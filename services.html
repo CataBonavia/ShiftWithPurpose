@@ -25,11 +25,33 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="methodology.html">Methodology</a></li>
-        <li><a href="blog.html">Insights</a></li>
+      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown active">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshops</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.html">Client Stories</a></li>
+            <li><a href="blog.html">Mighty Shifts Archive</a></li>
+            <li><a href="quiz.html">Experience Architecture Index</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__cta">
@@ -77,7 +99,7 @@
         </div>
 
         <!-- Card 2: EAI (all white text on purple) -->
-        <div class="card" style="background: linear-gradient(135deg, var(--color-primary) 0%, #5a4470 100%); border: none;">
+        <div class="card" style="background: var(--color-primary); border: none;">
           <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 14px;">Free diagnostic</p>
           <h3 style="margin-bottom: 16px; color: var(--color-white);">Experience Architecture Index</h3>
           <p style="color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 24px;">A free 15-minute diagnostic that identifies exactly which layer of your experience is under the most pressure. Built specifically for leaders in purpose-led, disability services, aged care, health, and community organisations. You receive a personalised result with a Loom video walkthrough and a PDF specifically designed for you, by Cata.</p>
@@ -137,7 +159,7 @@
           <div style="position: absolute; top: 16px; right: 16px; background: var(--color-sage); color: var(--color-navy); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px;">Taking expressions of interest</div>
           <div style="flex: 1;">
             <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 12px;">For stretched teams</p>
-            <h3 style="margin-bottom: 8px; color: var(--color-navy);">AI Amplifier</h3>
+            <h3 style="margin-bottom: 8px; color: var(--color-navy);">AI Impact Amplifier</h3>
             <p style="font-size: 1rem; font-style: italic; color: var(--color-text-mid); margin-bottom: 20px;">The one person doing three jobs deserves better tools.</p>
             <p style="color: var(--color-text-mid); line-height: 1.7; margin-bottom: 20px;">A focused engagement for stretched teams in purpose-led organisations. We map your current workflows, identify where AI can genuinely amplify your capacity, build the tools with you, and train your team to use them independently. Platform agnostic. Ethics-first.</p>
             <p style="font-size: 1.05rem; font-weight: 700; color: var(--color-navy); margin-bottom: 28px;">Priced as a project or 3+ month retainer</p>
@@ -156,7 +178,7 @@
           <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-navy); opacity: 0.6; margin-bottom: 10px;">Bespoke engagements</p>
           <h3 style="margin-bottom: 10px; color: var(--color-navy);">Bespoke Workshops</h3>
           <p style="font-style: italic; color: var(--color-text-mid); margin-bottom: 14px;">Custom-designed for your leadership team.</p>
-          <p style="color: var(--color-text-mid); line-height: 1.7; max-width: 680px;">When your team needs to think differently together — about a strategy challenge, a change initiative, or a cultural shift — a workshop designed specifically for your context and your people. Scoped and priced per engagement.</p>
+          <p style="color: var(--color-text-mid); line-height: 1.7; max-width: 680px;">When your team needs to think differently together; about a strategy challenge, a change initiative, or a cultural shift; a workshop designed specifically for your context and your people. Scoped and priced per engagement.</p>
         </div>
         <div style="flex-shrink: 0;">
           <a href="contact.html" class="btn btn-primary">Talk to us about a workshop &rarr;</a>
@@ -227,17 +249,32 @@
           <div>
             <p class="footer-edm__label">Mighty Shifts</p>
             <h3 class="footer-edm__heading">One insight. Every Thursday.<br>For the leaders doing the hardest work.</h3>
-            <p class="footer-edm__body">Mighty Shifts is a weekly email for CEOs, COOs, and founders in disability services, aged care, and community health. Each issue delivers one sharp, practical insight — no generic advice, no consultant jargon. Just the thinking your peers don't have time to share.</p>
+            <p class="footer-edm__body">Mighty Shifts is a weekly read for purpose-led leaders in disability services, aged care, health, and community organisations. Real stories. Practical ideas. One shift you can make before the week is out.</p>
           </div>
           <div>
-            <form class="footer-edm__form" action="#" method="post">
-              <div class="footer-edm__form-row">
-                <input type="text" name="first_name" placeholder="First name" class="footer-edm__input" required />
-                <input type="email" name="email" placeholder="Email address" class="footer-edm__input" required />
+            <div id="mlb2-24367037" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24367037">
+              <div class="ml-form-embedWrapper embedForm" style="background:transparent;border:none;padding:0;width:100%;max-width:100%;">
+                <div class="ml-form-embedBody row-form" style="padding:0;">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" data-code="" method="post" target="_blank" style="margin:0;">
+                    <div class="footer-edm__form-row">
+                      <input aria-label="name" type="text" name="fields[name]" placeholder="First name" class="footer-edm__input" autocomplete="given-name" />
+                      <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" class="footer-edm__input" required autocomplete="email" />
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
+                    <button disabled="disabled" style="display:none;" type="button"><span class="sr-only">Loading...</span></button>
+                    <p class="footer-edm__microcopy">No generic advice, no consultant jargon. Unsubscribe whenever you like.</p>
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none;padding:0;">
+                  <div style="padding: 24px 0;">
+                    <h4 style="color:var(--color-sage);margin-bottom:12px;">You&rsquo;re on the list.</h4>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. I can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                  </div>
+                </div>
               </div>
-              <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
-              <p class="footer-edm__microcopy">No generic advice. No consultant jargon. Unsubscribe any time.</p>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -248,7 +285,7 @@
           <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/shiftiwthpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
         <div class="footer__col">
@@ -256,7 +293,7 @@
           <ul>
             <li><a href="catalyst.html">SHiFT Catalyst</a></li>
             <li><a href="partnership.html">SHiFT Partnership</a></li>
-            <li><a href="ai-amplifier.html">AI Amplifier</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
             <li><a href="contact.html">Bespoke Workshops</a></li>
           </ul>
         </div>
@@ -284,5 +321,45 @@
     </div>
   </footer>
 
+
+  <!-- Mobile nav toggle -->
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+
+      // Close when clicking outside the nav
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('nav--open');
+        }
+      });
+
+      // Close when a nav link is clicked
+      document.querySelectorAll('.nav__links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          nav.classList.remove('nav--open');
+        });
+      });
+    })();
+  </script>
+
+  <!-- MailerLite webform handler -->
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+  <script>
+    function ml_webform_success_24367037() {
+      var body = document.querySelector('#mlb2-24367037 .ml-form-embedBody');
+      var success = document.querySelector('#mlb2-24367037 .ml-form-successBody');
+      if (body) body.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

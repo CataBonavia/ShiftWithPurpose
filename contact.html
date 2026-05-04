@@ -78,12 +78,33 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="methodology.html">Methodology</a></li>
-        
-            <li><a href="blog.html">Insights</a></li>
+      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshops</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="blog.html">Mighty Shifts Archive</a></li>
+            <li><a href="quiz.html">Experience Architecture Index</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <div class="nav__cta">
@@ -227,7 +248,7 @@
           <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/shiftiwthpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
         <div class="footer__col">
@@ -282,5 +303,34 @@
     }, false);
   </script>
 
+
+  <!-- Mobile nav toggle -->
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+
+      // Close when clicking outside the nav
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('nav--open');
+        }
+      });
+
+      // Close when a nav link is clicked
+      document.querySelectorAll('.nav__links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          nav.classList.remove('nav--open');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -25,11 +25,33 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="methodology.html" class="active">Methodology</a></li>
-        <li><a href="blog.html">Insights</a></li>
+      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown active">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshops</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="blog.html">Mighty Shifts Archive</a></li>
+            <li><a href="quiz.html">Experience Architecture Index</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__cta">
@@ -44,7 +66,7 @@
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="section" style="background: var(--color-navy); padding: 96px 0 80px;">
+  <section id="shift-method" class="section" style="background: var(--color-navy); padding: 96px 0 80px;">
     <div class="container" style="max-width: 800px; text-align: center;">
       <span class="caption" style="color: var(--color-sage);">How we work</span>
       <h1 style="color: var(--color-white); margin-top: 16px; margin-bottom: 20px;">The SHiFT Method</h1>
@@ -97,44 +119,58 @@
   <!-- ============================================================
        EXPERIENCE ARCHITECTURE FRAMEWORK
        ============================================================ -->
-  <section class="section" style="padding: 96px 0;">
+  <section id="experience-architecture-framework" class="section" style="padding: 96px 0;">
     <div class="container">
       <div class="grid-2" style="gap: 80px; align-items: start;">
         <div>
           <span class="caption">Framework</span>
-          <h2 style="margin-top: 12px; margin-bottom: 20px;">The Experience Architecture Framework</h2>
+          <h2 style="margin-top: 12px; margin-bottom: 12px;">The Experience Architecture Framework</h2>
+          <p style="font-size: 1rem; color: var(--color-text-mid); margin-bottom: 20px;">The framework that reveals whether your experience is designed to grow with you, or quietly working against you.</p>
           <div class="divider"></div>
           <p class="lead" style="margin-top: 20px; margin-bottom: 24px;">
-            Experience doesn't break in one place. It leaks across five layers, and most organisations are focused on the wrong one.
+            Before we redesign anything, we need to understand what's actually happening.
           </p>
           <p style="margin-bottom: 20px;">
-            The Experience Architecture Framework maps the five layers where participant and employee loyalty is built or lost — and gives you a way to diagnose which layer is where your organisation's experience is actually leaking.
+            The Experience Architecture Framework is a structured way of looking at how trust is built, value is delivered, and impact is sustained across your organisation. It breaks the experience into six layers and one multiplier, each measuring a different dimension of how your clients, customers, or participants experience working with you.
+          </p>
+          <p style="margin-bottom: 20px;">
+            Most organisations have invested in some of these layers without realising it. Strong operations here, a great team member there, a process that works well in one area but breaks down in another. The framework connects these pieces and reveals the patterns that are otherwise invisible: where the experience is strong by design, where it's strong by effort, and where it's quietly leaking the loyalty you've worked hard to build.
           </p>
           <p style="margin-bottom: 32px;">
-            Most teams focus on touchpoints; the form, the conversation, the onboarding video. The EAF goes deeper — into the systems, sequences, culture, and capability that hold the touchpoints together. Or don't.
+            The framework is assessed through the Experience Architecture Index, a 7-minute diagnostic that gives you a personalised picture of where you are across all seven dimensions.
           </p>
-          <a href="quiz.html" class="btn btn-primary">Take the free EAI Quiz &rarr;</a>
+          <a href="quiz.html" class="btn btn-primary">Take the Experience Architecture Index &rarr;</a>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="background: #f9f7fb; border-radius: 12px; padding: 24px 28px; border-left: 4px solid var(--color-primary);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Layer 1 — First contact &amp; onboarding</h4>
-            <p style="font-size: 0.92rem;">How it feels to come in for the first time. The quality of the welcome, the clarity of information, the speed of resolution.</p>
+        <div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
+              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Brilliant Basics</h4>
+              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Operational trust and friction discipline. Are your clients doing work your systems should be doing?</p>
+            </div>
+            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
+              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Intentional Direction</h4>
+              <p style="font-size: 0.87rem; color: var(--color-text-mid);">End-to-end experience design. If your best person left tomorrow, would the experience hold up?</p>
+            </div>
+            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
+              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Embedded Confidence</h4>
+              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Belief built by design, not by effort. Does your experience build confidence automatically, or only when someone remembers to check in?</p>
+            </div>
+            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
+              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Purposeful Relevance</h4>
+              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Contextual adaptation and personalisation. Does your experience get smarter over time, or repeat itself?</p>
+            </div>
+            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
+              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Clear Movement</h4>
+              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Visible momentum and felt progress. Do your clients know the experience is working, or do they just hope it is?</p>
+            </div>
+            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
+              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Compounding Impact</h4>
+              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Long-term advocacy and engagement. Are your longest-standing clients your loudest advocates, or your quietest?</p>
+            </div>
           </div>
-          <div style="background: #f9f7fb; border-radius: 12px; padding: 24px 28px; border-left: 4px solid var(--color-primary);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Layer 2 — Ongoing touchpoints</h4>
-            <p style="font-size: 0.92rem;">Whether the experience is deliberate and consistent, or dependent on who picks up the phone that day.</p>
-          </div>
-          <div style="background: #f9f7fb; border-radius: 12px; padding: 24px 28px; border-left: 4px solid var(--color-primary);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Layer 3 — Systems &amp; tools</h4>
-            <p style="font-size: 0.92rem;">Whether your technology supports or fights your team's ability to deliver well. The systems that should talk to each other. The ones that don't.</p>
-          </div>
-          <div style="background: #f9f7fb; border-radius: 12px; padding: 24px 28px; border-left: 4px solid var(--color-primary);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Layer 4 — Culture &amp; capability</h4>
-            <p style="font-size: 0.92rem;">Whether your team has the skills, clarity, and confidence to deliver the experience that's been designed — or whether good intentions keep getting filtered through individuals.</p>
-          </div>
-          <div style="background: #f9f7fb; border-radius: 12px; padding: 24px 28px; border-left: 4px solid var(--color-primary);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Layer 5 — Leadership &amp; strategy alignment</h4>
-            <p style="font-size: 0.92rem;">Whether leadership's stated direction and the lived experience of participants and staff are pointing in the same direction. The gap between the deck and the door.</p>
+          <div style="background: var(--color-navy); border-radius: 12px; padding: 20px 22px;">
+            <h4 style="color: var(--color-sage); margin-bottom: 6px; font-size: 0.95rem;">&times; Signature Moments — The Multiplier</h4>
+            <p style="font-size: 0.87rem; color: rgba(252,252,252,0.82);">Not a seventh layer; a multiplier that cuts across all six. Competence builds retention. Distinctiveness builds advocacy. Could a competitor replicate your experience tomorrow?</p>
           </div>
         </div>
       </div>
@@ -144,7 +180,7 @@
   <!-- ============================================================
        THINK THEN AI
        ============================================================ -->
-  <section class="section" style="background: var(--color-lavender); padding: 80px 0;">
+  <section id="think-then-ai" class="section" style="background: var(--color-lavender); padding: 80px 0;">
     <div class="container">
       <div class="grid-2" style="align-items: center; gap: 80px;">
         <div>
@@ -243,13 +279,50 @@
        ============================================================ -->
   <footer class="footer">
     <div class="container">
+
+      <!-- EDM Subscription -->
+      <div class="footer-edm">
+        <div class="footer-edm__inner">
+          <div>
+            <p class="footer-edm__label">Mighty Shifts</p>
+            <h3 class="footer-edm__heading">One insight. Every Thursday.<br>For the leaders doing the hardest work.</h3>
+            <p class="footer-edm__body">Each issue delivers one sharp, practical insight for CEOs, COOs, and founders in disability services, aged care, and community health. No generic advice, no consultant jargon; just the thinking your peers don't have time to share.</p>
+          </div>
+          <div>
+            <div id="mlb2-24367037" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24367037">
+              <div class="ml-form-embedWrapper embedForm" style="background:transparent;border:none;padding:0;width:100%;max-width:100%;">
+                <div class="ml-form-embedBody row-form" style="padding:0;">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" data-code="" method="post" target="_blank" style="margin:0;">
+                    <div class="footer-edm__form-row">
+                      <input aria-label="name" type="text" name="fields[name]" placeholder="First name" class="footer-edm__input" autocomplete="given-name" />
+                      <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" class="footer-edm__input" required autocomplete="email" />
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
+                    <button disabled="disabled" style="display:none;" type="button"><span class="sr-only">Loading...</span></button>
+                    <p class="footer-edm__microcopy">No generic advice, no consultant jargon. Unsubscribe whenever you like.</p>
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none;padding:0;">
+                  <div style="padding: 24px 0;">
+                    <h4 style="color:var(--color-sage);margin-bottom:12px;">You&rsquo;re on the list.</h4>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. I can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer__grid">
         <div>
           <div class="footer__logo"><img src="images/logo-dark.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
           <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/shiftiwthpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
         <div class="footer__col">
@@ -257,7 +330,7 @@
           <ul>
             <li><a href="services.html#catalyst">SHiFT Catalyst</a></li>
             <li><a href="services.html#partnership">SHiFT Partnership</a></li>
-            <li><a href="services.html#ai-amplifier">AI Amplifier</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
             <li><a href="services.html#workshops">Workshops</a></li>
           </ul>
         </div>
@@ -285,12 +358,45 @@
     </div>
   </footer>
 
+
+  <!-- Mobile nav toggle -->
   <script>
-  /* Mobile nav toggle */
-  document.querySelector('.nav__toggle')?.addEventListener('click', function() {
-    document.querySelector('.nav__links')?.classList.toggle('nav__links--open');
-  });
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+
+      // Close when clicking outside the nav
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('nav--open');
+        }
+      });
+
+      // Close when a nav link is clicked
+      document.querySelectorAll('.nav__links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          nav.classList.remove('nav--open');
+        });
+      });
+    })();
   </script>
 
+  <!-- MailerLite webform handler -->
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+  <script>
+    function ml_webform_success_24367037() {
+      var body = document.querySelector('#mlb2-24367037 .ml-form-embedBody');
+      var success = document.querySelector('#mlb2-24367037 .ml-form-successBody');
+      if (body) body.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

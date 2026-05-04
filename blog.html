@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insights | SHiFT with Purpose</title>
   <meta name="description" content="Ideas on experience design, AI, and what it actually takes to lead purpose-led organisations in disability services, aged care, and community health. Written by Catalina Bonavia." />
-  <link rel="canonical" href="blog.html" />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/insights" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -25,10 +25,33 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html" class="active">Insights</a></li>
+      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshops</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown active">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="blog/mighty-shifts.html">Mighty SHiFTs Archive</a></li>
+            <li><a href="quiz.html">Experience Architecture Index</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__cta">
@@ -43,247 +66,304 @@
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="section" style="background: var(--color-lavender); padding: 80px 0 72px;">
+  <section class="section" style="background: var(--color-lavender); padding: 80px 0 56px;">
     <div class="container" style="max-width: 720px;">
       <span class="caption">From Cata</span>
       <h1 style="margin-top: 16px; margin-bottom: 20px;">Insights</h1>
       <p class="lead">
         Ideas on experience design, AI for purpose-led organisations, and what it actually looks like to close the gap between what you intend and what people experience.
       </p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CONTENT CATEGORIES
-       ============================================================ -->
-  <section class="section" style="padding-top: 48px; padding-bottom: 16px;">
-    <div class="container">
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-        <span style="font-size: 0.82rem; font-weight: 600; color: var(--color-text-mid); margin-right: 4px;">Browse by topic:</span>
-        <a href="#pillar-1" style="display: inline-block; padding: 6px 16px; border-radius: 100px; background: var(--color-lavender); color: var(--color-primary); font-size: 0.82rem; font-weight: 600; text-decoration: none;">Why it's not working</a>
-        <a href="#pillar-2" style="display: inline-block; padding: 6px 16px; border-radius: 100px; background: var(--color-lavender); color: var(--color-primary); font-size: 0.82rem; font-weight: 600; text-decoration: none;">Competing without a corporate budget</a>
-        <a href="#pillar-3" style="display: inline-block; padding: 6px 16px; border-radius: 100px; background: var(--color-sage); color: var(--color-navy); font-size: 0.82rem; font-weight: 600; text-decoration: none;">AI for purpose-led orgs</a>
-        <a href="#pillar-4" style="display: inline-block; padding: 6px 16px; border-radius: 100px; background: #f5f2f8; color: var(--color-navy); font-size: 0.82rem; font-weight: 600; text-decoration: none;">Cata's perspective</a>
+      <!-- Search -->
+      <div class="blog-search-wrap">
+        <div class="blog-search">
+          <input
+            type="text"
+            id="blog-search-input"
+            class="blog-search__input"
+            placeholder="Search articles..."
+            aria-label="Search articles"
+          />
+          <svg class="blog-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       FEATURED POST — full-bleed split
+       CATEGORY PILLS
+       ============================================================ -->
+  <section class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <div class="container">
+      <div class="category-pills">
+        <span style="font-size: 0.82rem; font-weight: 600; color: var(--color-text-mid); margin-right: 4px;">Browse by topic:</span>
+        <a href="#pillar-stuck" class="category-pill">Where good work gets stuck</a>
+        <a href="#pillar-ai" class="category-pill category-pill--sage">AI for purpose-led organisations</a>
+        <a href="#pillar-standing-out" class="category-pill">Standing out without a corporate budget</a>
+        <a href="#pillar-behind" class="category-pill">Behind the work</a>
+        <a href="#pillar-mighty" class="category-pill category-pill--navy">Mighty SHiFTs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED POST
        ============================================================ -->
   <section class="split-section" style="min-height: 400px;">
 
-    <!-- Left: navy content -->
     <div class="split-col split-col--navy" style="padding: 72px 64px; display: flex; flex-direction: column; justify-content: center;">
-      <span style="display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 16px;">Featured &nbsp;|&nbsp; Why it's not working</span>
-      <h2 style="color: var(--color-white); margin-bottom: 16px; font-size: 1.65rem; line-height: 1.3;">Why your new systems are in place, but your retention scores haven't followed.</h2>
+      <span style="display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 16px;">Featured &nbsp;|&nbsp; Where good work gets stuck</span>
+      <h2 style="color: var(--color-white); margin-bottom: 16px; font-size: 1.65rem; line-height: 1.3;">Five layers where loyalty leaks; and how to find yours.</h2>
       <p style="color: rgba(252,252,252,0.75); margin-bottom: 32px; max-width: 480px;">
-        You implemented the CRM. You trained the team. The process looks better on paper. So why are participants still disengaging in the first 30 days? Here's what's actually happening — and which layer to look at first.
+        Participant retention isn&rsquo;t a marketing problem. It&rsquo;s an experience design problem. Here are the five layers where purpose-led organisations lose loyalty; and how to identify which one is costing you most.
       </p>
       <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        <a href="#" class="btn btn-sage">Read the article</a>
-        <a href="#" class="blog-card__download">&#8659; Download as PDF</a>
-        <span style="font-size: 0.82rem; color: rgba(255,255,255,0.4);">8 min read</span>
+        <a href="blog-five-layers-loyalty-leaks.html" class="btn btn-sage">Read the article</a>
+        <span style="font-size: 0.82rem; color: rgba(255,255,255,0.4);">10 min read</span>
       </div>
     </div>
 
-    <!-- Right: article image placeholder -->
     <div style="background: var(--color-primary); overflow: hidden; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-      <!-- REPLACE: Add featured article image here, e.g. <img src="images/article-retention.png" ...> -->
-      <div style="text-align: center; padding: 40px;">
-        <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.15); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-          <span style="font-size: 2rem; color: rgba(255,255,255,0.5);">✦</span>
-        </div>
-        <p style="color: rgba(255,255,255,0.4); font-size: 0.88rem;">[ Add article image ]</p>
-      </div>
+      <img src="images/blog-five-layers-loyalty-leaks.png" alt="Five layers where loyalty leaks" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 400px;" />
     </div>
 
   </section>
 
   <!-- ============================================================
-       PILLAR 1 — WHY IT'S NOT WORKING
+       NO RESULTS MESSAGE (shown by JS when search finds nothing)
        ============================================================ -->
-  <section id="pillar-1" class="section" style="padding-top: 48px;">
+  <div class="container">
+    <p class="search-no-results" id="search-no-results" role="status">No articles match your search. Try different keywords.</p>
+  </div>
+
+  <!-- ============================================================
+       PILLAR 1 — WHERE GOOD WORK GETS STUCK
+       ============================================================ -->
+  <section id="pillar-stuck" class="section pillar-section" data-pillar>
     <div class="container">
-      <div style="margin-bottom: 32px;">
-        <h3 style="font-size: 1.2rem;">Why it's not working (even though you've already tried)</h3>
-        <p style="margin-top: 8px; font-size: 0.92rem; color: var(--color-text-mid);">For leaders who've invested in CX and still aren't seeing it compound.</p>
+      <div class="pillar-header">
+        <div class="pillar-header__text">
+          <h3>Where good work gets stuck</h3>
+          <p>For leaders who've invested in CX and still aren't seeing it compound.</p>
+        </div>
+        <a href="blog/where-good-work-gets-stuck.html" class="pillar-explore-link">Explore all &rarr;</a>
       </div>
-      <div class="grid-3">
-        <!-- Article 1 — placeholder -->
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #ede8f4;">
-            <!-- REPLACE: Article image -->
+      <div class="carousel-wrap" data-carousel>
+        <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous articles" disabled>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #ede8f4;"><img src="images/blog-fixing-touchpoint-vs-redesigning-experience.png" alt="The difference between fixing a touchpoint and redesigning an experience" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Experience Design</span>
+                <div class="blog-card__title">The difference between fixing a touchpoint and redesigning an experience.</div>
+                <div class="blog-card__excerpt">One improved. The other compounds. Most organisations are doing the first and wondering why it hasn't produced the second.</div>
+                <div class="blog-card__meta">17 April 2026 &nbsp;|&nbsp; 7 min read</div>
+                <div class="blog-card__actions"><a href="blog-fixing-touchpoint-vs-redesigning-experience.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #e8f0e8;"><img src="images/blog-great-team-undesigned-system.png" alt="What happens when you build a great team inside a system that was never designed" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Onboarding</span>
+                <div class="blog-card__title">What happens when you build a great team inside a system that was never designed.</div>
+                <div class="blog-card__excerpt">The people are doing their best. The experience is inconsistent anyway. Here's why, and what to do about it.</div>
+                <div class="blog-card__meta">24 April 2026 &nbsp;|&nbsp; 8 min read</div>
+                <div class="blog-card__actions"><a href="blog-great-team-undesigned-system.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #f4ede8;"><img src="images/blog-five-layers-loyalty-leaks.png" alt="Five layers where loyalty leaks and how to find yours" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Retention</span>
+                <div class="blog-card__title">Five layers where loyalty leaks, and how to find yours.</div>
+                <div class="blog-card__excerpt">Participant retention isn't a marketing problem. It's an experience design problem. Here's how to find which layer is costing you.</div>
+                <div class="blog-card__meta">1 May 2026 &nbsp;|&nbsp; 10 min read</div>
+                <div class="blog-card__actions"><a href="blog-five-layers-loyalty-leaks.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
           </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Experience Design</span>
-            <div class="blog-card__title">The difference between fixing a touchpoint and redesigning an experience.</div>
-            <div class="blog-card__excerpt">One improved. The other compounds. Most organisations are doing the first and wondering why it hasn't produced the second.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 6 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
         </div>
-        <!-- Article 2 — placeholder -->
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #e8f0e8;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Onboarding</span>
-            <div class="blog-card__title">What happens when you build a great team inside a system that was never designed.</div>
-            <div class="blog-card__excerpt">The people are doing their best. The experience is inconsistent anyway. Here's why, and what to do about it.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 7 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
-        <!-- Article 3 — placeholder -->
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #f4ede8;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Retention</span>
-            <div class="blog-card__title">Five layers where loyalty leaks — and how to find yours.</div>
-            <div class="blog-card__excerpt">Participant retention isn't a marketing problem. It's an experience design problem. Here's how to find which layer is costing you.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 5 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
+        <button class="carousel__arrow carousel__arrow--next" aria-label="Next articles">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
+      <div class="carousel__dots" data-dots></div>
     </div>
   </section>
 
   <!-- ============================================================
-       PILLAR 3 — AI FOR PURPOSE-LED ORGS
+       PILLAR 2 — AI FOR PURPOSE-LED ORGANISATIONS
        ============================================================ -->
-  <section id="pillar-3" class="section" style="padding-top: 48px;">
+  <section id="pillar-ai" class="section pillar-section" style="background: #f9f8fc;" data-pillar>
     <div class="container">
-      <div style="margin-bottom: 32px;">
-        <h3 style="font-size: 1.2rem;">AI for purpose-led organisations</h3>
-        <p style="margin-top: 8px; font-size: 0.92rem; color: var(--color-text-mid);">The sector doing the most good deserves the best tools.</p>
+      <div class="pillar-header">
+        <div class="pillar-header__text">
+          <h3>AI for purpose-led organisations</h3>
+          <p>The sector doing the most good deserves the best tools.</p>
+        </div>
+        <a href="blog/ai-for-purpose-led-organisations.html" class="pillar-explore-link">Explore all &rarr;</a>
       </div>
-      <div class="grid-3">
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: linear-gradient(135deg, var(--color-primary), #5a4470);">
+      <div class="carousel-wrap" data-carousel>
+        <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous articles" disabled>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #e8dff4;"><img src="images/blog-ai-amplify-purpose.png" alt="AI should amplify purpose, not replace the people behind it" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">AI Ethics</span>
+                <div class="blog-card__title">AI should amplify purpose, not replace the people behind it.</div>
+                <div class="blog-card__excerpt">The organisations with the biggest hearts are drowning in the most paperwork. AI can change that, if we introduce it the right way.</div>
+                <div class="blog-card__meta">8 May 2026 &nbsp;|&nbsp; 8 min read</div>
+                <div class="blog-card__actions"><a href="blog-ai-amplify-purpose.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #e8f0f4;"><img src="images/blog-nfp-marketing-manager-ai.png" alt="The NDIS marketing manager is doing three jobs. Here's how AI can help." style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Marketing</span>
+                <div class="blog-card__title">The NDIS marketing manager is doing three jobs. Here's how AI can help.</div>
+                <div class="blog-card__excerpt">Commercial marketing, participant attraction, internal comms — one person, all three. What AI can amplify and where the human touch stays.</div>
+                <div class="blog-card__meta">15 May 2026 &nbsp;|&nbsp; 10 min read</div>
+                <div class="blog-card__actions"><a href="blog-nfp-marketing-manager-ai.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #f0f4e8;"></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Think Then AI</span>
+                <div class="blog-card__title">The sequence that makes AI adoption actually work in regulated environments.</div>
+                <div class="blog-card__excerpt">Most AI implementation starts with the tool. That's why most AI implementation fails. Here's the order that produces solutions people actually use.</div>
+                <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 7 min read</div>
+                <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div>
+              </div>
+            </div>
           </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">AI Ethics</span>
-            <div class="blog-card__title">AI should amplify purpose, not replace the people behind it.</div>
-            <div class="blog-card__excerpt">The organisations with the biggest hearts are drowning in the most paperwork. AI can change that, if we introduce it the right way.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 8 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
         </div>
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #e8f0f4;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Marketing</span>
-            <div class="blog-card__title">The NDIS marketing manager is doing three jobs. Here's how AI can help.</div>
-            <div class="blog-card__excerpt">Commercial marketing, participant attraction, internal comms — one person, all three. What AI can amplify and where the human touch stays.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 6 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #f0f4e8;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Think Then AI</span>
-            <div class="blog-card__title">The sequence that makes AI adoption actually work in regulated environments.</div>
-            <div class="blog-card__excerpt">Most AI implementation starts with the tool. That's why most AI implementation fails. Here's the order that produces solutions people actually use.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 7 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
+        <button class="carousel__arrow carousel__arrow--next" aria-label="Next articles">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
+      <div class="carousel__dots" data-dots></div>
     </div>
   </section>
 
   <!-- ============================================================
-       PILLAR 2 — COMPETING WITHOUT CORPORATE BUDGET
+       PILLAR 3 — STANDING OUT WITHOUT A CORPORATE BUDGET
        ============================================================ -->
-  <section id="pillar-2" class="section" style="padding-top: 48px;">
+  <section id="pillar-standing-out" class="section pillar-section" data-pillar>
     <div class="container">
-      <div style="margin-bottom: 32px;">
-        <h3 style="font-size: 1.2rem;">Competing without a corporate budget</h3>
-        <p style="margin-top: 8px; font-size: 0.92rem; color: var(--color-text-mid);">Differentiation that works within real-world constraints.</p>
+      <div class="pillar-header">
+        <div class="pillar-header__text">
+          <h3>Standing out without a corporate budget</h3>
+          <p>Differentiation that works within real-world constraints.</p>
+        </div>
+        <a href="blog/standing-out-without-a-corporate-budget.html" class="pillar-explore-link">Explore all &rarr;</a>
       </div>
-      <div class="grid-3">
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #e8f4f0;">
+      <div class="carousel-wrap" data-carousel>
+        <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous articles" disabled>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #e8f4f0;"><img src="images/blog-great-team-undesigned-system.png" alt="Why the organisations winning on retention aren't spending more on marketing" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Differentiation</span>
+                <div class="blog-card__title">Why the organisations winning on retention aren't spending more on marketing.</div>
+                <div class="blog-card__excerpt">The NDIS providers growing on referrals share one thing. It's not their prices. It's not their brand. Here's what it actually is.</div>
+                <div class="blog-card__meta">1 May 2026 &nbsp;|&nbsp; 10 min read</div>
+                <div class="blog-card__actions"><a href="blog-five-layers-loyalty-leaks.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #f4ede8;"></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">NDIS</span>
+                <div class="blog-card__title">How to stand out in a crowded NDIS market without changing your prices.</div>
+                <div class="blog-card__excerpt">Price differentiation is a race to the bottom. Experience differentiation is the one competitors can't copy overnight.</div>
+                <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 6 min read</div>
+                <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #ede8f4;"></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">CX Strategy</span>
+                <div class="blog-card__title">The experience your competitors can't copy.</div>
+                <div class="blog-card__excerpt">A brand can be replicated. A process can be improved. But an experience that's woven into how your organisation actually works is genuinely yours.</div>
+                <div class="blog-card__meta">1 May 2026 &nbsp;|&nbsp; 10 min read</div>
+                <div class="blog-card__actions"><a href="blog-five-layers-loyalty-leaks.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
           </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Differentiation</span>
-            <div class="blog-card__title">Why the organisations winning on retention aren't spending more on marketing.</div>
-            <div class="blog-card__excerpt">The NDIS providers growing on referrals share one thing. It's not their prices. It's not their brand. Here's what it actually is.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 5 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
         </div>
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #f4ede8;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">NDIS</span>
-            <div class="blog-card__title">How to stand out in a crowded NDIS market without changing your prices.</div>
-            <div class="blog-card__excerpt">Price differentiation is a race to the bottom. Experience differentiation is the one competitors can't copy overnight.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 6 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #ede8f4;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">CX Strategy</span>
-            <div class="blog-card__title">The experience your competitors can't copy.</div>
-            <div class="blog-card__excerpt">A brand can be replicated. A process can be improved. But an experience that's woven into how your organisation actually works is genuinely yours.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 5 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
+        <button class="carousel__arrow carousel__arrow--next" aria-label="Next articles">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
+      <div class="carousel__dots" data-dots></div>
     </div>
   </section>
 
   <!-- ============================================================
-       PILLAR 4 — CATA'S PERSPECTIVE
+       PILLAR 4 — BEHIND THE WORK
        ============================================================ -->
-  <section id="pillar-4" class="section" style="padding-top: 48px; padding-bottom: 80px;">
+  <section id="pillar-behind" class="section pillar-section" style="background: #f9f8fc;" data-pillar>
     <div class="container">
-      <div style="margin-bottom: 32px;">
-        <h3 style="font-size: 1.2rem;">Cata's perspective</h3>
-        <p style="margin-top: 8px; font-size: 0.92rem; color: var(--color-text-mid);">The formation story as professional credibility.</p>
+      <div class="pillar-header">
+        <div class="pillar-header__text">
+          <h3>Behind the work</h3>
+          <p>The formation story as professional credibility.</p>
+        </div>
+        <a href="blog/behind-the-work.html" class="pillar-explore-link">Explore all &rarr;</a>
       </div>
-      <div class="grid-3">
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: linear-gradient(135deg, var(--color-navy), #2a4a60);">
+      <div class="carousel-wrap" data-carousel>
+        <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous articles" disabled>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #f0ede4;"></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Story</span>
+                <div class="blog-card__title">What five years of design school didn't teach me, and what a grandmother in Buenos Aires did.</div>
+                <div class="blog-card__excerpt">The research question that changed everything I understood about what design is actually for.</div>
+                <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 6 min read</div>
+                <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card" data-card>
+              <div class="blog-card__image" style="background: #e8eef4;"></div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Perspective</span>
+                <div class="blog-card__title">What moving to a country where you know no one teaches you about reading an organisation quickly.</div>
+                <div class="blog-card__excerpt">The skill I didn't plan to have is now the one I use in every engagement.</div>
+                <div class="blog-card__meta">1 May 2026 &nbsp;|&nbsp; 10 min read</div>
+                <div class="blog-card__actions"><a href="blog-five-layers-loyalty-leaks.html" class="blog-card__read-link">Read the article &rarr;</a></div>
+              </div>
+            </div>
           </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Story</span>
-            <div class="blog-card__title">What five years of design school didn't teach me — and what a grandmother in Buenos Aires did.</div>
-            <div class="blog-card__excerpt">The research question that changed everything I understood about what design is actually for.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 6 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
         </div>
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #f0ede4;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Perspective</span>
-            <div class="blog-card__title">What moving to a country where you know no one teaches you about reading an organisation quickly.</div>
-            <div class="blog-card__excerpt">The skill I didn't plan to have is now the one I use in every engagement.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 5 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__image" style="background: #e8eef4;">
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Perspective</span>
-            <div class="blog-card__title">I left a stable university job the day they turned my research into a poster.</div>
-            <div class="blog-card__excerpt">The gap between insight and implementation has real costs. This is the moment I decided to stop waiting for someone else to close it.</div>
-            <div class="blog-card__meta">Coming soon &nbsp;|&nbsp; 4 min read</div>
-          <div class="blog-card__actions"><a href="#" class="blog-card__read-link">Read when published &rarr;</a></div></div>
-        </div>
+        <button class="carousel__arrow carousel__arrow--next" aria-label="Next articles">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
+      <div class="carousel__dots" data-dots></div>
     </div>
   </section>
 
   <!-- ============================================================
-       NEWSLETTER / EAI QUIZ BANNER
+       EAI QUIZ BANNER
        ============================================================ -->
-  <section class="section" style="padding: 64px 0; background: #f5f2f8;">
+  <section class="section" style="padding: 64px 0; background: var(--color-lavender);">
     <div class="container">
       <div class="quiz-banner">
         <div>
@@ -304,28 +384,95 @@
   </section>
 
   <!-- ============================================================
+       PILLAR 5 — MIGHTY SHIFTS
+       ============================================================ -->
+  <section id="pillar-mighty" class="section pillar-section pillar-section--mighty" data-pillar>
+    <div class="container">
+      <div class="pillar-header">
+        <div class="pillar-header__text">
+          <h3>Mighty SHiFTs</h3>
+          <p>One sharp insight. Every Thursday. For the leaders doing the hardest work.</p>
+        </div>
+        <a href="blog/mighty-shifts.html" class="pillar-explore-link">Explore all &rarr;</a>
+      </div>
+      <div class="carousel-wrap" data-carousel>
+        <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous issues" disabled>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <div class="blog-card blog-card--mighty" data-card>
+              <div class="blog-card__image" style="background: rgba(25,53,80,0.08); display: flex; align-items: center; justify-content: center; min-height: 180px;">
+                <span style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-white); background: var(--color-primary); padding: 5px 14px; border-radius: 100px;">Mighty SHiFTs &mdash; Issue 1</span>
+              </div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Essay</span>
+                <div class="blog-card__title">The day the research became a poster.</div>
+                <div class="blog-card__excerpt">Good intentions go in. Posters come out. The people who needed something to change are still waiting. This is why Mighty SHiFTs exists.</div>
+                <div class="blog-card__meta">10 April 2026 &nbsp;|&nbsp; 4 min read</div>
+                <div class="blog-card__actions"><a href="blog-the-day-the-research-became-a-poster.html" class="blog-card__read-link">Read the essay &rarr;</a></div>
+              </div>
+            </div>
+            <div class="blog-card blog-card--mighty" data-card>
+              <div class="blog-card__image" style="background: rgba(25,53,80,0.05); display: flex; align-items: center; justify-content: center; min-height: 180px;">
+                <span style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-white); background: var(--color-primary); padding: 5px 14px; border-radius: 100px;">Coming Thursday</span>
+              </div>
+              <div class="blog-card__body">
+                <span class="blog-card__pillar">Next Issue</span>
+                <div class="blog-card__title">More issues coming every Thursday.</div>
+                <div class="blog-card__excerpt">Subscribe below to get each one delivered directly to you. One sharp insight, no consultant jargon.</div>
+                <div class="blog-card__meta">Subscribe to receive it</div>
+                <div class="blog-card__actions"><a href="#footer-edm" class="blog-card__read-link">Subscribe &rarr;</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel__arrow carousel__arrow--next" aria-label="Next issues">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+      <div class="carousel__dots" data-dots></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        FOOTER
        ============================================================ -->
-  <footer class="footer">
+  <footer class="footer" id="footer-edm">
     <div class="container">
 
       <!-- EDM Subscription -->
       <div class="footer-edm">
         <div class="footer-edm__inner">
           <div>
-            <p class="footer-edm__label">Mighty Shifts</p>
+            <p class="footer-edm__label">Mighty SHiFTs</p>
             <h3 class="footer-edm__heading">One insight. Every Thursday.<br>For the leaders doing the hardest work.</h3>
-            <p class="footer-edm__body">Mighty Shifts is a weekly email for CEOs, COOs, and founders in disability services, aged care, and community health. Each issue delivers one sharp, practical insight — no generic advice, no consultant jargon. Just the thinking your peers don't have time to share.</p>
+            <p class="footer-edm__body">Each issue delivers one sharp, practical insight for CEOs, COOs, and founders in disability services, aged care, and community health. No generic advice, no consultant jargon; just the thinking your peers don't have time to share.</p>
           </div>
           <div>
-            <form class="footer-edm__form" action="#" method="post">
-              <div class="footer-edm__form-row">
-                <input type="text" name="first_name" placeholder="First name" class="footer-edm__input" required />
-                <input type="email" name="email" placeholder="Email address" class="footer-edm__input" required />
+            <div id="mlb2-24367037" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24367037">
+              <div class="ml-form-embedWrapper embedForm" style="background:transparent;border:none;padding:0;width:100%;max-width:100%;">
+                <div class="ml-form-embedBody row-form" style="padding:0;">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" data-code="" method="post" target="_blank" style="margin:0;">
+                    <div class="footer-edm__form-row">
+                      <input aria-label="name" type="text" name="fields[name]" placeholder="First name" class="footer-edm__input" autocomplete="given-name" />
+                      <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" class="footer-edm__input" required autocomplete="email" />
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
+                    <button disabled="disabled" style="display:none;" type="button"><span class="sr-only">Loading...</span></button>
+                    <p class="footer-edm__microcopy">No generic advice, no consultant jargon. Unsubscribe whenever you like.</p>
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none;padding:0;">
+                  <div style="padding: 24px 0;">
+                    <h4 style="color:var(--color-sage);margin-bottom:12px;">You&rsquo;re on the list.</h4>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. I can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                  </div>
+                </div>
               </div>
-              <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
-              <p class="footer-edm__microcopy">No generic advice. No consultant jargon. Unsubscribe any time.</p>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -336,16 +483,16 @@
           <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/shiftiwthpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#catalyst">SHiFT Catalyst</a></li>
-            <li><a href="services.html#partnership">SHiFT Partnership</a></li>
-            <li><a href="services.html#ai-amplifier">AI Amplifier</a></li>
-            <li><a href="services.html#workshops">Workshops</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Workshops</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -353,7 +500,6 @@
           <ul>
             <li><a href="about.html">About Cata</a></li>
             <li><a href="methodology.html">Methodology</a></li>
-        
             <li><a href="blog.html">Insights</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -373,5 +519,155 @@
     </div>
   </footer>
 
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script>
+  (function () {
+
+    /* ---- Mobile nav toggle ---- */
+    var toggle = document.querySelector('.nav__toggle');
+    var nav    = document.querySelector('.nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target)) nav.classList.remove('nav--open');
+      });
+      document.querySelectorAll('.nav__links a').forEach(function (link) {
+        link.addEventListener('click', function () { nav.classList.remove('nav--open'); });
+      });
+    }
+
+    /* ---- Carousel ---- */
+    function initCarousel(carouselEl) {
+      var track     = carouselEl.querySelector('.carousel__track');
+      var viewport  = carouselEl.querySelector('.carousel__viewport');
+      var prevBtn   = carouselEl.querySelector('.carousel__arrow--prev');
+      var nextBtn   = carouselEl.querySelector('.carousel__arrow--next');
+      var dotsWrap  = carouselEl.nextElementSibling; // .carousel__dots follows .carousel-wrap
+      var cards     = Array.from(track.querySelectorAll('[data-card]'));
+
+      if (!cards.length) return;
+
+      var currentPage = 0;
+      var pages = [];
+
+      function getCardsPerPage() {
+        return window.innerWidth <= 768 ? 1 : 3;
+      }
+
+      function buildPages() {
+        var cpp = getCardsPerPage();
+        pages = [];
+        for (var i = 0; i < cards.length; i += cpp) {
+          pages.push(i);
+        }
+      }
+
+      function buildDots() {
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        if (pages.length <= 1) { dotsWrap.style.display = 'none'; return; }
+        dotsWrap.style.display = '';
+        pages.forEach(function (_, idx) {
+          var dot = document.createElement('button');
+          dot.className = 'carousel__dot' + (idx === currentPage ? ' carousel__dot--active' : '');
+          dot.setAttribute('aria-label', 'Go to page ' + (idx + 1));
+          dot.addEventListener('click', function () { goTo(idx); });
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function updateDots() {
+        if (!dotsWrap) return;
+        var dots = dotsWrap.querySelectorAll('.carousel__dot');
+        dots.forEach(function (d, i) {
+          d.classList.toggle('carousel__dot--active', i === currentPage);
+        });
+      }
+
+      function goTo(page) {
+        currentPage = Math.max(0, Math.min(page, pages.length - 1));
+        var cardIndex = pages[currentPage];
+        var offset = cards[cardIndex] ? cards[cardIndex].offsetLeft : 0;
+        track.style.transform = 'translateX(-' + offset + 'px)';
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled = currentPage === pages.length - 1;
+        updateDots();
+      }
+
+      prevBtn.addEventListener('click', function () { goTo(currentPage - 1); });
+      nextBtn.addEventListener('click', function () { goTo(currentPage + 1); });
+
+      function init() {
+        buildPages();
+        buildDots();
+        goTo(0);
+      }
+
+      init();
+
+      var resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          buildPages();
+          buildDots();
+          goTo(0);
+        }, 150);
+      });
+    }
+
+    document.querySelectorAll('[data-carousel]').forEach(initCarousel);
+
+    /* ---- Client-side search ---- */
+    var searchInput = document.getElementById('blog-search-input');
+    var noResults   = document.getElementById('search-no-results');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        var query = this.value.trim().toLowerCase();
+        var allCards = document.querySelectorAll('[data-card]');
+        var visibleCount = 0;
+
+        allCards.forEach(function (card) {
+          var title   = (card.querySelector('.blog-card__title')   || {}).textContent || '';
+          var excerpt = (card.querySelector('.blog-card__excerpt') || {}).textContent || '';
+          var matches = !query || (title + ' ' + excerpt).toLowerCase().indexOf(query) > -1;
+          card.style.display = matches ? '' : 'none';
+          if (matches) visibleCount++;
+        });
+
+        /* Hide entire pillar sections if all their cards are hidden */
+        document.querySelectorAll('[data-pillar]').forEach(function (section) {
+          var sectionCards   = section.querySelectorAll('[data-card]');
+          var sectionVisible = Array.from(sectionCards).some(function (c) { return c.style.display !== 'none'; });
+          section.style.display = sectionVisible || !query ? '' : 'none';
+        });
+
+        if (noResults) {
+          noResults.style.display = (query && visibleCount === 0) ? 'block' : 'none';
+        }
+      });
+    }
+
+  })();
+  </script>
+
+
+  <!-- MailerLite webform handler -->
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+  <script>
+    function ml_webform_success_24367037() {
+      var body = document.querySelector('#mlb2-24367037 .ml-form-embedBody');
+      var success = document.querySelector('#mlb2-24367037 .ml-form-successBody');
+      if (body) body.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
     "sameAs": [
       "https://www.linkedin.com/in/catalina-bonavia/",
-      "https://www.instagram.com/shiftiwthpurpose/"
+      "https://www.instagram.com/shiftwithpurpose/"
     ]
   }
   </script>
@@ -44,12 +44,33 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="methodology.html">Methodology</a></li>
-        
-            <li><a href="blog.html">Insights</a></li>
+      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshops</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="blog.html">Mighty Shifts Archive</a></li>
+            <li><a href="quiz.html">Experience Architecture Index</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__cta">
@@ -64,29 +85,35 @@
   </nav>
 
   <!-- ============================================================
-       HERO
+       HERO — full-bleed layout, text left / photo right to edge
        ============================================================ -->
-  <section class="section section--navy" style="padding-top: 96px; padding-bottom: 96px;">
-    <div class="container">
-      <div class="grid-2" style="align-items: center; gap: 64px;">
-        <div>
-          <span class="caption" style="color: var(--color-sage);">Disability services · aged care · community health · social enterprises</span>
-          <h1 style="margin-top: 20px; margin-bottom: 24px; font-size: clamp(2.1rem, 4.5vw, 3.1rem); line-height: 1.18; color: var(--color-white);">
-            Purpose-led organisations shouldn't have to choose between impact and innovation.
-          </h1>
-          <p class="lead" style="color: rgba(252,252,252,0.82); margin-bottom: 40px;">
-            You've invested in the work. The CRM, the training, the restructure. The pieces are there; they just haven't compounded yet. SHiFT with Purpose connects what you've already built into an end-to-end experience your clients, participants, and people can actually feel.
-          </p>
-          <div class="btn-group">
-            <a href="contact.html" class="btn btn-sage">Book a Free SHiFT Call</a>
-            <a href="quiz.html" class="btn btn-outline-white">Take the EAI Quiz &rarr;</a>
-          </div>
-        </div>
-        <div class="photo-blob-wrap photo-blob-wrap--on-dark" style="height: 600px; max-width: 576px; margin: 0 auto;">
-          <img src="images/cata-hero.png" alt="Catalina Bonavia, founder of SHiFT with Purpose" />
-        </div>
+  <section class="hero-primary" style="background: var(--color-primary); overflow: hidden; display: flex; align-items: stretch; min-height: 680px;">
+
+    <!-- Text column: respects left page margin, centres content vertically -->
+    <div class="hero-primary__copy">
+      <span class="caption" style="color: rgba(255,255,255,0.9); font-weight: 600;">You are in the right place</span>
+      <h1 class="hero-primary__h1">
+        Here is where <span class="hero-kw-underline">impact</span><br>
+        meets <span style="color: var(--color-sage);">creativity</span> and<br>
+        <span style="color: #ffffff;">implementation</span>
+      </h1>
+      <p class="lead" style="color: rgba(25,53,80,0.85); margin-bottom: 40px;">
+        We work with your people, from the shop floor all the way to the board room, to design experiences and services that make your purpose-led org stand out.
+      </p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-sage">Book a Free SHiFT Call</a>
+        <a href="quiz.html" class="btn btn-outline-white">Mini Experience Audit</a>
       </div>
     </div>
+
+    <!-- Photo column: no container cap — bleeds to right viewport edge -->
+    <div class="hero-primary__photo">
+      <div class="photo-blob-wrap photo-blob-wrap--on-purple">
+        <img src="images/cata-hero.png" alt="Catalina Bonavia, founder of SHiFT with Purpose" />
+      </div>
+      <!-- Starburst accent will go here once you provide the image -->
+    </div>
+
   </section>
 
   <!-- ============================================================
@@ -97,14 +124,14 @@
     <!-- White column: headline + context -->
     <div class="split-col split-col--white">
       <span class="caption">Sound familiar?</span>
-      <h2 style="margin: 16px 0 24px;">You've already tried. Something still isn't adding up.</h2>
+      <h2 style="margin: 16px 0 24px;">You've already worked on quality or brand; something still isn't adding up.</h2>
       <p class="lead">
         You're a CEO, COO, or director of a NFP, social enterprise or purpose-led org. You've invested in experience, brand, or systems. The work happened. It just hasn't compounded, because the pieces were designed separately and nobody had time to connect them end-to-end.
       </p>
     </div>
 
-    <!-- Purple column: recognition statements -->
-    <div class="split-col split-col--purple">
+    <!-- Purple column: recognition statements — dark purple -->
+    <div class="split-col split-col--purple" style="background: var(--color-primary-dark);">
       <div class="recognition-statement">
         <div class="recognition-statement__dash"></div>
         <p>Your new systems are in place, but retention scores haven't followed.</p>
@@ -137,7 +164,7 @@
        ============================================================ -->
   <div class="sage-band">
     <div class="container" style="text-align: center; max-width: 800px;">
-      <h1 style="margin-bottom: 24px; color: var(--color-navy);">For organisations who are ready to compound.</h1>
+      <h1 style="margin-bottom: 24px; color: var(--color-navy);">For organisations that are ready to stand out.</h1>
       <p style="font-size: 1.1rem; color: var(--color-navy); opacity: 0.82; margin-bottom: 36px;">
         SHiFT with Purpose works with purpose-led organisations in disability services, aged care, health, and community services to design and implement experiences that work end-to-end. Not because you've failed, but because you're ready to go further.
       </p>
@@ -156,7 +183,7 @@
     <div class="container">
       <div class="section-header section-header--center">
         <span class="caption">Our approach</span>
-        <h2 style="margin-top: 12px;">Not consulting. Co-design.</h2>
+        <h2 style="margin-top: 12px;">Not consulting, co-design.</h2>
         <p style="margin-top: 12px; color: var(--color-text-mid);">
           Three principles that make the work stick where other engagements haven't.
         </p>
@@ -170,10 +197,10 @@
           <p>We don't start from scratch, we connect what you've already built into something that compounds. Your prior investment isn't wasted; it's the foundation we design from.</p>
         </div>
 
-        <!-- 02 Purple card / white text -->
-        <div class="card" style="background: var(--color-primary); border-color: var(--color-primary);">
+        <!-- 02 Dark purple card / white text -->
+        <div class="card" style="background: var(--color-primary-dark); border-color: var(--color-primary-dark);">
           <div style="font-size: 1.5rem; font-weight: 800; color: rgba(255,255,255,0.25); margin-bottom: 16px;">02</div>
-          <h3 style="color: var(--color-white); margin-bottom: 14px;">Human-centred before AI</h3>
+          <h3 style="color: var(--color-white); margin-bottom: 14px;">Human first, then tech</h3>
           <p style="color: rgba(252,252,252,0.88);">Understand the real needs first, design the solution then, and finally choose the technology. This sequence is non-negotiable. It's the order that produces solutions people actually use.</p>
           <p style="color: rgba(252,252,252,0.7); font-size: 0.88rem; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.15);">Already invested in technology that isn't performing? That's often a sequence problem, not a technology problem. We can work with what you have and connect it to what people actually need.</p>
         </div>
@@ -279,30 +306,25 @@
         <div class="shift-method-card">
           <div class="shift-method-card__label">SEE</div>
           <h4 class="shift-method-card__title">Map the experience as it actually exists</h4>
-          <p class="shift-method-card__body">Not the org chart version. Not what leadership thinks is happening. We sit with frontline workers, interview participants and clients, and build a picture of what people actually experience from first contact through to ongoing service.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">We collaborate with leadership and the board to understand and design a direction. We bring both worlds together into one picture.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">We ask the questions the room has stopped asking, to uncover the possibilities that insiders are too close to see.</p>
+          <p class="shift-method-card__body">We sit with frontline workers and interview participants to build a picture of what people actually experience; not what the org chart says should happen.</p>
         </div>
 
         <div class="shift-method-card shift-method-card--accent">
           <div class="shift-method-card__label">SHAPE</div>
           <h4 class="shift-method-card__title">Design around behaviours and needs, not just process</h4>
-          <p class="shift-method-card__body">Co-design workshops where your team builds the solution with us. We design for how humans actually behave; then layer in AI (and other technology) deliberately — automating repetitive tasks, surfacing insights, connecting systems that should already talk to each other.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">The change is easier because your people designed it.</p>
+          <p class="shift-method-card__body">Co-design workshops where your team builds the solution with us; then we layer in technology deliberately, where it actually helps.</p>
         </div>
 
         <div class="shift-method-card shift-method-card--accent">
           <div class="shift-method-card__label">SHiFT</div>
           <h4 class="shift-method-card__title">Implement so the work doesn't stay on a slide deck</h4>
-          <p class="shift-method-card__body">We support you through implementation; designing the details, providing change and communications support. We stay alongside you and your team — not as a consultant watching from the sideline, but as a partner making sure the design becomes the reality.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">Where required, AI tools are designed and your team is supported to adopt them — always specifically designed for your context and handed over with your people at the controls.</p>
+          <p class="shift-method-card__body">We stay alongside you through implementation; not as a consultant watching from the sideline, but as a partner making sure the design becomes the reality.</p>
         </div>
 
         <div class="shift-method-card">
           <div class="shift-method-card__label">SUSTAIN</div>
           <h4 class="shift-method-card__title">Build capability so it keeps improving</h4>
-          <p class="shift-method-card__body">Track what changes, measure what matters, and build the internal capability for the experience to keep compounding.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">The goal is for your organisation to run this without us — because the best outcome is that you no longer need us for your day-to-day.</p>
+          <p class="shift-method-card__body">We build your team's internal capability so the experience keeps compounding; the goal is that you no longer need us for the day-to-day.</p>
         </div>
 
       </div>
@@ -480,34 +502,34 @@
 
     <!-- Left: white — what we're NOT -->
     <div class="split-col split-col--white" style="padding: 80px 64px;">
-      <h2 style="margin-bottom: 40px; color: var(--color-navy);">What SHiFT with Purpose is (and what it isn't)</h2>
+      <h2 style="margin-bottom: 40px; color: var(--color-navy);">We're not what you've tried before.</h2>
 
       <div style="display: flex; flex-direction: column; gap: 28px;">
         <div>
-          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px;">Not a marketing agency.</p>
-          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We don't run ads or manage socials. We design the experience that makes your marketing true. If your marketing promises something your delivery can't sustain, that's the gap we close.</p>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won't run your ads while your delivery gaps grow.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We design the experience that makes your marketing true. If your marketing promises something your delivery can't sustain, that's the gap we close.</p>
         </div>
         <div style="height: 1px; background: var(--color-border);"></div>
         <div>
-          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px;">Not a big consulting firm.</p>
-          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We don't hand over a 200-page report and walk away. We co-design with your team and implement alongside you. No cookie-cutter frameworks. No junior staff doing the work. You get Cata, start to finish.</p>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won't hand you a report and call it done.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We co-design with your team and implement alongside you. No cookie-cutter frameworks. No junior staff doing the work. You get Cata, start to finish.</p>
         </div>
         <div style="height: 1px; background: var(--color-border);"></div>
         <div>
-          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px;">Not an AI tech vendor.</p>
-          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We don't sell software. We help you figure out where AI fits and where it doesn't, always with your people at the centre. Platform-agnostic and human-centred first.</p>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won't sell you software before understanding your people.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We help you figure out where AI fits and where it doesn't, always with your people at the centre. Platform-agnostic and human-first.</p>
         </div>
         <div style="height: 1px; background: var(--color-border);"></div>
         <div>
-          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px;">Not a freelancer who disappears at handover.</p>
-          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We stay alongside you through implementation. The work is done when the change is embedded — not when the document is delivered.</p>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won't disappear when implementation gets messy.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">The work is done when the change is embedded; not when the document is delivered.</p>
         </div>
       </div>
     </div>
 
-    <!-- Right: purple — what we ARE -->
-    <div class="split-col split-col--purple" style="padding: 80px 64px;">
-      <h2 style="color: var(--color-white); margin-bottom: 40px;">We ARE</h2>
+    <!-- Right: dark purple — what we ARE -->
+    <div class="split-col split-col--purple" style="padding: 80px 64px; background: var(--color-primary-dark);">
+      <h2 style="color: var(--color-white); margin-bottom: 40px;">We are your partner from idea to implementation.</h2>
       <div style="display: flex; flex-direction: column; gap: 24px;">
         <div style="display: flex; align-items: flex-start; gap: 16px;">
           <span style="color: var(--color-sage); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
@@ -556,7 +578,7 @@
 
     <!-- Right: photo — tightly cropped to faces -->
     <div style="background: var(--color-navy); overflow: hidden; min-height: 200px;">
-      <img src="images/workshop-session.png" alt="SHiFT with Purpose workshop in action" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; opacity: 0.9;" />
+      <img src="images/cata-laughing-with-clients.jpg" alt="SHiFT with Purpose workshop in action" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; opacity: 0.9;" />
     </div>
 
   </section>
@@ -566,13 +588,50 @@
        ============================================================ -->
   <footer class="footer">
     <div class="container">
+
+      <!-- EDM Subscription -->
+      <div class="footer-edm">
+        <div class="footer-edm__inner">
+          <div>
+            <p class="footer-edm__label">Mighty Shifts</p>
+            <h3 class="footer-edm__heading">One insight. Every Thursday.<br>For the leaders doing the hardest work.</h3>
+            <p class="footer-edm__body">Mighty Shifts is a weekly email for CEOs, COOs, and founders in disability services, aged care, and community health. Each issue delivers one sharp, practical insight — no generic advice, no consultant jargon. Just the thinking your peers don't have time to share.</p>
+          </div>
+          <div>
+            <div id="mlb2-24367037" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24367037">
+              <div class="ml-form-embedWrapper embedForm" style="background:transparent;border:none;padding:0;width:100%;max-width:100%;">
+                <div class="ml-form-embedBody row-form" style="padding:0;">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" data-code="" method="post" target="_blank" style="margin:0;">
+                    <div class="footer-edm__form-row">
+                      <input aria-label="name" type="text" name="fields[name]" placeholder="First name" class="footer-edm__input" autocomplete="given-name" />
+                      <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" class="footer-edm__input" required autocomplete="email" />
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
+                    <button disabled="disabled" style="display:none;" type="button"><span class="sr-only">Loading...</span></button>
+                    <p class="footer-edm__microcopy">No generic advice. No consultant jargon. Unsubscribe any time.</p>
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none;padding:0;">
+                  <div style="padding: 24px 0;">
+                    <h4 style="color:var(--color-sage);margin-bottom:12px;">You&rsquo;re on the list.</h4>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. I can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer__grid">
         <div>
           <div class="footer__logo"><img src="images/logo-dark.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
           <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/shiftiwthpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
         <div class="footer__col">
@@ -610,5 +669,45 @@
     </div>
   </footer>
 
+
+  <!-- Mobile nav toggle -->
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+
+      // Close when clicking outside the nav
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('nav--open');
+        }
+      });
+
+      // Close when a nav link is clicked
+      document.querySelectorAll('.nav__links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          nav.classList.remove('nav--open');
+        });
+      });
+    })();
+  </script>
+
+  <!-- MailerLite webform handler -->
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+  <script>
+    function ml_webform_success_24367037() {
+      var body = document.querySelector('#mlb2-24367037 .ml-form-embedBody');
+      var success = document.querySelector('#mlb2-24367037 .ml-form-successBody');
+      if (body) body.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
