@@ -1446,8 +1446,9 @@ a.has-dropdown::after {
   position: relative;
   overflow: visible;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  padding: 32px 0;
 }
 
 .hero-primary__photo .photo-blob-wrap {
@@ -2278,3 +2279,58 @@ a.has-dropdown::after {
     height: 14px;
   }
 }
+
+/* =============================================================
+   Logo Carousel
+   ============================================================= */
+.logo-carousel {
+  overflow: hidden;
+  position: relative;
+  background: var(--color-white);
+  padding: 56px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.logo-carousel__label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-mid);
+  margin: 0 0 40px;
+}
+.logo-carousel::before,
+.logo-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+.logo-carousel::before { left: 0;  background: linear-gradient(to right, var(--color-white), transparent); }
+.logo-carousel::after  { right: 0; background: linear-gradient(to left,  var(--color-white), transparent); }
+.logo-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  width: max-content;
+  animation: logo-scroll 40s linear infinite;
+}
+.logo-carousel__track:hover { animation-play-state: paused; }
+@keyframes logo-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logo-carousel__track img {
+  height: 132px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  opacity: 0.65;
+  flex-shrink: 0;
+  transition: opacity 0.25s;
+}
+.logo-carousel__track img:hover { opacity: 1; }
