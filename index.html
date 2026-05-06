@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NR1ZB5W4N5');
+  </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
@@ -207,7 +215,7 @@
        CRITICAL MOMENTS; white bg, purple heading, Playfair accents
        ============================================================ -->
   <section style="background: var(--color-white); padding: 0; overflow: hidden;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 560px;">
+    <div class="critical-moments-grid" style="display: grid; grid-template-columns: 1fr 1fr; min-height: 560px;">
 
       <!-- Left: heading + list -->
       <div style="padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; gap: 40px;">
@@ -353,7 +361,7 @@
       <h2 style="margin-top: 12px;">There&rsquo;s a way in that fits where you are.</h2>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+    <div class="services-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
 
       <!-- Catalyst; purple -->
       <div style="background: var(--color-primary); padding: 56px 48px; display: flex; flex-direction: column; gap: 24px;">
@@ -682,7 +690,7 @@
       <p style="margin-top: 12px; color: var(--color-text-mid);">Two ways to get real value before you commit to anything.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+    <div class="entry-points-grid" style="display: grid; grid-template-columns: 1fr 1fr;">
 
       <!-- Left: Free SHiFT Call; lavender -->
       <div style="background: var(--color-lavender); padding: 64px 56px; display: flex; flex-direction: column; gap: 24px;">

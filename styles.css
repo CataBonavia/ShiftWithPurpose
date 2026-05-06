@@ -65,6 +65,7 @@ body {
   background-color: var(--color-white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -1806,8 +1807,67 @@ a.has-dropdown::after {
   }
 
   .grid-2,
-  .grid-3 {
+  .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  /* Services: 3 columns → single column stack */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .services-grid > div {
+    padding: 48px 24px !important;
+  }
+
+  /* Start here: 2 columns → single column stack */
+  .entry-points-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .entry-points-grid > div {
+    padding: 48px 24px !important;
+  }
+
+  /* Split sections: fix inline padding overriding mobile CSS */
+  .split-col {
+    padding: 56px 24px !important;
+  }
+
+  /* Banner cards (workshop, EAI) — stack CTA below content */
+  .banner-card {
+    grid-template-columns: 1fr !important;
+    padding: 32px 24px !important;
+  }
+
+  /* Phase cards (partnership) — stack number above content */
+  .phase-card {
+    grid-template-columns: 1fr !important;
+    padding: 28px 24px !important;
+    gap: 16px !important;
+  }
+  .phase-card > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+  }
+
+  /* Critical moments: stack the two-column layout, hide photo on mobile */
+  .critical-moments-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .critical-moments-grid > div:last-child {
+    display: none;
+  }
+  .critical-moments-grid > div:first-child {
+    padding: 56px 24px !important;
+  }
+
+  /* Co-design section inner padding */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* On mobile, show blob photo at a comfortable height */
@@ -1830,14 +1890,10 @@ a.has-dropdown::after {
   }
 
   /* Mobile nav — open state */
-  .nav--open {
-    position: relative;
-  }
-
   .nav--open .nav__links {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 72px;
     left: 0;
     right: 0;
