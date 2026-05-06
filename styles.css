@@ -5,7 +5,11 @@
    ============================================================= */
 
 /* Garet — primary brand font (Fontshare) */
-@import url('https://api.fontshare.com/v2/css?f[]=garet@400,700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=garet@400,700,800&display=swap');
+/* Satoshi — section captions / labels (Fontshare) */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+/* Clash Display — accent / display words (Fontshare) */
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
 /* Poppins — fallback / extended weights */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -19,12 +23,14 @@
   --color-sage:      #ced78d;   /* Sage/lime — fresh highlight accent */
   --color-lavender:  #e7cfe8;   /* Lavender — soft backgrounds */
   --color-white:     #fcfcfc;   /* Off-white — main backgrounds */
-  --color-text:      #1c1c2e;   /* Near-black — body text */
-  --color-text-mid:  #4a4a6a;   /* Mid tone — secondary text */
+  --color-text:      #4a2d6a;   /* Purple — body text */
+  --color-text-mid:  #6c5481;   /* Purple mid — secondary text */
   --color-border:    #e2dce8;   /* Light border */
 
   --font-main:       'Garet', 'Poppins', sans-serif;
-  --font-accent:     'Garet', 'Poppins', sans-serif;
+  --font-accent:     'Clash Display', 'Garet', sans-serif;
+  --font-caption:    'Satoshi', 'Poppins', sans-serif;
+  --color-coral:     #e07560;
 
   --max-width:       1160px;
   --section-py:      96px;
@@ -103,11 +109,21 @@ p {
 }
 
 .caption {
+  font-family: var(--font-caption);
   font-size: 0.82rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-primary);
+  display: block;
+  line-height: 1.2;
+}
+
+/* Clash Display accent words */
+.accent {
+  font-family: var(--font-accent);
+  font-style: normal;
+  font-weight: 600;
 }
 
 .accent-text {
@@ -767,8 +783,8 @@ a.has-dropdown::after {
 
 .tc-photo {
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--color-sage);
