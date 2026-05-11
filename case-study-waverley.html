@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5"></script>
+  <!-- Google Analytics — loads only after cookie consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NR1ZB5W4N5');
+    function swp_loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5';
+      document.head.appendChild(s);
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-NR1ZB5W4N5'); };
+    }
+    if (localStorage.getItem('swp_cookie_consent') === 'accepted') { swp_loadGA(); }
   </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
@@ -166,10 +171,11 @@
         <li>
           <a href="services.html" class="has-dropdown">Services</a>
           <ul class="nav__dropdown">
-            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
-            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst (Strategy Day)</a></li>
+            <li><a href="spark.html">SHiFT Spark (Project)</a></li>
+            <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
             <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
-            <li><a href="contact.html">Bespoke Workshops</a></li>
+            <li><a href="contact.html">Bespoke Workshop</a></li>
           </ul>
         </li>
         <li>
@@ -476,7 +482,7 @@
         <div style="background: var(--color-lavender); border-radius: var(--radius-lg); padding: 48px 40px;">
           <h3 style="color: var(--color-navy); margin-bottom: 16px;">Want to see what this looks like for your organisation?</h3>
           <p style="color: var(--color-text-mid); line-height: 1.7; margin-bottom: 32px;">Thirty minutes. No pitch. A conversation about where the leverage is hiding in your participant or employee experience.</p>
-          <a href="contact.html" class="btn btn-primary">Book a free SHiFT Call &rarr;</a>
+          <a href="contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
         </div>
 
         <!-- Secondary CTA -->
@@ -568,7 +574,7 @@
                 <div class="ml-form-successBody row-success" style="display:none;padding:0;">
                   <div style="padding: 24px 0;">
                     <h4 style="color:var(--color-sage);margin-bottom:12px;">You&rsquo;re on the list.</h4>
-                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. I can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. We can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
                   </div>
                 </div>
               </div>
@@ -591,7 +597,7 @@
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 SHiFT with Purpose. ABN: 43 326 330 421. All rights reserved.</span>
-        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a></span>
+        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a> &nbsp;|&nbsp; <a href="#" id="swp-cookie-prefs" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Cookie preferences</a></span>
       </div>
     </div>
   </footer>
@@ -625,5 +631,43 @@
       if (success) success.style.display = 'block';
     }
   </script>
+
+  <!-- ============================================================
+       COOKIE CONSENT BANNER
+       ============================================================ -->
+  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-primary-dark); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.65; margin:0; max-width:660px;">
+      We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--color-sage); text-decoration:underline; text-underline-offset:3px;">Privacy policy</a>
+    </p>
+    <div style="display:flex; gap:12px; flex-shrink:0;">
+      <button id="swp-cookie-decline" style="background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.65); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-family:inherit;">Decline</button>
+      <button id="swp-cookie-accept" style="background:var(--color-sage); border:none; color:var(--color-navy); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-weight:700; font-family:inherit;">Accept</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var KEY = 'swp_cookie_consent';
+      var banner = document.getElementById('swp-cookie-banner');
+      if (!localStorage.getItem(KEY) && banner) banner.style.display = 'flex';
+      var a = document.getElementById('swp-cookie-accept');
+      var d = document.getElementById('swp-cookie-decline');
+      var p = document.getElementById('swp-cookie-prefs');
+      if (a) a.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'accepted');
+        if (banner) banner.style.display = 'none';
+        if (typeof swp_loadGA === 'function') swp_loadGA();
+      });
+      if (d) d.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'declined');
+        if (banner) banner.style.display = 'none';
+      });
+      if (p) p.addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem(KEY);
+        if (banner) banner.style.display = 'flex';
+      });
+    })();
+  </script>
+
 </body>
 </html>

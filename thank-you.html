@@ -20,119 +20,210 @@
   <link rel="shortcut icon" href="images/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Discovery Call | SHiFT with Purpose</title>
-  <meta name="description" content="Book a free 30-minute discovery call with Catalina Bonavia. Find out which service is right for you, your people, and the transformation you're looking to achieve." />
-  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/contact" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/contact" />
-  <meta property="og:title" content="Book a Discovery Call | SHiFT with Purpose" />
-  <meta property="og:description" content="30 minutes to find out which package is right for you. Book a free discovery call with Catalina Bonavia." />
-
+  <title>You're booked in | SHiFT with Purpose</title>
+  <meta name="description" content="Your discovery call is confirmed. Here's what happens next." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/thank-you" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Moxie iFrame resizer -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js"></script>
-
   <style>
-    /* Full-viewport two-column booking layout */
-    .booking-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: calc(100vh - 72px); /* subtract nav height */
+    .thankyou-page {
+      background: var(--color-lavender);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    .booking-split__left {
+    /* ---------- HERO ---------- */
+    .thankyou-hero {
       background: var(--color-primary-dark);
-      padding: clamp(48px, 7vw, 96px) clamp(32px, 5vw, 72px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .booking-split__right {
-      background: #f5f2f8;
-      padding: clamp(32px, 5vw, 64px) clamp(24px, 4vw, 56px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .booking-split__left h1 {
-      color: var(--color-white);
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      margin: 0 0 12px;
-      line-height: 1.15;
-    }
-
-    .booking-split__left h2 {
-      color: var(--color-sage);
-      font-size: clamp(1rem, 1.6vw, 1.25rem);
-      font-weight: 600;
-      margin: 0 0 28px;
-      line-height: 1.4;
-    }
-
-    .booking-split__left p {
-      color: rgba(252,252,252,0.85);
-      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-      line-height: 1.7;
-      margin: 0 0 20px;
-    }
-
-    .booking-split__left ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .booking-split__left ul li {
-      color: rgba(252,252,252,0.85);
-      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-      line-height: 1.6;
-      padding-left: 20px;
+      padding: clamp(56px, 8vw, 104px) 24px clamp(56px, 8vw, 96px);
       position: relative;
-    }
-
-    .booking-split__left ul li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--color-sage);
-      font-size: 0.9em;
-    }
-
-    .booking-split__left .closing-line {
-      color: var(--color-sage);
-      font-weight: 700;
-      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-      margin: 8px 0 0;
-    }
-
-    .moxie-wrapper {
-      background: var(--color-white);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
       overflow: hidden;
     }
 
-    @media (max-width: 860px) {
-      .booking-split {
-        grid-template-columns: 1fr;
-        min-height: unset;
-      }
+    .thankyou-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-      .booking-split__right {
-        padding: 40px 24px 64px;
+    .thankyou-hero__inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .thankyou-hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-sage);
+      color: var(--color-navy);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    .thankyou-hero__eyebrow::before {
+      content: '✓';
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .thankyou-hero h1 {
+      color: var(--color-white);
+      font-size: clamp(2.4rem, 5.2vw, 4rem);
+      margin: 0 0 20px;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .thankyou-hero p {
+      color: rgba(252,252,252,0.85);
+      font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+      max-width: 480px;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .thankyou-hero__image {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+      aspect-ratio: 4 / 5;
+      background: var(--color-lavender);
+    }
+
+    .thankyou-hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ---------- LETTER / SECTIONS ---------- */
+    .thankyou-letter {
+      flex: 1;
+      padding: clamp(48px, 7vw, 88px) 24px clamp(56px, 8vw, 96px);
+    }
+
+    .thankyou-letter__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(24px, 3vw, 32px);
+    }
+
+    .letter-block {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: clamp(36px, 5vw, 56px) clamp(28px, 4vw, 52px);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    }
+
+    .letter-block__title {
+      font-size: clamp(1.45rem, 2.6vw, 2rem);
+      color: var(--color-primary-dark);
+      margin: 0 0 20px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .letter-block p {
+      font-size: clamp(0.97rem, 1.2vw, 1.06rem);
+      line-height: 1.8;
+      color: var(--color-text);
+      margin: 0 0 18px;
+    }
+
+    .letter-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .letter-question {
+      background: var(--color-lavender);
+      border-left: 4px solid var(--color-primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-size: clamp(0.97rem, 1.2vw, 1.06rem);
+      line-height: 1.75;
+      color: var(--color-navy);
+      font-style: italic;
+    }
+
+    .letter-signature {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .letter-signature p {
+      font-size: clamp(0.97rem, 1.2vw, 1.06rem);
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .letter-signature .sig-name {
+      font-family: var(--font-accent);
+      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+      color: var(--color-primary-dark);
+      display: block;
+      margin-top: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .thankyou-links {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 860px) {
+      .thankyou-hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+      .thankyou-hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .thankyou-hero__image {
+        max-width: 360px;
+        margin: 0 auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .letter-block {
+        padding: 32px 24px;
       }
     }
   </style>
 </head>
-<body>
+<body class="thankyou-page">
 
   <!-- ============================================================
        NAVIGATION
@@ -142,7 +233,8 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
         <li>
           <a href="methodology.html" class="has-dropdown">Methodology</a>
           <ul class="nav__dropdown">
@@ -170,10 +262,10 @@
             <li><a href="quiz.html">Experience Architecture Index</a></li>
           </ul>
         </li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__cta">
-        <a href="#booking" class="btn btn-primary">Book a Free SHiFT Call</a>
+        <a href="contact.html#booking" class="btn btn-primary">Book a Free SHiFT Call</a>
       </div>
       <div class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -182,41 +274,64 @@
   </nav>
 
   <!-- ============================================================
-       BOOKING — TWO-COLUMN FULL-PAGE LAYOUT
+       HERO
        ============================================================ -->
-  <section id="booking" class="booking-split">
-
-    <!-- Left: Copy -->
-    <div class="booking-split__left">
-      <h1>Let's Chat</h1>
-      <h2>Book Your free 45 minute Discovery Call</h2>
-      <p>If you're not quite sure what option would work best for you, let's jump on a call.</p>
-      <p>This 45 minutes are a great opportunity to:</p>
-      <ul>
-        <li>Get to know each other</li>
-        <li>Understand your key challenges, goals and what you're looking to achieve</li>
-        <li>Better understand what I do and how I do it.</li>
-      </ul>
-      <p>By the end of the call, I'll provide you with a recommendation on which package is best for you, your people and the transformation you are looking to achieve.</p>
-      <p style="margin-bottom: 8px;">And will know whether we're suited to work together to achieve your attraction, retention and impact goals.</p>
-      <p class="closing-line">Pick a date and time and book in now.</p>
-    </div>
-
-    <!-- Right: Moxie calendar -->
-    <div class="booking-split__right">
-      <div class="moxie-wrapper">
-        <div style="width:100%; min-height:500px;">
-          <iframe
-            src="https://hello.withmoxie.com/01/weshift/discovery-call?inFrame=true"
-            id="moxie-discovery-call"
-            style="padding: 0; margin: 0; border: 0; max-width: 100%; min-width: 100%;"
-            title="Book a Discovery Call with Cata"
-          ></iframe>
-        </div>
+  <div class="thankyou-hero">
+    <div class="thankyou-hero__inner">
+      <div class="thankyou-hero__content">
+        <span class="thankyou-hero__eyebrow">Your call is confirmed</span>
+        <h1>You're booked in</h1>
+        <p>Over the next few days I'll share some stories to illustrate what to expect.</p>
+      </div>
+      <div class="thankyou-hero__image">
+        <img src="images/cata-hero.png" alt="Catalina Bonavia, Founder of SHiFT with Purpose" />
       </div>
     </div>
+  </div>
 
-  </section>
+  <!-- ============================================================
+       SECTIONS
+       ============================================================ -->
+  <div class="thankyou-letter">
+    <div class="thankyou-letter__inner">
+
+      <!-- Section 1 -->
+      <section class="letter-block">
+        <h2 class="letter-block__title">You don't need to have it all figured out</h2>
+        <p>Most leaders I speak with can't quite name what's going on; and that's actually best. All I ask you is to come open to share and to sit with the unknown. We'll unpack it together &mdash; I promise!</p>
+        <p>Booking this call means you're one step closer to a transformation that matters, and I'm genuinely excited to walk through this SHiFT with you.</p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="letter-block">
+        <h2 class="letter-block__title">What happens next</h2>
+        <p>Over the next couple of days I'll send you a few things; how I think, how I work, and some of the shifts I've helped organisations like yours make. I promise it won't be a lengthy boring document; just enough context so that when we meet, you already know who you're walking in to speak with.</p>
+        <p>The call itself is 30&ndash;45 minutes. Come as you are. The best conversations I have start with someone saying "I'm not entirely sure how to describe it, but something isn't quite working."</p>
+        <p>That's exactly where we begin.</p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="letter-block">
+        <h2 class="letter-block__title">In the meantime</h2>
+        <p>If something comes to mind before our call; a detail you forgot to add, something you want me to know, just reply to any of my emails. I read everything.</p>
+        <p>And if you're anything like me, you'll want something to chew on before we meet. So here's a question I ask all my clients before we begin:</p>
+        <div class="letter-question">
+          What would make you feel comfortable throughout our time together? And is there anything (positive or negative) from a past experience, with transformation, change, or consultants, that still sits with you?
+        </div>
+        <p>Your answer to that is the foundation of how we build something that actually works.</p>
+        <div class="letter-signature">
+          <p>I'll see you soon.</p>
+          <span class="sig-name">Cata</span>
+        </div>
+      </section>
+
+      <div class="thankyou-links">
+        <a href="index.html" class="btn btn-outline">Back to home</a>
+        <a href="quiz.html" class="btn btn-accent">Take the EAI Quiz &rarr;</a>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ============================================================
        FOOTER
@@ -235,10 +350,10 @@
         <div class="footer__col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#catalyst">SHiFT Catalyst</a></li>
-            <li><a href="services.html#partnership">SHiFT Partnership</a></li>
-            <li><a href="services.html#ai-amplifier">AI Amplifier</a></li>
-            <li><a href="services.html#workshops">Workshops</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="spark.html">SHiFT Spark</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -246,7 +361,6 @@
           <ul>
             <li><a href="about.html">About Cata</a></li>
             <li><a href="methodology.html">Methodology</a></li>
-        
             <li><a href="blog.html">Insights</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
@@ -255,7 +369,7 @@
         <div class="footer__col">
           <h4>Start here</h4>
           <ul>
-            <li><a href="contact.html">Free SHiFT Call</a></li>
+            <li><a href="contact.html">Discovery Call</a></li>
             <li><a href="quiz.html">EAI Quiz</a></li>
           </ul>
         </div>
@@ -266,34 +380,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Moxie iFrame init -->
-  <script type="text/javascript">
-    setTimeout(() => iFrameResize({
-      heightCalculationMethod: 'min',
-      sizeWidth: true,
-      sizeHeight: true,
-      log: false,
-      checkOrigin: false
-    }, '#moxie-discovery-call'), 100);
-
-    window.addEventListener("message", (event) => {
-      if (event.origin === 'https://hello.withmoxie.com' && event.data && event.data.startsWith('[Redirect]')) {
-        let url = event.data.slice(10);
-        // If Moxie sends a relative or empty redirect, land on the thank-you page
-        if (!url || url === '/') {
-          window.location = 'thank-you.html';
-        } else {
-          window.location = url;
-        }
-      }
-      // Booking confirmed event — redirect to thank-you page
-      if (event.origin === 'https://hello.withmoxie.com' && event.data && event.data.includes('booking_confirmed')) {
-        window.location = 'thank-you.html';
-      }
-    }, false);
-  </script>
-
 
   <!-- Mobile nav toggle -->
   <script>
@@ -308,14 +394,12 @@
         toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
       });
 
-      // Close when clicking outside the nav
       document.addEventListener('click', function(e) {
         if (!nav.contains(e.target)) {
           nav.classList.remove('nav--open');
         }
       });
 
-      // Close when a nav link is clicked
       document.querySelectorAll('.nav__links a').forEach(function(link) {
         link.addEventListener('click', function() {
           nav.classList.remove('nav--open');

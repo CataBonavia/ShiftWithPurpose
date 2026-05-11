@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5"></script>
+  <!-- Google Analytics — loads only after cookie consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NR1ZB5W4N5');
+    function swp_loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5';
+      document.head.appendChild(s);
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-NR1ZB5W4N5'); };
+    }
+    if (localStorage.getItem('swp_cookie_consent') === 'accepted') { swp_loadGA(); }
   </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
@@ -49,10 +54,11 @@
         <li>
           <a href="services.html" class="has-dropdown">Services</a>
           <ul class="nav__dropdown">
-            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
-            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst (Strategy Day)</a></li>
+            <li><a href="spark.html">SHiFT Spark (Project)</a></li>
+            <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
             <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
-            <li><a href="contact.html">Bespoke Workshops</a></li>
+            <li><a href="contact.html">Bespoke Workshop</a></li>
           </ul>
         </li>
         <li>
@@ -81,9 +87,9 @@
   <section id="shift-method" class="section" style="background: var(--color-navy); padding: 96px 0 80px;">
     <div class="container" style="max-width: 800px; text-align: center;">
       <span class="caption" style="color: var(--color-sage);">How we work</span>
-      <h1 style="color: var(--color-white); margin-top: 16px; margin-bottom: 20px;">The SHiFT Method</h1>
+      <h1 style="color: var(--color-white); margin-top: 16px; margin-bottom: 20px;">The SHiFT Method<sup style="font-size: 0.45em; vertical-align: super;">®</sup></h1>
       <p class="lead" style="color: rgba(252,252,252,0.8);">
-        Four stages. One continuous thread. Everything connects; from the first research conversation to the moment your team runs the experience independently.
+        Four stages that take you from strategy to implementation. Everything connects; from the first research conversation to the moment your team runs the experience independently.
       </p>
     </div>
   </section>
@@ -97,24 +103,24 @@
 
         <div class="shift-method-card">
           <div class="shift-method-card__label">SEE</div>
-          <h4 class="shift-method-card__title">Map the experience as it actually exists</h4>
-          <p class="shift-method-card__body">Not the org chart version. Not what leadership thinks is happening. We sit with frontline workers, interview participants and clients, and build a picture of what people actually experience from first contact through to ongoing service.</p>
+          <h4 class="shift-method-card__title">Map the reality as it actually exists</h4>
+          <p class="shift-method-card__body">We don't focus on the org chart version or what leadership thinks is happening. We sit with frontline workers, interview participants and clients, and if available, we look into your data. Then we build a picture of what people actually experience from first contact through to ongoing service; and how that's being delivered.</p>
           <p class="shift-method-card__body" style="margin-top: 12px;">We collaborate with leadership and the board to understand and design a direction. We bring both worlds together into one picture.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">We ask the questions the room has stopped asking, to uncover the possibilities that insiders are too close to see.</p>
+          <p class="shift-method-card__body" style="margin-top: 12px;">We ask the questions the team has stopped asking, to uncover the possibilities that insiders are too close to see.</p>
         </div>
 
         <div class="shift-method-card shift-method-card--accent">
           <div class="shift-method-card__label">SHAPE</div>
           <h4 class="shift-method-card__title">Design around behaviours and needs, not just process</h4>
-          <p class="shift-method-card__body">Co-design workshops where your team builds the solution with us. We design for how humans actually behave; then layer in AI (and other technology) deliberately; automating repetitive tasks, surfacing insights, connecting systems that should already talk to each other.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">The change is easier because your people designed it.</p>
+          <p class="shift-method-card__body">We do co-design workshops where your team builds the solution with us (for real). We design for how humans actually behave; what drives and blocks them. Then we layer processes and technology (including AI) deliberately; to automate repetitive tasks, eliminate what's not adding value and connect systems to create efficiencies.</p>
+          <p class="shift-method-card__body" style="margin-top: 12px;">This phase is what makes change easier; because your people designed it.</p>
         </div>
 
         <div class="shift-method-card shift-method-card--accent">
           <div class="shift-method-card__label">SHiFT</div>
           <h4 class="shift-method-card__title">Implement so the work doesn't stay on a slide deck</h4>
-          <p class="shift-method-card__body">We support you through implementation; designing the details, providing change and communications support. We stay alongside you and your team; not as a consultant watching from the sideline, but as a partner making sure the design becomes the reality.</p>
-          <p class="shift-method-card__body" style="margin-top: 12px;">Where required, AI tools are designed and your team is supported to adopt them; always specifically designed for your context and handed over with your people at the controls.</p>
+          <p class="shift-method-card__body">We support you through implementation; designing the details, providing change and communications support. We stay alongside you and your team; as your partner making sure the design becomes the reality.</p>
+          <p class="shift-method-card__body" style="margin-top: 12px;">Where required, we design assets (forms, visuals, spaces, AI tools) and we support your team to adopt them; always specifically designed for your context and handed over to your people.</p>
         </div>
 
         <div class="shift-method-card">
@@ -137,53 +143,40 @@
         <div>
           <span class="caption">Framework</span>
           <h2 style="margin-top: 12px; margin-bottom: 12px;">The Experience Architecture Framework</h2>
-          <p style="font-size: 1rem; color: var(--color-text-mid); margin-bottom: 20px;">The framework that reveals whether your experience is designed to grow with you, or quietly working against you.</p>
-          <div class="divider"></div>
-          <p class="lead" style="margin-top: 20px; margin-bottom: 24px;">
+          <div class="divider" style="margin-bottom: 20px;"></div>
+          <p class="lead" style="margin-bottom: 24px;">
             Before we redesign anything, we need to understand what's actually happening.
           </p>
           <p style="margin-bottom: 20px;">
-            The Experience Architecture Framework is a structured way of looking at how trust is built, value is delivered, and impact is sustained across your organisation. It breaks the experience into six layers and one multiplier, each measuring a different dimension of how your clients, customers, or participants experience working with you.
+            After more than a decade working with purpose-led organisations, we designed a framework that serves as the structure to design services and experiences that create real impact.
           </p>
           <p style="margin-bottom: 20px;">
-            Most organisations have invested in some of these layers without realising it. Strong operations here, a great team member there, a process that works well in one area but breaks down in another. The framework connects these pieces and reveals the patterns that are otherwise invisible: where the experience is strong by design, where it's strong by effort, and where it's quietly leaking the loyalty you've worked hard to build.
+            The Experience Architecture Framework is a structured way of looking at how trust is built, value is delivered, and impact is sustained across your organisation. We look into six layers and one multiplier, each measuring a different dimension of how your clients, team, or partners experience working with you.
           </p>
+          <p style="margin-bottom: 20px;">
+            Most organisations have invested in some of these layers without realising it. Strong operations here, a great team member there, a process that works well in one area but breaks down in another. The framework connects these pieces and reveals the patterns that are otherwise invisible:
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-sage); font-weight: 700; flex-shrink: 0;">—</span>
+              <span>Where the experience is strong by design,</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-sage); font-weight: 700; flex-shrink: 0;">—</span>
+              <span>Where it's strong by effort, and</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-sage); font-weight: 700; flex-shrink: 0;">—</span>
+              <span>Where it's quietly leaking the loyalty you've worked hard to build.</span>
+            </li>
+          </ul>
           <p style="margin-bottom: 32px;">
-            The framework is assessed through the Experience Architecture Index, a 7-minute diagnostic that gives you a personalised picture of where you are across all seven dimensions.
+            To get you started we've created the Experience Architecture Index; a 7-minute diagnostic that gives you a personalised picture of where you are across all seven dimensions.
           </p>
           <a href="quiz.html" class="btn btn-primary">Take the Experience Architecture Index &rarr;</a>
         </div>
-        <div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
-              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Brilliant Basics</h4>
-              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Operational trust and friction discipline. Are your clients doing work your systems should be doing?</p>
-            </div>
-            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
-              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Intentional Direction</h4>
-              <p style="font-size: 0.87rem; color: var(--color-text-mid);">End-to-end experience design. If your best person left tomorrow, would the experience hold up?</p>
-            </div>
-            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
-              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Embedded Confidence</h4>
-              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Belief built by design, not by effort. Does your experience build confidence automatically, or only when someone remembers to check in?</p>
-            </div>
-            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
-              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Purposeful Relevance</h4>
-              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Contextual adaptation and personalisation. Does your experience get smarter over time, or repeat itself?</p>
-            </div>
-            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
-              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Clear Movement</h4>
-              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Visible momentum and felt progress. Do your clients know the experience is working, or do they just hope it is?</p>
-            </div>
-            <div style="background: #f9f7fb; border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--color-primary);">
-              <h4 style="color: var(--color-primary); margin-bottom: 6px; font-size: 0.95rem;">Compounding Impact</h4>
-              <p style="font-size: 0.87rem; color: var(--color-text-mid);">Long-term advocacy and engagement. Are your longest-standing clients your loudest advocates, or your quietest?</p>
-            </div>
-          </div>
-          <div style="background: var(--color-navy); border-radius: 12px; padding: 20px 22px;">
-            <h4 style="color: var(--color-sage); margin-bottom: 6px; font-size: 0.95rem;">&times; Signature Moments; The Multiplier</h4>
-            <p style="font-size: 0.87rem; color: rgba(252,252,252,0.82);">Not a seventh layer; a multiplier that cuts across all six. Competence builds retention. Distinctiveness builds advocacy. Could a competitor replicate your experience tomorrow?</p>
-          </div>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <img src="images/Experience-Architecture-Framework-Ipad.png" alt="The Experience Architecture Framework shown across six layers and one multiplier" style="width: 100%; max-width: 560px; height: auto; display: block;" />
         </div>
       </div>
     </div>
@@ -203,32 +196,20 @@
             AI should amplify purpose, not replace the people behind it.
           </p>
           <p style="margin-bottom: 20px;">
-            Before we recommend a single tool, we understand the humans. Your clients, your staff, your community. We don't open with a technology recommendation; we arrive at it after the human picture is clear.
+            Our approach to AI is not different to our approach with any technology; before we recommend a single tool, we understand the humans, the organisation, the direction and real needs.
           </p>
           <p style="margin-bottom: 20px;">
-            In purpose-led organisations, the sequence matters more than in most sectors. The people you serve are often in vulnerable circumstances. The staff delivering your services carry real emotional weight. Introducing AI without understanding that context first isn't innovation; it's risk.
+            We don't open with a technology recommendation; we arrive at it after the human picture is clear. Introducing AI without understanding that context first isn't innovation; it's risk.
+          </p>
+          <p style="margin-bottom: 20px;">
+            This isn't anti-AI; it's pro-human. The two things are not in conflict; and in purpose-led organisations, getting that sequence right is everything.
           </p>
           <p>
-            This isn't anti-AI. It's pro-human. The two things are not in conflict; and in purpose-led organisations, getting that sequence right is everything.
+            We've created this methodology in collaboration with Sofia Geyer from The Human Lab to help you identify when, where and how to best incorporate AI.
           </p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="background: var(--color-white); border-radius: 12px; padding: 24px 28px; border: 1px solid rgba(118,92,138,0.2);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Human-centred before AI</h4>
-            <p style="font-size: 0.92rem;">We understand your people and processes first. Technology comes in at the end of that sequence; deliberately, not as the starting point.</p>
-          </div>
-          <div style="background: var(--color-white); border-radius: 12px; padding: 24px 28px; border: 1px solid rgba(118,92,138,0.2);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Platform-agnostic</h4>
-            <p style="font-size: 0.92rem;">We don't sell software. We help you choose the right tools for your team, your context, and your budget; and build the skills to use them independently.</p>
-          </div>
-          <div style="background: var(--color-white); border-radius: 12px; padding: 24px 28px; border: 1px solid rgba(118,92,138,0.2);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Ethical by design</h4>
-            <p style="font-size: 0.92rem;">Nothing gets automated without deliberate consideration. In regulated sectors like disability, aged care, and health, that's not optional; it's the standard.</p>
-          </div>
-          <div style="background: var(--color-white); border-radius: 12px; padding: 24px 28px; border: 1px solid rgba(118,92,138,0.2);">
-            <h4 style="color: var(--color-primary); margin-bottom: 8px;">Built with your team, not for them</h4>
-            <p style="font-size: 0.92rem;">AI tools that work are the ones your people helped design and feel confident using. We build them together and hand them over with training.</p>
-          </div>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <img src="images/think-then-ai.png" alt="Think Then AI methodology; a human-first approach to incorporating AI in purpose-led organisations" style="width: 100%; max-width: 560px; height: auto; display: block;" />
         </div>
       </div>
     </div>
@@ -319,7 +300,7 @@
                 <div class="ml-form-successBody row-success" style="display:none;padding:0;">
                   <div style="padding: 24px 0;">
                     <h4 style="color:var(--color-sage);margin-bottom:12px;">You&rsquo;re on the list.</h4>
-                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. I can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. We can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
                   </div>
                 </div>
               </div>
@@ -366,7 +347,7 @@
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 SHiFT with Purpose. ABN: 43 326 330 421. All rights reserved.</span>
-        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a></span>
+        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a> &nbsp;|&nbsp; <a href="#" id="swp-cookie-prefs" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Cookie preferences</a></span>
       </div>
     </div>
   </footer>
@@ -411,5 +392,43 @@
       if (success) success.style.display = 'block';
     }
   </script>
+
+  <!-- ============================================================
+       COOKIE CONSENT BANNER
+       ============================================================ -->
+  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-primary-dark); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.65; margin:0; max-width:660px;">
+      We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--color-sage); text-decoration:underline; text-underline-offset:3px;">Privacy policy</a>
+    </p>
+    <div style="display:flex; gap:12px; flex-shrink:0;">
+      <button id="swp-cookie-decline" style="background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.65); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-family:inherit;">Decline</button>
+      <button id="swp-cookie-accept" style="background:var(--color-sage); border:none; color:var(--color-navy); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-weight:700; font-family:inherit;">Accept</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var KEY = 'swp_cookie_consent';
+      var banner = document.getElementById('swp-cookie-banner');
+      if (!localStorage.getItem(KEY) && banner) banner.style.display = 'flex';
+      var a = document.getElementById('swp-cookie-accept');
+      var d = document.getElementById('swp-cookie-decline');
+      var p = document.getElementById('swp-cookie-prefs');
+      if (a) a.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'accepted');
+        if (banner) banner.style.display = 'none';
+        if (typeof swp_loadGA === 'function') swp_loadGA();
+      });
+      if (d) d.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'declined');
+        if (banner) banner.style.display = 'none';
+      });
+      if (p) p.addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem(KEY);
+        if (banner) banner.style.display = 'flex';
+      });
+    })();
+  </script>
+
 </body>
 </html>

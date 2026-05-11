@@ -20,7 +20,7 @@
   --color-primary:      #ac7fd4;   /* Brand purple — light */
   --color-primary-dark: #6c5481;   /* Brand purple — dark */
   --color-navy:         #193550;   /* Navy — hero backgrounds, strong text */
-  --color-sage:      #ced78d;   /* Sage/lime — fresh highlight accent */
+  --color-sage:      #ced78d;   /* Sage/lime — fresh highlight accent. NEVER use as text colour on white backgrounds — fails WCAG contrast. Use on dark/navy/purple backgrounds only. */
   --color-lavender:  #e7cfe8;   /* Lavender — soft backgrounds */
   --color-white:     #fcfcfc;   /* Off-white — main backgrounds */
   --color-text:      #4a2d6a;   /* Purple — body text */
