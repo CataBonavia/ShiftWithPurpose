@@ -225,12 +225,21 @@
     // Read name + email from URL params as soon as possible
     (function() {
       var params = new URLSearchParams(window.location.search);
-      var rawName  = params.get('name')  || '';
-      var rawEmail = params.get('email') || '';
 
-      // Decode URI components in case Moxie URL-encodes them
-      try { rawName  = decodeURIComponent(rawName);  } catch(e) {}
-      try { rawEmail = decodeURIComponent(rawEmail); } catch(e) {}
+      // Moxie can send params twice — first as an unfilled placeholder ({{name}})
+      // and then as the real value. Get all occurrences and use the first real one.
+      function getParam(key) {
+        var all = params.getAll(key);
+        for (var i = 0; i < all.length; i++) {
+          var val = all[i];
+          try { val = decodeURIComponent(val); } catch(e) {}
+          if (val && !/^\{\{.*\}\}$/.test(val.trim())) return val;
+        }
+        return '';
+      }
+
+      var rawName  = getParam('name');
+      var rawEmail = getParam('email');
 
       // First name only (split on space)
       var firstName = rawName.split(' ')[0];
