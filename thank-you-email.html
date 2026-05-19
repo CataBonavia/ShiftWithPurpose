@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <!-- Google Analytics — loads only after cookie consent -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function swp_loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5';
+      document.head.appendChild(s);
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-NR1ZB5W4N5'); };
+    }
+    if (localStorage.getItem('swp_cookie_consent') === 'accepted') { swp_loadGA(); }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're booked in | SHiFT with Purpose</title>
+  <meta name="description" content="Your discovery call is confirmed. Here's what happens next." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- iFrame resizer (for Moxie pre-call form) -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js"></script>
+
+  <style>
+    .thankyou-page {
+      background: var(--color-lavender);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---------- HERO ---------- */
+    .thankyou-hero {
+      background: var(--color-primary-dark);
+      padding: clamp(56px, 8vw, 104px) 24px clamp(56px, 8vw, 96px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .thankyou-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .thankyou-hero__inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .thankyou-hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-sage);
+      color: var(--color-navy);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    .thankyou-hero__eyebrow::before { content: '✓'; font-size: 0.9rem; line-height: 1; }
+
+    .thankyou-hero h1 {
+      color: var(--color-white);
+      font-size: clamp(2.4rem, 5.2vw, 4rem);
+      margin: 0 0 20px;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .thankyou-hero p {
+      color: rgba(252,252,252,0.85);
+      font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+      max-width: 480px;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .thankyou-hero__image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+      aspect-ratio: 4 / 5;
+      background: var(--color-lavender);
+    }
+
+    .thankyou-hero__image img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    /* ---------- LETTER ---------- */
+    .thankyou-letter {
+      flex: 1;
+      padding: clamp(48px, 7vw, 88px) 24px clamp(56px, 8vw, 96px);
+    }
+
+    .thankyou-letter__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(24px, 3vw, 32px);
+    }
+
+    .letter-block {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: clamp(36px, 5vw, 56px) clamp(28px, 4vw, 52px);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    }
+
+    .letter-block__title {
+      font-size: clamp(1.45rem, 2.6vw, 2rem);
+      color: var(--color-primary-dark);
+      margin: 0 0 20px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .letter-block p {
+      font-size: clamp(0.97rem, 1.2vw, 1.06rem);
+      line-height: 1.8;
+      color: var(--color-text);
+      margin: 0 0 18px;
+    }
+
+    .letter-block p:last-child { margin-bottom: 0; }
+
+    .letter-question {
+      background: var(--color-lavender);
+      border-left: 4px solid var(--color-primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-size: clamp(0.97rem, 1.2vw, 1.06rem);
+      line-height: 1.75;
+      color: var(--color-navy);
+      font-style: italic;
+    }
+
+    .letter-signature {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .letter-signature p {
+      font-size: clamp(0.97rem, 1.2vw, 1.06rem);
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .letter-signature .sig-name {
+      font-family: var(--font-accent);
+      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+      color: var(--color-primary-dark);
+      display: block;
+      margin-top: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ---------- PRE-CALL FORM ---------- */
+    .precall-section {
+      background: var(--color-navy);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.1);
+    }
+
+    .precall-section__header {
+      padding: clamp(32px, 4vw, 48px) clamp(28px, 4vw, 52px) 24px;
+    }
+
+    .precall-section__eyebrow {
+      font-family: var(--font-caption);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .precall-section__heading {
+      font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+      color: var(--color-white);
+      margin: 0 0 12px;
+      line-height: 1.25;
+    }
+
+    .precall-section__sub {
+      font-size: clamp(0.92rem, 1.1vw, 1rem);
+      color: rgba(252,252,252,0.72);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .precall-section__form {
+      padding: 0 clamp(28px, 4vw, 52px) clamp(32px, 4vw, 48px);
+    }
+
+    .moxie-wrapper {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-top: 24px;
+    }
+
+    .thankyou-links {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 860px) {
+      .thankyou-hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+      .thankyou-hero p { margin-left: auto; margin-right: auto; }
+      .thankyou-hero__image { max-width: 360px; margin: 0 auto; aspect-ratio: 1 / 1; }
+    }
+
+    @media (max-width: 600px) {
+      .letter-block { padding: 32px 24px; }
+      .precall-section__header { padding: 28px 24px 20px; }
+      .precall-section__form { padding: 0 24px 28px; }
+    }
+  </style>
+
+  <script>
+    // Read name + email from URL params as soon as possible
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var rawName  = params.get('name')  || '';
+      var rawEmail = params.get('email') || '';
+
+      // Decode URI components in case Moxie URL-encodes them
+      try { rawName  = decodeURIComponent(rawName);  } catch(e) {}
+      try { rawEmail = decodeURIComponent(rawEmail); } catch(e) {}
+
+      // First name only (split on space)
+      var firstName = rawName.split(' ')[0];
+      // Capitalise first letter just in case it comes through lowercase
+      if (firstName) {
+        firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+      }
+
+      // Expose globally so the DOM-ready block can use them
+      window._swpName      = rawName;
+      window._swpFirstName = firstName;
+      window._swpEmail     = rawEmail;
+    })();
+  </script>
+</head>
+<body class="thankyou-page">
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="catalyst.html">SHiFT Catalyst (Strategy Day)</a></li>
+            <li><a href="spark.html">SHiFT Spark (Project)</a></li>
+            <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshop</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="blog.html">Mighty Shifts Archive</a></li>
+            <li><a href="quiz.html">Experience Architecture Index</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="contact.html#booking" class="btn btn-primary">Book a Free SHiFT Call</a>
+      </div>
+      <div class="nav__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <div class="thankyou-hero">
+    <div class="thankyou-hero__inner">
+      <div>
+        <span class="thankyou-hero__eyebrow">Your call is confirmed</span>
+        <!-- js-hero-heading gets personalised by script below -->
+        <h1 id="js-hero-heading">You&rsquo;re booked in.</h1>
+        <p>What if this call changes the course of your organisation? A CEO I work with calls me his secret weapon. You might have just found yours.</p>
+      </div>
+      <div class="thankyou-hero__image">
+        <img src="images/cata-hero.png" alt="Catalina Bonavia, Founder of SHiFT with Purpose" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       LETTER
+       ============================================================ -->
+  <div class="thankyou-letter">
+    <div class="thankyou-letter__inner">
+
+      <section class="letter-block">
+        <h2 class="letter-block__title">You don&rsquo;t need to have it all figured out</h2>
+        <!-- js-greeting gets "Hi FirstName," prepended by script -->
+        <p id="js-letter-open">Most leaders I speak with can&rsquo;t quite name what&rsquo;s going on; and that&rsquo;s ok. We&rsquo;ll figure it out together. Booking this call means you&rsquo;re one step closer to a transformation that matters, and I&rsquo;m genuinely excited to walk through this SHiFT with you.</p>
+      </section>
+
+      <section class="letter-block">
+        <h2 class="letter-block__title">What happens next</h2>
+        <p>Over the next couple of days I&rsquo;ll send you a few things; how I think, how I work, and some of the shifts I&rsquo;ve helped organisations like yours make. I promise it won&rsquo;t be a lengthy boring document; just enough context so that when we meet, you already know who you&rsquo;re walking in to speak with.</p>
+        <p>The call itself is 30&ndash;45 minutes. Come as you are. The best conversations I have start with someone saying &ldquo;I&rsquo;m not entirely sure how to describe it, but something isn&rsquo;t quite working.&rdquo;</p>
+        <p>That&rsquo;s exactly where we begin.</p>
+      </section>
+
+      <section class="letter-block">
+        <h2 class="letter-block__title">In the meantime</h2>
+        <p>If something comes to mind before our call; a detail you forgot to add, something you want me to know, just reply to any of my emails. I read everything.</p>
+        <p>And if you&rsquo;re anything like me, you&rsquo;ll want something to chew on before we meet. So here&rsquo;s a question I ask all my clients before we begin:</p>
+        <div class="letter-question">
+          What would make you feel comfortable throughout our time together? And is there anything (positive or negative) from a past experience, with transformation, change, or consultants, that still sits with you?
+        </div>
+        <p>Your answer to that is the foundation of how we build something that actually works.</p>
+        <div class="letter-signature">
+          <!-- js-closing gets "I'll see you soon, FirstName." -->
+          <p id="js-closing">I&rsquo;ll see you soon.</p>
+          <span class="sig-name">Cata</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PRE-CALL QUESTIONS FORM
+           ============================================================ -->
+      <section class="precall-section">
+        <div class="precall-section__header">
+          <span class="precall-section__eyebrow">One last thing</span>
+          <!-- js-form-heading gets personalised -->
+          <h2 class="precall-section__heading" id="js-form-heading">Help me make the most of our time together.</h2>
+          <p class="precall-section__sub">A few short questions before we meet. Your answers help me come prepared with the most useful perspective for your specific situation.</p>
+        </div>
+        <div class="precall-section__form">
+          <div class="moxie-wrapper">
+            <div style="width:100%; min-height:500px;">
+              <iframe
+                id="moxie-discovery-call---form"
+                allowtransparency="true"
+                style="padding:0; margin:0; border:0; max-width:100%; min-width:100%;"
+                title="Pre-call questions"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="thankyou-links">
+        <a href="index.html" class="btn btn-outline">Back to home</a>
+        <a href="quiz.html" class="btn btn-accent">Take the EAI Quiz &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo"><img src="images/logo-dark.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
+          <p class="footer__tagline">Purpose-led organisations shouldn&rsquo;t have to choose between impact and innovation.</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="spark.html">SHiFT Spark</a></li>
+            <li><a href="partnership.html">SHiFT Partnership</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Cata</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Start here</h4>
+          <ul>
+            <li><a href="contact.html">Discovery Call</a></li>
+            <li><a href="quiz.html">EAI Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 SHiFT with Purpose. ABN: 43 326 330 421. All rights reserved.</span>
+        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a> &nbsp;|&nbsp; <a href="#" id="swp-cookie-prefs" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Cookie preferences</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       PERSONALISATION — inject name into page elements
+       ============================================================ -->
+  <script>
+    (function() {
+      var fn = window._swpFirstName || '';
+
+      if (fn) {
+        // Hero heading: "You're booked in, FirstName."
+        var heading = document.getElementById('js-hero-heading');
+        if (heading) heading.textContent = 'You’re booked in, ' + fn + '.';
+
+        // Opening paragraph: prepend "Hi FirstName, " before the existing text
+        var open = document.getElementById('js-letter-open');
+        if (open) {
+          var existing = open.innerHTML;
+          open.innerHTML = '<strong>Hi ' + fn + ',</strong> ' + existing;
+        }
+
+        // Closing line: "I'll see you soon, FirstName."
+        var closing = document.getElementById('js-closing');
+        if (closing) closing.textContent = 'I’ll see you soon, ' + fn + '.';
+
+        // Pre-call form heading
+        var formHeading = document.getElementById('js-form-heading');
+        if (formHeading) formHeading.textContent = fn + ', help me make the most of our time together.';
+      }
+    })();
+  </script>
+
+  <!-- Moxie pre-call form iFrame init -->
+  <script type="text/javascript">
+    var moxieFrame = document.getElementById('moxie-discovery-call---form');
+    moxieFrame.src = 'https://hello.withmoxie.com/01/weshift/discovery-call---form?inFrame=true&sourceUrl=' + encodeURIComponent(window.location.href);
+    setTimeout(function() {
+      iFrameResize({
+        heightCalculationMethod: 'min',
+        sizeWidth: true,
+        sizeHeight: true,
+        log: false,
+        checkOrigin: false
+      }, '#moxie-discovery-call---form');
+    }, 100);
+    window.addEventListener('message', function(event) {
+      if (event.origin === 'https://hello.withmoxie.com' && event.data && event.data.startsWith('[Redirect]')) {
+        var url = event.data.slice(10);
+        window.location = url;
+      }
+    }, false);
+  </script>
+
+  <!-- Mobile nav toggle -->
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target)) nav.classList.remove('nav--open');
+      });
+      document.querySelectorAll('.nav__links a').forEach(function(link) {
+        link.addEventListener('click', function() { nav.classList.remove('nav--open'); });
+      });
+    })();
+  </script>
+
+  <!-- ============================================================
+       COOKIE CONSENT BANNER
+       ============================================================ -->
+  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-primary-dark); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.65; margin:0; max-width:660px;">
+      We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--color-sage); text-decoration:underline; text-underline-offset:3px;">Privacy policy</a>
+    </p>
+    <div style="display:flex; gap:12px; flex-shrink:0;">
+      <button id="swp-cookie-decline" style="background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.65); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-family:inherit;">Decline</button>
+      <button id="swp-cookie-accept" style="background:var(--color-sage); border:none; color:var(--color-navy); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-weight:700; font-family:inherit;">Accept</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var KEY = 'swp_cookie_consent';
+      var banner = document.getElementById('swp-cookie-banner');
+      if (!localStorage.getItem(KEY) && banner) banner.style.display = 'flex';
+      var a = document.getElementById('swp-cookie-accept');
+      var d = document.getElementById('swp-cookie-decline');
+      var p = document.getElementById('swp-cookie-prefs');
+      if (a) a.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'accepted');
+        if (banner) banner.style.display = 'none';
+        if (typeof swp_loadGA === 'function') swp_loadGA();
+      });
+      if (d) d.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'declined');
+        if (banner) banner.style.display = 'none';
+      });
+      if (p) p.addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem(KEY);
+        if (banner) banner.style.display = 'flex';
+      });
+    })();
+  </script>
+
+  <script src="acknowledgement.js"></script>
+</body>
+</html>
