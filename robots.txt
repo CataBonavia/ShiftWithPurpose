@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block thank-you and utility pages from indexing
+Disallow: /thank-you
+Disallow: /thank-you-email
+Disallow: /first30days
+
+Sitemap: https://www.shiftwithpurpose.com.au/sitemap.xml
