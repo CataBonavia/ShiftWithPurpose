@@ -21,12 +21,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SHiFT Catalyst | SHiFT with Purpose</title>
-  <meta name="description" content="The SHiFT Catalyst is a one-day strategic intensive that turns a fragmented customer or employee experience into a coherent one; with a deliberate plan for where AI helps and where it doesn't. $5,000 + GST." />
-  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/catalyst.html" />
+  <meta name="description" content="SHiFT Catalyst is a focused strategic engagement designed to help purpose-led organisations pause, reflect and gain clarity before committing to larger transformation work. From $5,000 + GST." />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/catalyst" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/catalyst.html" />
+  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/catalyst" />
   <meta property="og:title" content="SHiFT Catalyst | SHiFT with Purpose" />
-  <meta property="og:description" content="One focused day. Five artefacts. A plan your team can act on immediately. For purpose-led leaders in disability, aged care, health, and community services." />
+  <meta property="og:description" content="Strategic clarity before transformation. For purpose-led leaders in disability services, aged care, health, and community services." />
   <link rel="stylesheet" href="styles.css" />
   <style>
     /* FAQ accordion */
@@ -50,15 +50,6 @@
     .faq-item.open .faq-answer { display: block; }
     .faq-answer p { color: var(--color-text-mid); line-height: 1.75; }
 
-    /* Timeline */
-    .timeline { display: grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; align-items: start; gap: 0; }
-    .timeline-connector { display: flex; align-items: flex-start; justify-content: center; padding-top: 28px; }
-    .timeline-connector::after { content: ''; display: block; width: 2px; height: 40px; background: var(--color-sage); opacity: 0.4; }
-    @media (max-width: 768px) {
-      .timeline { grid-template-columns: 1fr; }
-      .timeline-connector { display: none; }
-    }
-
     /* Deliverable cards */
     .deliverable-card {
       background: var(--color-white); border-radius: var(--radius-lg);
@@ -77,9 +68,35 @@
       color: var(--color-navy); opacity: 0.25; line-height: 1; margin-bottom: 10px;
     }
 
-    /* Think Then AI steps */
-    .think-then-ai-steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; }
-    @media (max-width: 768px) { .think-then-ai-steps { grid-template-columns: 1fr; } }
+    /* What it can support tags */
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .support-item {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border: 1px solid var(--color-border);
+    }
+    .support-item__icon {
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+    .support-item__text {
+      color: var(--color-navy);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -137,8 +154,8 @@
     <div style="padding: 100px 64px 80px; display: flex; flex-direction: column; justify-content: center;">
       <a href="services.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-sage); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 36px;">&larr; Back to Services</a>
       <span class="caption" style="color: var(--color-sage); display: block; margin-bottom: 16px;">SHiFT Catalyst</span>
-      <h1 style="color: var(--color-white); margin-bottom: 28px; font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.15;">For purpose-led leaders ready to raise retention and impact.</h1>
-      <p class="lead" style="color: rgba(252,252,252,0.82); margin-bottom: 40px;">The SHiFT Catalyst is a one-day strategic intensive designed to turn a beige, fragmented customer or employee experience into a coherent one that stands out from the crowd; with a deliberate plan for where tech and AI help and where they don't.</p>
+      <h1 style="color: var(--color-white); margin-bottom: 28px; font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.15;">Strategic clarity before transformation</h1>
+      <p class="lead" style="color: rgba(252,252,252,0.82); margin-bottom: 40px;">When services grow over time, it can become difficult to see where friction, duplication or missed opportunities are emerging. Teams feel stretched, participant and customer experiences become inconsistent, and leaders know something needs to shift; but it's not always clear where to start. SHiFT Catalyst is a focused strategic engagement designed to help organisations pause, reflect and gain clarity before committing to larger transformation work.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
         <a href="contact.html" class="btn btn-sage" style="font-size: 1rem; padding: 16px 32px;">Book a discovery call &rarr;</a>
         <a href="quiz.html" class="btn btn-outline-white">Take the EAI first</a>
@@ -177,12 +194,15 @@
   <section style="background: var(--color-lavender); padding: 96px 0;">
     <div class="container" style="max-width: 820px; text-align: center;">
       <span class="caption">What it is</span>
-      <h2 style="margin: 16px 0 28px; color: var(--color-navy);">A one-day strategic intensive</h2>
+      <h2 style="margin: 16px 0 28px; color: var(--color-navy);">A focused strategic engagement</h2>
       <p class="lead" style="color: var(--color-text); margin-bottom: 24px;">
-        Designed for up to five of your leaders; to turn a fragmented customer or employee experience into a coherent one that makes you stand out, with a deliberate plan for where tech or AI helps and where it doesn't.
+        Through stakeholder conversations, service and experience review, and collaborative sense-making, we uncover what's working, where challenges exist, and where the greatest opportunities for impact may be.
+      </p>
+      <p style="color: var(--color-text-mid); line-height: 1.8; margin-bottom: 20px;">
+        This engagement creates the insight, alignment and strategic direction needed to move forward with confidence.
       </p>
       <p style="color: var(--color-text-mid); line-height: 1.8;">
-        You bring the complexity of your real environment. We bring the design lens, the sector depth, and the SHiFT methodology. Together, in one focused day, we map what's actually happening, design what should be, and close with a plan your team can act on.
+        You bring the complexity of your real environment. I bring the design lens, the sector depth, and the SHiFT methodology. Together, in one focused working session, we map what's actually happening, design what should be, and close with a plan your team can act on.
       </p>
     </div>
   </section>
@@ -194,7 +214,7 @@
     <div class="container">
       <div class="section-header section-header--center" style="margin-bottom: 52px;">
         <span class="caption">Is this right for you?</span>
-        <h2 style="margin-top: 12px; color: var(--color-navy);">Who this day was built for</h2>
+        <h2 style="margin-top: 12px; color: var(--color-navy);">Who this was built for</h2>
       </div>
       <div class="grid-2" style="gap: 32px; align-items: start;">
 
@@ -204,11 +224,11 @@
           <div style="display: flex; flex-direction: column; gap: 16px;">
             <div style="display: flex; gap: 14px; align-items: flex-start;">
               <span style="color: var(--color-sage); font-weight: 700; flex-shrink: 0; padding-top: 2px;">&#10003;</span>
-              <p style="line-height: 1.7; color: var(--color-text); margin: 0;">You're in disability services, aged care, health, or community services</p>
+              <p style="line-height: 1.7; color: var(--color-text); margin: 0;">You're in disability services, aged care, health, women's wellbeing, or community services</p>
             </div>
             <div style="display: flex; gap: 14px; align-items: flex-start;">
               <span style="color: var(--color-sage); font-weight: 700; flex-shrink: 0; padding-top: 2px;">&#10003;</span>
-              <p style="line-height: 1.7; color: var(--color-text); margin: 0;">You've already invested in CX, EX, or technology and want it to actually work for you</p>
+              <p style="line-height: 1.7; color: var(--color-text); margin: 0;">You understand the importance of a coherent service ecosystem and experience to attract and retain great people</p>
             </div>
             <div style="display: flex; gap: 14px; align-items: flex-start;">
               <span style="color: var(--color-sage); font-weight: 700; flex-shrink: 0; padding-top: 2px;">&#10003;</span>
@@ -241,40 +261,90 @@
   </section>
 
   <!-- ============================================================
-       SECTION 4: ARCHITECTURE OF THE DAY
+       SECTION 4: WHAT IT CAN SUPPORT
        ============================================================ -->
   <section style="background: #f5f2f8; padding: 96px 0;">
     <div class="container">
+      <div class="section-header section-header--center" style="margin-bottom: 8px;">
+        <span class="caption">Scope</span>
+        <h2 style="margin-top: 12px; color: var(--color-navy);">What Catalyst can support</h2>
+        <p style="margin-top: 16px; color: var(--color-text-mid); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">Every engagement is tailored. Depending on your organisation, the work may focus on one of these areas or span several.</p>
+      </div>
+      <div class="support-grid">
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Service and programme reviews</span>
+        </div>
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Participant and staff experience insights</span>
+        </div>
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Organisational reflection and alignment</span>
+        </div>
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Opportunity and gap identification</span>
+        </div>
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Strategic prioritisation</span>
+        </div>
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Transformation readiness</span>
+        </div>
+        <div class="support-item">
+          <span class="support-item__icon">&#8594;</span>
+          <span class="support-item__text">Early-stage service design thinking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: ARCHITECTURE
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 96px 0;">
+    <div class="container">
       <div class="section-header section-header--center" style="margin-bottom: 16px;">
         <span class="caption">The process</span>
-        <h2 style="margin-top: 12px; color: var(--color-navy);">The architecture of the day</h2>
+        <h2 style="margin-top: 12px; color: var(--color-navy);">The architecture behind</h2>
       </div>
-      <p style="text-align: center; color: var(--color-text-mid); max-width: 620px; margin: 0 auto 56px; line-height: 1.7;">
-        This is a strategic intensive built like an iceberg; most of the value is in what happens before and after the day itself.
+      <p style="text-align: center; color: var(--color-text-mid); max-width: 680px; margin: 0 auto 12px; line-height: 1.7;">
+        Catalyst is a focused strategic engagement built like an iceberg. Most of the value exists beneath the surface; in the thinking, preparation, synthesis and strategic alignment that happens before and after the working session itself.
+      </p>
+      <p style="text-align: center; color: var(--color-text-mid); max-width: 680px; margin: 0 auto 56px; line-height: 1.7; font-weight: 600; color: var(--color-navy);">
+        This is not simply a workshop or facilitation session.
       </p>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start;">
 
         <!-- Pre-session -->
-        <div style="background: var(--color-white); border-radius: var(--radius-lg); padding: 36px 32px; border-top: 4px solid var(--color-sage);">
-          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 12px;">1 to 3 weeks before</p>
-          <h4 style="color: var(--color-navy); margin-bottom: 16px;">Pre-session</h4>
+        <div style="background: #f5f2f8; border-radius: var(--radius-lg); padding: 36px 32px; border-top: 4px solid var(--color-sage);">
+          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 12px;">1&ndash;3 weeks prior</p>
+          <h4 style="color: var(--color-navy); margin-bottom: 16px;">Before the session</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
             <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Review of your current customer or employee experience materials
+              Review of existing service, customer or employee experience materials
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Pre-session form completed by your team so the agenda is built for your situation
+              Strategic preparation tailored to your organisation, context and priorities
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Approximately eight hours of design preparation
+              Pre-session reflection form completed by your team
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              1:1 meeting with the CEO and up to two other leaders
+              Leadership conversations with the CEO and key stakeholders
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
+              Facilitation and engagement design shaped around your organisational realities
             </li>
           </ul>
         </div>
@@ -282,43 +352,55 @@
         <!-- Working session -->
         <div style="background: var(--color-primary-dark); border-radius: var(--radius-lg); padding: 36px 32px; border-top: 4px solid var(--color-sage);">
           <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 12px;">The working session</p>
-          <h4 style="color: var(--color-white); margin-bottom: 16px;">Half-day, three to four hours</h4>
+          <h4 style="color: var(--color-white); margin-bottom: 16px;">Half-day strategic intensive</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
             <li style="display: flex; gap: 12px; align-items: flex-start; color: rgba(252,252,252,0.78); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Up to five C-level leaders in the room
+              Map the experience as it currently exists across teams, systems and services
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: rgba(252,252,252,0.78); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Mapping the experience as it actually exists, not as it appears on the org chart
+              Identify friction, duplication and missed opportunities
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: rgba(252,252,252,0.78); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Designing one signature experience, end-to-end
+              Explore participant, customer and staff experience realities
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: rgba(252,252,252,0.78); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              AI opportunity mapping using the Think Then AI methodology
+              Prioritise where focused change will create the greatest impact
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: rgba(252,252,252,0.78); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
-              Building the 90-day plan together, so your team owns it
+              Design one key experience, journey or opportunity area together
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: rgba(252,252,252,0.78); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>
+              Build practical next steps aligned with your operational realities and capacity
             </li>
           </ul>
         </div>
 
         <!-- Post-session -->
-        <div style="background: var(--color-white); border-radius: var(--radius-lg); padding: 36px 32px; border-top: 4px solid var(--color-primary);">
-          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 12px;">The fortnight after</p>
-          <h4 style="color: var(--color-navy); margin-bottom: 16px;">Post-session</h4>
+        <div style="background: #f5f2f8; border-radius: var(--radius-lg); padding: 36px 32px; border-top: 4px solid var(--color-primary);">
+          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 12px;">2&ndash;4 weeks following</p>
+          <h4 style="color: var(--color-navy); margin-bottom: 16px;">After the session</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
             <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-primary); flex-shrink: 0; font-weight: 700;">—</span>
-              All deliverables designed and delivered as working documents
+              Delivery of strategic artefacts and working documents
             </li>
             <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
               <span style="color: var(--color-primary); flex-shrink: 0; font-weight: 700;">—</span>
-              60-minute check-in two to four weeks later, locked in your calendar before we close
+              Refinement and synthesis of insights and recommendations
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-primary); flex-shrink: 0; font-weight: 700;">—</span>
+              Practical roadmap and prioritisation guidance
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-primary); flex-shrink: 0; font-weight: 700;">—</span>
+              Follow-up strategic check-in session to support momentum and next steps
             </li>
           </ul>
         </div>
@@ -328,74 +410,85 @@
   </section>
 
   <!-- ============================================================
-       SECTION 5: WHAT YOU WALK AWAY WITH
+       SECTION 6: WHAT YOU WALK AWAY WITH
        ============================================================ -->
-  <section style="background: var(--color-white); padding: 96px 0;">
+  <section style="background: var(--color-lavender); padding: 96px 0;">
     <div class="container">
-      <div class="section-header section-header--center" style="margin-bottom: 52px;">
+      <div class="section-header section-header--center" style="margin-bottom: 16px;">
         <span class="caption">Deliverables</span>
         <h2 style="margin-top: 12px; color: var(--color-navy);">What you walk away with</h2>
-        <p style="margin-top: 12px; color: var(--color-text-mid); max-width: 560px; margin-left: auto; margin-right: auto;">Five named artefacts. Designed by us, owned by you, ready to act on.</p>
+        <p style="margin-top: 12px; color: var(--color-text-mid); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">Catalyst is designed to create practical clarity, not theoretical strategy. Every engagement produces a tailored set of strategic artefacts designed to support decision-making, alignment and action beyond the session itself.</p>
       </div>
 
-      <div class="grid-3" style="gap: 24px; margin-bottom: 24px;">
+      <div class="grid-3" style="gap: 24px; margin-bottom: 24px; margin-top: 48px;">
 
         <div class="deliverable-card">
           <div class="deliverable-card__image" style="background: var(--color-lavender);">
-            <img src="images/2.png" alt="Customer journey map" />
+            <img src="images/2.png" alt="Service or experience journey map" />
           </div>
           <div class="deliverable-card__body">
             <div class="deliverable-card__num">01</div>
-            <h4 style="color: var(--color-navy); margin-bottom: 10px;">Customer Journey Map</h4>
-            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Designed and delivered as a working document your team can use on Monday; not filed away and forgotten.</p>
+            <h4 style="color: var(--color-navy); margin-bottom: 10px;">Service or Experience Journey Map</h4>
+            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">A clear visualisation of the participant, customer or staff experience as it currently exists; including friction points, gaps and opportunities.</p>
           </div>
         </div>
 
         <div class="deliverable-card">
           <div class="deliverable-card__image" style="background: #f0f5f2;">
-            <img src="images/5.png" alt="Signature experience designed end-to-end" />
+            <img src="images/5.png" alt="Strategic opportunity areas" />
           </div>
           <div class="deliverable-card__body">
             <div class="deliverable-card__num">02</div>
-            <h4 style="color: var(--color-navy); margin-bottom: 10px;">One Signature Experience</h4>
-            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Designed end-to-end; the door your participants or staff walk through, built to reflect your values at every touchpoint.</p>
+            <h4 style="color: var(--color-navy); margin-bottom: 10px;">Strategic Opportunity Areas</h4>
+            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Prioritised opportunities for improvement, innovation or operational alignment across services, systems or experiences.</p>
           </div>
         </div>
 
         <div class="deliverable-card">
           <div class="deliverable-card__image">
-            <img src="images/6.png" alt="AI Opportunity Map" />
+            <img src="images/5.png" alt="Experience or service concept" />
           </div>
           <div class="deliverable-card__body">
             <div class="deliverable-card__num">03</div>
-            <h4 style="color: var(--color-navy); margin-bottom: 10px;">AI Opportunity Map</h4>
-            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Built with the Think Then AI methodology: where AI amplifies your team, where it doesn't, and where it's a clear no.</p>
+            <h4 style="color: var(--color-navy); margin-bottom: 10px;">Experience or Service Concept</h4>
+            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">A collaboratively designed future-state experience, interaction or service opportunity shaped around real organisational constraints and goals.</p>
           </div>
         </div>
 
       </div>
 
-      <div class="grid-2" style="gap: 24px; max-width: 820px; margin: 0 auto;">
+      <div class="grid-3" style="gap: 24px; max-width: 100%; margin: 0 auto;">
 
         <div class="deliverable-card">
           <div class="deliverable-card__image">
-            <img src="images/4.png" alt="90-day Now / Next / Later plan" />
+            <img src="images/4.png" alt="90-day roadmap" />
           </div>
           <div class="deliverable-card__body">
             <div class="deliverable-card__num">04</div>
-            <h4 style="color: var(--color-navy); margin-bottom: 10px;">90-Day Now / Next / Later Plan</h4>
-            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Named owners and metrics. Not a wish list; a plan your team built and actually owns.</p>
+            <h4 style="color: var(--color-navy); margin-bottom: 10px;">90-Day Roadmap</h4>
+            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">A practical Now / Next / Later implementation pathway with priorities, momentum actions and ownership recommendations.</p>
           </div>
         </div>
 
         <div class="deliverable-card">
           <div class="deliverable-card__image" style="background: var(--color-lavender);">
-            <img src="images/3.png" alt="60-minute check-in session" />
+            <img src="images/3.png" alt="Strategic reflection and follow-up" />
           </div>
           <div class="deliverable-card__body">
             <div class="deliverable-card__num">05</div>
-            <h4 style="color: var(--color-navy); margin-bottom: 10px;">60-Minute Check-in</h4>
-            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Two to four weeks post-session, locked in your calendar before the day ends. Because implementation always surfaces questions.</p>
+            <h4 style="color: var(--color-navy); margin-bottom: 10px;">Strategic Reflection and Follow-up</h4>
+            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">A facilitated check-in session following delivery to support alignment, momentum and next-step decision-making.</p>
+          </div>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-card__image">
+            <img src="images/6.png" alt="AI opportunity mapping" />
+          </div>
+          <div class="deliverable-card__body">
+            <div class="deliverable-card__num">06</div>
+            <h4 style="color: var(--color-navy); margin-bottom: 10px;">AI Opportunity Mapping <span style="font-size: 0.78rem; font-weight: 500; color: var(--color-text-mid);">(where relevant)</span></h4>
+            <p style="color: var(--color-text-mid); font-size: 0.95rem; line-height: 1.7;">Exploration of opportunities for ethical and human-centred use of AI to reduce friction, support teams or strengthen service delivery.</p>
           </div>
         </div>
 
@@ -404,7 +497,7 @@
   </section>
 
   <!-- ============================================================
-       SECTION 6: THINK THEN AI
+       SECTION 7: THINK THEN AI
        ============================================================ -->
   <section style="background: var(--color-navy); padding: 96px 0;">
     <div class="container">
@@ -412,7 +505,7 @@
         <span class="caption" style="color: var(--color-sage);">The methodology underneath</span>
         <h2 style="margin-top: 12px; color: var(--color-white);">Think Then AI</h2>
         <p style="margin-top: 12px; color: rgba(252,252,252,0.75); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.75;">
-          In purpose-led sectors, AI shouldn't replace the people doing good. It should multiply their capacity to do it. Think Then AI is the methodology that runs underneath every decision in the day.
+          In purpose-led sectors, AI shouldn't replace the people doing good. It should multiply their capacity to do it. Think Then AI is the methodology that runs underneath every decision in the engagement.
         </p>
       </div>
 
@@ -438,37 +531,40 @@
   </section>
 
   <!-- ============================================================
-       SECTION 7: WHY ME
+       SECTION 8: WHY ME
        ============================================================ -->
   <section style="background: var(--color-white); padding: 96px 0;">
     <div class="container">
       <div class="grid-2" style="gap: 80px; align-items: center;">
-        <div style="border-radius: var(--radius-lg); overflow: hidden; max-height: 560px;">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; max-height: 600px;">
           <img src="images/Cata - SHiFT Catalyst.png" alt="Cata Bonavia, Founder, SHiFT with Purpose" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+          <p style="font-size: 0.85rem; color: var(--color-text-mid); margin-top: 12px; text-align: center;">Cata Bonavia, Founder, SHiFT with Purpose</p>
         </div>
         <div>
-          <span class="caption">Why us</span>
+          <span class="caption">Why me</span>
           <h2 style="margin: 16px 0 24px; color: var(--color-navy);">From Strategy to Making it Happen</h2>
           <p style="margin-bottom: 18px; line-height: 1.8; color: var(--color-text);">
-            I'm Catalina; an Argentine-born industrial designer and service strategist based in Melbourne. My career has been at the intersection of human experience and systems change; from designing a bathroom that can be built in eight hours with no prior knowledge, to building the Employee Experience team at RMIT University, to co-designing service systems across more than ten councils in Victoria.
+            Hi, I'm Catalina; an Argentine-born industrial designer and service strategist based in Melbourne. In 2014, fresh out of university, I took a job at a start-up creating housing solutions for low-income families in Argentina. I spent months visiting families, learning about their motivations, needs and ways of thinking. The outcome was a bathroom that can be built in eight hours with no prior knowledge or trade skills. But what changed me wasn't the solution; it was the process to get there.
+          </p>
+          <p style="margin-bottom: 18px; line-height: 1.8; color: var(--color-text-mid);">
+            After that I built my career at the intersection of human experience and systems change; building the Employee Experience team at RMIT and changing how HR approached their projects, co-designing a new business permits process across more than ten councils in Victoria, and redesigning an industry-leading supported employee experience with and for people with intellectual disabilities.
           </p>
           <p style="margin-bottom: 18px; line-height: 1.8; color: var(--color-text-mid);">
             I founded SHiFT with Purpose because I kept watching the same pattern repeat: purpose-led organisations with good people and real intent, whose participant, client and employee experiences were being held back by systems and structures that were never designed for them.
           </p>
           <p style="margin-bottom: 18px; line-height: 1.8; color: var(--color-text-mid);">
-            I work with everyone from the shop floor to the board room and beyond. I'm directly and deeply involved in every engagement; from the first workshop to the final handover. Continuity of thinking is part of the design.
+            I work with everyone from the shop floor to the board room and beyond. I am directly and deeply involved in every engagement; from the first conversation to the final handover. Continuity of thinking is part of the design.
           </p>
           <p style="line-height: 1.8; color: var(--color-text-mid);">
             Moving countries teaches you to read unfamiliar environments quickly. To notice what others have stopped seeing. To ask the question the room has decided is too obvious, or too uncomfortable. That's the lens every engagement starts with.
           </p>
-          <p style="margin-top: 16px; font-size: 0.88rem; color: var(--color-text-mid);">Cata Bonavia, Founder, SHiFT with Purpose</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       SECTION 8: TESTIMONIAL
+       SECTION 9: TESTIMONIAL
        ============================================================ -->
   <section style="background: #f5f2f8; padding: 96px 0;">
     <div class="container" style="max-width: 860px;">
@@ -481,7 +577,7 @@
         </div>
         <div>
           <p style="font-size: 1.1rem; font-style: italic; color: var(--color-navy); line-height: 1.8; margin-bottom: 28px;">
-            "We were looking for a unicorn, and we found her. We needed someone who could do it all, and I honestly didn't think they existed. We interviewed service designers and a few larger creative agencies, but SHiFT With Purpose was the only one that took the time to understand us and didn't propose a cookie-cutter approach. For us it is critical that our participants feel heard and engaged, and Catalina's approach exceeded our expectations. I never have to worry about anything; she's the dream."
+            &ldquo;We were looking for a unicorn, and we found her. We needed someone who could do it all, and I honestly didn&rsquo;t think they existed. We interviewed service designers and a few larger creative agencies, but SHiFT With Purpose was the only one that took the time to understand us and didn&rsquo;t propose a cookie-cutter approach. For us it is critical that our participants feel heard and engaged, and Catalina&rsquo;s approach exceeded our expectations. I never have to worry about anything; she&rsquo;s the dream.&rdquo;
           </p>
           <p style="font-weight: 700; color: var(--color-navy); margin-bottom: 4px;">Sarah Exton</p>
           <p style="font-size: 0.9rem; color: var(--color-text-mid);">Chief Experience Officer, Waverley Social Enterprises</p>
@@ -491,7 +587,7 @@
   </section>
 
   <!-- ============================================================
-       SECTION 9: THE INVESTMENT
+       SECTION 10: THE INVESTMENT
        ============================================================ -->
   <section style="background: var(--color-primary-dark); padding: 96px 0;">
     <div class="container">
@@ -499,30 +595,43 @@
         <div>
           <span class="caption" style="color: var(--color-sage);">Pricing</span>
           <h2 style="color: var(--color-white); margin: 16px 0 12px;">The investment</h2>
-          <p style="font-size: 2rem; font-weight: 800; color: var(--color-sage); margin-bottom: 28px; font-family: var(--font-accent);">$5,000 + GST</p>
-          <p style="color: rgba(252,252,252,0.8); line-height: 1.8; margin-bottom: 20px;">
-            What that buys you: a fortnight of strategic design work compressed into one focused day, five named artefacts you can show your board, an AI plan you can trust, and a 90-day map your team owns.
-          </p>
-          <p style="color: rgba(252,252,252,0.8); line-height: 1.8; margin-bottom: 20px;">
-            What it replaces: months of meetings that go nowhere, rework, and the quiet cost of staff who leave because the systems don't support meaningful work.
-          </p>
-          <p style="color: rgba(252,252,252,0.65); line-height: 1.8;">
-            Many clients find the Catalyst pays for itself within months; when one participant who would have disengaged stays, or one staff member who would have left finds the role still works for them.
+          <p style="font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 800; color: var(--color-sage); margin-bottom: 28px; font-family: var(--font-accent); line-height: 1.2;">Typically $5,000&ndash;15,000 + GST</p>
+          <p style="color: rgba(252,252,252,0.7); font-size: 0.88rem; margin-bottom: 24px; line-height: 1.7;">Depending on scope and organisational complexity.</p>
+          <p style="color: rgba(252,252,252,0.8); line-height: 1.8; margin-bottom: 16px;">The investment includes:</p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px;">
+            <li style="display: flex; gap: 12px; color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>Tailored strategic preparation
+            </li>
+            <li style="display: flex; gap: 12px; color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>Leadership and stakeholder engagement
+            </li>
+            <li style="display: flex; gap: 12px; color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>Facilitated working sessions
+            </li>
+            <li style="display: flex; gap: 12px; color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>Strategic synthesis and recommendations
+            </li>
+            <li style="display: flex; gap: 12px; color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.6;">
+              <span style="color: var(--color-sage); flex-shrink: 0; font-weight: 700;">—</span>Practical implementation guidance and follow-up support
+            </li>
+          </ul>
+          <p style="color: rgba(252,252,252,0.65); line-height: 1.8; font-size: 0.95rem;">
+            Many organisations find the engagement helps reduce operational friction, strengthen alignment and accelerate decision-making across teams and services.
           </p>
         </div>
         <div style="background: rgba(255,255,255,0.06); border-radius: var(--radius-lg); padding: 44px; border: 1px solid rgba(255,255,255,0.1);">
           <h4 style="color: var(--color-white); margin-bottom: 28px; font-size: 1rem;">Consider the real cost of the current experience&hellip;</h4>
           <div style="display: flex; flex-direction: column; gap: 20px;">
             <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <span style="color: var(--color-sage); font-size: 1.3rem; flex-shrink: 0; line-height: 1.2;">01</span>
+              <span style="color: var(--color-sage); font-size: 1.3rem; flex-shrink: 0; line-height: 1.2; font-family: var(--font-accent);">01</span>
               <p style="color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.7; margin: 0;">One participant who disengages in the first 30 days</p>
             </div>
             <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <span style="color: var(--color-sage); font-size: 1.3rem; flex-shrink: 0; line-height: 1.2;">02</span>
+              <span style="color: var(--color-sage); font-size: 1.3rem; flex-shrink: 0; line-height: 1.2; font-family: var(--font-accent);">02</span>
               <p style="color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.7; margin: 0;">One staff member who leaves because the systems make meaningful work harder than it should be</p>
             </div>
             <div style="display: flex; gap: 16px; align-items: flex-start;">
-              <span style="color: var(--color-sage); font-size: 1.3rem; flex-shrink: 0; line-height: 1.2;">03</span>
+              <span style="color: var(--color-sage); font-size: 1.3rem; flex-shrink: 0; line-height: 1.2; font-family: var(--font-accent);">03</span>
               <p style="color: rgba(252,252,252,0.75); font-size: 0.95rem; line-height: 1.7; margin: 0;">One referral partner who stops sending people your way</p>
             </div>
           </div>
@@ -533,7 +642,7 @@
   </section>
 
   <!-- ============================================================
-       SECTION 10: FAQ
+       SECTION 11: FAQ
        ============================================================ -->
   <section style="background: var(--color-white); padding: 96px 0;">
     <div class="container" style="max-width: 780px;">
@@ -546,21 +655,21 @@
 
         <div class="faq-item">
           <button class="faq-question">
-            We don't have time for this right now.
+            We don&rsquo;t have the capacity for this right now.
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>You're already spending that time; it's just spread across meetings that go nowhere, rework, and putting out fires. The Catalyst replaces months of unproductive effort with one focused day and a plan. The cost of not doing this is higher than the cost of doing it.</p>
+            <p>Most organisations are already investing significant time responding to operational friction, rework, misalignment and competing priorities. Catalyst creates a structured space to step out of reactive mode and identify where focused changes will create the greatest impact.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            We don't have the budget.
+            We&rsquo;re not sure we have the budget.
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Consider the cost of the current experience. One participant who disengages in the first 30 days. One staff member who leaves because the systems make meaningful work harder. None of these show up as a line item, but they compound. Most clients find the Catalyst repays itself within months.</p>
+            <p>The cost of service friction is rarely visible on a spreadsheet. Participant disengagement, staff burnout, duplicated effort and inconsistent experiences compound over time. Catalyst is designed to help organisations identify where strategic improvements can create meaningful operational and human impact.</p>
           </div>
         </div>
 
@@ -570,47 +679,47 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Large corporates have entire CX departments and still fail to implement. You don't have a strategic team that can work with your ops team to make things happen; which is precisely why you need someone who can do this work alongside you. The organisations serving the most complex and vulnerable communities are usually the ones with the least resources to design experience properly.</p>
+            <p>Large corporates have entire CX departments, and still fail to implement. You don't have a strategic team that can work with your ops team to make things happen; which is precisely why you need someone who can do this work alongside you. The organisations serving the most complex and vulnerable communities are usually the ones with the least resources to design experience properly.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            What if the research surfaces things we can't action?
+            What if we uncover challenges we can&rsquo;t immediately solve?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Research only goes where it can be acted on. We are firm believers that if we find a restriction and a real need, we have an excellent challenge to tackle with creativity grounded in reality. We never ask questions we're not prepared to act on; the scope is shaped by your real-world constraints from the start.</p>
+            <p>Not every challenge requires immediate transformation. Often the first step is creating visibility, alignment and prioritisation. Recommendations are always shaped around your organisation's real constraints, capacity and environment.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            We've tried consultants before and nothing stuck.
+            We&rsquo;ve tried consultants before and nothing stuck.
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>That's the most common thing we hear. And exactly the opposite of what our clients say about working with us. Most consulting produces reports, not implementation. The work here is co-designed with your team, and we stay alongside you to implement. There is no blue-sky thinking that can't be implemented; the changes hold because your people built them with us.</p>
+            <p>That's the most common thing I hear; and exactly the opposite of what my clients say about working with me. Most consulting produces reports, not implementation. The work here is co-designed with your team and stays alongside you to implement. There is no blue-sky thinking that can't be implemented; the changes hold because your people built them with me, and we designed them with you and for you.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            We're worried about AI replacing jobs or compromising ethics.
+            We&rsquo;re cautious about AI and ethics.
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>So are we. That's exactly why this work exists. AI in this context amplifies your team; it doesn't reduce headcount. The Think Then AI methodology is human-centred from the first question. Nothing gets automated without deliberate, ethical consideration.</p>
+            <p>So am I. Any exploration of AI is approached carefully, ethically and in service of people; not as a replacement for them. The goal is never automation for its own sake, but identifying where technology may thoughtfully reduce friction or support teams.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            Our sector is too regulated for this kind of work.
+            Our sector is highly regulated and complex.
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Regulated environments are where this works best. Every solution is designed within your real constraints; including funding models, audit requirements, and workforce limitations. If your team can't deliver it within your regulatory environment, we won't design it.</p>
+            <p>Regulated and resource-constrained environments are often where this work creates the greatest value. Every recommendation is designed within the realities of funding models, workforce limitations, operational pressures and compliance requirements.</p>
           </div>
         </div>
 
@@ -619,15 +728,15 @@
   </section>
 
   <!-- ============================================================
-       SECTION 11: FINAL CTA
+       SECTION 12: FINAL CTA
        ============================================================ -->
   <section style="background: var(--color-primary); padding: 96px 0; text-align: center;">
     <div class="container" style="max-width: 640px;">
       <h2 style="color: var(--color-white); margin-bottom: 20px;">The next step</h2>
       <p style="color: rgba(252,252,252,0.82); font-size: 1.05rem; line-height: 1.75; margin-bottom: 16px;">
-        Book a 30-minute discovery call. We'll talk about what's happening for you, whether the Catalyst is the right next step, and what a day together would look like.
+        The first step is a conversation. Book a discovery call to explore what's happening within your organisation, what challenges or opportunities are emerging, and whether Catalyst is the right fit for where you are right now.
       </p>
-      <p style="color: rgba(252,252,252,0.55); font-size: 0.95rem; margin-bottom: 40px;">No pitch. No pressure.</p>
+      <p style="color: rgba(252,252,252,0.55); font-size: 0.95rem; margin-bottom: 40px;">If it is, we'll discuss what a tailored engagement could look like. If it's not, I'll point you in the right direction.</p>
       <div class="btn-group" style="justify-content: center;">
         <a href="contact.html" class="btn btn-sage" style="font-size: 1rem; padding: 16px 36px;">Book a discovery call &rarr;</a>
         <a href="quiz.html" class="btn btn-outline-white">Take the EAI first</a>
@@ -688,8 +797,9 @@
           <h4>Services</h4>
           <ul>
             <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="spark.html">SHiFT Spark</a></li>
             <li><a href="partnership.html">SHiFT Partnership</a></li>
-            <li><a href="ai-amplifier.html">SHiFT Spark</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -760,7 +870,6 @@
     }
   </script>
 
-
   <!-- ============================================================
        COOKIE CONSENT BANNER
        ============================================================ -->
@@ -798,5 +907,6 @@
     })();
   </script>
 
+  <script src="acknowledgement.js"></script>
 </body>
 </html>
