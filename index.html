@@ -49,6 +49,33 @@
 </head>
 <body>
 
+  <!-- ============================================================
+       ANNOUNCEMENT BANNER
+       ============================================================ -->
+  <div id="swp-announcement-bar" style="background: var(--color-primary-dark); padding: 12px 24px; display: flex; align-items: center; justify-content: center; gap: 16px; position: relative; z-index: 200;">
+    <p style="color: rgba(255,255,255,0.92); font-size: 0.9rem; margin: 0; text-align: center; line-height: 1.5;">
+      Free: Find out where your client experience is leaking; before it costs you a client or a referral.
+      <a href="quiz.html" style="color: var(--color-sage); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; margin-left: 6px;">Take the Customer Experience Quiz &rarr;</a>
+    </p>
+    <button id="swp-banner-close" aria-label="Dismiss banner" style="background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; line-height: 1; flex-shrink: 0; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);">&times;</button>
+  </div>
+
+  <!-- ============================================================
+       EXIT-INTENT POPUP
+       ============================================================ -->
+  <div id="swp-exit-popup" style="display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(25,53,80,0.75); backdrop-filter: blur(4px);">
+    <div style="background: var(--color-white); border-radius: 20px; max-width: 540px; width: calc(100% - 48px); padding: 48px 44px; position: relative; box-shadow: 0 24px 80px rgba(0,0,0,0.25);">
+      <button id="swp-popup-close" aria-label="Close" style="position: absolute; top: 18px; right: 20px; background: none; border: none; font-size: 1.4rem; color: var(--color-text-mid); cursor: pointer; line-height: 1;">&times;</button>
+      <span style="font-family: var(--font-caption); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); font-weight: 600; display: block; margin-bottom: 14px;">Before you go</span>
+      <h3 style="color: var(--color-navy); font-size: clamp(1.2rem, 2.5vw, 1.55rem); line-height: 1.3; margin: 0 0 20px;">Do you know which part of your experience is costing you the most?</h3>
+      <p style="color: var(--color-text-mid); line-height: 1.75; margin-bottom: 28px; font-size: 0.97rem;">Most leaders in disability services, aged care, and community health are losing participants and staff to something they've never measured. The Customer Experience Quiz takes 7 minutes and tells you exactly which layer to strengthen first; built on the Experience Architecture Framework, and personalised to your organisation.</p>
+      <a href="quiz.html" class="btn btn-primary" style="display: block; text-align: center; font-size: 1rem; padding: 14px 28px;" onclick="document.getElementById('swp-exit-popup').style.display='none';">Take the free quiz &rarr;</a>
+      <p style="text-align: center; margin-top: 16px; margin-bottom: 0;">
+        <button onclick="document.getElementById('swp-exit-popup').style.display='none'; sessionStorage.setItem('swp_exit_dismissed','1');" style="background: none; border: none; color: var(--color-text-mid); font-size: 0.85rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;">No thanks, I'll figure it out on my own</button>
+      </p>
+    </div>
+  </div>
+
   <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner">
@@ -68,8 +95,8 @@
         <li>
           <a href="services.html" class="has-dropdown">Services</a>
           <ul class="nav__dropdown">
-            <li><a href="catalyst.html">SHiFT Catalyst (Strategy Day)</a></li>
-            <li><a href="spark.html">SHiFT Spark (Project)</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="spark.html">SHiFT Spark</a></li>
             <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
             <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
             <li><a href="contact.html">Bespoke Workshop</a></li>
@@ -81,7 +108,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="case-studies.html">Client Stories</a></li>
             <li><a href="blog.html">Mighty Shifts Archive</a></li>
-            <li><a href="quiz.html">Experience Architecture Index</a></li>
+            <li><a href="quiz.html">Customer Experience Quiz</a></li>
           </ul>
         </li>
         <li><a href="contact.html">Contact</a></li>
@@ -112,7 +139,7 @@
       </p>
       <div class="btn-group" style="justify-content: center;">
         <a href="contact.html" class="btn btn-sage">Book a discovery call</a>
-        <a href="quiz.html" class="btn btn-outline-white">Free Experience Audit</a>
+        <a href="quiz.html" class="btn btn-outline-white">Free Customer Experience Quiz</a>
       </div>
     </div>
 
@@ -723,11 +750,11 @@
         <a href="contact.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">Book a Discovery Call</a>
       </div>
 
-      <!-- Right: EAI Quiz; navy -->
+      <!-- Right: Customer Experience Quiz; navy -->
       <div style="background: var(--color-navy); padding: 64px 56px; display: flex; flex-direction: column; gap: 24px;">
         <div>
           <span style="font-family: var(--font-caption); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: rgba(255,255,255,0.55); display: block; margin-bottom: 10px;">15 minutes</span>
-          <h3 style="color: var(--color-white); font-size: clamp(1.4rem, 2vw, 1.8rem); margin: 0; font-weight: 800;">Experience Architecture Index</h3>
+          <h3 style="color: var(--color-white); font-size: clamp(1.4rem, 2vw, 1.8rem); margin: 0; font-weight: 800;">Customer Experience Quiz</h3>
         </div>
         <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.65; margin: 0;">A diagnostic for disability, health, and wellbeing leaders. Find out which layer of your onboarding experience is where loyalty is actually leaking.</p>
         <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -770,7 +797,7 @@
       <p style="color: rgba(252,252,252,0.8); font-size: 1rem; margin-bottom: 28px; max-width: 480px;">Book a Discovery Call. 30 minutes, no pitch, just clarity on your biggest leverage point.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
         <a href="contact.html" class="btn btn-sage">Book a Discovery Call</a>
-        <a href="quiz.html" class="btn btn-outline-white" style="font-size: 0.88rem;">Or take the EAI Quiz first &rarr;</a>
+        <a href="quiz.html" class="btn btn-outline-white" style="font-size: 0.88rem;">Or take the Customer Experience Quiz first &rarr;</a>
       </div>
     </div>
     <div style="background: var(--color-navy); overflow: hidden; min-height: 200px;">
@@ -850,7 +877,7 @@
           <h4>Start here</h4>
           <ul>
             <li><a href="contact.html">Discovery Call</a></li>
-            <li><a href="quiz.html">EAI Quiz</a></li>
+            <li><a href="quiz.html">Customer Experience Quiz</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -926,5 +953,69 @@
   </script>
 
   <script src="acknowledgement.js"></script>
+
+  <!-- Announcement banner dismiss -->
+  <script>
+    (function() {
+      var bar   = document.getElementById('swp-announcement-bar');
+      var close = document.getElementById('swp-banner-close');
+      if (!bar || !close) return;
+      // Hide if previously dismissed this session
+      if (sessionStorage.getItem('swp_banner_dismissed') === '1') {
+        bar.style.display = 'none';
+      }
+      close.addEventListener('click', function() {
+        bar.style.display = 'none';
+        sessionStorage.setItem('swp_banner_dismissed', '1');
+      });
+    })();
+  </script>
+
+  <!-- Exit-intent popup -->
+  <script>
+    (function() {
+      var popup     = document.getElementById('swp-exit-popup');
+      var popupClose = document.getElementById('swp-popup-close');
+      if (!popup) return;
+
+      var shown = false;
+
+      function showPopup() {
+        if (shown) return;
+        if (sessionStorage.getItem('swp_exit_dismissed') === '1') return;
+        shown = true;
+        popup.style.display = 'flex';
+      }
+
+      // Desktop: detect mouse leaving viewport toward top (closing tab / address bar)
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 10) showPopup();
+      });
+
+      // Mobile / fallback: show after 40s of inactivity
+      var idleTimer = setTimeout(showPopup, 40000);
+      ['mousemove','scroll','keydown','touchstart'].forEach(function(ev) {
+        document.addEventListener(ev, function() {
+          clearTimeout(idleTimer);
+          idleTimer = setTimeout(showPopup, 40000);
+        }, { passive: true });
+      });
+
+      if (popupClose) {
+        popupClose.addEventListener('click', function() {
+          popup.style.display = 'none';
+          sessionStorage.setItem('swp_exit_dismissed', '1');
+        });
+      }
+
+      // Close on backdrop click
+      popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+          sessionStorage.setItem('swp_exit_dismissed', '1');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
