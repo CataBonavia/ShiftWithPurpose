@@ -334,6 +334,51 @@
       }
     };
 
+    var STAGE_BAND_TEXT = {
+      s1: {
+        foundation:  'Your [term] are finding you by accident rather than by design. The language you use to describe yourself may not match what they are searching for.',
+        emerging:    'You are showing up in some of the right places, but not consistently. [term] who find you may still be unsure whether you are the right fit.',
+        developing:  'You are findable and recognisable to the people looking for what you offer. The opportunity is in being even more present in the moments before they know they need you.',
+        compounding: 'You show up in the language of the problem, not just the solution. [term] find you at exactly the right moment and already feel understood before they make contact.'
+      },
+      s2: {
+        foundation:  'The research stage is largely undesigned. [term] are building their picture of what is possible without much help from you.',
+        emerging:    'You are present in some of the spaces where [term] look for answers, but gaps remain. Some will find you; others will find a competitor first.',
+        developing:  'You make it reasonably easy to understand what you do and whether you are right for someone. There is room to be more present in the conversations happening before they contact you.',
+        compounding: 'Someone researching their options will find something about you that makes them stop and take note. You are present where it matters and you reduce uncertainty before they even reach out.'
+      },
+      s3: {
+        foundation:  'The decision stage is creating anxiety rather than resolving it. People may be hesitating or going quiet after initial contact.',
+        emerging:    'You have some ways of supporting the decision, but they are inconsistent. Some [term] commit with confidence; others need more reassurance than you currently provide.',
+        developing:  'You guide the decision well for most [term]. The opportunity is in the moments where anxiety peaks — making it even easier to say yes, or to feel confident saying not yet.',
+        compounding: 'Your decision stage is designed to reduce anxiety and guide [term] toward the right choice — for them, not just for you. This builds trust before the relationship even starts.'
+      },
+      s4: {
+        foundation:  'The joining experience is not yet designed. What happens after someone says yes is largely unintentional and may not be matching the confidence they had when they committed.',
+        emerging:    'There are parts of your joining experience that work well, but the overall picture is inconsistent. Some [term] land confidently; others feel the gap between the promise and the reality.',
+        developing:  'Most [term] join with confidence and have a clear enough picture of what comes next. The opportunity is in the details — the moments that confirm they made the right call.',
+        compounding: 'Your joining experience reinforces the decision your [term] made. They feel welcomed, clear, and confident. The first 30-45 days are as well-designed as everything that preceded them.'
+      },
+      s5: {
+        foundation:  'The ongoing relationship is running on autopilot. Touchpoints exist because they always have, not because they are adding value.',
+        emerging:    'There are moments in the ongoing relationship that work well and that [term] value. But they are not consistent, and the experience depends too much on which team member is paying attention.',
+        developing:  'The relationship is well-supported in most areas. [term] feel the care and the consistency. The opportunity is in the long middle — the stretches between milestones where momentum can quietly stall.',
+        compounding: 'Every touchpoint in the ongoing relationship has a clear purpose. [term] feel the difference between working with you and working with anyone else — and they can say why.'
+      },
+      s6: {
+        foundation:  'The experience is not yet designed to grow with your [term]. Most of the energy goes into delivery rather than deepening the relationship over time.',
+        emerging:    'Some [term] stay and deepen; others plateau or drift. The difference is more about them than about what you are doing — and that is the opportunity.',
+        developing:  'You support growth in the relationship well for most [term]. The opportunity is in making the evolution of the relationship more visible — helping [term] see how far they have come and where they could go next.',
+        compounding: 'Your experience is designed to deepen over time. [term] do not just stay; they grow, refer, and advocate. The relationship compounds because you have designed it to.'
+      },
+      s7: {
+        foundation:  'The exit is not designed. Relationships end or pause without intention, which means you have little control over the story [term] tell about you afterward.',
+        emerging:    'You have some closing practices, but they are inconsistent. Some [term] leave well; others simply stop hearing from you.',
+        developing:  'Most [term] leave or pause with a reasonable sense of closure. The opportunity is in making the ending as intentional as the welcome — so the story they tell is the one you would want them to tell.',
+        compounding: 'You design the goodbye as carefully as the welcome. [term] who finish or pause their relationship with you leave with clarity, confidence, and something specific to say about how it was handled.'
+      }
+    };
+
     var STAGES = {
       s1: { name: 'Trigger',             desc: 'They don\'t know you exist yet. They know something needs to change.' },
       s2: { name: 'Research',            desc: 'They\'re building a picture of what\'s possible — not looking for you yet, looking for answers.' },
@@ -391,46 +436,130 @@
 
     var PARAGRAPHS = {
       bb: {
-        foundation:  'Your team is working hard to deliver for your [term], but the infrastructure underneath that effort hasn\'t been designed, yet. Right now, the experience depends on individuals filling gaps rather than systems making it easy. [term] may feel the care, but they\'re also feeling the friction.',
-        emerging:    'You have the building blocks in place and your [term] can feel that you\'re trying to make things easy. But the experience is inconsistent; some touchpoints are smooth, others create more work than they should, for you and for them. The basics are there; they just haven\'t been joined up yet.',
-        developing:  'Your operational foundations are solid. [term] move through your experience without unnecessary friction, and your team has clear enough systems to deliver consistently. Where the opportunity lives is in making what already works even more seamless; removing the last points of repetition or confusion that [term] probably don\'t mention but do notice.',
-        compounding: 'Your basics are genuinely brilliant. [term] move through your experience without friction, your team can deliver consistently without depending on heroics, and the infrastructure underneath the relationship is as well-designed as the relationship itself. This is rare, and it\'s the foundation that makes everything else possible.'
+        foundation:  {
+          text:     'Your team is working hard to deliver for your [term], but the infrastructure underneath that effort has not been designed yet. Right now, the experience depends on individuals filling gaps rather than systems making it easy. [term] may feel the care, but they are also feeling the friction.',
+          question: 'What actually happens between your first contact with a new [term] and day 30 — not what is supposed to happen, but what does? Map it out and find the worst friction point.'
+        },
+        emerging:    {
+          text:     'You have the building blocks in place and your [term] can feel that you are trying to make things easy. But the experience is inconsistent; some touchpoints are smooth, others create more work than they should, for you and for them. The basics are there; they just have not been joined up yet.',
+          question: 'Look at the systems you are currently using and analyse which ones are helping, which ones are adding work, and where you need to connect them or replace them.'
+        },
+        developing:  {
+          text:     'Your operational foundations are solid. [term] move through your experience without unnecessary friction, and your team has clear enough systems to deliver consistently. Where the opportunity lives is in making what already works even more seamless; removing the last points of repetition or confusion that [term] probably do not mention but do notice.',
+          question: 'Ask three recent [term] what felt unnecessarily complicated about working with you. The things they mention but did not raise as complaints are your next design brief.'
+        },
+        compounding: {
+          text:     'Your basics are genuinely brilliant. [term] move through your experience without friction, your team can deliver consistently without depending on heroics, and the infrastructure underneath the relationship is as well-designed as the relationship itself. This is rare, and it is the foundation that makes everything else possible.',
+          question: 'Document what makes your basics this good — who built it, why they made those choices — so it does not live only in the heads of the people who designed it.'
+        }
       },
       id: {
-        foundation:  'Your experience has evolved organically; built around what was needed at the time, shaped by what worked for your team, and held together by the people who care enough to fill the gaps. That\'s not a criticism; most organisations start here. But right now, the direction of the experience is implicit, and that makes it very difficult to change, grow or scale.',
-        emerging:    'You\'ve started making deliberate choices about how your experience works; there are moments where the intention is clear and the [term] feel it. But those moments aren\'t consistent yet, and the balance between human connection and process hasn\'t been worked out across the whole experience. What\'s intentional in some areas is still accidental in others.',
-        developing:  'You\'ve designed your experience with genuine thought. There\'s a clear intention behind how you work, and most of your [term] experience the benefit of that; things feel considered rather than accidental. The opportunity is in the edges: the stages where the intention hasn\'t quite made it into the actual touchpoints, or where the design doesn\'t yet account for [term] who are stretched, overwhelmed, or having a hard week.',
-        compounding: 'Your experience is genuinely designed; not only documented, but deliberately shaped. [term] feel the intention behind every touchpoint, and your team knows how to make decisions that are consistent with it, even in situations that weren\'t anticipated. The balance between human connection and process is working, and it doesn\'t depend on any one person to hold it together.'
+        foundation:  {
+          text:     'Your experience has evolved organically; built around what was needed at the time, shaped by what worked for your team, and held together by the people who care enough to fill the gaps. That is not a criticism; most organisations start here. But right now, the direction of the experience is implicit, and that makes it very difficult to change, grow or scale.',
+          question: 'If you asked your team what do we want [term] to feel at every stage of working with us — would you get the same answer from everyone? That conversation is your starting point.'
+        },
+        emerging:    {
+          text:     'You have started making deliberate choices about how your experience works; there are moments where the intention is clear and the [term] feel it. But those moments are not consistent yet, and the balance between human connection and process has not been worked out across the whole experience. What is intentional in some areas is still accidental in others.',
+          question: 'What do you want your [term] to feel and think throughout your end-to-end experience? Write it down in one sentence. Then check your last three touchpoints against it.'
+        },
+        developing:  {
+          text:     'You have designed your experience with genuine thought. There is a clear intention behind how you work, and most of your [term] experience the benefit of that; things feel considered rather than accidental. The opportunity is in the edges: the stages where the intention has not quite made it into the actual touchpoints, or where the design does not yet account for [term] who are stretched, overwhelmed, or having a hard week.',
+          question: 'Pick the stage of your experience where intention runs out — where things become habitual rather than designed. What would it look like to bring the same care you have at your best moments to that stage?'
+        },
+        compounding: {
+          text:     'Your experience is genuinely designed; not only documented, but deliberately shaped. [term] feel the intention behind every touchpoint, and your team knows how to make decisions that are consistent with it, even in situations that were not anticipated. The balance between human connection and process is working, and it does not depend on any one person to hold it together.',
+          question: 'As your organisation grows or changes, how will you keep the experience intentional without it becoming rigid? A regular review rhythm is what protects what you have built.'
+        }
       },
       ec: {
-        foundation:  'Right now, [term] confidence depends largely on how proactive your team is; the [term] who feel secure are the ones getting regular attention, and the ones who are quieter may be drifting without anyone noticing. Confidence isn\'t yet built into the experience itself; it lives in the people delivering it.',
-        emerging:    'You\'ve created some touchpoints that genuinely build confidence; moments where [term] feel reassured, seen, or clear about what happens next. But those moments aren\'t consistent across all [term] or all circumstances. [term] who are vocal and engaged tend to get what they need; quieter ones might not be getting the same experience.',
-        developing:  'Confidence is generally well-supported in your experience. [term] move through the relationship without significant doubt or uncertainty, and when challenges arise, there are usually mechanisms in place to catch them before they become problems. The opportunity is in systematising what currently depends on attentiveness; making sure a [term] can lose confidence and be noticed, regardless of who\'s looking after them that week.',
-        compounding: 'Confidence in your experience isn\'t something [term] have to maintain; it\'s built into how you work. [term] don\'t worry about whether they\'ll be looked after because they\'ve seen enough evidence that they will be. The systems for noticing disengagement, adapting to different needs, and supporting [term] through hard moments are designed in, not dependent on memory or proximity.'
+        foundation:  {
+          text:     'Right now, [term] confidence depends largely on how proactive your team is; the [term] who feel secure are the ones getting regular attention, and the ones who are quieter may be drifting without anyone noticing. Confidence is not yet built into the experience itself; it lives in the people delivering it.',
+          question: 'What is the earliest signal that a [term] is losing confidence in working with you? Name it specifically. Then ask: would you know it was happening if they did not tell you?'
+        },
+        emerging:    {
+          text:     'You have created some touchpoints that genuinely build confidence; moments where [term] feel reassured, seen, or clear about what happens next. But those moments are not consistent across all [term] or all circumstances. [term] who are vocal and engaged tend to get what they need; quieter ones might not be getting the same experience.',
+          question: 'What are the [term] who get the best results experiencing or accessing? Is the difference in what you provide them with, or in who they are? Sometimes the problem is also in who you are attracting.'
+        },
+        developing:  {
+          text:     'Confidence is generally well-supported in your experience. [term] move through the relationship without significant doubt or uncertainty, and when challenges arise, there are usually mechanisms in place to catch them before they become problems. The opportunity is in systematising what currently depends on attentiveness; making sure a [term] can lose confidence and be noticed, regardless of who is looking after them that week.',
+          question: 'If your most attentive team member was away for a month, which [term] would start to drift? That is your confidence gap. What would need to be designed in so it did not depend on that person?'
+        },
+        compounding: {
+          text:     'Confidence in your experience is not something [term] have to maintain; it is built into how you work. [term] do not worry about whether they will be looked after because they have seen enough evidence that they will be. The systems for noticing disengagement, adapting to different needs, and supporting [term] through hard moments are designed in, not dependent on memory or proximity.',
+          question: 'Where in the experience are [term] still carrying confidence on their own — moments where doubt could creep in without you noticing? That is the edge worth designing for next.'
+        }
       },
       pr: {
-        foundation:  'Your experience doesn\'t adapt to your [term]\'s needs, context, capacity, or stage in the relationship. That consistency can feel safe and fair; but it can also mean [term] feel like they\'re going through a checklist rather than being fully understood and receiving the services they need. Right now, personalisation happens when someone on your team takes the initiative, not because the experience is designed to adapt.',
-        emerging:    'You\'re starting to adapt to your [term] in meaningful ways; there are moments where they feel seen and responded to as individuals, not just as accounts. But the personalisation is patchy; it tends to happen in the early stages of the relationship and taper off over time, or it relies on whoever manages that [term] remembering what they know rather than the experience being designed to use it.',
-        developing:  'You personalise your experience in ways that [term] notice and value. You adapt based on what you know about them, and there are genuine moments where a [term] feels that the experience was made for them, not just delivered to them. The opportunity is in the middle and later stages of the relationship, where personalisation often gives way to routine; the initial effort hasn\'t been maintained as the [term] has evolved.',
-        compounding: 'Personalisation is woven through your entire experience. You adapt based on behaviour, not just information; you review what you know and update it; and your [term] feel the difference; they describe working with you in specific terms, not general ones. This is the layer that turns good service into a relationship [term] don\'t want to leave.'
+        foundation:  {
+          text:     'Your experience does not adapt to your [term] needs, context, capacity, or stage in the relationship. That consistency can feel safe and fair; but it can also mean [term] feel like they are going through a checklist rather than being fully understood. Right now, personalisation happens when someone on your team takes the initiative, not because the experience is designed to adapt.',
+          question: 'What do you know about each [term] after their first interaction with you that you are not actually using? Pick one thing and build one response to it.'
+        },
+        emerging:    {
+          text:     'You are starting to adapt to your [term] in meaningful ways; there are moments where they feel seen and responded to as individuals, not just as accounts. But the personalisation is patchy; it tends to happen in the early stages of the relationship and taper off over time, or it relies on whoever manages that [term] remembering what they know.',
+          question: 'Look at your [term] who have been with you the longest. Is the experience you are delivering to them still relevant to where they are now — or is it still calibrated to who they were when they joined?'
+        },
+        developing:  {
+          text:     'You personalise your experience in ways that [term] notice and value. You adapt based on what you know about them, and there are genuine moments where a [term] feels that the experience was made for them, not just delivered to them. The opportunity is in the middle and later stages of the relationship, where personalisation often gives way to routine; the initial effort has not been maintained as the [term] has evolved.',
+          question: 'What are the moments that matter in the long middle part of your experience — the ones that can make or break it? How can you make those feel seamless and easier to stay than to leave?'
+        },
+        compounding: {
+          text:     'Personalisation is woven through your entire experience. You adapt based on behaviour, not just information; you review what you know and update it; and your [term] feel the difference; they describe working with you in specific terms, not general ones. This is the layer that turns good service into a relationship [term] do not want to leave.',
+          question: 'Can your [term] see how much you adapt to them specifically? Sometimes the personalisation is real but invisible. Making it visible — without it feeling self-congratulatory — is the next layer of trust.'
+        }
       },
       cm: {
-        foundation:  'Right now, [term] may be experiencing real value in working with you; but they\'re not necessarily seeing it. Progress feels invisible; there aren\'t clear milestones marking how far they\'ve come or what\'s been achieved. Without visible movement, even great work can feel uncertain, and [term] can disengage without being able to articulate why.',
-        emerging:    'There are moments where [term] can see their progress and feel the forward movement in the relationship. But those moments are inconsistent; some [term] see results clearly, others are less sure of what\'s changed. The experience doesn\'t yet reliably help [term] mark and feel the value of what\'s happening.',
-        developing:  '[term] generally experience clear progress and can see the results of working with you. You know roughly how long it takes for them to reach meaningful value, and the experience is designed to move them forward rather than let them stall. The opportunity is in sharpening the visibility of that movement; making the milestones even more explicit, so [term] feel the momentum as well as see the outcomes.',
-        compounding: 'Movement is one of the defining features of your experience. [term] don\'t just experience results; they see them, feel them, and can articulate them. Early wins are designed in, milestones are visible, and the experience makes it easier to move forward than to stall. [term] who reach meaningful value quickly are your most engaged, most loyal, and most likely to refer.'
+        foundation:  {
+          text:     'Right now, [term] may be experiencing real value in working with you; but they are not necessarily seeing it. Progress feels invisible; there are not clear milestones marking how far they have come or what has been achieved. Without visible movement, even great work can feel uncertain, and [term] can disengage without being able to articulate why.',
+          question: 'What would a [term] say if you asked them what has changed since you started working with us? If they would struggle to answer, progress is invisible. What is the one win you could make visible this week?'
+        },
+        emerging:    {
+          text:     'There are moments where [term] can see their progress and feel the forward movement in the relationship. But those moments are inconsistent; some [term] see results clearly, others are less sure of what has changed. The experience does not yet reliably help [term] mark and feel the value of what is happening.',
+          question: 'Pick one [term] who is mid-relationship with you right now and send them a note that names specifically how far they have come. See how they respond. That response tells you how visible progress currently feels.'
+        },
+        developing:  {
+          text:     '[term] generally experience clear progress and can see the results of working with you. You know roughly how long it takes for them to reach meaningful value, and the experience is designed to move them forward rather than let them stall. The opportunity is in sharpening the visibility of that movement; making the milestones even more explicit, so [term] feel the momentum as well as see the outcomes.',
+          question: 'What happens between milestones — in the long stretches where [term] are doing the work but not yet at a visible outcome? That is where momentum most often stalls. What one touchpoint could acknowledge progress-in-progress?'
+        },
+        compounding: {
+          text:     'Movement is one of the defining features of your experience. [term] do not just experience results; they see them, feel them, and can articulate them. Early wins are designed in, milestones are visible, and the experience makes it easier to move forward than to stall. [term] who reach meaningful value quickly are your most engaged, most loyal, and most likely to refer.',
+          question: 'In your longer relationships, how do you keep progress feeling visible and meaningful when the results are slower or harder to see? The organisations that retain people long-term have an answer to this.'
+        }
       },
       ci: {
-        foundation:  'The impact you\'re having on your [term] probably doesn\'t end when the formal engagement does; but right now, you\'re not tracking it and you\'re not designing for it. The relationship exists within the boundaries of the service, and what happens beyond those boundaries isn\'t yet part of your experience design.',
-        emerging:    'You\'re starting to think beyond the immediate transaction; there are [term] who have stayed, deepened, and referred, and you can see that what you\'re doing is having a longer-term effect. But you\'re not yet measuring it or designing for it consistently. The compounding that\'s happening is real; it just isn\'t intentional yet.',
-        developing:  'Your experience creates real long-term value and you can see evidence of it; [term] stay, refer, and go deeper over time. You track engagement beyond the first milestone and you understand what\'s driving retention. The opportunity is in making the long-term impact more visible to [term] themselves; helping them see how working with you is contributing to their bigger goals, not just their immediate needs.',
-        compounding: 'Your experience doesn\'t just deliver value; it compounds it. [term] who work with you over time don\'t just stay; they deepen, refer, and advocate. You track what matters beyond the first milestone, you help [term] connect your work to their long-term goals, and the relationship reinforces itself. This is the rarest thing in experience design: an architecture that gets better the longer it runs.'
+        foundation:  {
+          text:     'The impact you are having on your [term] probably does not end when the formal engagement does; but right now, you are not tracking it and you are not designing for it. The relationship exists within the boundaries of the service, and what happens beyond those boundaries is not yet part of your experience design.',
+          question: 'What do your best long-term [term] have in common — not who they are, but what you did differently for them? That pattern is the beginning of designing for impact that compounds.'
+        },
+        emerging:    {
+          text:     'You are starting to think beyond the immediate transaction; there are [term] who have stayed, deepened, and referred, and you can see that what you are doing is having a longer-term effect. But you are not yet measuring it or designing for it consistently. The compounding that is happening is real; it just is not intentional yet.',
+          question: 'Choose one measure of long-term impact and start tracking it — even informally. You cannot design for what you are not measuring. Three months of data will show you what is compounding and what is quietly leaking.'
+        },
+        developing:  {
+          text:     'Your experience creates real long-term value and you can see evidence of it; [term] stay, refer, and go deeper over time. You track engagement beyond the first milestone and you understand what is driving retention. The opportunity is in making the long-term impact more visible to [term] themselves; helping them see how working with you is contributing to their bigger goals, not just their immediate needs.',
+          question: 'At your next key milestone moment with a [term] — a renewal, a review, a check-in — explicitly connect what you have done together to where they are going. Help them articulate the value in their own words.'
+        },
+        compounding: {
+          text:     'Your experience does not just deliver value; it compounds it. [term] who work with you over time do not just stay; they deepen, refer, and advocate. You track what matters beyond the first milestone, you help [term] connect your work to their long-term goals, and the relationship reinforces itself. This is the rarest thing in experience design: an architecture that gets better the longer it runs.',
+          question: 'Can a [term] who has worked with you for two years tell a compelling story about what has changed? If they can, you have an advocacy engine. If they struggle, there is a design opportunity.'
+        }
       },
       sm: {
-        foundation:  'If you removed your name from your experience, a [term] moving through it probably couldn\'t tell it was yours. Not because the experience is bad — but because it hasn\'t yet been designed to express who you are. The touches that make you distinctive exist in your relationships, not in the experience itself.',
-        emerging:    'There are moments in your experience that feel distinctly yours — a specific touchpoint, a way of communicating, something [term] remember and mention. But those moments are inconsistent; they happen in some interactions and not others, and they haven\'t been deliberately placed throughout the experience. Your distinctiveness is visible; it just isn\'t reliable yet.',
-        developing:  'Your experience has a genuine signature; [term] who work with you notice something specific that they wouldn\'t find elsewhere. Your values show up in the experience in ways that feel authentic, not performed. The opportunity is in extending that distinctiveness into the stages where it\'s currently thinner; particularly the later stages of the relationship, where routines can quietly replace intentionality.',
-        compounding: 'Your signature is unmistakable. [term] who have worked with you describe specific things; not that you were helpful or professional, but moments, details, ways of working that they haven\'t experienced anywhere else. Your values are expressed in the experience in ways that competitors couldn\'t replicate even if they tried, because they\'re not just features; they\'re the product of who you are and how you think. This is your most durable competitive advantage.'
+        foundation:  {
+          text:     'If you removed your name from your experience, a [term] moving through it probably could not tell it was yours. Not because the experience is bad — but because it has not yet been designed to express who you are. The touches that make you distinctive exist in your relationships, not in the experience itself.',
+          question: 'Ask three of your best [term] one question: when you have recommended us to someone, what do you usually say? Their answer is your signature — and it is waiting to be designed into the experience deliberately.'
+        },
+        emerging:    {
+          text:     'There are moments in your experience that feel distinctly yours — a specific touchpoint, a way of communicating, something [term] remember and mention. But those moments are inconsistent; they happen in some interactions and not others, and they have not been deliberately placed throughout the experience. Your distinctiveness is visible; it just is not reliable yet.',
+          question: 'The moment [term] mention most specifically when describing you — is it designed, or does it happen by accident? If it is accidental, make it deliberate. One intentional signature moment changes how the whole relationship feels.'
+        },
+        developing:  {
+          text:     'Your experience has a genuine signature; [term] who work with you notice something specific that they would not find elsewhere. Your values show up in the experience in ways that feel authentic, not performed. The opportunity is in extending that distinctiveness into the stages where it is currently thinner; particularly the later stages of the relationship, where routines can quietly replace intentionality.',
+          question: 'Where in your experience does your distinctiveness go quiet — the stages where routine has replaced intention? That is usually where loyalty is most at risk. What would it take to bring your signature into those moments?'
+        },
+        compounding: {
+          text:     'Your signature is unmistakable. [term] who have worked with you describe specific things; not that you were helpful or professional, but moments, details, ways of working that they have not experienced anywhere else. Your values are expressed in the experience in ways that competitors could not replicate even if they tried, because they are not just features; they are the product of who you are and how you think. This is your most durable competitive advantage.',
+          question: 'Is what makes you unmistakably yours visible before someone commits to working with you? If your signature only shows up after they have joined, you are leaving conversion on the table.'
+        }
       }
     };
 
@@ -500,7 +629,10 @@
       var bk = bandKey(rawBand);
       var band = BANDS[bk] || { label: rawBand, desc: '', bg: '#f0f0f0', color: '#333' };
 
-      var desc = replaceTerm(stage.desc, term);
+      var stageBandTexts = STAGE_BAND_TEXT[key];
+      var desc = stageBandTexts && stageBandTexts[bk]
+        ? replaceTerm(stageBandTexts[bk], term)
+        : replaceTerm(stage.desc, term);
 
       var card = document.createElement('div');
       card.className = 'card';
@@ -519,6 +651,68 @@
     // ─── Step 6: Layer rows ───────────────────────────────────────
 
     var layerContainer = document.getElementById('layer-rows');
+
+    // ── Change 4: Layer bar chart (renders above legend) ─────────
+    var chartDiv = document.createElement('div');
+    chartDiv.style.cssText = 'margin-bottom:32px;display:flex;flex-direction:column;gap:12px;';
+
+    var layerMeta = [
+      { key: 'bb', name: 'Brilliant Basics' },
+      { key: 'id', name: 'Intentional Direction' },
+      { key: 'ec', name: 'Embedded Confidence' },
+      { key: 'pr', name: 'Purposeful Relevance' },
+      { key: 'cm', name: 'Clear Movement' },
+      { key: 'ci', name: 'Compounding Impact' },
+      { key: 'sm', name: 'Signature Moments' }
+    ];
+
+    var bandWidth = {
+      foundation:  '25%',
+      emerging:    '50%',
+      developing:  '75%',
+      compounding: '100%'
+    };
+
+    layerMeta.forEach(function(lm) {
+      var rawBand = params.get('l_' + lm.key) || '';
+      var bk      = bandKey(rawBand);
+      var band    = BANDS[bk] || { label: rawBand, bg: '#eee', color: '#333' };
+      var width   = bandWidth[bk] || '10%';
+
+      var barRow = document.createElement('div');
+      barRow.style.cssText = 'display:flex;align-items:center;gap:16px;';
+      barRow.innerHTML =
+        '<div style="width:180px;flex-shrink:0;font-size:0.88rem;color:var(--color-navy);font-weight:600;">' + lm.name + '</div>' +
+        '<div style="flex:1;background:#f0f0f0;border-radius:4px;height:14px;">' +
+          '<div style="width:' + width + ';height:14px;border-radius:4px;background:' + band.bg + ';border:1px solid ' + band.color + ';"></div>' +
+        '</div>' +
+        '<div style="width:110px;flex-shrink:0;">' +
+          '<span style="background:' + band.bg + ';color:' + band.color + ';font-size:0.72rem;padding:3px 10px;border-radius:20px;font-weight:700;">' + band.label + '</span>' +
+        '</div>';
+      chartDiv.appendChild(barRow);
+    });
+
+    layerContainer.before(chartDiv);
+
+    // ── Change 3: Band legend (renders between chart and rows) ────
+    var legend = document.createElement('div');
+    legend.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px;';
+    legend.innerHTML =
+      '<div style="background:#FDF3E7;color:#7A4F00;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
+        '<strong>Foundation</strong><br>Largely undesigned — the experience runs on effort and goodwill rather than systems and intention.' +
+      '</div>' +
+      '<div style="background:#EEF4E0;color:#3D5200;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
+        '<strong>Emerging</strong><br>Intentional in places — deliberate choices have been made but are not yet consistent across the whole experience.' +
+      '</div>' +
+      '<div style="background:#E8EEF6;color:#193550;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
+        '<strong>Developing</strong><br>Working well with gaps — the experience is solid and your [term] feel it; the opportunity is in the edges.' +
+      '</div>' +
+      '<div style="background:#F5EAF8;color:#6B2F7A;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
+        '<strong>Compounding</strong><br>Building on itself — the experience is designed well enough that it gets better over time rather than staying the same.' +
+      '</div>';
+    legend.innerHTML = replaceTerm(legend.innerHTML, term);
+    layerContainer.before(legend);
+
     var layerKeys = ['bb','id','ec','pr','cm','ci','sm'];
 
     layerKeys.forEach(function(lk, i) {
@@ -529,9 +723,9 @@
       var band = BANDS[bk] || { label: rawBand, desc: '', bg: '#f0f0f0', color: '#333' };
 
       var definition = replaceTerm(layer.definition, term);
-      var paragraphText = PARAGRAPHS[lk] && PARAGRAPHS[lk][bk]
-        ? replaceTerm(PARAGRAPHS[lk][bk], term)
-        : '';
+      var paraData = PARAGRAPHS[lk] && PARAGRAPHS[lk][bk] ? PARAGRAPHS[lk][bk] : null;
+      var paragraphText = paraData ? replaceTerm(paraData.text, term) : '';
+      var questionText  = paraData ? replaceTerm(paraData.question, term) : '';
 
       var borderStyle = i < layerKeys.length - 1
         ? 'border-bottom:1px solid var(--color-border);'
@@ -541,7 +735,6 @@
       row.style.cssText = 'display:flex;flex-wrap:wrap;gap:48px;align-items:start;padding:48px 0;' + borderStyle;
       row.innerHTML =
         '<div style="flex:1;min-width:260px;">' +
-          '<p style="font-family:var(--font-caption);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);font-weight:700;margin:0 0 6px;">' + layer.code + '</p>' +
           '<h4 style="margin:0 0 4px;color:var(--color-navy);">' + layer.name + '</h4>' +
           '<p style="font-size:0.82rem;color:var(--color-text-mid);font-style:italic;margin:0 0 16px;">' + layer.subtitle + '</p>' +
           '<p style="font-size:0.92rem;color:var(--color-text-mid);line-height:1.7;margin:0;">' + definition + '</p>' +
@@ -549,6 +742,7 @@
         '<div style="flex:1;min-width:260px;">' +
           '<span class="pill" style="background:' + band.bg + ';color:' + band.color + ';font-size:0.72rem;margin-bottom:16px;display:inline-block;">' + band.label + ' — ' + band.desc + '</span>' +
           '<p style="color:var(--color-navy);line-height:1.75;margin:0;font-size:0.97rem;">' + paragraphText + '</p>' +
+          (questionText ? '<p style="font-weight:700;color:var(--color-navy);line-height:1.7;margin:20px 0 0;font-size:0.95rem;">' + questionText + '</p>' : '') +
         '</div>';
 
       layerContainer.appendChild(row);
