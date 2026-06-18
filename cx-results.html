@@ -153,24 +153,28 @@
   </section>
 
   <!-- ============================================================
-       3.7; CTA; Book the Deep Dive; primary purple background
+       3.7; CTA; Book the Results Conversation; primary purple background
        ============================================================ -->
   <section id="results-cta" class="section section--primary text-center">
     <div class="container" style="max-width: 680px;">
-      <h2>Let&rsquo;s look at your results together.</h2>
-      <p class="lead" style="opacity: 0.88; margin-top: 20px; margin-bottom: 36px;">The CX Quiz Deep Dive is a 60-minute conversation; just the two of us. We look at your results, I share what I notice, and you leave knowing exactly where to focus first. No report. No proposal. Just clarity.</p>
-      <a href="[BOOKING_LINK]" class="btn btn-outline-white" target="_blank" rel="noopener">Book your CX Quiz Deep Dive &rarr;</a>
+      <h2 id="cta-heading">Ready to dig into the detail?</h2>
+      <p class="lead" id="cta-body" style="opacity: 0.88; margin-top: 20px; margin-bottom: 48px;">This is a 30-minute conversation where we look at your results together; what the scores actually mean for your organisation, where the real opportunity is, and what a clear next step looks like. No proposal. No pitch. Just the conversation that connects where you are to where you want to be.</p>
     </div>
-  </section>
-
-  <!-- ============================================================
-       3.8; EMAIL MY RESULTS; white background
-       ============================================================ -->
-  <section id="results-email" class="section text-center">
-    <div class="container" style="max-width: 560px;">
-      <h3>Want to save your results?</h3>
-      <p style="color: var(--color-text-mid); margin-top: 16px; margin-bottom: 28px; line-height: 1.7;">Your results live in the link you received. Click the button below to open an email with your results link ready to send to yourself; or share with a colleague.</p>
-      <a id="email-results-btn" href="#" class="btn btn-outline">Email my results link</a>
+    <div class="container" style="max-width: 860px; padding-bottom: 8px;">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js"></script>
+      <div style="width:100%; min-height:500px; border-radius:12px; overflow:hidden;">
+        <iframe src="https://hello.withmoxie.com/01/weshift/cx-quiz---debrief-and-plan?inFrame=true" id="moxie-cx-quiz---debrief-and-plan" style="padding:0; margin:0; border:0; max-width:100%; min-width:100%; border-radius:12px;"></iframe>
+      </div>
+      <script type="text/javascript">
+        setTimeout(function() {
+          iFrameResize({ heightCalculationMethod: 'min', sizeWidth: true, sizeHeight: true, log: false, checkOrigin: false }, '#moxie-cx-quiz---debrief-and-plan');
+        }, 100);
+        window.addEventListener('message', function(event) {
+          if (event.origin === 'https://hello.withmoxie.com' && event.data && event.data.startsWith('[Redirect]')) {
+            window.location = event.data.slice(10);
+          }
+        }, false);
+      </script>
     </div>
   </section>
 
@@ -605,7 +609,6 @@
       document.getElementById('results-layers').style.display       = 'none';
       document.getElementById('results-opportunities').style.display = 'none';
       document.getElementById('results-cta').style.display          = 'none';
-      document.getElementById('results-email').style.display        = 'none';
       return;
     }
 
@@ -865,17 +868,17 @@
         '</div>';
     }
 
-    // ─── Step 8: Email mailto link ────────────────────────────────
+    // ─── Step 8: Personalise CTA copy with goal ──────────────────
 
-    var emailBtn = document.getElementById('email-results-btn');
-    if (emailBtn) {
-      var subject = encodeURIComponent('My CX Quiz results: SHiFT with Purpose');
-      var body    = encodeURIComponent(
-        'Hi,\n\nHere are my CX Quiz results from SHiFT with Purpose:\n\n' +
-        window.location.href +
-        '\n\nYou can view my personalised Experience Map at the link above.'
-      );
-      emailBtn.href = 'mailto:?subject=' + subject + '&body=' + body;
+    if (goal) {
+      var ctaBody = document.getElementById('cta-body');
+      if (ctaBody) {
+        ctaBody.textContent =
+          'This is a 30-minute conversation where we look at your results together. ' +
+          'We dig into what is actually happening in your experience right now, and map ' +
+          'a clear path toward ' + goal.toLowerCase().replace(/\.$/, '') + '. ' +
+          'No proposal. No pitch. Just the conversation that connects where you are to where you want to be.';
+      }
     }
 
   });
