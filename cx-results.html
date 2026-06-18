@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <!-- Google Analytics — loads only after cookie consent -->
+  <!-- Google Analytics; loads only after cookie consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your CX Quiz Results | SHiFT with Purpose</title>
-  <meta name="description" content="Your personalised Customer Experience Quiz results — built on the Experience Architecture Framework. Find out exactly where your experience is designed, where it isn't, and what to strengthen first." />
+  <meta name="description" content="Your personalised Customer Experience Quiz results; built on the Experience Architecture Framework. Find out exactly where your experience is designed, where it isn't, and what to strengthen first." />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="https://www.shiftwithpurpose.com.au/cx-results.html" />
   <link rel="stylesheet" href="styles.css" />
@@ -76,7 +76,7 @@
   </nav>
 
   <!-- ============================================================
-       3.2 — HERO; navy background, personalised by JS
+       3.2; HERO; navy background, personalised by JS
        ============================================================ -->
   <section id="results-hero" class="section section--navy">
     <div class="container" style="text-align: center; max-width: 800px;">
@@ -87,7 +87,7 @@
   </section>
 
   <!-- ============================================================
-       3.3 — ARCHETYPE CARD; white background
+       3.3; ARCHETYPE CARD; white background
        ============================================================ -->
   <section id="results-archetype" class="section">
     <div class="container" style="max-width: 760px;">
@@ -99,34 +99,41 @@
     </div>
   </section>
 
+  <!-- Goal section -->
+  <section id="results-goal" class="section" style="display:none;">
+    <div class="container">
+      <div id="goal-card"></div>
+    </div>
+  </section>
+
   <!-- ============================================================
-       3.4 — STAGE RESULTS; light grey background
+       3.4; STAGE RESULTS; light grey background
        ============================================================ -->
   <section id="results-stages" class="section" style="background: #F5F5F5;">
     <div class="container">
       <div class="section-header">
         <span class="caption">Your Journey Stages</span>
-        <h2 style="margin-top: 16px;">Where your experience is designed — and where it isn&rsquo;t.</h2>
+        <h2 style="margin-top: 16px;">Where your experience is designed; and where it isn&rsquo;t.</h2>
       </div>
       <div id="stage-grid" class="grid-3" style="margin-top: 48px; gap: 24px;"></div>
     </div>
   </section>
 
   <!-- ============================================================
-       3.5 — LAYER RESULTS; white background
+       3.5; LAYER RESULTS; white background
        ============================================================ -->
   <section id="results-layers" class="section">
     <div class="container">
       <div class="section-header">
         <span class="caption">Your Experience Layers</span>
-        <h2 style="margin-top: 16px;">The design capabilities behind your results.</h2>
+        <h2 style="margin-top: 16px;">The building blocks behind your results.</h2>
       </div>
       <div id="layer-rows" style="margin-top: 48px; display: flex; flex-direction: column; gap: 0;"></div>
     </div>
   </section>
 
   <!-- ============================================================
-       3.6 — THREE OPPORTUNITIES; navy background
+       3.6; THREE OPPORTUNITIES; navy background
        ============================================================ -->
   <section id="results-opportunities" class="section section--navy">
     <div class="container">
@@ -138,30 +145,37 @@
     </div>
   </section>
 
+  <!-- Free text reflection section -->
+  <section id="results-freetext" class="section" style="display:none;background:#F5F5F5;">
+    <div class="container">
+      <div id="freetext-card"></div>
+    </div>
+  </section>
+
   <!-- ============================================================
-       3.7 — CTA — Book the Deep Dive; primary purple background
+       3.7; CTA; Book the Deep Dive; primary purple background
        ============================================================ -->
   <section id="results-cta" class="section section--primary text-center">
     <div class="container" style="max-width: 680px;">
       <h2>Let&rsquo;s look at your results together.</h2>
-      <p class="lead" style="opacity: 0.88; margin-top: 20px; margin-bottom: 36px;">The CX Quiz Deep Dive is a 60-minute conversation — just the two of us. We look at your results, I share what I notice, and you leave knowing exactly where to focus first. No report. No proposal. Just clarity.</p>
+      <p class="lead" style="opacity: 0.88; margin-top: 20px; margin-bottom: 36px;">The CX Quiz Deep Dive is a 60-minute conversation; just the two of us. We look at your results, I share what I notice, and you leave knowing exactly where to focus first. No report. No proposal. Just clarity.</p>
       <a href="[BOOKING_LINK]" class="btn btn-outline-white" target="_blank" rel="noopener">Book your CX Quiz Deep Dive &rarr;</a>
     </div>
   </section>
 
   <!-- ============================================================
-       3.8 — EMAIL MY RESULTS; white background
+       3.8; EMAIL MY RESULTS; white background
        ============================================================ -->
   <section id="results-email" class="section text-center">
     <div class="container" style="max-width: 560px;">
       <h3>Want to save your results?</h3>
-      <p style="color: var(--color-text-mid); margin-top: 16px; margin-bottom: 28px; line-height: 1.7;">Your results live in the link you received. Click the button below to open an email with your results link ready to send to yourself — or share with a colleague.</p>
+      <p style="color: var(--color-text-mid); margin-top: 16px; margin-bottom: 28px; line-height: 1.7;">Your results live in the link you received. Click the button below to open an email with your results link ready to send to yourself; or share with a colleague.</p>
       <a id="email-results-btn" href="#" class="btn btn-outline">Email my results link</a>
     </div>
   </section>
 
   <!-- ============================================================
-       3.9 — FALLBACK (no URL params); white background, hidden by default
+       3.9; FALLBACK (no URL params); white background, hidden by default
        ============================================================ -->
   <section id="results-fallback" class="section text-center" style="display: none;">
     <div class="container" style="max-width: 560px;">
@@ -293,7 +307,7 @@
   </script>
 
   <!-- ============================================================
-       CX RESULTS PAGE — MAIN JS
+       CX RESULTS PAGE; MAIN JS
        ============================================================ -->
   <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -310,23 +324,23 @@
     var ARCHETYPES = {
       'The Instinctive Deliverer': {
         headline: 'Your experience works because of who you are. Now let\'s make it work because of how it\'s designed.',
-        description: 'You deliver real value and your [term] feel it — but the experience runs on people and relationships rather than systems and architecture. What you\'ve built is impressive. The opportunity is making it consistent, scalable, and sustainable without depending on the same individuals doing the same things every time.'
+        description: 'You deliver real value and your [term] feel it; but the experience runs on people and relationships rather than systems and architecture. What you\'ve built is impressive. The opportunity is making it consistent, scalable, and sustainable without depending on the same individuals doing the same things every time.'
       },
       'The Careful Builder': {
         headline: 'Your foundations are solid. Now it\'s time to build on them.',
-        description: 'You\'ve created something reliable. Your [term] feel safe working with you and your operations run without significant friction. The opportunity is in moving from reliable to remarkable — taking what\'s already working and adding the intentional touches that turn a good experience into one [term] talk about.'
+        description: 'You\'ve created something reliable. Your [term] feel safe working with you and your operations run without significant friction. The opportunity is in moving from reliable to remarkable; taking what\'s already working and adding the intentional touches that turn a good experience into one [term] talk about.'
       },
       'The Intentional Designer': {
         headline: 'You think about experience deliberately. That puts you ahead of most.',
-        description: 'You\'ve made choices about how your experience works that most organisations haven\'t even thought to make. There\'s a clear intention behind your touchpoints and your [term] feel the difference. The opportunity is in the long game — the compounding that happens when intentional design is sustained across every stage, not just the ones you\'ve prioritised.'
+        description: 'You\'ve made choices about how your experience works that most organisations haven\'t even thought to make. There\'s a clear intention behind your touchpoints and your [term] feel the difference. The opportunity is in the long game; the compounding that happens when intentional design is sustained across every stage, not just the ones you\'ve prioritised.'
       },
       'The Natural Connector': {
         headline: 'Your relationships are your greatest asset. Your systems can catch up.',
-        description: 'People trust you quickly and feel seen when they work with you. The confidence and warmth in your relationships is genuine and [term] notice it. The opportunity is in building the infrastructure to match the quality of those relationships — so the experience is as well-designed as the connection is natural.'
+        description: 'People trust you quickly and feel seen when they work with you. The confidence and warmth in your relationships is genuine and [term] notice it. The opportunity is in building the infrastructure to match the quality of those relationships; so the experience is as well-designed as the connection is natural.'
       },
       'The Emerging Architect': {
         headline: 'You\'re at the beginning of something. The potential in your answers is real.',
-        description: 'You haven\'t had the space or the framework to be fully intentional yet — but that doesn\'t mean you\'re not doing good work. There are genuine strengths visible in your results. The opportunity is giving what you\'re already doing the architecture it deserves, so it compounds rather than stays the same.'
+        description: 'You haven\'t had the space or the framework to be fully intentional yet; but that doesn\'t mean you\'re not doing good work. There are genuine strengths visible in your results. The opportunity is giving what you\'re already doing the architecture it deserves, so it compounds rather than stays the same.'
       },
       'The Compounding Organisation': {
         headline: 'Your experience is one of the most intentionally designed we see.',
@@ -350,38 +364,38 @@
       s3: {
         foundation:  'The decision stage is creating anxiety rather than resolving it. People may be hesitating or going quiet after initial contact.',
         emerging:    'You have some ways of supporting the decision, but they are inconsistent. Some [term] commit with confidence; others need more reassurance than you currently provide.',
-        developing:  'You guide the decision well for most [term]. The opportunity is in the moments where anxiety peaks — making it even easier to say yes, or to feel confident saying not yet.',
-        compounding: 'Your decision stage is designed to reduce anxiety and guide [term] toward the right choice — for them, not just for you. This builds trust before the relationship even starts.'
+        developing:  'You guide the decision well for most [term]. The opportunity is in the moments where anxiety peaks; making it even easier to say yes, or to feel confident saying not yet.',
+        compounding: 'Your decision stage is designed to reduce anxiety and guide [term] toward the right choice; for them, not just for you. This builds trust before the relationship even starts.'
       },
       s4: {
         foundation:  'The joining experience is not yet designed. What happens after someone says yes is largely unintentional and may not be matching the confidence they had when they committed.',
         emerging:    'There are parts of your joining experience that work well, but the overall picture is inconsistent. Some [term] land confidently; others feel the gap between the promise and the reality.',
-        developing:  'Most [term] join with confidence and have a clear enough picture of what comes next. The opportunity is in the details — the moments that confirm they made the right call.',
+        developing:  'Most [term] join with confidence and have a clear enough picture of what comes next. The opportunity is in the details; the moments that confirm they made the right call.',
         compounding: 'Your joining experience reinforces the decision your [term] made. They feel welcomed, clear, and confident. The first 30-45 days are as well-designed as everything that preceded them.'
       },
       s5: {
         foundation:  'The ongoing relationship is running on autopilot. Touchpoints exist because they always have, not because they are adding value.',
         emerging:    'There are moments in the ongoing relationship that work well and that [term] value. But they are not consistent, and the experience depends too much on which team member is paying attention.',
-        developing:  'The relationship is well-supported in most areas. [term] feel the care and the consistency. The opportunity is in the long middle — the stretches between milestones where momentum can quietly stall.',
-        compounding: 'Every touchpoint in the ongoing relationship has a clear purpose. [term] feel the difference between working with you and working with anyone else — and they can say why.'
+        developing:  'The relationship is well-supported in most areas. [term] feel the care and the consistency. The opportunity is in the long middle; the stretches between milestones where momentum can quietly stall.',
+        compounding: 'Every touchpoint in the ongoing relationship has a clear purpose. [term] feel the difference between working with you and working with anyone else; and they can say why.'
       },
       s6: {
         foundation:  'The experience is not yet designed to grow with your [term]. Most of the energy goes into delivery rather than deepening the relationship over time.',
-        emerging:    'Some [term] stay and deepen; others plateau or drift. The difference is more about them than about what you are doing — and that is the opportunity.',
-        developing:  'You support growth in the relationship well for most [term]. The opportunity is in making the evolution of the relationship more visible — helping [term] see how far they have come and where they could go next.',
+        emerging:    'Some [term] stay and deepen; others plateau or drift. The difference is more about them than about what you are doing; and that is the opportunity.',
+        developing:  'You support growth in the relationship well for most [term]. The opportunity is in making the evolution of the relationship more visible; helping [term] see how far they have come and where they could go next.',
         compounding: 'Your experience is designed to deepen over time. [term] do not just stay; they grow, refer, and advocate. The relationship compounds because you have designed it to.'
       },
       s7: {
         foundation:  'The exit is not designed. Relationships end or pause without intention, which means you have little control over the story [term] tell about you afterward.',
         emerging:    'You have some closing practices, but they are inconsistent. Some [term] leave well; others simply stop hearing from you.',
-        developing:  'Most [term] leave or pause with a reasonable sense of closure. The opportunity is in making the ending as intentional as the welcome — so the story they tell is the one you would want them to tell.',
+        developing:  'Most [term] leave or pause with a reasonable sense of closure. The opportunity is in making the ending as intentional as the welcome; so the story they tell is the one you would want them to tell.',
         compounding: 'You design the goodbye as carefully as the welcome. [term] who finish or pause their relationship with you leave with clarity, confidence, and something specific to say about how it was handled.'
       }
     };
 
     var STAGES = {
       s1: { name: 'Trigger',             desc: 'They don\'t know you exist yet. They know something needs to change.' },
-      s2: { name: 'Research',            desc: 'They\'re building a picture of what\'s possible — not looking for you yet, looking for answers.' },
+      s2: { name: 'Research',            desc: 'They\'re building a picture of what\'s possible; not looking for you yet, looking for answers.' },
       s3: { name: 'Decide',              desc: 'They know what they want. Committing feels risky. Your job is to guide the decision.' },
       s4: { name: 'Join',                desc: 'They said yes. The feeling at this stage should be: I made the right call.' },
       s5: { name: 'Engage &amp; Participate', desc: 'This is where the relationship either compounds or flatlines.' },
@@ -394,43 +408,43 @@
         code: 'BB',
         name: 'Brilliant Basics',
         subtitle: 'Operational trust and friction discipline',
-        definition: 'The infrastructure of your experience — the systems, processes, and handovers that either make it easy for your [term] and your team, or create invisible friction that erodes trust over time.'
+        definition: 'The infrastructure of your experience; the systems, processes, and handovers that either make it easy for your [term] and your team, or create invisible friction that erodes trust over time.'
       },
       id: {
         code: 'ID',
         name: 'Intentional Direction',
         subtitle: 'End-to-end experience design',
-        definition: 'Whether the choices in your experience are deliberate or accidental — the difference between an experience that reflects your values and one that simply grew around what was convenient.'
+        definition: 'Whether the choices in your experience are deliberate or accidental; the difference between an experience that reflects your values and one that simply grew around what was convenient.'
       },
       ec: {
         code: 'EC',
         name: 'Embedded Confidence',
         subtitle: 'Strengthened belief and reduced doubt by design',
-        definition: 'How well your experience builds and maintains [term] confidence — not through the effort of individuals, but through design choices that make [term] feel secure, seen, and certain they made the right call.'
+        definition: 'How well your experience builds and maintains [term] confidence; not through the effort of individuals, but through design choices that make [term] feel secure, seen, and certain they made the right call.'
       },
       pr: {
         code: 'PR',
         name: 'Purposeful Relevance',
         subtitle: 'Contextual adaptation and personalisation',
-        definition: 'How well your experience adapts to who your [term] actually are — their context, capacity, and changing needs — rather than delivering the same thing to everyone and hoping it fits.'
+        definition: 'How well your experience adapts to who your [term] actually are; their context, capacity, and changing needs; rather than delivering the same thing to everyone and hoping it fits.'
       },
       cm: {
         code: 'CM',
         name: 'Clear Movement',
         subtitle: 'Visible momentum and felt progress',
-        definition: 'Whether your [term] can see and feel that working with you is moving them forward — through early wins, visible milestones, and an experience that makes progress feel real, not assumed.'
+        definition: 'Whether your [term] can see and feel that working with you is moving them forward; through early wins, visible milestones, and an experience that makes progress feel real, not assumed.'
       },
       ci: {
         code: 'CI',
         name: 'Compounding Impact',
         subtitle: 'Long-term relationships and growing advocacy',
-        definition: 'Whether your experience is designed to deepen over time — building loyalty, driving referrals, and creating relationships that get more valuable the longer they run.'
+        definition: 'Whether your experience is designed to deepen over time; building loyalty, driving referrals, and creating relationships that get more valuable the longer they run.'
       },
       sm: {
         code: 'SM',
         name: 'Signature Moments',
         subtitle: 'Your unique experience amplifies every layer',
-        definition: 'The moments in your experience that are unmistakably yours — the things [term] describe specifically when they tell someone else about you, that no competitor could replicate without also becoming you.'
+        definition: 'The moments in your experience that are unmistakably yours; the things [term] describe specifically when they tell someone else about you, that no competitor could replicate without also becoming you.'
       }
     };
 
@@ -438,7 +452,7 @@
       bb: {
         foundation:  {
           text:     'Your team is working hard to deliver for your [term], but the infrastructure underneath that effort has not been designed yet. Right now, the experience depends on individuals filling gaps rather than systems making it easy. [term] may feel the care, but they are also feeling the friction.',
-          question: 'What actually happens between your first contact with a new [term] and day 30 — not what is supposed to happen, but what does? Map it out and find the worst friction point.'
+          question: 'What actually happens between your first contact with a new [term] and day 30; not what is supposed to happen, but what does? Map it out and find the worst friction point.'
         },
         emerging:    {
           text:     'You have the building blocks in place and your [term] can feel that you are trying to make things easy. But the experience is inconsistent; some touchpoints are smooth, others create more work than they should, for you and for them. The basics are there; they just have not been joined up yet.',
@@ -450,13 +464,13 @@
         },
         compounding: {
           text:     'Your basics are genuinely brilliant. [term] move through your experience without friction, your team can deliver consistently without depending on heroics, and the infrastructure underneath the relationship is as well-designed as the relationship itself. This is rare, and it is the foundation that makes everything else possible.',
-          question: 'Document what makes your basics this good — who built it, why they made those choices — so it does not live only in the heads of the people who designed it.'
+          question: 'Document what makes your basics this good; who built it, why they made those choices; so it does not live only in the heads of the people who designed it.'
         }
       },
       id: {
         foundation:  {
           text:     'Your experience has evolved organically; built around what was needed at the time, shaped by what worked for your team, and held together by the people who care enough to fill the gaps. That is not a criticism; most organisations start here. But right now, the direction of the experience is implicit, and that makes it very difficult to change, grow or scale.',
-          question: 'If you asked your team what do we want [term] to feel at every stage of working with us — would you get the same answer from everyone? That conversation is your starting point.'
+          question: 'If you asked your team what do we want [term] to feel at every stage of working with us; would you get the same answer from everyone? That conversation is your starting point.'
         },
         emerging:    {
           text:     'You have started making deliberate choices about how your experience works; there are moments where the intention is clear and the [term] feel it. But those moments are not consistent yet, and the balance between human connection and process has not been worked out across the whole experience. What is intentional in some areas is still accidental in others.',
@@ -464,7 +478,7 @@
         },
         developing:  {
           text:     'You have designed your experience with genuine thought. There is a clear intention behind how you work, and most of your [term] experience the benefit of that; things feel considered rather than accidental. The opportunity is in the edges: the stages where the intention has not quite made it into the actual touchpoints, or where the design does not yet account for [term] who are stretched, overwhelmed, or having a hard week.',
-          question: 'Pick the stage of your experience where intention runs out — where things become habitual rather than designed. What would it look like to bring the same care you have at your best moments to that stage?'
+          question: 'Pick the stage of your experience where intention runs out; where things become habitual rather than designed. What would it look like to bring the same care you have at your best moments to that stage?'
         },
         compounding: {
           text:     'Your experience is genuinely designed; not only documented, but deliberately shaped. [term] feel the intention behind every touchpoint, and your team knows how to make decisions that are consistent with it, even in situations that were not anticipated. The balance between human connection and process is working, and it does not depend on any one person to hold it together.',
@@ -486,7 +500,7 @@
         },
         compounding: {
           text:     'Confidence in your experience is not something [term] have to maintain; it is built into how you work. [term] do not worry about whether they will be looked after because they have seen enough evidence that they will be. The systems for noticing disengagement, adapting to different needs, and supporting [term] through hard moments are designed in, not dependent on memory or proximity.',
-          question: 'Where in the experience are [term] still carrying confidence on their own — moments where doubt could creep in without you noticing? That is the edge worth designing for next.'
+          question: 'Where in the experience are [term] still carrying confidence on their own; moments where doubt could creep in without you noticing? That is the edge worth designing for next.'
         }
       },
       pr: {
@@ -496,15 +510,15 @@
         },
         emerging:    {
           text:     'You are starting to adapt to your [term] in meaningful ways; there are moments where they feel seen and responded to as individuals, not just as accounts. But the personalisation is patchy; it tends to happen in the early stages of the relationship and taper off over time, or it relies on whoever manages that [term] remembering what they know.',
-          question: 'Look at your [term] who have been with you the longest. Is the experience you are delivering to them still relevant to where they are now — or is it still calibrated to who they were when they joined?'
+          question: 'Look at your [term] who have been with you the longest. Is the experience you are delivering to them still relevant to where they are now; or is it still calibrated to who they were when they joined?'
         },
         developing:  {
           text:     'You personalise your experience in ways that [term] notice and value. You adapt based on what you know about them, and there are genuine moments where a [term] feels that the experience was made for them, not just delivered to them. The opportunity is in the middle and later stages of the relationship, where personalisation often gives way to routine; the initial effort has not been maintained as the [term] has evolved.',
-          question: 'What are the moments that matter in the long middle part of your experience — the ones that can make or break it? How can you make those feel seamless and easier to stay than to leave?'
+          question: 'What are the moments that matter in the long middle part of your experience; the ones that can make or break it? How can you make those feel seamless and easier to stay than to leave?'
         },
         compounding: {
           text:     'Personalisation is woven through your entire experience. You adapt based on behaviour, not just information; you review what you know and update it; and your [term] feel the difference; they describe working with you in specific terms, not general ones. This is the layer that turns good service into a relationship [term] do not want to leave.',
-          question: 'Can your [term] see how much you adapt to them specifically? Sometimes the personalisation is real but invisible. Making it visible — without it feeling self-congratulatory — is the next layer of trust.'
+          question: 'Can your [term] see how much you adapt to them specifically? Sometimes the personalisation is real but invisible. Making it visible; without it feeling self-congratulatory; is the next layer of trust.'
         }
       },
       cm: {
@@ -518,7 +532,7 @@
         },
         developing:  {
           text:     '[term] generally experience clear progress and can see the results of working with you. You know roughly how long it takes for them to reach meaningful value, and the experience is designed to move them forward rather than let them stall. The opportunity is in sharpening the visibility of that movement; making the milestones even more explicit, so [term] feel the momentum as well as see the outcomes.',
-          question: 'What happens between milestones — in the long stretches where [term] are doing the work but not yet at a visible outcome? That is where momentum most often stalls. What one touchpoint could acknowledge progress-in-progress?'
+          question: 'What happens between milestones; in the long stretches where [term] are doing the work but not yet at a visible outcome? That is where momentum most often stalls. What one touchpoint could acknowledge progress-in-progress?'
         },
         compounding: {
           text:     'Movement is one of the defining features of your experience. [term] do not just experience results; they see them, feel them, and can articulate them. Early wins are designed in, milestones are visible, and the experience makes it easier to move forward than to stall. [term] who reach meaningful value quickly are your most engaged, most loyal, and most likely to refer.',
@@ -528,15 +542,15 @@
       ci: {
         foundation:  {
           text:     'The impact you are having on your [term] probably does not end when the formal engagement does; but right now, you are not tracking it and you are not designing for it. The relationship exists within the boundaries of the service, and what happens beyond those boundaries is not yet part of your experience design.',
-          question: 'What do your best long-term [term] have in common — not who they are, but what you did differently for them? That pattern is the beginning of designing for impact that compounds.'
+          question: 'What do your best long-term [term] have in common; not who they are, but what you did differently for them? That pattern is the beginning of designing for impact that compounds.'
         },
         emerging:    {
           text:     'You are starting to think beyond the immediate transaction; there are [term] who have stayed, deepened, and referred, and you can see that what you are doing is having a longer-term effect. But you are not yet measuring it or designing for it consistently. The compounding that is happening is real; it just is not intentional yet.',
-          question: 'Choose one measure of long-term impact and start tracking it — even informally. You cannot design for what you are not measuring. Three months of data will show you what is compounding and what is quietly leaking.'
+          question: 'Choose one measure of long-term impact and start tracking it; even informally. You cannot design for what you are not measuring. Three months of data will show you what is compounding and what is quietly leaking.'
         },
         developing:  {
           text:     'Your experience creates real long-term value and you can see evidence of it; [term] stay, refer, and go deeper over time. You track engagement beyond the first milestone and you understand what is driving retention. The opportunity is in making the long-term impact more visible to [term] themselves; helping them see how working with you is contributing to their bigger goals, not just their immediate needs.',
-          question: 'At your next key milestone moment with a [term] — a renewal, a review, a check-in — explicitly connect what you have done together to where they are going. Help them articulate the value in their own words.'
+          question: 'At your next key milestone moment with a [term]; a renewal, a review, a check-in; explicitly connect what you have done together to where they are going. Help them articulate the value in their own words.'
         },
         compounding: {
           text:     'Your experience does not just deliver value; it compounds it. [term] who work with you over time do not just stay; they deepen, refer, and advocate. You track what matters beyond the first milestone, you help [term] connect your work to their long-term goals, and the relationship reinforces itself. This is the rarest thing in experience design: an architecture that gets better the longer it runs.',
@@ -545,16 +559,16 @@
       },
       sm: {
         foundation:  {
-          text:     'If you removed your name from your experience, a [term] moving through it probably could not tell it was yours. Not because the experience is bad — but because it has not yet been designed to express who you are. The touches that make you distinctive exist in your relationships, not in the experience itself.',
-          question: 'Ask three of your best [term] one question: when you have recommended us to someone, what do you usually say? Their answer is your signature — and it is waiting to be designed into the experience deliberately.'
+          text:     'If you removed your name from your experience, a [term] moving through it probably could not tell it was yours. Not because the experience is bad; but because it has not yet been designed to express who you are. The touches that make you distinctive exist in your relationships, not in the experience itself.',
+          question: 'Ask three of your best [term] one question: when you have recommended us to someone, what do you usually say? Their answer is your signature; and it is waiting to be designed into the experience deliberately.'
         },
         emerging:    {
-          text:     'There are moments in your experience that feel distinctly yours — a specific touchpoint, a way of communicating, something [term] remember and mention. But those moments are inconsistent; they happen in some interactions and not others, and they have not been deliberately placed throughout the experience. Your distinctiveness is visible; it just is not reliable yet.',
-          question: 'The moment [term] mention most specifically when describing you — is it designed, or does it happen by accident? If it is accidental, make it deliberate. One intentional signature moment changes how the whole relationship feels.'
+          text:     'There are moments in your experience that feel distinctly yours; a specific touchpoint, a way of communicating, something [term] remember and mention. But those moments are inconsistent; they happen in some interactions and not others, and they have not been deliberately placed throughout the experience. Your distinctiveness is visible; it just is not reliable yet.',
+          question: 'The moment [term] mention most specifically when describing you; is it designed, or does it happen by accident? If it is accidental, make it deliberate. One intentional signature moment changes how the whole relationship feels.'
         },
         developing:  {
           text:     'Your experience has a genuine signature; [term] who work with you notice something specific that they would not find elsewhere. Your values show up in the experience in ways that feel authentic, not performed. The opportunity is in extending that distinctiveness into the stages where it is currently thinner; particularly the later stages of the relationship, where routines can quietly replace intentionality.',
-          question: 'Where in your experience does your distinctiveness go quiet — the stages where routine has replaced intention? That is usually where loyalty is most at risk. What would it take to bring your signature into those moments?'
+          question: 'Where in your experience does your distinctiveness go quiet; the stages where routine has replaced intention? That is usually where loyalty is most at risk. What would it take to bring your signature into those moments?'
         },
         compounding: {
           text:     'Your signature is unmistakable. [term] who have worked with you describe specific things; not that you were helpful or professional, but moments, details, ways of working that they have not experienced anywhere else. Your values are expressed in the experience in ways that competitors could not replicate even if they tried, because they are not just features; they are the product of who you are and how you think. This is your most durable competitive advantage.',
@@ -598,7 +612,7 @@
     // ─── Step 3: Hero ─────────────────────────────────────────────
 
     document.getElementById('hero-h1').textContent =
-      'Hello ' + name + ' — here is your experience map.';
+      'Hello ' + name + ' ; here is your experience map.';
 
     if (archetype) {
       document.getElementById('hero-archetype').textContent =
@@ -612,10 +626,31 @@
       document.getElementById('archetype-tag').textContent = archetype;
       document.getElementById('archetype-headline').textContent =
         replaceTerm(archetypeData.headline, term);
+      var archetypeDesc = name
+        ? name + ', ' + archetypeData.description.charAt(0).toLowerCase() + archetypeData.description.slice(1)
+        : archetypeData.description;
       document.getElementById('archetype-description').textContent =
-        replaceTerm(archetypeData.description, term);
+        replaceTerm(archetypeDesc, term);
     } else {
       document.getElementById('results-archetype').style.display = 'none';
+    }
+
+    // ── Goal section ─────────────────────────────────────────────
+    var goal = params.get('goal') || '';
+    if (goal) {
+      document.getElementById('results-goal').style.display = '';
+      var goalCard = document.getElementById('goal-card');
+      goalCard.innerHTML =
+        '<div style="background:var(--color-lavender,#E7CFE8);border-radius:12px;padding:28px 32px;">' +
+          '<p style="font-family:var(--font-caption,sans-serif);font-size:0.78rem;letter-spacing:0.1em;' +
+            'text-transform:uppercase;color:var(--color-primary-dk,#6C5481);font-weight:700;margin:0 0 10px;">Your goal</p>' +
+          '<p style="font-size:1.05rem;color:var(--color-navy,#193550);line-height:1.75;margin:0;font-weight:500;">' +
+            goal +
+          '</p>' +
+          '<p style="font-size:0.88rem;color:var(--color-text-mid,#6C5481);line-height:1.65;margin:14px 0 0;">' +
+            'Everything on this page is most useful when read through the lens of what you are actually trying to achieve. Keep coming back to this.' +
+          '</p>' +
+        '</div>';
     }
 
     // ─── Step 5: Stage cards ──────────────────────────────────────
@@ -699,21 +734,36 @@
     legend.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px;';
     legend.innerHTML =
       '<div style="background:#FDF3E7;color:#7A4F00;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
-        '<strong>Foundation</strong><br>Largely undesigned — the experience runs on effort and goodwill rather than systems and intention.' +
+        '<strong>Foundation</strong><br>Largely undesigned; the experience runs on effort and goodwill rather than systems and intention.' +
       '</div>' +
       '<div style="background:#EEF4E0;color:#3D5200;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
-        '<strong>Emerging</strong><br>Intentional in places — deliberate choices have been made but are not yet consistent across the whole experience.' +
+        '<strong>Emerging</strong><br>Intentional in places; deliberate choices have been made but are not yet consistent across the whole experience.' +
       '</div>' +
       '<div style="background:#E8EEF6;color:#193550;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
-        '<strong>Developing</strong><br>Working well with gaps — the experience is solid and your [term] feel it; the opportunity is in the edges.' +
+        '<strong>Developing</strong><br>Working well with gaps; the experience is solid and your [term] feel it; the opportunity is in the edges.' +
       '</div>' +
       '<div style="background:#F5EAF8;color:#6B2F7A;padding:12px 18px;border-radius:8px;font-size:0.85rem;line-height:1.6;flex:1;min-width:180px;">' +
-        '<strong>Compounding</strong><br>Building on itself — the experience is designed well enough that it gets better over time rather than staying the same.' +
+        '<strong>Compounding</strong><br>Building on itself; the experience is designed well enough that it gets better over time rather than staying the same.' +
       '</div>';
     legend.innerHTML = replaceTerm(legend.innerHTML, term);
     layerContainer.before(legend);
 
     var layerKeys = ['bb','id','ec','pr','cm','ci','sm'];
+
+    // Identify lowest scoring layer for org name personalisation
+    var lowestLayerKey = layerKeys[0];
+    var lowestLayerScore = 999;
+    // foundation excluded (score 999) so the substitution targets the lowest DESIGNED layer
+    var bandScoreMap = { foundation: 999, emerging: 2, developing: 3, compounding: 4 };
+    layerKeys.forEach(function(lk) {
+      var rawBand = params.get('l_' + lk) || '';
+      var bk = bandKey(rawBand);
+      var score = bandScoreMap[bk] || 2;
+      if (score < lowestLayerScore) {
+        lowestLayerScore = score;
+        lowestLayerKey = lk;
+      }
+    });
 
     layerKeys.forEach(function(lk, i) {
       var layer = LAYERS[lk];
@@ -726,6 +776,19 @@
       var paraData = PARAGRAPHS[lk] && PARAGRAPHS[lk][bk] ? PARAGRAPHS[lk][bk] : null;
       var paragraphText = paraData ? replaceTerm(paraData.text, term) : '';
       var questionText  = paraData ? replaceTerm(paraData.question, term) : '';
+
+      // Change 6b: for the lowest scoring layer, open the paragraph with org name
+      if (lk === lowestLayerKey && org) {
+        paragraphText = paragraphText
+          .replace(/^You have/, org + ' has')
+          .replace(/^You are/, org + ' is')
+          .replace(/^You personalise/, org + ' personalises')
+          .replace(/^You do not/, org + ' does not')
+          .replace(/^Your team/, org + '\'s team')
+          .replace(/^If you removed/, 'If ' + org + ' removed')
+          .replace(/^Right now, \[term\]/, 'Right now, ' + org + '\'s [term]')
+          .replace(/^Right now, you/, 'Right now, ' + org);
+      }
 
       var borderStyle = i < layerKeys.length - 1
         ? 'border-bottom:1px solid var(--color-border);'
@@ -740,7 +803,7 @@
           '<p style="font-size:0.92rem;color:var(--color-text-mid);line-height:1.7;margin:0;">' + definition + '</p>' +
         '</div>' +
         '<div style="flex:1;min-width:260px;">' +
-          '<span class="pill" style="background:' + band.bg + ';color:' + band.color + ';font-size:0.72rem;margin-bottom:16px;display:inline-block;">' + band.label + ' — ' + band.desc + '</span>' +
+          '<span class="pill" style="background:' + band.bg + ';color:' + band.color + ';font-size:0.72rem;margin-bottom:16px;display:inline-block;">' + band.label + ': ' + band.desc + '</span>' +
           '<p style="color:var(--color-navy);line-height:1.75;margin:0;font-size:0.97rem;">' + paragraphText + '</p>' +
           (questionText ? '<p style="font-weight:700;color:var(--color-navy);line-height:1.7;margin:20px 0 0;font-size:0.95rem;">' + questionText + '</p>' : '') +
         '</div>';
@@ -758,30 +821,55 @@
     var winAction    = params.get('win_layer_action') || '';
 
     var opps = [
-      { num: '1', label: 'The Fix',        subLabel: fixStage,   action: fixAction,   cardClass: 'card card--primary' },
-      { num: '2', label: 'The Build',      subLabel: buildLayer, action: buildAction, cardClass: 'card card--lavender' },
-      { num: '3', label: 'The Quick Win',  subLabel: winLayer,   action: winAction,   cardClass: 'card card--sage'    }
+      { num: '1', label: 'The Fix',       subLabel: fixStage,   action: fixAction,   cardClass: 'card card--primary',  textColor: ''        },
+      { num: '2', label: 'The Build',     subLabel: buildLayer, action: buildAction, cardClass: 'card card--lavender', textColor: '#193550' },
+      { num: '3', label: 'The Quick Win', subLabel: winLayer,   action: winAction,   cardClass: 'card card--sage',     textColor: ''        }
     ];
 
     var oppGrid = document.getElementById('opportunity-grid');
 
     opps.forEach(function(o) {
-      var actionText = replaceTerm(o.action, term);
+      var actionText  = replaceTerm(o.action, term);
+      var subLabel    = (o.num === '1' && org) ? 'For ' + org + ': ' + o.subLabel : o.subLabel;
+      var numColor    = o.textColor || 'inherit';
+      var labelColor  = o.textColor ? 'color:' + o.textColor + ';' : '';
+      var bodyColor   = o.textColor ? 'color:' + o.textColor + ';' : '';
       var card = document.createElement('div');
       card.className = o.cardClass;
       card.innerHTML =
-        '<p style="font-family:var(--font-accent);font-size:3rem;font-weight:700;margin:0 0 8px;line-height:1;opacity:0.35;">' + o.num + '</p>' +
-        '<h4 style="margin:0 0 6px;">' + o.label + '</h4>' +
-        (o.subLabel ? '<p style="font-size:0.78rem;font-family:var(--font-caption);letter-spacing:0.08em;text-transform:uppercase;opacity:0.65;margin:0 0 16px;">' + o.subLabel + '</p>' : '') +
-        '<p style="line-height:1.7;margin:0;font-size:0.95rem;">' + actionText + '</p>';
+        '<p style="font-family:var(--font-accent);font-size:3rem;font-weight:700;margin:0 0 8px;line-height:1;opacity:0.35;' + labelColor + '">' + o.num + '</p>' +
+        '<h4 style="margin:0 0 6px;' + labelColor + '">' + o.label + '</h4>' +
+        (subLabel ? '<p style="font-size:0.78rem;font-family:var(--font-caption);letter-spacing:0.08em;text-transform:uppercase;opacity:0.65;margin:0 0 16px;' + labelColor + '">' + subLabel + '</p>' : '') +
+        '<p style="line-height:1.7;margin:0;font-size:0.95rem;' + bodyColor + '">' + actionText + '</p>';
       oppGrid.appendChild(card);
     });
+
+    // ── Free text reflection section ────────────────────────────
+    var freeText = params.get('free_text') || '';
+    var goalText = params.get('goal') || '';
+    if (freeText && freeText !== goalText && freeText.length > 10) {
+      document.getElementById('results-freetext').style.display = '';
+      var ftCard = document.getElementById('freetext-card');
+      ftCard.innerHTML =
+        '<div style="max-width:680px;">' +
+          '<span style="font-family:var(--font-caption,sans-serif);font-size:0.78rem;letter-spacing:0.1em;' +
+            'text-transform:uppercase;color:var(--color-primary-dk,#6C5481);font-weight:700;">What you shared</span>' +
+          '<p style="font-size:1rem;color:var(--color-navy,#193550);line-height:1.8;margin:12px 0 16px;' +
+            'font-style:italic;border-left:3px solid var(--color-primary,#AC7FD4);padding-left:18px;">' +
+            freeText +
+          '</p>' +
+          '<p style="font-size:0.88rem;color:var(--color-text-mid,#6C5481);line-height:1.65;margin:0;">' +
+            'This is a reminder of what you brought into the room. The three steps above are a starting point; ' +
+            'the conversation that matters most is the one where you connect these insights to what you just shared.' +
+          '</p>' +
+        '</div>';
+    }
 
     // ─── Step 8: Email mailto link ────────────────────────────────
 
     var emailBtn = document.getElementById('email-results-btn');
     if (emailBtn) {
-      var subject = encodeURIComponent('My CX Quiz results — SHiFT with Purpose');
+      var subject = encodeURIComponent('My CX Quiz results: SHiFT with Purpose');
       var body    = encodeURIComponent(
         'Hi,\n\nHere are my CX Quiz results from SHiFT with Purpose:\n\n' +
         window.location.href +
