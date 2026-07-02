@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
+  <!-- Google Analytics — loads only after cookie consent -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function swp_loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5';
+      document.head.appendChild(s);
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-NR1ZB5W4N5'); };
+    }
+    if (localStorage.getItem('swp_cookie_consent') === 'accepted') { swp_loadGA(); }
+  </script>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mighty SHiFTs Archive | Insights | SHiFT with Purpose</title>
-  <meta name="description" content="Every issue of Mighty SHiFTs, the weekly essay for CEOs, COOs, and founders doing the hardest work in disability services, aged care, and community health." />
-  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/blog/mighty-shifts" />
-  <link rel="stylesheet" href="../styles.css" />
+  <title>Mighty SHiFTs Newsletter | SHiFT with Purpose</title>
+  <meta name="description" content="One story, one insight, sent weekly(ish). Written for purpose-led leaders who care about their people, their impact, and the long game." />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/mighty-shifts" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/mighty-shifts" />
+  <meta property="og:title" content="Mighty SHiFTs Newsletter | SHiFT with Purpose" />
+  <meta property="og:description" content="One story, one insight, sent weekly(ish). For purpose-led leaders doing the hardest work." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
   <nav class="nav">
     <div class="nav__inner">
-      <a href="../index.html" class="nav__logo">
-        <img src="../images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
+      <a href="index.html" class="nav__logo">
+        <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
       <ul class="nav__links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li>
-          <a href="../methodology.html" class="has-dropdown">Methodology</a>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
           <ul class="nav__dropdown">
-            <li><a href="../methodology.html#shift-method">SHiFT Method</a></li>
-            <li><a href="../methodology.html#think-then-ai">Think Then AI</a></li>
-            <li><a href="../methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
           </ul>
         </li>
         <li>
-          <a href="../services.html" class="has-dropdown">Services</a>
+          <a href="services.html" class="has-dropdown">Services</a>
           <ul class="nav__dropdown">
-            <li><a href="../catalyst.html">SHiFT Catalyst</a></li>
-            <li><a href="../partnership.html">SHiFT Partnership</a></li>
-            <li><a href="../ai-amplifier.html">AI Impact Amplifier</a></li>
-            <li><a href="../contact.html">Bespoke Workshops</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+            <li><a href="spark.html">SHiFT Spark</a></li>
+            <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
+            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+            <li><a href="contact.html">Bespoke Workshop</a></li>
           </ul>
         </li>
         <li>
-          <a href="../blog.html" class="has-dropdown active">Insights</a>
+          <a href="blog.html" class="has-dropdown active">Insights</a>
           <ul class="nav__dropdown">
-            <li><a href="../blog.html">Blog</a></li>
-            <li><a href="../blog.html">Client Stories</a></li>
-            <li><a href="mighty-shifts.html" class="active">Mighty SHiFTs Archive</a></li>
-            <li><a href="../quiz.html">Experience Architecture Index</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="mighty-shifts.html">Mighty SHiFTs Newsletter</a></li>
+            <li><a href="blog/mighty-shifts.html">Mighty SHiFTs Archive</a></li>
+            <li><a href="quiz.html">Customer Experience Quiz</a></li>
           </ul>
         </li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__cta">
-        <a href="../contact.html" class="btn btn-primary">Book a Free SHiFT Call</a>
+        <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
       </div>
       <div class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -55,121 +80,186 @@
     </div>
   </nav>
 
-  <!-- HERO — navy to match the section treatment on blog.html -->
-  <section class="section" style="background: var(--color-navy); padding: 80px 0 64px;">
-    <div class="container" style="max-width: 720px;">
-      <a href="../blog.html" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--color-sage); text-decoration: none; margin-bottom: 24px;">&larr; Back to Insights</a>
-      <span class="caption" style="color: var(--color-sage);">Weekly essay</span>
-      <h1 style="margin-top: 16px; margin-bottom: 20px; color: var(--color-white);">Mighty SHiFTs</h1>
-      <p class="lead" style="color: rgba(252,252,252,0.75);">
-        One sharp insight. Every Thursday. For the leaders doing the hardest work in disability services, aged care, and community health. No generic advice, no consultant jargon.
-      </p>
-      <div style="margin-top: 32px;">
-        <a href="#subscribe" class="btn btn-sage">Subscribe and get every issue</a>
+  <!-- ============================================================
+       HERO + FORM
+       ============================================================ -->
+  <section style="background: var(--color-navy); padding: 96px 0 80px; min-height: 80vh; display: flex; align-items: center;">
+    <div class="container">
+      <div style="max-width: 560px; margin: 0 auto; text-align: center;">
+
+        <span class="caption" style="color: var(--color-sage);">Free weekly newsletter</span>
+
+        <h1 style="color: var(--color-white); margin-top: 16px; margin-bottom: 20px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15;">
+          Mighty SHiFTs
+        </h1>
+
+        <p style="color: rgba(255,255,255,0.72); font-size: 1.1rem; line-height: 1.75; margin-bottom: 48px;">
+          One story. One insight. Sent weekly(ish). Written for purpose-led leaders who want to think more clearly about their people, their impact, and what they are actually building for the long term.
+        </p>
+
+        <!-- Form -->
+        <div id="mlb2-24367037" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24367037">
+          <div class="ml-form-embedWrapper embedForm" style="background: transparent; border: none; padding: 0; width: 100%; max-width: 100%;">
+            <div class="ml-form-embedBody row-form" style="padding: 0;">
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" data-code="" method="post" target="_blank" style="margin: 0;">
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 12px;">
+                  <input
+                    aria-label="name"
+                    type="text"
+                    name="fields[name]"
+                    placeholder="First name"
+                    autocomplete="given-name"
+                    style="width: 100%; padding: 14px 18px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: white; font-size: 0.98rem; font-family: inherit; box-sizing: border-box; outline: none;"
+                    onfocus="this.style.borderColor='var(--color-sage)'"
+                    onblur="this.style.borderColor='rgba(255,255,255,0.2)'"
+                  />
+                  <input
+                    aria-label="email"
+                    aria-required="true"
+                    type="email"
+                    name="fields[email]"
+                    placeholder="Email address"
+                    autocomplete="email"
+                    required
+                    style="width: 100%; padding: 14px 18px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: white; font-size: 0.98rem; font-family: inherit; box-sizing: border-box; outline: none;"
+                    onfocus="this.style.borderColor='var(--color-sage)'"
+                    onblur="this.style.borderColor='rgba(255,255,255,0.2)'"
+                  />
+                </div>
+                <input type="hidden" name="ml-submit" value="1" />
+                <input type="hidden" name="anticsrf" value="true" />
+                <button
+                  type="submit"
+                  style="width: 100%; padding: 15px 24px; background: var(--color-sage); color: var(--color-navy); border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: opacity 0.15s;"
+                  onmouseover="this.style.opacity='0.85'"
+                  onmouseout="this.style.opacity='1'"
+                >
+                  Send me the Mighty SHiFTs &rarr;
+                </button>
+              </form>
+            </div>
+            <div class="ml-form-successBody row-success" style="display: none; padding: 28px; background: rgba(206,215,141,0.12); border-radius: 12px; border: 1px solid rgba(206,215,141,0.3);">
+              <p style="color: var(--color-sage); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">You&rsquo;re on the list.</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 0.92rem; line-height: 1.65; margin: 0;">Welcome. You&rsquo;ll receive the next issue when it lands. If this is your first time here, check your inbox to confirm your subscription first.</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="color: rgba(255,255,255,0.35); font-size: 0.8rem; margin-top: 16px;">
+          No generic advice. No consultant jargon. Unsubscribe whenever you like.
+        </p>
+
       </div>
     </div>
   </section>
 
-  <!-- ARCHIVE GRID -->
-  <section class="section" style="padding-top: 56px; padding-bottom: 96px; background: #f5f4f9;">
-    <div class="container">
-
-      <div style="margin-bottom: 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-        <h2 style="font-size: 1.2rem; font-weight: 700;">All issues</h2>
-        <div class="blog-search" style="max-width: 360px;">
-          <input type="text" id="cat-search" class="blog-search__input" placeholder="Search issues..." aria-label="Search issues" />
-          <svg class="blog-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
+  <!-- ============================================================
+       WHAT TO EXPECT
+       ============================================================ -->
+  <section style="background: #f5f2f8; padding: 72px 0;">
+    <div class="container" style="max-width: 600px; text-align: center;">
+      <span class="caption">What to expect</span>
+      <h2 style="margin-top: 12px; margin-bottom: 40px;">Written for leaders who are already doing the work.</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px; text-align: left;">
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-lavender); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; color: var(--color-primary); font-size: 0.85rem;">1</div>
+          <div>
+            <h4 style="margin-bottom: 4px;">A real story, not a case study</h4>
+            <p style="font-size: 0.95rem; color: var(--color-text-mid); margin: 0; line-height: 1.7;">Something that happened; in a session, in a conversation, in the gap between what was promised and what people experienced.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-lavender); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; color: var(--color-primary); font-size: 0.85rem;">2</div>
+          <div>
+            <h4 style="margin-bottom: 4px;">One insight worth sitting with</h4>
+            <p style="font-size: 0.95rem; color: var(--color-text-mid); margin: 0; line-height: 1.7;">Not a list of ten things. One idea about experience, leadership, or what it actually takes to build something that compounds over time.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-lavender); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; color: var(--color-primary); font-size: 0.85rem;">3</div>
+          <div>
+            <h4 style="margin-bottom: 4px;">Something you can actually use</h4>
+            <p style="font-size: 0.95rem; color: var(--color-text-mid); margin: 0; line-height: 1.7;">A question worth asking your team. A reframe that changes how you approach a problem. A small shift that makes the next thing easier.</p>
+          </div>
         </div>
       </div>
-
-      <div class="grid-3" id="articles-grid">
-
-        <!-- Issue 1 — published -->
-        <div class="blog-card" data-card style="border: 1.5px solid var(--color-border);">
-          <div class="blog-card__image" style="background: var(--color-navy); display: flex; align-items: center; justify-content: center; min-height: 180px;">
-            <span style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-sage); background: rgba(206,215,141,0.15); padding: 5px 14px; border-radius: 100px;">Issue 1</span>
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Essay</span>
-            <div class="blog-card__title">The day the research became a poster.</div>
-            <div class="blog-card__excerpt">Good intentions go in. Posters come out. The people who needed something to change are still waiting. This is why Mighty SHiFTs exists.</div>
-            <div class="blog-card__meta">10 April 2026 &nbsp;|&nbsp; 4 min read</div>
-            <div class="blog-card__actions"><a href="../blog-the-day-the-research-became-a-poster.html" class="blog-card__read-link">Read the essay &rarr;</a></div>
-          </div>
-        </div>
-
-        <!-- Placeholder — next issue -->
-        <div class="blog-card" data-card style="border: 1.5px dashed var(--color-border); opacity: 0.6;">
-          <div class="blog-card__image" style="background: #ede8f4; display: flex; align-items: center; justify-content: center; min-height: 180px;">
-            <span style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-primary); background: rgba(118,92,138,0.08); padding: 5px 14px; border-radius: 100px;">Coming Thursday</span>
-          </div>
-          <div class="blog-card__body">
-            <span class="blog-card__pillar">Next Issue</span>
-            <div class="blog-card__title">Subscribe to receive Issue 2 directly.</div>
-            <div class="blog-card__excerpt">Every issue goes to subscribers first. Add your name below and it lands in your inbox every Thursday.</div>
-            <div class="blog-card__meta">Coming soon</div>
-            <div class="blog-card__actions"><a href="#subscribe" class="blog-card__read-link">Subscribe &rarr;</a></div>
-          </div>
-        </div>
-
-      </div>
-
-      <p id="no-results" style="display:none; text-align:center; padding: 40px 0; color: var(--color-text-mid);">No issues match your search.</p>
-
     </div>
   </section>
 
-  <!-- SUBSCRIBE -->
-  <footer class="footer" id="subscribe">
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
     <div class="container">
-      <div class="footer-edm">
-        <div class="footer-edm__inner">
-          <div>
-            <p class="footer-edm__label">Mighty SHiFTs</p>
-            <h3 class="footer-edm__heading">One insight. Every Thursday.<br>For the leaders doing the hardest work.</h3>
-            <p class="footer-edm__body">Each issue delivers one sharp, practical insight for CEOs, COOs, and founders in disability services, aged care, and community health. No generic advice, no consultant jargon; just the thinking your peers don't have time to share.</p>
-          </div>
-          <div>
-            <form class="footer-edm__form" action="#" method="post">
-              <div class="footer-edm__form-row">
-                <input type="text" name="first_name" placeholder="First name" class="footer-edm__input" required />
-                <input type="email" name="email" placeholder="Email address" class="footer-edm__input" required />
-              </div>
-              <button type="submit" class="footer-edm__submit">Send me the Mighty SHiFTs</button>
-              <p class="footer-edm__microcopy">No generic advice. No consultant jargon. Unsubscribe any time.</p>
-            </form>
-          </div>
-        </div>
-      </div>
       <div class="footer__grid">
         <div>
-          <div class="footer__logo"><img src="../images/logo-dark.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
-          <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
+          <div class="footer__logo"><img src="images/logo-dark.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
+          <p class="footer__tagline">Purpose-led organisations shouldn&rsquo;t have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/shiftiwthpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
           </div>
         </div>
-        <div class="footer__col"><h4>Services</h4><ul><li><a href="../catalyst.html">SHiFT Catalyst</a></li><li><a href="../partnership.html">SHiFT Partnership</a></li><li><a href="../ai-amplifier.html">AI Impact Amplifier</a></li><li><a href="../contact.html">Workshops</a></li></ul></div>
-        <div class="footer__col"><h4>Company</h4><ul><li><a href="../about.html">About Cata</a></li><li><a href="../methodology.html">Methodology</a></li><li><a href="../blog.html">Insights</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
-        <div class="footer__col"><h4>Start here</h4><ul><li><a href="../contact.html">Free SHiFT Call</a></li><li><a href="../quiz.html">EAI Quiz</a></li></ul></div>
+        <div class="footer__col"><h4>Services</h4><ul><li><a href="catalyst.html">SHiFT Catalyst</a></li><li><a href="spark.html">SHiFT Spark</a></li><li><a href="partnership.html">SHiFT Partnership</a></li><li><a href="ai-amplifier.html">AI Impact Amplifier</a></li></ul></div>
+        <div class="footer__col"><h4>Company</h4><ul><li><a href="about.html">About Cata</a></li><li><a href="methodology.html">Methodology</a></li><li><a href="blog.html">Insights</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+        <div class="footer__col"><h4>Start here</h4><ul><li><a href="contact.html">Discovery Call</a></li><li><a href="quiz.html">Customer Experience Quiz</a></li><li><a href="mighty-shifts.html">Mighty SHiFTs Newsletter</a></li></ul></div>
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 SHiFT with Purpose. ABN: 43 326 330 421. All rights reserved.</span>
-        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a></span>
+        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a> &nbsp;|&nbsp; <a href="#" id="swp-cookie-prefs" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Cookie preferences</a></span>
       </div>
     </div>
   </footer>
 
+  <!-- Mobile nav toggle -->
   <script>
-  (function () {
-    var toggle = document.querySelector('.nav__toggle'); var nav = document.querySelector('.nav');
-    if (toggle && nav) { toggle.addEventListener('click', function (e) { e.stopPropagation(); nav.classList.toggle('nav--open'); }); document.addEventListener('click', function (e) { if (!nav.contains(e.target)) nav.classList.remove('nav--open'); }); document.querySelectorAll('.nav__links a').forEach(function (l) { l.addEventListener('click', function () { nav.classList.remove('nav--open'); }); }); }
-    var input = document.getElementById('cat-search'); var noR = document.getElementById('no-results');
-    if (input) { input.addEventListener('input', function () { var q = this.value.trim().toLowerCase(); var vis = 0; document.querySelectorAll('[data-card]').forEach(function (c) { var t = (c.querySelector('.blog-card__title') || {}).textContent || ''; var e = (c.querySelector('.blog-card__excerpt') || {}).textContent || ''; var m = !q || (t + ' ' + e).toLowerCase().indexOf(q) > -1; c.style.display = m ? '' : 'none'; if (m) vis++; }); if (noR) noR.style.display = (q && vis === 0) ? 'block' : 'none'; }); }
-  })();
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+      document.addEventListener('click', function(e) { if (!nav.contains(e.target)) nav.classList.remove('nav--open'); });
+      document.querySelectorAll('.nav__links a').forEach(function(link) { link.addEventListener('click', function() { nav.classList.remove('nav--open'); }); });
+    })();
   </script>
+
+  <!-- MailerLite form handler -->
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+  <script>
+    function ml_webform_success_24367037() {
+      var body = document.querySelector('#mlb2-24367037 .ml-form-embedBody');
+      var success = document.querySelector('#mlb2-24367037 .ml-form-successBody');
+      if (body) body.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
+
+  <!-- Cookie consent -->
+  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-primary-dark); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.65; margin:0; max-width:660px;">We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--color-sage); text-decoration:underline;">Privacy policy</a></p>
+    <div style="display:flex; gap:12px; flex-shrink:0;">
+      <button id="swp-cookie-decline" style="background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.65); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-family:inherit;">Decline</button>
+      <button id="swp-cookie-accept" style="background:var(--color-sage); border:none; color:var(--color-navy); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-weight:700; font-family:inherit;">Accept</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var KEY = 'swp_cookie_consent';
+      var banner = document.getElementById('swp-cookie-banner');
+      if (!localStorage.getItem(KEY) && banner) banner.style.display = 'flex';
+      var a = document.getElementById('swp-cookie-accept');
+      var d = document.getElementById('swp-cookie-decline');
+      var p = document.getElementById('swp-cookie-prefs');
+      if (a) a.addEventListener('click', function() { localStorage.setItem(KEY, 'accepted'); if (banner) banner.style.display = 'none'; if (typeof swp_loadGA === 'function') swp_loadGA(); });
+      if (d) d.addEventListener('click', function() { localStorage.setItem(KEY, 'declined'); if (banner) banner.style.display = 'none'; });
+      if (p) p.addEventListener('click', function(e) { e.preventDefault(); localStorage.removeItem(KEY); if (banner) banner.style.display = 'flex'; });
+    })();
+  </script>
+
+  <script src="acknowledgement.js"></script>
 </body>
 </html>
