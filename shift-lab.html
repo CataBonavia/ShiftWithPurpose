@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SHiFT Lab — Find what's next. Build it. Test it.</title>
+<meta name="description" content="Sixteen weeks. One new offer, taken from opportunity to market test. For established purpose-led organisations ready to build something they own.">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* =============================================================
+   SHiFT Lab landing page — page-specific components only.
+   Everything else comes from styles.css
+   ============================================================= */
+
+.lp-nav { padding: 22px 0; border-bottom: 1px solid var(--color-border); background: var(--color-white); }
+.lp-nav__inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--section-px);
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.lp-nav__logo img { height: 40px; }
+
+/* HERO */
+.lp-hero { background: var(--color-navy); color: var(--color-white); padding: 96px 0 88px; position: relative; overflow: hidden; }
+.lp-hero::after { content:''; position:absolute; right:-180px; top:-180px; width:560px; height:560px; border-radius:50%;
+  background: radial-gradient(circle, rgba(172,127,212,0.30) 0%, transparent 70%); pointer-events:none; }
+.lp-hero .container { position: relative; z-index: 1; }
+.lp-hero h1 { color: var(--color-white); max-width: 20ch; margin-bottom: 28px; }
+.lp-hero h1 .accent { color: var(--color-sage); }
+.lp-hero .lead { color: rgba(252,252,252,0.9); max-width: 60ch; }
+.lp-hero__caption { color: var(--color-sage); }
+.lp-hero__note { font-family: var(--font-caption); font-size: 0.88rem; color: rgba(252,252,252,0.7); margin-top: 14px; }
+
+.lp-meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:40px; }
+.lp-meta span { font-family: var(--font-caption); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+  padding:9px 18px; border:1px solid rgba(252,252,252,0.28); border-radius:100px; color: rgba(252,252,252,0.88); }
+
+/* SCARCITY STRIP */
+.lp-strip { background: var(--color-sage); padding: 20px 0; }
+.lp-strip p { color: var(--color-navy); font-weight: 600; margin:0; text-align:center; font-size:1rem; }
+
+/* PULL QUOTE */
+.lp-pull { border-left: 4px solid var(--color-primary); padding: 26px 32px; background: var(--color-white);
+  border-radius: 0 var(--radius) var(--radius) 0; box-shadow: var(--shadow-sm); margin: 36px 0; }
+.lp-pull p { font-family: var(--font-accent); font-size: 1.28rem; line-height:1.5; color: var(--color-navy); margin:0; }
+.section--navy .lp-pull { background: rgba(252,252,252,0.06); border-left-color: var(--color-sage); }
+.section--navy .lp-pull p { color: var(--color-white); }
+
+/* REASONS */
+.lp-reason { background: var(--color-white); border-radius: var(--radius-lg); padding: 34px 32px;
+  box-shadow: var(--shadow-sm); border-top: 4px solid var(--color-primary); height: 100%; }
+.lp-reason__num { font-family: var(--font-accent); font-size: 0.9rem; letter-spacing:0.1em; color: var(--color-primary); margin-bottom:10px; }
+.lp-reason h3 { margin-bottom: 12px; }
+.lp-reason p:last-child { margin-bottom: 0; }
+
+/* PHASES */
+.lp-phase { display:grid; grid-template-columns: 150px 1fr; gap:30px; padding: 30px 0;
+  border-top: 1px solid rgba(252,252,252,0.14); }
+.lp-phase:first-of-type { border-top: none; }
+.lp-phase__when { font-family: var(--font-caption); font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;
+  color: var(--color-sage); padding-top:7px; font-weight:500; }
+.lp-phase h3 { color: var(--color-white); margin-bottom:10px; font-family: var(--font-accent); }
+.lp-phase p { margin-bottom: 10px; }
+.lp-phase__out { font-size:0.98rem; color: var(--color-sage); }
+.lp-phase__out strong { color: var(--color-sage); }
+
+/* FUTURES */
+.lp-future { background: var(--color-white); border-radius: var(--radius-lg); padding: 30px 28px;
+  border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm); height:100%; }
+.lp-future__name { font-family: var(--font-accent); font-size:0.9rem; letter-spacing:0.14em; text-transform:uppercase;
+  color: var(--color-primary); margin-bottom:12px; }
+.lp-future__q { font-family: var(--font-main); font-weight:700; font-size:1.18rem; color: var(--color-navy);
+  line-height:1.35; margin-bottom:10px; }
+.lp-future p { font-size:1rem; margin:0; }
+
+/* CRITERIA */
+.lp-criteria { display:grid; grid-template-columns: repeat(5,1fr); gap:16px; margin-top:36px; }
+.lp-crit { background: var(--color-lavender); border-radius: var(--radius); padding:20px 18px; }
+.lp-crit__k { font-family: var(--font-caption); font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase;
+  color: var(--color-primary-dark); font-weight:700; margin-bottom:8px; }
+.lp-crit p { font-size:0.95rem; margin:0; color: var(--color-text); }
+
+/* LADDER */
+.lp-rung { display:grid; grid-template-columns: 60px 1fr; gap:24px; align-items:baseline;
+  padding:20px 0; border-bottom:1px solid var(--color-border); }
+.lp-rung:last-child { border-bottom:none; }
+.lp-rung__n { font-family: var(--font-accent); font-size:1.5rem; color: var(--color-primary); }
+.lp-rung__t { font-family: var(--font-main); font-weight:700; font-size:1.1rem; color: var(--color-navy); }
+.lp-rung p { margin:4px 0 0; font-size:1rem; }
+
+/* LEAVE WITH */
+.lp-leave { display:grid; grid-template-columns: 200px 1fr; gap:28px; padding:24px 0;
+  border-bottom:1px solid var(--color-border); align-items:baseline; }
+.lp-leave:last-of-type { border-bottom:none; }
+.lp-leave__k { font-family: var(--font-accent); font-size:1.05rem; color: var(--color-primary); }
+.lp-leave p { margin:0; }
+
+/* OUTCOMES */
+.lp-outcome { background: rgba(252,252,252,0.07); border:1px solid rgba(252,252,252,0.16);
+  border-radius: var(--radius-lg); padding:28px 26px; height:100%; }
+.lp-outcome__label { font-family: var(--font-accent); font-size:1.5rem; color: var(--color-sage); margin-bottom:12px; }
+.lp-outcome p { margin:0; font-size:1rem; }
+
+/* FEELS LIKE */
+.lp-nots { list-style:none; margin:0 0 28px; padding:0; }
+.lp-nots li { font-size:1.08rem; color: var(--color-text-mid); padding:10px 0 10px 32px; position:relative; }
+.lp-nots li::before { content:'✕'; position:absolute; left:0; top:10px; color: var(--color-coral); font-weight:700; }
+.lp-asks { background: var(--color-navy); border-radius: var(--radius-lg); padding:34px 36px; }
+.lp-asks p { color: var(--color-sage); font-family: var(--font-caption); font-size:0.8rem; letter-spacing:0.1em;
+  text-transform:uppercase; margin-bottom:18px; }
+.lp-asks ul { list-style:none; padding:0; margin:0; }
+.lp-asks li { font-family: var(--font-accent); font-size:1.2rem; color: var(--color-white);
+  padding:9px 0; line-height:1.4; }
+
+/* STATS */
+.lp-stat { text-align:center; padding:26px 18px; background: var(--color-white);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); height:100%; }
+.lp-stat__fig { font-family: var(--font-accent); font-size:2.4rem; color: var(--color-primary); line-height:1; margin-bottom:10px; }
+.lp-stat p { font-size:0.98rem; margin:0; }
+
+/* FAQ */
+.lp-faq { border-top:1px solid var(--color-border); padding:26px 0; }
+.lp-faq:last-of-type { border-bottom:1px solid var(--color-border); }
+.lp-faq__q { font-family: var(--font-accent); font-size:1.22rem; color: var(--color-navy); margin-bottom:12px; }
+.lp-faq p:last-child { margin-bottom:0; }
+
+/* PRICE */
+.lp-price { background: var(--color-white); border-radius: var(--radius-lg); padding:44px;
+  box-shadow: var(--shadow-lg); margin-top:36px; }
+.lp-price__row { display:flex; justify-content:space-between; align-items:baseline; gap:20px;
+  padding:20px 0; border-bottom:1px solid var(--color-border); flex-wrap:wrap; }
+.lp-price__row:last-child { border-bottom:none; }
+.lp-price__k { font-size:1.05rem; color: var(--color-text-mid); }
+.lp-price__k strong { display:block; color: var(--color-navy); font-size:1.15rem; margin-bottom:2px; }
+.lp-price__v { font-family: var(--font-accent); font-size:1.9rem; color: var(--color-navy); }
+.lp-price__v.is-accent { color: var(--color-primary); }
+
+/* STEPS */
+.lp-step { background: rgba(252,252,252,0.07); border-radius: var(--radius-lg); padding:26px 24px; height:100%; }
+.lp-step__n { font-family: var(--font-caption); font-size:0.76rem; letter-spacing:0.12em; text-transform:uppercase;
+  color: var(--color-sage); font-weight:700; margin-bottom:10px; }
+.lp-step h4 { color: var(--color-white); margin-bottom:8px; }
+.lp-step p { margin:0; font-size:0.98rem; }
+
+.lp-sign { font-family: var(--font-accent); font-size:2rem; color: var(--color-sage); margin-top:6px; }
+
+@media (max-width: 900px) {
+  .lp-criteria { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 760px) {
+  .lp-phase { grid-template-columns:1fr; gap:8px; }
+  .lp-phase__when { padding-top:0; }
+  .lp-leave { grid-template-columns:1fr; gap:6px; }
+  .lp-criteria { grid-template-columns:1fr; }
+  .lp-price { padding:28px 24px; }
+  .lp-hero { padding:64px 0 56px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="lp-nav">
+  <div class="lp-nav__inner">
+    <a href="index.html" class="lp-nav__logo"><img src="images/logo-light.png" alt="SHiFT with Purpose"></a>
+    <a href="#start" class="btn btn-accent">Start a conversation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="lp-hero">
+  <div class="container">
+    <span class="caption lp-hero__caption">The SHiFT Lab</span>
+    <h1 class="mt-16">You bring me in when the board asks where growth comes from and <span class="accent">the room goes quiet.</span></h1>
+    <p class="lead">Sixteen weeks. One new offer, taken from opportunity to market test. You leave with the evidence, the business case and the equipment to take it forward.</p>
+    <p class="lead mt-16"><strong style="color:var(--color-sage)">And if the evidence says don't build it, I'll tell you.</strong></p>
+    <div class="btn-group mt-32">
+      <a href="#start" class="btn btn-sage">Start a conversation</a>
+      <a href="#investment" class="btn btn-outline-white">See the investment</a>
+    </div>
+    <p class="lp-hero__note">Four organisations in 2026. The last one starts late September.</p>
+    <div class="lp-meta">
+      <span>16 weeks</span><span>Private 1:1</span><span>Ends with real buyers</span>
+    </div>
+  </div>
+</header>
+
+<!-- SCARCITY -->
+<div class="lp-strip">
+  <div class="container">
+    <p>I'm on maternity leave from mid-January, so the last engagement of 2026 has to start by late September. The next round opens mid-2027.</p>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">The opportunity</span>
+      <h2>You already have more value than you're capturing.</h2>
+    </div>
+    <p class="lead">The training you built for your own staff, that three other organisations have already asked to borrow. The assessment tool you've refined over eight years. The methodology you explain for free on every panel you sit on.</p>
+    <p class="lead">The relationships, expertise and ways of working you've built because you've spent years solving problems other organisations don't know how to solve.</p>
+    <p class="lead"><strong>None of that is a new business. It may be the business you already have, sold to someone who is not the person you currently serve.</strong></p>
+
+    <div class="lp-pull">
+      <p>An organisation whose entire direction can be redrawn by one unsuccessful funding round isn't running a strategy, it's renting one. What you have is a landlord disguised as a funder.</p>
+    </div>
+
+    <p class="lead">Funders matter and they should be part of your strategy. They shouldn't be able to switch the whole thing off.</p>
+  </div>
+</section>
+
+<!-- WHAT THIS IS -->
+<section class="section section--lavender">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">What this is</span>
+      <h2>Find what's hiding in plain sight. Build what's next.</h2>
+    </div>
+    <p class="lead">We find the value already inside your organisation, turn the strongest opportunity into an offer people will pay for, and put it in front of real buyers before we finish.</p>
+    <p class="lead"><strong>An offer</strong> is something your organisation can repeatedly provide to a defined customer in exchange for money. A service, a program, a product, a training offer, a membership, a licensed methodology, a corporate partnership, an advisory offer, or something we haven't thought of yet.</p>
+    <p class="lead">This isn't about finding another funding source. It's about creating something people genuinely want to buy, using capabilities and knowledge your organisation already has.</p>
+  </div>
+</section>
+
+<!-- THREE REASONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="caption">Why this works differently</span>
+      <h2>Three reasons</h2>
+    </div>
+    <div class="grid-3">
+      <div class="lp-reason">
+        <div class="lp-reason__num">01</div>
+        <h3>Evidence, not a plan</h3>
+        <p>We don't spend sixteen weeks building a beautiful strategy for you to implement later. Your idea meets the real world before we finish, so you'll know what buyers think and what they'll commit to.</p>
+      </div>
+      <div class="lp-reason">
+        <div class="lp-reason__num">02</div>
+        <h3>Less work for your team</h3>
+        <p>Your team's time is capped and written into the scope. You bring the decisions, the expertise and the access. We do the strategic production. No homework, no disappearing for six weeks and returning with a deck.</p>
+      </div>
+      <div class="lp-reason">
+        <div class="lp-reason__num">03</div>
+        <h3>Equipment, not recommendations</h3>
+        <p>You don't leave with a strategy deck telling you what to do. You leave with the things you need to sell it, deliver it and get it approved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption" style="color:var(--color-sage)">How it works</span>
+      <h2>Six phases. One offer. Real buyers at the end.</h2>
+    </div>
+
+    <div class="lp-phase">
+      <div class="lp-phase__when">Weeks 1–3</div>
+      <div>
+        <h3>See</h3>
+        <p>We understand the organisation as it actually is today. Your current model, customers, capabilities, assets, unmet needs, constraints and readiness. We find what's already working, what's getting in the way, and where there might be something worth building.</p>
+        <div class="lp-phase__out"><strong>You leave with:</strong> a sharp diagnosis of what's holding you back from your next chapter. Not sixty pages that end up in a drawer.</div>
+      </div>
+    </div>
+
+    <div class="lp-phase">
+      <div class="lp-phase__when">Weeks 4–6</div>
+      <div>
+        <h3>Hunt</h3>
+        <p>We look for the value hiding in plain sight. What do you know? What do you have? What do people need? Where could value be created? And, crucially, who would pay for it? We develop three possible futures for the organisation, not three variations of the same safe idea.</p>
+        <div class="lp-phase__out"><strong>You leave with:</strong> your Opportunity Map and the Three Futures.</div>
+      </div>
+    </div>
+
+    <div class="lp-phase">
+      <div class="lp-phase__when">Weeks 7–8</div>
+      <div>
+        <h3>Back it</h3>
+        <p>Now we make the decision. Each opportunity is tested against impact, demand, income, capability and feasibility. One gets backed; not because it's the most exciting idea in the room, but because it has the strongest case for investment.</p>
+        <div class="lp-phase__out"><strong>You leave with:</strong> one prioritised opportunity and the reasoning a board can follow. This is often the moment you see something you couldn't see before.</div>
+      </div>
+    </div>
+
+    <div class="lp-phase">
+      <div class="lp-phase__when">Weeks 9–12</div>
+      <div>
+        <h3>Build</h3>
+        <p>Now we make it real. The offer, the customer, the value proposition, the delivery model, the pricing, the capability required, and the assets that make it sellable and deliverable.</p>
+        <div class="lp-phase__out"><strong>You leave with:</strong> the offer, built, plus the business case for taking it forward.</div>
+      </div>
+    </div>
+
+    <div class="lp-phase">
+      <div class="lp-phase__when">Weeks 13–14</div>
+      <div>
+        <h3>Test</h3>
+        <p>We put the smallest useful version of the offer in front of real buyers. A paid pilot, a pre-sale, a prototype, a customer commitment, or another test designed to generate the strongest possible evidence.</p>
+        <div class="lp-phase__out"><strong>You leave with:</strong> real market evidence, not opinions about whether the idea is good.</div>
+      </div>
+    </div>
+
+    <div class="lp-phase">
+      <div class="lp-phase__when">Weeks 15–16</div>
+      <div>
+        <h3>Take it forward</h3>
+        <p>The final two weeks turn evidence into a decision and a practical next move. Go, refine or kill. And a 90-day roadmap built around the reality of your team, your systems and your constraints.</p>
+        <div class="lp-phase__out"><strong>You leave with:</strong> a clear path to putting your new offer into your customers' hands. No wishful thinking, and no "now someone needs to implement the strategy".</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE FUTURES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">The Three Futures</span>
+      <h2>Three real options, chosen deliberately, instead of falling in love with the first idea in the room.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="lp-future">
+        <div class="lp-future__name">Extend</div>
+        <div class="lp-future__q">What could we sell differently?</div>
+        <p>Take something you already do and offer it to a new audience, or in a new way.</p>
+      </div>
+      <div class="lp-future">
+        <div class="lp-future__name">Productise</div>
+        <div class="lp-future__q">What could we package and repeat?</div>
+        <p>Turn existing expertise, methodology or IP into something repeatable and scalable.</p>
+      </div>
+      <div class="lp-future">
+        <div class="lp-future__name">Reinvent</div>
+        <div class="lp-future__q">What could we create that doesn't exist today?</div>
+        <p>Build something genuinely new from an emerging or unmet need.</p>
+      </div>
+    </div>
+
+    <p class="lead mt-48">Every opportunity is assessed against five criteria.</p>
+    <div class="lp-criteria">
+      <div class="lp-crit"><div class="lp-crit__k">Impact</div><p>Will it strengthen the mission?</p></div>
+      <div class="lp-crit"><div class="lp-crit__k">Demand</div><p>Does someone want it badly enough?</p></div>
+      <div class="lp-crit"><div class="lp-crit__k">Income</div><p>Can it generate meaningful return?</p></div>
+      <div class="lp-crit"><div class="lp-crit__k">Capability</div><p>Can we credibly deliver it?</p></div>
+      <div class="lp-crit"><div class="lp-crit__k">Feasibility</div><p>Can we do it without breaking the organisation?</p></div>
+    </div>
+    <div class="lp-pull">
+      <p>The result isn't a room full of exciting ideas. It's a decision you can defend.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE LADDER -->
+<section class="section section--lavender">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">The Evidence Ladder</span>
+      <h2>Don't confuse interest with demand.</h2>
+      <p class="lead">People saying they like an idea isn't evidence that they'll buy it. The Evidence Ladder gives us progressively stronger signals of real demand.</p>
+    </div>
+
+    <div class="lp-rung">
+      <div class="lp-rung__n">01</div>
+      <div><div class="lp-rung__t">Interest</div><p>Someone says they'd use it.</p></div>
+    </div>
+    <div class="lp-rung">
+      <div class="lp-rung__n">02</div>
+      <div><div class="lp-rung__t">Intent</div><p>Someone commits time, provides data or joins a waitlist.</p></div>
+    </div>
+    <div class="lp-rung">
+      <div class="lp-rung__n">03</div>
+      <div><div class="lp-rung__t">Commitment</div><p>Someone signs up or agrees to a pilot.</p></div>
+    </div>
+    <div class="lp-rung">
+      <div class="lp-rung__n">04</div>
+      <div><div class="lp-rung__t">Payment</div><p>Someone actually pays.</p></div>
+    </div>
+
+    <p class="lead mt-32"><strong>The goal isn't Level 4 every time.</strong> It's to reach the strongest evidence we can realistically get before you invest further, and to be completely honest about which rung you've reached.</p>
+    <p class="lead">Because the point isn't to build offers that sound good. It's to invest in the ones with real potential to create income and more impact.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU LEAVE WITH -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">What you leave with</span>
+      <h2>Equipment, not recommendations.</h2>
+    </div>
+
+    <div class="lp-leave">
+      <div class="lp-leave__k">Three opportunities</div>
+      <p>Three viable pathways identified through the Opportunity Map, scored and ranked.</p>
+    </div>
+    <div class="lp-leave">
+      <div class="lp-leave__k">One tested offer</div>
+      <p>A new offer, designed, costed and tested with real buyers.</p>
+    </div>
+    <div class="lp-leave">
+      <div class="lp-leave__k">One business case</div>
+      <p>A board-ready case for the investment required to take it forward.</p>
+    </div>
+    <div class="lp-leave">
+      <div class="lp-leave__k">Four pieces of equipment</div>
+      <p>The specific assets required to sell and deliver the offer. Pricing and cost model, sales kit, offer prototype, delivery playbook, board case or customer onboarding experience. We decide which four matter most once we know what we're building.</p>
+    </div>
+    <div class="lp-leave">
+      <div class="lp-leave__k">One 90-day roadmap</div>
+      <p>Exactly what needs to happen next, built for the reality of your team and systems.</p>
+    </div>
+
+    <div class="lp-pull">
+      <p>No strategy deck. No sixty-page report.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption" style="color:var(--color-sage)">And then we make an honest decision</span>
+      <h2>Three possible outcomes. One of them might be no.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="lp-outcome">
+        <div class="lp-outcome__label">Go</div>
+        <p>The evidence supports launching. You have what you need to start.</p>
+      </div>
+      <div class="lp-outcome">
+        <div class="lp-outcome__label">Refine</div>
+        <p>There's something here. It needs adjustment before it's worth investing further.</p>
+      </div>
+      <div class="lp-outcome">
+        <div class="lp-outcome__label">Kill</div>
+        <p>The evidence says don't invest further. You still leave with the Opportunity Map and the other two futures.</p>
+      </div>
+    </div>
+    <div class="lp-pull">
+      <p>You're not paying me to make your original idea work. You're paying me to find out whether it's worth building.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT FEELS LIKE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">What working with me feels like</span>
+      <h2>We work together. We make decisions. We build things.</h2>
+    </div>
+    <div class="grid-2">
+      <div>
+        <ul class="lp-nots">
+          <li>No disappearing into a strategy cave</li>
+          <li>No endless stakeholder interviews that produce a 70-page report</li>
+          <li>No workshop where everyone has sticky notes and nobody knows what happens on Monday</li>
+        </ul>
+        <p class="lead"><strong>Creative thinking. Feet firmly on the ground. Designed for implementation.</strong></p>
+      </div>
+      <div class="lp-asks">
+        <p>You'll hear me ask</p>
+        <ul>
+          <li>Who would actually pay for this?</li>
+          <li>What are we assuming?</li>
+          <li>What if we sold this to someone else?</li>
+          <li>What could we test next week?</li>
+          <li>Is this actually worth building?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="section section--lavender">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">Fit</span>
+      <h2>This isn't for everyone, and I'll tell you in the first conversation.</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="mb-16">This is for you if</h3>
+        <ul class="feature-list">
+          <li>You lead an established purpose-led organisation with real capability, reputation and ambition</li>
+          <li>You know the organisation needs to evolve, but can't yet see what the next model looks like</li>
+          <li>You're grateful for your funders, and you know that owning something which creates income would strengthen your impact and your legacy</li>
+          <li>You're ready to make decisions, invest resources and try something different</li>
+          <li>You want someone who will tell you when the answer is no</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="mb-16">This isn't for you if</h3>
+        <ul class="feature-list">
+          <li>You want a report and a set of recommendations</li>
+          <li>You want the answer without your team in the room</li>
+          <li>The opportunity is unlikely to be commercially meaningful enough to justify a private engagement; the group program will be a better fit</li>
+          <li>You're looking for help winning more grants</li>
+          <li>You want someone to run the resulting business for you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">Why me</span>
+      <h2>I don't just find the idea. I know how to make it real.</h2>
+      <p class="lead">I'm an industrial designer who has spent fourteen years working exclusively with purpose-led organisations, from frontline teams to board tables. Along the way I've learned to read a P&amp;L, design services, develop new concepts, lead change, work with boards, facilitate decisions, and turn ideas into things people can actually use.</p>
+    </div>
+
+    <div class="grid-4 mt-32">
+      <div class="lp-stat"><div class="lp-stat__fig">14</div><p>Years working exclusively with purpose-led organisations</p></div>
+      <div class="lp-stat"><div class="lp-stat__fig">100s</div><p>Founders and leaders, from frontline teams to board tables</p></div>
+      <div class="lp-stat"><div class="lp-stat__fig">Masters</div><p>Teaching Customer Experience Design at the University of Melbourne, a subject I co-designed in 2022</p></div>
+      <div class="lp-stat"><div class="lp-stat__fig">8 hrs</div><p>To build a bathroom for low-income families, with no prior knowledge required</p></div>
+    </div>
+
+    <div class="lp-pull">
+      <p>Most people in this market either think or make. I do both, which is why what gets designed is built for the reality of the organisation that has to deliver it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CFO -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption" style="color:var(--color-sage)">A note on your CFO</span>
+      <h2>You don't have to choose between me and your CFO. We solve different parts of the same problem.</h2>
+    </div>
+    <div class="grid-2">
+      <div>
+        <p class="lead">Your CFO helps you understand the numbers, strengthen your financial strategy and identify what the organisation needs to be viable. They help you understand where the money needs to come from.</p>
+      </div>
+      <div>
+        <p class="lead">I work on the other side of the equation. What could you actually sell? I help you design what you can offer to bring more of it in.</p>
+        <p class="lead"><strong style="color:var(--color-sage)">If you already have a CFO, I want them in the room. If you need one, I can recommend trusted partners.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">The questions I always get</span>
+      <h2>Asked and answered.</h2>
+    </div>
+
+    <div class="lp-faq">
+      <div class="lp-faq__q">Isn't this just commercialising our mission?</div>
+      <p>The value already exists, and you're currently giving much of it away. I'm not asking you to sell your purpose, or to charge the people you serve. I'm asking a different question: who else has a problem your organisation is uniquely equipped to solve, and would pay you to solve it?</p>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq__q">Our people can't pay for anything.</div>
+      <p>Correct. The buyer for the new offer usually isn't the person you serve today. That's the point.</p>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq__q">Won't this pull the team away from mission work?</div>
+      <p>It will, if you bolt another business onto the organisation. It shouldn't, if the offer is designed properly. The delivery model and pricing need to cover the real cost of delivering it before you scale. That's part of the work we do together.</p>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq__q">We tried a social enterprise before and it didn't work.</div>
+      <p>Often the problem is that the social enterprise becomes a second business built around capabilities the organisation doesn't actually have. We start somewhere else: what are you already exceptionally good at, and who else needs it?</p>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq__q">We've tried consultants before and nothing stuck.</div>
+      <p>The most common thing I hear. Most consulting produces reports. You leave here with equipment, and with evidence about whether anyone will pay.</p>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq__q">What if the idea doesn't work?</div>
+      <p>Then I'll tell you, and that's why we test before you invest heavily in building it. Before we get anywhere near a kill decision, we'll adapt and iterate to find a version that does work. You may leave with a Go, a Refine or a Kill, and all three are useful decisions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="section section--lavender" id="investment">
+  <div class="container">
+    <div class="section-header">
+      <span class="caption">Investment</span>
+      <h2>A fixed fee for a fixed outcome.</h2>
+      <p class="lead">This isn't priced by the day or the hour. You're investing in the opportunity, the evidence and the equipment required to take it forward.</p>
+      <p class="lead">The offers we design are built to generate <strong>$250,000 to $500,000 a year and beyond</strong> once established. What any single offer earns depends on the market, the product and the effort behind it, and by week twelve you'll have the business case in front of you and can judge for yourself.</p>
+    </div>
+
+    <div class="lp-price">
+      <div class="lp-price__row">
+        <div class="lp-price__k"><strong>The SHiFT Lab</strong>16 weeks, private 1:1</div>
+        <div class="lp-price__v">$—</div>
+      </div>
+      <div class="lp-price__row">
+        <div class="lp-price__k"><strong>Founding client</strong>First three organisations</div>
+        <div class="lp-price__v is-accent">$—</div>
+      </div>
+      <div class="lp-price__row">
+        <div class="lp-price__k"><strong>Paid across three milestones</strong>As the work moves, not on a schedule</div>
+        <div class="lp-price__v" style="font-size:1.15rem">Commit · Back · Test</div>
+      </div>
+    </div>
+
+    <p class="lead mt-32">Fixed fee. Fixed scope. No surprise invoices.</p>
+    <p class="lead">The first three organisations receive founding-client pricing, in exchange for permission to document the work, the outcomes and the lessons, agreed upfront.</p>
+  </div>
+</section>
+
+<!-- START -->
+<section class="section section--navy" id="start">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="caption" style="color:var(--color-sage)">Next</span>
+      <h2>Let's find your next offer.</h2>
+      <p class="lead">A first conversation costs nothing and commits you to nothing. Bring the challenges, the ideas, the things you've tried, the thing you can't quite name. We'll work out whether there's something here worth building.</p>
+      <p class="lead">If I don't think the SHiFT Lab is right for your organisation, I'll tell you, and I'll tell you what I'd do instead.</p>
+    </div>
+
+    <div class="grid-3 mt-48">
+      <div class="lp-step">
+        <div class="lp-step__n">Step one</div>
+        <h4>A 45-minute conversation</h4>
+        <p>What's happening, what's getting in the way, and what you're seeing that others aren't.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step__n">Step two</div>
+        <h4>A short written proposal</h4>
+        <p>Scope, capped hours, investment, and exactly what we're building together.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step__n">Step three</div>
+        <h4>We start</h4>
+        <p>Sixteen weeks later you have an evidence-backed, market-tested offer and a clear decision about what happens next.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-48">
+      <a href="#" class="btn btn-sage">Book a conversation</a>
+      <p class="lp-hero__note">Four organisations in 2026. The last one starts late September, because I'm on maternity leave from mid-January.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="section">
+  <div class="container text-center">
+    <div class="section-header section-header--center">
+      <span class="caption">Not this year</span>
+      <h2>The 2027 waitlist</h2>
+      <p class="lead">If the timing isn't right, or the four places have gone, join the waitlist. You'll be first to hear when the next round opens in mid-2027, and first to hear about the group program for organisations earlier in the journey.</p>
+    </div>
+    <a href="#" class="btn btn-accent">Join the 2027 waitlist</a>
+  </div>
+</section>
+
+<!-- SIGN OFF -->
+<section class="section section--lavender">
+  <div class="container text-center">
+    <p class="lead" style="font-style:italic;margin-bottom:0">See you soon,</p>
+    <div class="lp-sign" style="color:var(--color-primary)">Cata</div>
+  </div>
+</section>
+
+</body>
+</html>
