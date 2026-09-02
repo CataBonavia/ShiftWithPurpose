@@ -20,46 +20,17 @@
   <link rel="shortcut icon" href="images/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customer Experience Quiz | SHiFT with Purpose</title>
-  <meta name="description" content="A free 10&ndash;15 minute diagnostic for purpose-led organisations. Find out where your client experience is working by design &mdash; and where it&rsquo;s quietly leaking loyalty, retention, and referrals." />
-  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/eai-quiz" />
+  <title>Find Your Hidden Opportunities | SHiFT with Purpose</title>
+  <meta name="description" content="Your next revenue stream might already be inside your organisation. Take this free 10-minute quiz to uncover 3 opportunities hiding in what you already know, do, have or are trusted for." />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/quiz" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/eai-quiz" />
-  <meta property="og:title" content="Customer Experience Quiz | SHiFT with Purpose" />
-  <meta property="og:description" content="Free 7-minute diagnostic for disability, health and wellbeing leaders. Built on the Experience Architecture Framework. Find out exactly which layer to strengthen first." />
+  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/quiz" />
+  <meta property="og:title" content="Find Your Hidden Opportunities | SHiFT with Purpose" />
+  <meta property="og:description" content="Your next revenue stream is hiding in plain sight. Take the free 10-minute quiz to find out where." />
 
   <link rel="stylesheet" href="styles.css" />
-  <script src="//embed.typeform.com/next/embed.js"></script>
-
-  <style>
-    .quiz-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .quiz-feature:last-child {
-      border-bottom: none;
-    }
-
-    .quiz-feature-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-weight: 700;
-      color: var(--color-sage);
-      font-size: 1rem;
-    }
-  </style>
 </head>
 <body>
 
@@ -71,7 +42,8 @@
       <a href="index.html" class="nav__logo">
         <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
       </a>
-      <ul class="nav__links">        <li><a href="about.html">About</a></li>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
         <li>
           <a href="methodology.html" class="has-dropdown">Methodology</a>
           <ul class="nav__dropdown">
@@ -83,20 +55,18 @@
         <li>
           <a href="services.html" class="has-dropdown">Services</a>
           <ul class="nav__dropdown">
-            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
-            <li><a href="spark.html">SHiFT Spark</a></li>
-            <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
-            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
-            <li><a href="contact.html">Bespoke Workshop</a></li>
+            <li><a href="catalyst.html">The Catalyst Day</a></li>
+            <li><a href="sprint.html">The SHiFT Sprint</a></li>
+            <li><a href="studio.html">The SHiFT Studio</a></li>
+            <li><a href="circle.html">The SHiFT Circle</a></li>
           </ul>
         </li>
         <li>
-          <a href="blog.html" class="has-dropdown active">Insights</a>
+          <a href="blog.html" class="has-dropdown">Insights</a>
           <ul class="nav__dropdown">
             <li><a href="blog.html">Blog</a></li>
             <li><a href="case-studies.html">Client Stories</a></li>
-            <li><a href="blog.html">Mighty Shifts Archive</a></li>
-            <li><a href="quiz.html">Customer Experience Quiz</a></li>
+            <li><a href="mighty-shifts.html">Mighty SHiFTs Newsletter</a></li>
           </ul>
         </li>
         <li><a href="contact.html">Contact</a></li>
@@ -113,215 +83,51 @@
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="section" style="background: linear-gradient(135deg, var(--color-primary) 0%, #3d2d55 100%); padding: 80px 0 64px;">
-    <div class="container">
-      <div class="grid-2" style="align-items: center; gap: 64px;">
-        <div>
-          <span class="caption" style="color: rgba(255,255,255,0.65);">Free diagnostic</span>
-          <h1 style="color: var(--color-white); margin-top: 16px; margin-bottom: 20px; font-size: clamp(1.8rem, 4vw, 2.7rem);">
-            Most organisations think their experience is working. This shows you whether it is.
-          </h1>
-          <p class="lead" style="color: rgba(252,252,252,0.82); margin-bottom: 32px;">
-            The Customer Experience Quiz maps your organisation across seven stages of the client journey and seven layers of experience quality. In 10&ndash;15 minutes, you get a personalised picture of where your experience is designed, where it&rsquo;s accidental, and where to focus first.
-          </p>
-          <div class="btn-group">
-            <a href="#quiz" class="btn btn-sage">Take the quiz &darr;</a>
-            <a href="contact.html" class="btn btn-outline-white" style="font-size: 0.9rem;">Book a Discovery Call</a>
-          </div>
-        </div>
-        <div>
-          <div style="background: rgba(255,255,255,0.1); border-radius: 18px; padding: 36px 32px;">
-            <h4 style="color: var(--color-sage); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;">In 10&ndash;15 minutes, you&rsquo;ll get</h4>
-            <div class="quiz-feature">
-              <div class="quiz-feature-icon">&#10003;</div>
-              <div>
-                <h4 style="color: var(--color-white); margin-bottom: 4px;">A clear picture of where you actually are</h4>
-                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Not a satisfaction score. A map of your experience across seven stages; from the moment someone first hears about you to what happens when they leave.</p>
-              </div>
-            </div>
-            <div class="quiz-feature">
-              <div class="quiz-feature-icon">&#10003;</div>
-              <div>
-                <h4 style="color: var(--color-white); margin-bottom: 4px;">The layer that&rsquo;s costing you most</h4>
-                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Every organisation has one area where a targeted improvement would have the biggest impact on retention, referrals, and results. You&rsquo;ll know which one is yours.</p>
-              </div>
-            </div>
-            <div class="quiz-feature">
-              <div class="quiz-feature-icon">&#10003;</div>
-              <div>
-                <h4 style="color: var(--color-white); margin-bottom: 4px;">Three specific things worth doing next</h4>
-                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Not a generic report. Three actions based on your actual results; your lowest stage, your weakest layer, and a quick win using what&rsquo;s already working.</p>
-              </div>
-            </div>
-            <div style="margin-top: 20px; padding: 14px 20px; background: rgba(255,255,255,0.08); border-radius: 8px;">
-              <p style="font-size: 0.88rem; color: rgba(255,255,255,0.7); margin: 0;">10&ndash;15 minutes &nbsp;|&nbsp; Free &nbsp;|&nbsp; For leaders who want to know where to focus, not just how they&rsquo;re doing</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section style="background: var(--color-navy); padding: 96px 0 80px;">
+    <div class="container" style="max-width: 760px; text-align: center;">
+      <span class="caption" style="color: var(--color-sage);">Free quiz</span>
+      <h1 style="color: var(--color-white); margin-top: 20px; margin-bottom: 24px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; font-weight: 800;">
+        Your Next Revenue Stream is Hiding in Plain Sight
+      </h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem; line-height: 1.75; margin-bottom: 40px; max-width: 620px; margin-left: auto; margin-right: auto;">
+        Your organisation may already have the ingredients for a new source of income. This 10-minute quiz will help you find where it&rsquo;s hiding and what you could do with it.
+      </p>
+      <a href="#quiz" class="btn btn-sage" style="font-size: 1.05rem; padding: 16px 36px;">Find what&rsquo;s hiding in plain sight &darr;</a>
     </div>
   </section>
 
   <!-- ============================================================
-       WHAT IT MEASURES
+       QUIZ EMBED
        ============================================================ -->
-  <section class="section" style="padding: 80px 0; background: #f5f2f8;">
-    <div class="container">
-      <div class="section-header section-header--center" style="margin-bottom: 16px;">
-        <span class="caption">What it measures</span>
-        <h2 style="margin-top: 12px;">Seven stages. Seven layers. One clear picture.</h2>
-        <p style="margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">The quiz measures your experience at every stage of the relationship; before someone finds you, through to what happens after they leave. Each stage is assessed across seven layers of experience quality, so the result tells you not just where the gaps are, but what kind of gap it is.</p>
-      </div>
-
-      <!-- THE SEVEN STAGES -->
-      <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary); margin: 48px 0 20px;">The seven stages</h3>
-      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px;">
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">0</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Trigger</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">Before they know you exist. Are you showing up in the language of their problem, or waiting to be found?</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">1</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Research</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">When they&rsquo;re looking for answers, not yet for you. Are you present where they&rsquo;re actually looking?</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">2</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Decide</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">The moment of commitment. Committing feels risky for them. Is your experience designed to guide that decision; or does it create more questions?</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">3</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Join</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">They said yes. Does what happens next feel like the beginning of something good, or like admin?</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">4</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Engage and Participate</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">The long middle. Does every touchpoint add value; or exist because it always has?</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">5</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Grow</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">The client isn&rsquo;t the same person who joined. Are you designing for who they are now?</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <div style="min-width: 44px; height: 44px; border-radius: 50%; background: var(--color-lavender); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">6</div>
-          <div>
-            <h4 style="margin-bottom: 4px;">Go On</h4>
-            <p style="font-size: 0.92rem; color: var(--color-text-mid); margin: 0;">They&rsquo;ve finished, paused, or left. How you handle this determines whether they come back, refer, and what story they tell.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- THE SEVEN LAYERS -->
-      <div style="padding: 36px 40px; background: var(--color-navy); border-radius: var(--radius-lg);">
-        <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-sage); margin-bottom: 8px;">The seven layers</h3>
-        <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin-bottom: 28px;">Each stage is assessed across seven design layers:</p>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
-            <h4 style="color: var(--color-white); margin-bottom: 4px;">Brilliant Basics</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Do your systems make it easy, or do your clients do work your processes should be doing?</p>
-          </div>
-          <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
-            <h4 style="color: var(--color-white); margin-bottom: 4px;">Intentional Direction</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Is the experience deliberately designed end-to-end, or did it grow by accident?</p>
-          </div>
-          <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
-            <h4 style="color: var(--color-white); margin-bottom: 4px;">Embedded Confidence</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Does confidence in the relationship build automatically, or only when someone remembers to check in?</p>
-          </div>
-          <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
-            <h4 style="color: var(--color-white); margin-bottom: 4px;">Purposeful Relevance</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Does your experience adapt to each client over time, or treat everyone the same?</p>
-          </div>
-          <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
-            <h4 style="color: var(--color-white); margin-bottom: 4px;">Clear Movement</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Can your clients see and feel their own progress, or do they just hope it&rsquo;s working?</p>
-          </div>
-          <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">
-            <h4 style="color: var(--color-white); margin-bottom: 4px;">Compounding Impact</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Are your longest-standing clients your loudest advocates; or your quietest?</p>
-          </div>
-          <div>
-            <h4 style="color: var(--color-sage); margin-bottom: 4px;">Signature Moments</h4>
-            <p style="color: rgba(255,255,255,0.65); font-size: 0.92rem; margin: 0;">Is your experience unmistakably yours, or simply competently delivered?</p>
-          </div>
-        </div>
-      </div>
+  <section id="quiz" style="background: var(--color-white); padding: 80px 0;">
+    <div class="container" style="max-width: 900px;">
+      <div data-tf-live="01M1DH737P2FP0EHCD0XB6N961" style="width: 100%; min-height: 600px;"></div>
     </div>
   </section>
+  <script src="https://embed.typeform.com/next/embed.js"></script>
 
   <!-- ============================================================
-       TYPEFORM QUIZ EMBED
+       THE QUESTION / PROMISE
        ============================================================ -->
-  <section id="quiz" class="section" style="padding: 80px 0;">
-    <div class="container">
-      <div class="section-header section-header--center">
-        <span class="caption">The quiz</span>
-        <h2 style="margin-top: 12px;">Take the Customer Experience Quiz</h2>
-        <p style="margin-top: 12px;">10&ndash;15 minutes. Free. Personalised to your organisation.</p>
-      </div>
-      <div style="max-width: 860px; margin: 0 auto; width: 100%; overflow: hidden;">
-        <div data-tf-live="01KV9EPW4YME18BW9FCC108GPE"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       WHAT YOU RECEIVE
-       ============================================================ -->
-  <section class="section" style="background: var(--color-navy); padding: 80px 0;">
-    <div class="container">
-      <div class="grid-2" style="align-items: start; gap: 72px;">
-        <div>
-          <span class="caption" style="color: var(--color-sage);">What you get at the end</span>
-          <h2 style="color: var(--color-white); margin-top: 12px; margin-bottom: 20px;">Your results are personalised to your organisation.</h2>
-          <p style="color: rgba(252,252,252,0.78); margin-bottom: 16px;">
-            A results page showing your experience band across all seven stages and seven layers; so you can see at a glance where things are working and where they aren&rsquo;t.
-          </p>
-          <p style="color: rgba(252,252,252,0.78); margin-bottom: 16px;">
-            A layer-by-layer interpretation that tells you what your results actually mean in plain language.
-          </p>
-          <p style="color: rgba(252,252,252,0.78); margin-bottom: 32px;">
-            Three specific next steps: the stage most worth strengthening, the layer most worth building, and one quick win you can act on this week. Your results live at a link you can save, return to, and share with your team.
-          </p>
-          <a href="#quiz" class="btn btn-sage">Take the quiz &darr;</a>
+  <section style="background: var(--color-lavender); padding: 64px 0;">
+    <div class="container" style="max-width: 680px; text-align: center;">
+      <h2 style="font-family: var(--font-main); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--color-navy); line-height: 1.25; margin-bottom: 24px;">In 15 minutes, you&rsquo;ll have 3 places to start looking.</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px; text-align: left; max-width: 480px; margin: 0 auto 36px;">
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+          <p style="margin: 0; color: var(--color-navy); font-size: 1rem; line-height: 1.6;">No business plan.</p>
         </div>
-        <div>
-          <h3 style="color: var(--color-sage); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;">Your snapshot: one of four profiles</h3>
-          <p style="color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 20px;">Your overall results place you in one of four profiles. These aren&rsquo;t labels; they&rsquo;re a starting point for understanding where your experience design is right now.</p>
-          <div style="display: flex; flex-direction: column; gap: 14px;">
-            <div style="background: rgba(255,255,255,0.07); border-radius: var(--radius-lg); padding: 22px 26px; border: 1px solid rgba(255,255,255,0.1);">
-              <h4 style="color: var(--color-white); margin-bottom: 6px;">The Emerging Architect</h4>
-              <p style="color: rgba(252,252,252,0.65); font-size: 0.9rem; margin: 0;">You&rsquo;re at the beginning of intentional design. What you&rsquo;re doing works in places; the opportunity is building the architecture that makes it consistent.</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.07); border-radius: var(--radius-lg); padding: 22px 26px; border: 1px solid rgba(255,255,255,0.1);">
-              <h4 style="color: var(--color-white); margin-bottom: 6px;">The Careful Builder</h4>
-              <p style="color: rgba(252,252,252,0.65); font-size: 0.9rem; margin: 0;">You&rsquo;re making deliberate choices and your clients feel it. The opportunity is making what&rsquo;s working in pockets consistent across the whole experience.</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.07); border-radius: var(--radius-lg); padding: 22px 26px; border: 1px solid rgba(255,255,255,0.1);">
-              <h4 style="color: var(--color-white); margin-bottom: 6px;">The Intentional Designer</h4>
-              <p style="color: rgba(252,252,252,0.65); font-size: 0.9rem; margin: 0;">You think about experience deliberately and it shows. The opportunity is in the compounding; sustaining that intention across every stage, not just the ones you&rsquo;ve prioritised.</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.07); border-radius: var(--radius-lg); padding: 22px 26px; border: 1px solid rgba(206,215,141,0.25);">
-              <h4 style="color: var(--color-sage); margin-bottom: 6px;">The Compounding Organisation</h4>
-              <p style="color: rgba(252,252,252,0.65); font-size: 0.9rem; margin: 0;">Your experience gets better over time rather than just staying the same. Clients stay, refer, and deepen. The opportunity is protecting what&rsquo;s working and finding the edges worth refining.</p>
-            </div>
-          </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+          <p style="margin: 0; color: var(--color-navy); font-size: 1rem; line-height: 1.6;">No rabbit holes.</p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+          <p style="margin: 0; color: var(--color-navy); font-size: 1rem; line-height: 1.6;">No complicated commercialisation exercise.</p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+          <p style="margin: 0; color: var(--color-navy); font-size: 1rem; line-height: 1.6;">Just a fresh perspective on what might already be worth exploring.</p>
         </div>
       </div>
     </div>
@@ -330,20 +136,11 @@
   <!-- ============================================================
        CLOSING CTA
        ============================================================ -->
-  <section class="section" style="background: var(--color-lavender); padding: 80px 0;">
-    <div class="container" style="max-width: 720px; text-align: center;">
-      <span class="caption">Ready when you are</span>
-      <h2 style="margin-top: 16px; margin-bottom: 20px;">Ready to see where you actually are?</h2>
-      <p style="font-size: 1.05rem; color: var(--color-navy); opacity: 0.8; line-height: 1.75; margin-bottom: 12px;">
-        The quiz takes 10&ndash;15 minutes. Your results are ready immediately after you submit; a personalised page built from your answers, with specific insights and three clear next steps.
-      </p>
-      <p style="font-size: 1.05rem; color: var(--color-navy); opacity: 0.8; line-height: 1.75; margin-bottom: 36px;">
-        If your results raise questions worth exploring together, you can book a CX Quiz Deep Dive; a 60-minute conversation where we look at your results and you leave knowing exactly where to start.
-      </p>
-      <div class="btn-group" style="justify-content: center;">
-        <a href="#quiz" class="btn btn-primary">Take the quiz &darr;</a>
-        <a href="contact.html" class="btn btn-outline-navy">Book a CX Quiz Deep Dive</a>
-      </div>
+  <section style="background: var(--color-navy); padding: 80px 0;">
+    <div class="container" style="max-width: 640px; text-align: center;">
+      <h2 style="color: var(--color-white); margin-bottom: 16px;">Want to go deeper?</h2>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.75; margin-bottom: 32px;">If your results spark ideas worth exploring together, book a 20-minute discovery call. No pitch; just a conversation about what might already be hiding in your organisation.</p>
+      <a href="contact.html" class="btn btn-sage">Book a Discovery Call</a>
     </div>
   </section>
 
@@ -355,7 +152,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__logo"><img src="images/logo-dark.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
-          <p class="footer__tagline">Purpose-led organisations shouldn't have to choose between impact and innovation.</p>
+          <p class="footer__tagline">Purpose-led organisations shouldn&rsquo;t have to choose between impact and innovation.</p>
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
             <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
@@ -364,10 +161,10 @@
         <div class="footer__col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#catalyst">SHiFT Catalyst</a></li>
-            <li><a href="services.html#partnership">SHiFT Partnership</a></li>
-            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
-            <li><a href="services.html#workshops">Workshops</a></li>
+            <li><a href="catalyst.html">The Catalyst Day</a></li>
+            <li><a href="sprint.html">The SHiFT Sprint</a></li>
+            <li><a href="studio.html">The SHiFT Studio</a></li>
+            <li><a href="circle.html">The SHiFT Circle</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -375,7 +172,6 @@
           <ul>
             <li><a href="about.html">About Cata</a></li>
             <li><a href="methodology.html">Methodology</a></li>
-        
             <li><a href="blog.html">Insights</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
@@ -385,7 +181,7 @@
           <h4>Start here</h4>
           <ul>
             <li><a href="contact.html">Discovery Call</a></li>
-            <li><a href="quiz.html">Customer Experience Quiz</a></li>
+            <li><a href="quiz.html">Find Your Opportunities</a></li>
           </ul>
         </div>
       </div>
@@ -402,25 +198,16 @@
       var toggle = document.querySelector('.nav__toggle');
       var nav    = document.querySelector('.nav');
       if (!toggle || !nav) return;
-
       toggle.addEventListener('click', function(e) {
         e.stopPropagation();
         nav.classList.toggle('nav--open');
         toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
       });
-
-      // Close when clicking outside the nav
       document.addEventListener('click', function(e) {
-        if (!nav.contains(e.target)) {
-          nav.classList.remove('nav--open');
-        }
+        if (!nav.contains(e.target)) nav.classList.remove('nav--open');
       });
-
-      // Close when a nav link is clicked
       document.querySelectorAll('.nav__links a').forEach(function(link) {
-        link.addEventListener('click', function() {
-          nav.classList.remove('nav--open');
-        });
+        link.addEventListener('click', function() { nav.classList.remove('nav--open'); });
       });
     })();
   </script>
