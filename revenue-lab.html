@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <!-- Google Analytics — loads only after cookie consent -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function swp_loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5';
+      document.head.appendChild(s);
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-NR1ZB5W4N5'); };
+    }
+    if (localStorage.getItem('swp_cookie_consent') === 'accepted') { swp_loadGA(); }
+  </script>
+
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Revenue Lab | SHiFT with Purpose</title>
+  <meta name="description" content="For CEOs and COOs of not-for-profits ready to reduce their reliance on grants and philanthropy. Over fourteen weeks we build one new revenue stream, from first idea to market test." />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/revenue-lab" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/revenue-lab" />
+  <meta property="og:title" content="The Revenue Lab — Build a new revenue stream | SHiFT with Purpose" />
+  <meta property="og:description" content="For CEOs and COOs of not-for-profits. Over 14 weeks we find, validate and market-test one new revenue stream. Fixed fee. Evidence-backed." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Inherit Garet font declarations from main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================================================
+       REVENUE LAB — STANDALONE SALES PAGE
+       Brand palette:
+         Navy    #193550  hero / section backgrounds / footer
+         Lime    #ced78d  numbers / badges / accents / underlines
+         Magenta #d17fd4  primary CTA buttons only
+         Lav     #e7cfe8  secondary highlights / callout sections
+         Beige   #fffcf7  long body sections / card backgrounds
+    ============================================================ */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --lab-navy:   #193550;
+      --lab-lime:   #ced78d;
+      --lab-orchid: #d17fd4;
+      --lab-lav:    #e7cfe8;
+      --lab-beige:  #fffcf7;
+      --lab-white:  #ffffff;
+      --lab-mid:    rgba(25,53,80,0.55);
+      --lab-font-head: 'Garet', 'Poppins', sans-serif;
+      --lab-font-body: 'Poppins', sans-serif;
+      --lab-radius: 12px;
+      --lab-max: 820px;
+      --lab-max-wide: 1080px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--lab-font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--lab-navy);
+      background: var(--lab-beige);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- UTILITY ---- */
+    .lab-wrap       { max-width: var(--lab-max); margin: 0 auto; padding: 0 24px; }
+    .lab-wrap--wide { max-width: var(--lab-max-wide); margin: 0 auto; padding: 0 24px; }
+    .lab-eyebrow {
+      display: inline-block;
+      font-family: var(--lab-font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lab-lime);
+      margin-bottom: 16px;
+    }
+    .lab-eyebrow--orchid { color: var(--lab-orchid); }
+    .lab-eyebrow--navy   { color: var(--lab-navy); }
+
+    /* ---- BUTTONS ---- */
+    .lab-btn {
+      display: inline-block;
+      padding: 15px 34px;
+      border-radius: 6px;
+      font-family: var(--lab-font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.1s;
+      cursor: pointer;
+      border: none;
+    }
+    .lab-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .lab-btn--orchid { background: var(--lab-orchid); color: var(--lab-navy); }
+    .lab-btn--lime   { background: var(--lab-lime); color: var(--lab-navy); }
+    .lab-btn--outline-white {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.4);
+      color: var(--lab-white);
+    }
+    .lab-btn--outline-navy {
+      background: transparent;
+      border: 2px solid var(--lab-navy);
+      color: var(--lab-navy);
+    }
+    .lab-btn--lg { padding: 18px 42px; font-size: 1.05rem; }
+
+    /* ---- STICKY NAV ---- */
+    .lab-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--lab-navy);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .lab-nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--lab-max-wide);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 68px;
+    }
+    .lab-nav__logo img { height: 40px; display: block; }
+    .lab-nav__cta { display: flex; align-items: center; gap: 16px; }
+    .lab-nav__label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+    }
+    @media (max-width: 540px) { .lab-nav__label { display: none; } }
+
+    /* ---- SITE MENU INSIDE THE LAB NAV ---- */
+    .lab-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+    .lab-nav__links > li { position: relative; }
+    .lab-nav__links a {
+      font-family: var(--lab-font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.18s ease;
+    }
+    .lab-nav__links a:hover,
+    .lab-nav__links a.is-current { color: var(--lab-lime); }
+    .lab-nav__links .lab-nav__caret::after {
+      content: '';
+      display: inline-block;
+      margin-left: 6px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid currentColor;
+      vertical-align: middle;
+      opacity: 0.7;
+    }
+    .lab-nav__drop {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      min-width: 232px;
+      background: var(--lab-navy);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 10px;
+      padding: 10px 0;
+      list-style: none;
+      margin: 0;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.32);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.18s ease, visibility 0.18s ease;
+    }
+    .lab-nav__links > li:hover > .lab-nav__drop,
+    .lab-nav__links > li:focus-within > .lab-nav__drop { opacity: 1; visibility: visible; }
+    .lab-nav__drop a {
+      display: block;
+      padding: 9px 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.78);
+    }
+    .lab-nav__drop a:hover { color: var(--lab-navy); background: var(--lab-lime); }
+
+    @media (max-width: 1080px) {
+      .lab-nav__links { gap: 18px; }
+      .lab-nav__links a { font-size: 0.86rem; }
+    }
+    @media (max-width: 900px) {
+      .lab-nav__inner { height: auto; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; gap: 12px; }
+      .lab-nav__links {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .lab-nav__links::-webkit-scrollbar { display: none; }
+      .lab-nav__drop { display: none; }
+      .lab-nav__links .lab-nav__caret::after { display: none; }
+    }
+
+    /* ---- HERO ---- */
+    .lab-hero {
+      background: var(--lab-navy);
+      padding: 96px 0 80px;
+    }
+    .lab-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: var(--lab-max-wide);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .lab-hero__tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(206,215,141,0.15);
+      border: 1px solid rgba(206,215,141,0.3);
+      color: var(--lab-lime);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .lab-hero h1 {
+      font-family: var(--lab-font-head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--lab-white);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .lab-hero h1 em {
+      font-style: normal;
+      color: var(--lab-lime);
+    }
+    .lab-hero__sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .lab-hero__cta-group { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .lab-hero__scarcity {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+    }
+    .lab-hero__scarcity strong { color: var(--lab-lime); }
+    .lab-hero__photo {
+      border-radius: var(--lab-radius);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .lab-hero__photo img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+    .lab-hero__photo-placeholder {
+      text-align: center;
+      color: rgba(255,255,255,0.2);
+      font-size: 0.82rem;
+      padding: 24px;
+    }
+    @media (max-width: 768px) {
+      .lab-hero__inner { grid-template-columns: 1fr; gap: 40px; }
+      .lab-hero__photo { aspect-ratio: 16/9; }
+    }
+
+    /* ---- SECTION SHARED ---- */
+    .lab-section { padding: 88px 0; }
+    .lab-section--sm { padding: 64px 0; }
+    .lab-section--navy { background: var(--lab-navy); }
+    .lab-section--beige { background: var(--lab-beige); }
+    .lab-section--lav { background: var(--lab-lav); }
+    .lab-section--orchid { background: var(--lab-orchid); }
+
+    .lab-h2 {
+      font-family: var(--lab-font-head);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .lab-h2--white { color: var(--lab-white); }
+    .lab-h2--navy  { color: var(--lab-navy); }
+    .lab-h2--orchid { color: var(--lab-orchid); }
+
+    .lab-h3 {
+      font-family: var(--lab-font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .lab-h3--lime   { color: var(--lab-lime); }
+    .lab-h3--navy   { color: var(--lab-navy); }
+    .lab-h3--orchid { color: var(--lab-orchid); }
+
+    .lab-body { font-size: 1.05rem; line-height: 1.75; }
+    .lab-body--white { color: rgba(255,255,255,0.8); }
+    .lab-body--mid   { color: var(--lab-mid); }
+    .lab-body--navy  { color: var(--lab-navy); }
+
+    /* Override global p colour from styles.css inside lab context classes */
+    .lab-body--white p { color: rgba(255,255,255,0.8); }
+    .lab-body--mid p   { color: var(--lab-mid); }
+    .lab-body--navy p  { color: var(--lab-navy); }
+    .lab-section--navy p { color: rgba(255,255,255,0.8); }
+    .lab-section--navy h3 { color: var(--lab-white); }
+    .lab-section--navy h4 { color: var(--lab-white); }
+
+    .lab-body p + p { margin-top: 1.2em; }
+
+    /* ---- PAIN ---- */
+    .lab-pain__photo {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--lab-radius);
+      background: #e0ddd5;
+      aspect-ratio: 16/7;
+    }
+    .lab-pain__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    @media (max-width: 680px) { .lab-pain__grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* ---- PROMISE ---- */
+    @media (max-width: 720px) {
+      .lab-promise__two-col { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+
+    /* ---- PROMISE LIST (legacy — kept for reference) ---- */
+    .lab-promise__items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .lab-promise__item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--lab-radius);
+      padding: 24px;
+    }
+    .lab-promise__num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--lab-lime);
+      line-height: 1;
+      margin-bottom: 10px;
+      font-family: var(--lab-font-head);
+    }
+    .lab-promise__label { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
+    @media (max-width: 680px) { .lab-promise__items { grid-template-columns: 1fr; } }
+
+    /* ---- BELIEF ---- */
+    .lab-belief__pull {
+      border-left: 4px solid var(--lab-orchid);
+      padding: 20px 28px;
+      background: rgba(209,127,212,0.06);
+      border-radius: 0 var(--lab-radius) var(--lab-radius) 0;
+      margin: 32px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--lab-navy);
+      line-height: 1.6;
+    }
+
+    /* ---- APPROACH ---- */
+    .lab-approach__examples {
+      background: var(--lab-navy);
+      border-radius: var(--lab-radius);
+      padding: 32px 36px;
+      margin: 32px 0;
+    }
+    .lab-approach__examples p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .lab-approach__examples p + p { margin-top: 0.8em; }
+    .lab-approach__offer-types {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .lab-approach__offer-type {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .lab-approach__offer-type::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lab-lime);
+      flex-shrink: 0;
+    }
+    @media (max-width: 540px) { .lab-approach__offer-types { grid-template-columns: 1fr; } }
+
+    /* ---- SCALE ---- */
+    .lab-scale__number {
+      font-family: var(--lab-font-head);
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800;
+      color: var(--lab-navy);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .lab-scale__bullets {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .lab-scale__bullet {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .lab-scale__bullet-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(25,53,80,0.12);
+      border: 1px solid rgba(25,53,80,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .lab-scale__bullet-icon svg { width: 12px; height: 12px; stroke: var(--lab-navy); fill: none; stroke-width: 2.5; }
+    .lab-scale__bullet p { font-size: 0.95rem; color: var(--lab-navy); line-height: 1.6; }
+    @media (max-width: 680px) { .lab-scale__bullets { grid-template-columns: 1fr; } }
+
+    /* ---- METHODOLOGY ---- */
+    .lab-method__phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+    @media (max-width: 900px) { .lab-method__phases { grid-template-columns: 1fr; } }
+    .lab-method__phase {
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--lab-radius);
+      overflow: hidden;
+    }
+    .lab-method__phase-label {
+      background: var(--lab-navy);
+      padding: 24px 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-shrink: 0;
+    }
+    .lab-method__phase-weeks {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--lab-lime);
+      margin-bottom: 6px;
+    }
+    .lab-method__phase-name {
+      font-family: var(--lab-font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--lab-white);
+      line-height: 1.3;
+    }
+    .lab-method__phase-body {
+      background: white;
+      padding: 24px 24px;
+      border: 1px solid #ede8f0;
+      border-top: none;
+      flex: 1;
+    }
+    .lab-method__phase-body p { font-size: 0.92rem; color: var(--lab-navy); line-height: 1.7; margin-bottom: 12px; }
+    .lab-method__phase-outcome {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #f5f2fb;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 4px;
+    }
+    .lab-method__phase-outcome::before {
+      content: '→';
+      color: var(--lab-orchid);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .lab-method__phase-outcome p {
+      font-size: 0.82rem !important;
+      font-style: italic;
+      color: var(--lab-mid) !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ---- JUDGEMENT / THREE FUTURES ---- */
+    .lab-futures {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .lab-future-card {
+      border-radius: var(--lab-radius);
+      padding: 28px 24px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+    .lab-future-card__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--lab-lime);
+      margin-bottom: 10px;
+    }
+    .lab-future-card h3 {
+      font-family: var(--lab-font-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--lab-white);
+      margin-bottom: 10px;
+    }
+    .lab-future-card p { font-size: 0.92rem; color: rgba(255,255,255,0.65); line-height: 1.65; }
+    @media (max-width: 680px) { .lab-futures { grid-template-columns: 1fr; } }
+
+    .lab-criteria {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 36px;
+    }
+    .lab-criterion {
+      text-align: center;
+      padding: 20px 12px;
+      border-radius: var(--lab-radius);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .lab-criterion__num {
+      font-family: var(--lab-font-head);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--lab-lime);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .lab-criterion__name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--lab-white);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+    .lab-criterion__desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.4; }
+    @media (max-width: 680px) { .lab-criteria { grid-template-columns: 1fr 1fr; } }
+
+    /* ---- JUDGEMENT ACCORDIONS (navy bg) ---- */
+    .lab-judgement-acc { margin-top: 40px; }
+    .lab-judgement-acc-item { border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .lab-judgement-acc-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--lab-font-body);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--lab-white);
+    }
+    .lab-judgement-acc-item summary::-webkit-details-marker { display: none; }
+    .lab-judgement-acc-item .lab-acc-arrow {
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
+    .lab-judgement-acc-item[open] .lab-acc-arrow { transform: rotate(180deg); }
+    .lab-judgement-acc-item__body {
+      padding: 0 0 28px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+    .lab-judgement-acc-item__body p { color: rgba(255,255,255,0.75); }
+
+    .lab-result-note {
+      margin-top: 32px;
+      background: rgba(206,215,141,0.1);
+      border: 1px solid rgba(206,215,141,0.25);
+      border-radius: var(--lab-radius);
+      padding: 20px 24px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      font-style: italic;
+    }
+
+    /* ---- VALIDATION / EVIDENCE LADDER ---- */
+    .lab-ladder { margin-top: 40px; }
+    .lab-rung {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 0;
+      margin-bottom: 4px;
+    }
+    .lab-rung__num {
+      background: var(--lab-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--lab-font-head);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--lab-lime);
+      border-radius: var(--lab-radius) 0 0 var(--lab-radius);
+      padding: 24px 0;
+    }
+    .lab-rung__body {
+      background: white;
+      border: 1px solid #ede8f0;
+      border-left: none;
+      border-radius: 0 var(--lab-radius) var(--lab-radius) 0;
+      padding: 20px 24px;
+    }
+    .lab-rung__title { font-weight: 700; font-size: 0.95rem; color: var(--lab-navy); }
+    .lab-rung__desc { font-size: 0.88rem; color: var(--lab-mid); margin-top: 2px; }
+
+    .lab-scenarios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .lab-scenario {
+      border-radius: var(--lab-radius);
+      padding: 24px;
+      border: 1px solid #e8e2f0;
+    }
+    .lab-scenario__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-bottom: 14px;
+    }
+    .lab-scenario__dot--green  { background: #4caf7d; }
+    .lab-scenario__dot--amber  { background: #f5a623; }
+    .lab-scenario__dot--orchid { background: var(--lab-orchid); }
+    .lab-scenario h4 { font-size: 0.95rem; font-weight: 700; color: var(--lab-navy); margin-bottom: 8px; }
+    .lab-scenario p  { font-size: 0.88rem; color: var(--lab-mid); line-height: 1.6; }
+    @media (max-width: 680px) { .lab-scenarios { grid-template-columns: 1fr; } }
+
+    /* ---- EFFORT ---- */
+    .lab-effort__split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .lab-effort__col {
+      border-radius: var(--lab-radius);
+      padding: 28px 28px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .lab-effort__col--you { background: rgba(255,255,255,0.05); }
+    .lab-effort__col--us  { background: rgba(209,127,212,0.1); border-color: rgba(209,127,212,0.25); }
+    .lab-effort__col h4 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .lab-effort__col--you h4 { color: var(--lab-lime); }
+    .lab-effort__col--us  h4 { color: var(--lab-orchid); }
+    .lab-effort__col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .lab-effort__col ul li {
+      display: flex;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.55;
+    }
+    .lab-effort__col ul li::before {
+      content: '✓';
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .lab-effort__col--you ul li::before { color: var(--lab-lime); }
+    .lab-effort__col--us  ul li::before { color: var(--lab-orchid); }
+    @media (max-width: 640px) { .lab-effort__split { grid-template-columns: 1fr; } }
+
+    /* ---- EXECUTION / DELIVERABLES ---- */
+    .lab-deliverables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .lab-deliverable {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px;
+      border-radius: var(--lab-radius);
+      background: white;
+      border: 1px solid #ede8f0;
+    }
+    .lab-deliverable__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--lab-navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--lab-font-head);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--lab-lime);
+      flex-shrink: 0;
+    }
+    .lab-deliverable h4 { font-size: 0.92rem; font-weight: 700; color: var(--lab-navy); margin-bottom: 4px; }
+    .lab-deliverable p  { font-size: 0.85rem; color: var(--lab-mid); line-height: 1.55; }
+    @media (max-width: 640px) { .lab-deliverables { grid-template-columns: 1fr; } }
+
+    /* ---- CREDIBILITY ---- */
+    .lab-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-top: 48px;
+    }
+    .lab-stat {
+      background: var(--lab-navy);
+      border-radius: var(--lab-radius);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .lab-stat__num {
+      font-family: var(--lab-font-head);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--lab-lime);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .lab-stat__label { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.4; }
+    @media (max-width: 640px) { .lab-stats { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 400px) { .lab-stats { grid-template-columns: 1fr; } }
+
+    .lab-client-stories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .lab-client-story {
+      background: white;
+      border: 1px solid #ede8f0;
+      border-radius: var(--lab-radius);
+      padding: 24px;
+    }
+    .lab-client-story__outcome {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lab-orchid);
+      margin-bottom: 10px;
+    }
+    .lab-client-story p { font-size: 0.9rem; color: var(--lab-navy); line-height: 1.65; }
+    @media (max-width: 680px) { .lab-client-stories { grid-template-columns: 1fr; } }
+
+    /* ---- CFO NOTE ---- */
+    .lab-cfo-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+      border-top: 1px solid #ede8f0;
+      padding-top: 40px;
+    }
+    .lab-cfo-note h3 {
+      font-family: var(--lab-font-head);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--lab-navy);
+      margin-bottom: 12px;
+    }
+    .lab-cfo-note p { font-size: 0.92rem; color: var(--lab-mid); line-height: 1.7; }
+    @media (max-width: 640px) { .lab-cfo-note { grid-template-columns: 1fr; } }
+
+    /* ---- QUALIFICATION ---- */
+    .lab-qual-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .lab-qual-col {
+      border-radius: var(--lab-radius);
+      padding: 32px;
+    }
+    .lab-qual-col--yes { background: rgba(206,215,141,0.12); border: 1px solid rgba(206,215,141,0.25); }
+    .lab-qual-col--no  { background: rgba(209,127,212,0.07); border: 1px solid rgba(209,127,212,0.18); }
+    .lab-qual-col__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .lab-qual-col--yes .lab-qual-col__label { color: var(--lab-lime); }
+    .lab-qual-col--no  .lab-qual-col__label { color: var(--lab-orchid); }
+    .lab-qual-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .lab-qual-col ul li {
+      display: flex;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.55;
+    }
+    .lab-qual-col ul li::before { flex-shrink: 0; font-weight: 700; margin-top: 1px; }
+    .lab-qual-col--yes ul li::before { content: '✓'; color: var(--lab-lime); }
+    .lab-qual-col--no  ul li::before { content: '✕'; color: var(--lab-orchid); }
+    @media (max-width: 640px) { .lab-qual-split { grid-template-columns: 1fr; } }
+
+    /* ---- FAQ ---- */
+    .lab-faq { margin-top: 40px; }
+    .lab-faq-item {
+      border-bottom: 1px solid #ddd8e8;
+    }
+    .lab-faq-item:first-child { border-top: 1px solid #ddd8e8; }
+    .lab-faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--lab-navy);
+      user-select: none;
+    }
+    .lab-faq-item summary::-webkit-details-marker { display: none; }
+    .lab-faq-item summary .lab-faq-arrow {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--lab-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+    .lab-faq-item summary .lab-faq-arrow svg { width: 10px; height: 10px; stroke: var(--lab-lime); fill: none; stroke-width: 2.5; }
+    .lab-faq-item[open] summary .lab-faq-arrow { transform: rotate(180deg); }
+    .lab-faq-item__body {
+      padding: 0 0 20px;
+      font-size: 0.95rem;
+      color: var(--lab-mid);
+      line-height: 1.75;
+    }
+    .lab-faq-item__body p + p { margin-top: 0.8em; }
+
+    /* ---- INVESTMENT ---- */
+    .lab-investment-card {
+      max-width: 600px;
+      margin: 40px auto 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--lab-radius);
+      padding: 48px 40px;
+      text-align: center;
+    }
+    .lab-investment-card__offer {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--lab-lime);
+      margin-bottom: 12px;
+    }
+    .lab-investment-card__name {
+      font-family: var(--lab-font-head);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--lab-white);
+      margin-bottom: 6px;
+    }
+    .lab-investment-card__desc {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 32px;
+    }
+    .lab-investment-card__price {
+      font-family: var(--lab-font-head);
+      font-size: clamp(2.8rem, 8vw, 4.5rem);
+      font-weight: 800;
+      color: var(--lab-white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .lab-investment-card__price-note {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 32px;
+    }
+    .lab-investment-card__inclusions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 36px;
+      text-align: left;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 20px 0;
+    }
+    .lab-investment-card__inclusion {
+      display: flex;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.72);
+    }
+    .lab-investment-card__inclusion::before { content: '✓'; color: var(--lab-lime); font-weight: 700; flex-shrink: 0; }
+
+    /* ---- CTA SECTION ---- */
+    .lab-cta-section {
+      background: var(--lab-navy);
+      border-top: 4px solid var(--lab-orchid);
+      padding: 88px 0;
+    }
+    .lab-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 48px 0 40px;
+    }
+    .lab-step {
+      text-align: center;
+    }
+    .lab-step__num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--lab-orchid);
+      color: var(--lab-navy);
+      font-family: var(--lab-font-head);
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .lab-step h4 { font-size: 0.95rem; font-weight: 700; color: var(--lab-white); margin-bottom: 8px; }
+    .lab-step p  { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    @media (max-width: 640px) { .lab-steps { grid-template-columns: 1fr; } }
+
+    /* ---- WAITLIST ---- */
+    .lab-waitlist {
+      background: var(--lab-navy);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding: 64px 24px;
+    }
+    .lab-waitlist h2 {
+      font-family: var(--lab-font-head);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--lab-white);
+      margin-bottom: 12px;
+    }
+    .lab-waitlist p { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .lab-waitlist__sign { margin-top: 40px; font-size: 0.92rem; color: rgba(255,255,255,0.35); }
+    .lab-waitlist__sign strong { display: block; font-size: 1rem; color: rgba(255,255,255,0.55); margin-top: 4px; font-style: italic; }
+
+    /* ---- FOOTER ---- */
+    .lab-footer {
+      background: var(--lab-navy);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .lab-footer p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .lab-footer a { color: rgba(255,255,255,0.4); text-decoration: underline; }
+
+    /* ---- PHOTO PLACEHOLDER ---- */
+    .lab-photo-placeholder {
+      width: 100%;
+      border-radius: var(--lab-radius);
+      background: linear-gradient(135deg, #e0ddd5 0%, #d5d0c8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(25,53,80,0.35);
+      font-size: 0.82rem;
+      font-style: italic;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* ---- MISC ---- */
+    .lab-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 48px 0;
+    }
+    .lab-divider--light {
+      border-top-color: #ddd8e8;
+    }
+    .lab-text-center { text-align: center; }
+    .lab-mt-lg { margin-top: 48px; }
+    .lab-mt-md { margin-top: 32px; }
+    .lab-mb-sm { margin-bottom: 16px; }
+  </style>
+</head>
+<body style="background: var(--lab-beige);">
+
+<!-- ============================================================
+     STICKY NAV
+============================================================ -->
+<nav class="lab-nav">
+  <div class="lab-nav__inner">
+    <a href="index.html" class="lab-nav__logo">
+      <img src="images/logo-light.png" alt="SHiFT with Purpose" />
+    </a>
+    <ul class="lab-nav__links">
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="methodology.html" class="lab-nav__caret">Methodology</a>
+        <ul class="lab-nav__drop">
+          <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+          <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+          <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="services.html" class="lab-nav__caret">Services</a>
+        <ul class="lab-nav__drop">
+          <li><a href="catalyst.html">SHiFT Catalyst (Strategy Day)</a></li>
+          <li><a href="spark.html">SHiFT Spark (Project)</a></li>
+          <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
+          <li><a href="revenue-lab.html" class="is-current">Revenue Lab (14 Weeks)</a></li>
+          <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
+          <li><a href="contact.html">Bespoke Workshop</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="blog.html" class="lab-nav__caret">Insights</a>
+        <ul class="lab-nav__drop">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="case-studies.html">Client Stories</a></li>
+          <li><a href="mighty-shifts.html">Mighty SHiFTs Archive</a></li>
+          <li><a href="quiz.html">Experience Architecture Index</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="lab-nav__cta">
+      <span class="lab-nav__label">Limited spots in 2026</span>
+      <a href="contact.html" class="lab-btn lab-btn--orchid">Apply now &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="lab-hero">
+  <div class="lab-hero__inner">
+    <div>
+      <div class="lab-hero__tag">New revenue stream in less than 4 months</div>
+      <h1>For CEOs and COOs ready to reduce their reliance on grants and philanthropy.</h1>
+      <p class="lab-hero__sub">Over fourteen weeks we build one new revenue stream; from first idea to market test. You leave with the evidence, the business case, and the equipment to take it forward.</p>
+      <div class="lab-hero__cta-group">
+        <a href="contact.html" class="lab-btn lab-btn--orchid lab-btn--lg">Apply now &rarr;</a>
+      </div>
+    </div>
+    <div class="lab-hero__photo">
+      <img src="images/Cata presenting to boardroom.png" alt="Cata Bonavia presenting to a boardroom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAIN
+============================================================ -->
+<section style="background: var(--lab-lav); padding: 0; overflow: hidden;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 580px;">
+
+    <!-- Left: statement + copy -->
+    <div style="padding: 72px 64px; display: flex; flex-direction: column; justify-content: flex-start; gap: 24px;">
+      <span style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lab-navy); opacity: 0.5;">The moment that brings people to me</span>
+      <h2 style="font-family: var(--lab-font-head); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--lab-navy); line-height: 1.15; margin: 0;">When the board asks: where does growth come from next?</h2>
+      <p style="font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 700; color: var(--lab-orchid); line-height: 1.3; margin: 0;">And the room goes quiet.</p>
+      <p style="font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 700; color: var(--lab-navy); line-height: 1.3; margin: 0;">That&rsquo;s when you bring me in.</p>
+      <div style="font-size: 1rem; color: var(--lab-navy); line-height: 1.75; opacity: 0.8; display: flex; flex-direction: column; gap: 12px; margin-top: 8px;">
+        <p style="margin: 0;">You have been in that meeting. Everyone looks at the same three options: apply for more, cut something, or run another event.</p>
+        <p style="margin: 0;">None of them change the shape of the problem; and everyone in the room knows it.</p>
+        <p style="margin: 0;">Meanwhile the demand keeps rising, the grants get harder, the margins get thinner, and the strategy you wrote eighteen months ago is being quietly rewritten by whoever last opened a funding round.</p>
+      </div>
+      <a href="quiz.html" class="lab-btn lab-btn--outline-navy" style="align-self: flex-start; margin-top: 8px;">Find what might be hiding in your organisation &rarr;</a>
+    </div>
+
+    <!-- Right: photo -->
+    <div style="overflow: hidden; position: relative; min-height: 480px;">
+      <img src="images/Catalina Bonavia - SHiFT with Purpose - purpose-led leaders.png" alt="Catalina Bonavia with purpose-led leaders" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROMISE
+============================================================ -->
+<section class="lab-section lab-section--navy">
+  <div class="lab-wrap--wide">
+    <div class="lab-promise__two-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;">
+
+      <!-- Left: heading + copy -->
+      <div>
+        <span class="lab-eyebrow">What we do together</span>
+        <h2 class="lab-h2 lab-h2--white">Let&rsquo;s build a new revenue stream in 14 weeks.</h2>
+        <div class="lab-body lab-body--white">
+          <p>Using the value you are already generating, the IP you already own.</p>
+          <p>We find the opportunity, choose it deliberately, design the offer, cost it, price it, build the things you need to sell and deliver it, and then put it in front of real buyers before we finish.</p>
+          <p>Not a strategy you implement later. Not a workshop with sticky notes. A new offer, tested, with the evidence to back your next decision.</p>
+        </div>
+      </div>
+
+      <!-- Right: big number stats -->
+      <div style="display: flex; flex-direction: column; gap: 40px; padding-top: 12px;">
+        <div>
+          <div style="font-family: var(--lab-font-head); font-size: clamp(4rem, 7vw, 5.5rem); font-weight: 800; color: var(--lab-lime); line-height: 1;">3</div>
+          <div style="font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.5; margin-top: 8px;">viable opportunity pathways, scored and ranked</div>
+        </div>
+        <div>
+          <div style="font-family: var(--lab-font-head); font-size: clamp(4rem, 7vw, 5.5rem); font-weight: 800; color: var(--lab-lime); line-height: 1;">1</div>
+          <div style="font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.5; margin-top: 8px;">tested offer; designed, costed, priced and put in front of real buyers</div>
+        </div>
+        <div>
+          <div style="font-family: var(--lab-font-head); font-size: clamp(4rem, 7vw, 5.5rem); font-weight: 800; color: var(--lab-lime); line-height: 1;">90</div>
+          <div style="font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.5; margin-top: 8px;">day roadmap; built for the reality of your team and constraints</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BELIEF
+============================================================ -->
+<section class="lab-section lab-section--beige">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow lab-eyebrow--navy">A different premise</span>
+    <h2 class="lab-h2 lab-h2--navy">Your growth and impact shouldn&rsquo;t depend on the next grant.</h2>
+    <p class="lab-body lab-body--navy" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 32px;">Your next revenue stream might already be inside your organisation.</p>
+    <div class="lab-body lab-body--navy">
+      <p>Somewhere along the way this sector accepted a trade: you can be mission-driven or you can be commercially confident; and choosing both makes you suspicious.</p>
+      <p>I don&rsquo;t accept it. And neither do the leaders I work with.</p>
+      <p>Funders matter. They are not the enemy and they should be part of your strategy.</p>
+      <p>But when a single funding round can redraw everything you&rsquo;ve built, you&rsquo;re not running a strategy. You&rsquo;re renting one.</p>
+      <p>And when the landlord decides to move on, the whole thing goes with them.</p>
+    </div>
+    <div style="margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="contact.html" class="lab-btn lab-btn--orchid">Book a discovery call &rarr;</a>
+      <a href="quiz.html" class="lab-btn lab-btn--outline-navy">Not sure where to start? Take the quiz first</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     OWNED REVENUE STREAM GRAPHIC
+============================================================ -->
+<section style="background: var(--lab-navy); padding: 64px 0 0; overflow: hidden;">
+  <div style="text-align: center; padding-bottom: 48px; max-width: 760px; margin: 0 auto; padding-left: 24px; padding-right: 24px;">
+    <h2 style="font-family: var(--lab-font-head); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--lab-lime); line-height: 1.15; margin: 0;">Find what&rsquo;s next without losing what matters.</h2>
+  </div>
+  <img src="images/Your owned revenue stream shift with purpose.png" alt="Your owned revenue stream &mdash; SHiFT with Purpose helps purpose-led organisations find and build new income streams that grow their mission" style="width: 80%; display: block; margin: 0 auto;" />
+  <div style="text-align: center; padding: 40px 24px 64px; max-width: 680px; margin: 0 auto;">
+    <p style="font-family: var(--lab-font-body); font-size: clamp(1rem, 1.5vw, 1.2rem); font-weight: 600; color: var(--lab-orchid); line-height: 1.55; margin: 0;">There is potential hiding in your organisation. I want to help you turn it into owned revenue.</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     APPROACH — PART 1: lime background, navy text
+============================================================ -->
+<section style="background: var(--lab-lime); padding: 80px 0;">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow" style="color: var(--lab-navy);">The starting point</span>
+    <h2 class="lab-h2" style="color: var(--lab-navy);">The value is already inside your organisation. We turn it into something people pay for.</h2>
+    <div style="margin-top: 24px;">
+      <p style="color: var(--lab-navy); font-size: 1.05rem; line-height: 1.75; margin-bottom: 16px;">You are already creating value that you give away for free, while working hard to raise more funds.</p>
+      <p style="color: var(--lab-navy); font-size: 1.05rem; line-height: 1.75; margin-bottom: 16px;">So before we add anything, I look at what you already have.</p>
+      <p style="color: var(--lab-navy); font-size: 1.05rem; line-height: 1.75; margin-bottom: 16px;">And yes, you&rsquo;re probably wondering what value I&rsquo;m actually talking about.</p>
+      <p style="color: var(--lab-navy); font-size: 1.05rem; line-height: 1.75; margin-bottom: 16px;">The training you built. The assessment tool. The methodology. The service a corporate would happily pay for. The relationships, the expertise, the data, the trust.</p>
+      <p style="color: var(--lab-navy); font-size: 1.05rem; line-height: 1.75; margin-bottom: 0;"><strong>None of that is a new business.</strong> It may be the business you already have, sold to someone who is not the person you currently serve. The work we do is about finding a different customer who has a problem your organisation is uniquely equipped to solve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     APPROACH — PART 2: navy background, offer types
+============================================================ -->
+<section class="lab-section lab-section--navy">
+  <div class="lab-wrap">
+    <h3 class="lab-h3 lab-h3--lime">So what kind of offer are we talking about?</h3>
+    <div class="lab-body lab-body--white lab-mb-sm">
+      <p>An offer is something your organisation can repeatedly provide to a defined customer in exchange for money. It might be:</p>
+    </div>
+    <div class="lab-approach__offer-types">
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A training program</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A licensed methodology</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A corporate partnership</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A paid membership</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">An accreditation service</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">Consulting or advisory</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A productised service</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A data or insight product</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A physical product</div>
+      <div class="lab-approach__offer-type" style="color: var(--lab-white);">A new market entry</div>
+    </div>
+    <div style="margin-top: 48px;">
+      <a href="contact.html" class="lab-btn lab-btn--orchid">Book a discovery call &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SCALE
+============================================================ -->
+<section class="lab-section lab-section--lav">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow lab-eyebrow--navy">The target</span>
+    <h2 class="lab-h2 lab-h2--navy">We focus on offers with the potential to generate $250,000 to $500,000 a year and beyond.</h2>
+    <div class="lab-scale__number">$250k&ndash;500k+</div>
+    <div class="lab-body lab-body--navy">
+      <p>What would you do with another quarter of a million a year that nobody can switch off?</p>
+    </div>
+    <div class="lab-scale__bullets">
+      <div class="lab-scale__bullet">
+        <div class="lab-scale__bullet-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p style="color: var(--lab-navy);">Run fewer events; let your people focus on the mission.</p>
+      </div>
+      <div class="lab-scale__bullet">
+        <div class="lab-scale__bullet-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p style="color: var(--lab-navy);">Start working through the waitlist instead of managing it.</p>
+      </div>
+      <div class="lab-scale__bullet">
+        <div class="lab-scale__bullet-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p style="color: var(--lab-navy);">Raise the quality and depth of support for the people you serve.</p>
+      </div>
+      <div class="lab-scale__bullet">
+        <div class="lab-scale__bullet-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p style="color: var(--lab-navy);">With the ability to actually forecast. And a service that grows rather than resets each year.</p>
+      </div>
+    </div>
+    <div class="lab-body lab-body--mid lab-mt-md" style="font-style: italic; font-size: 0.9rem;">
+      <p>What any single offer earns depends on the market, the product, and the effort behind it. What we control is whether it is designed to be worth building in the first place; and we screen for that at every step.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     METHODOLOGY
+============================================================ -->
+<section id="methodology" class="lab-section lab-section--beige">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow lab-eyebrow--navy">How it works</span>
+    <h2 class="lab-h2 lab-h2--navy">Your purpose-led organisation needs revenue, not just donations. Here&rsquo;s how we build it.</h2>
+    <div class="lab-method__phases">
+
+      <div class="lab-method__phase">
+        <div class="lab-method__phase-label">
+          <div class="lab-method__phase-weeks">Weeks 1 &ndash; 3</div>
+          <div class="lab-method__phase-name">See what you already have</div>
+        </div>
+        <div class="lab-method__phase-body">
+          <p>We understand the organisation as it actually is today; your current model, customers, capabilities, assets, unmet needs, constraints and readiness. We find what&rsquo;s already working, what&rsquo;s getting in the way, and where there might be something worth building.</p>
+          <div class="lab-method__phase-outcome"><p>A sharp diagnosis of what&rsquo;s holding you back from your next chapter, and an initial desirability, feasibility and viability analysis. Not sixty pages that end up in a drawer.</p></div>
+        </div>
+      </div>
+
+      <div class="lab-method__phase">
+        <div class="lab-method__phase-label">
+          <div class="lab-method__phase-weeks">Weeks 4 &ndash; 6</div>
+          <div class="lab-method__phase-name">Hunt for opportunities hiding inside your organisation</div>
+        </div>
+        <div class="lab-method__phase-body">
+          <p>We look for the value hiding in plain sight. What do you know? What do you have? What do people need? Where could value be created? And, crucially, who would pay for it? We develop three possible futures; not three variations of the same safe idea.</p>
+          <div class="lab-method__phase-outcome"><p>Your Opportunity Map and the Three Futures.</p></div>
+        </div>
+      </div>
+
+      <div class="lab-method__phase">
+        <div class="lab-method__phase-label">
+          <div class="lab-method__phase-weeks">Weeks 7 &ndash; 8</div>
+          <div class="lab-method__phase-name">Back it up with market evidence</div>
+        </div>
+        <div class="lab-method__phase-body">
+          <p>Now we make the decision. Each opportunity is tested against impact, demand, income, capability and feasibility. We look at who else is serving this need, what they charge, what they&rsquo;re missing, and whether you can credibly do it better. One opportunity gets backed; because it has the strongest case for investment.</p>
+          <div class="lab-method__phase-outcome"><p>One prioritised opportunity and the reasoning a board can follow. This is often the moment you see something you couldn&rsquo;t see before.</p></div>
+        </div>
+      </div>
+
+      <div class="lab-method__phase">
+        <div class="lab-method__phase-label">
+          <div class="lab-method__phase-weeks">Weeks 9 &ndash; 12</div>
+          <div class="lab-method__phase-name">Build the equipment to make it happen</div>
+        </div>
+        <div class="lab-method__phase-body">
+          <p>Now we make it real. The offer, the customer, the value proposition, the delivery model, the pricing, the unit economics, the capability required, and the assets that make it sellable and deliverable.</p>
+          <div class="lab-method__phase-outcome"><p>The offer, built; plus the business case for taking it forward.</p></div>
+        </div>
+      </div>
+
+      <div class="lab-method__phase">
+        <div class="lab-method__phase-label">
+          <div class="lab-method__phase-weeks">Week 13</div>
+          <div class="lab-method__phase-name">Test, and iterate where needed</div>
+        </div>
+        <div class="lab-method__phase-body">
+          <p>We put the smallest useful version of the offer in front of real buyers. A paid pilot, a pre-sale, a prototype, a customer commitment, or another test designed to generate the strongest possible evidence.</p>
+          <div class="lab-method__phase-outcome"><p>Real market evidence; not opinions about whether the idea is good.</p></div>
+        </div>
+      </div>
+
+      <div class="lab-method__phase">
+        <div class="lab-method__phase-label">
+          <div class="lab-method__phase-weeks">Week 14</div>
+          <div class="lab-method__phase-name">Take it forward, grow your impact</div>
+        </div>
+        <div class="lab-method__phase-body">
+          <p>The final two weeks turn evidence into a decision and a practical next move, plus a 90-day roadmap built around the reality of your team, your systems and your constraints.</p>
+          <div class="lab-method__phase-outcome"><p>A clear path to putting your new offer into your customers&rsquo; hands. No wishful thinking; no &ldquo;now someone needs to implement the strategy.&rdquo;</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     JUDGEMENT
+============================================================ -->
+<section class="lab-section lab-section--navy">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow">The right idea; not the loudest one</span>
+    <h2 class="lab-h2 lab-h2--white">Choose the right idea, not the loudest one.</h2>
+    <div class="lab-body lab-body--white">
+      <p>We match what the market needs with your values and your capability. That intersection is where a competitive advantage actually lives; and why the offer we build is hard for anyone else to copy.</p>
+    </div>
+
+    <!-- Three accordions -->
+    <div class="lab-judgement-acc">
+
+      <details class="lab-judgement-acc-item">
+        <summary>
+          We explore at least 3 possible futures
+          <span class="lab-acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lab-lime)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-judgement-acc-item__body">
+          <div class="lab-futures" style="margin-top: 20px;">
+            <div class="lab-future-card">
+              <div class="lab-future-card__label">Extend</div>
+              <h3>Sell differently</h3>
+              <p>Take something you already do and offer it to a new audience, or in a new way.</p>
+            </div>
+            <div class="lab-future-card">
+              <div class="lab-future-card__label">Productise</div>
+              <h3>Package and repeat</h3>
+              <p>Turn existing expertise, methodology or IP into something repeatable and scalable.</p>
+            </div>
+            <div class="lab-future-card">
+              <div class="lab-future-card__label">Reinvent</div>
+              <h3>Create what doesn&rsquo;t exist</h3>
+              <p>Build something genuinely new from an emerging or unmet need.</p>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; font-style: italic; opacity: 0.6; margin-top: 20px;">We develop three, deliberately. The first idea in the room is rarely the best one.</p>
+        </div>
+      </details>
+
+      <details class="lab-judgement-acc-item">
+        <summary>
+          Every opportunity is assessed against five criteria
+          <span class="lab-acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lab-lime)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-judgement-acc-item__body">
+          <div class="lab-criteria" style="margin-top: 20px;">
+            <div class="lab-criterion">
+              <div class="lab-criterion__num">01</div>
+              <div class="lab-criterion__name">Impact</div>
+              <div class="lab-criterion__desc">Will it strengthen the mission?</div>
+            </div>
+            <div class="lab-criterion">
+              <div class="lab-criterion__num">02</div>
+              <div class="lab-criterion__name">Demand</div>
+              <div class="lab-criterion__desc">Does someone want it enough to pay?</div>
+            </div>
+            <div class="lab-criterion">
+              <div class="lab-criterion__num">03</div>
+              <div class="lab-criterion__name">Income</div>
+              <div class="lab-criterion__desc">Can it generate meaningful return?</div>
+            </div>
+            <div class="lab-criterion">
+              <div class="lab-criterion__num">04</div>
+              <div class="lab-criterion__name">Capability</div>
+              <div class="lab-criterion__desc">Can we credibly deliver it?</div>
+            </div>
+            <div class="lab-criterion">
+              <div class="lab-criterion__num">05</div>
+              <div class="lab-criterion__name">Feasibility</div>
+              <div class="lab-criterion__desc">Can we do it without breaking the organisation?</div>
+            </div>
+          </div>
+          <div class="lab-result-note" style="margin-top: 24px;">
+            The result isn&rsquo;t a room full of exciting ideas. It&rsquo;s a decision you can defend.
+          </div>
+        </div>
+      </details>
+
+      <details class="lab-judgement-acc-item">
+        <summary>
+          We take a research-based approach
+          <span class="lab-acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lab-lime)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-judgement-acc-item__body">
+          <p style="margin-bottom: 24px;">People saying they like an idea isn&rsquo;t evidence that they&rsquo;ll buy it. So we don&rsquo;t confuse interest with demand.</p>
+          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lab-lime); margin-bottom: 16px;">The Evidence Ladder</p>
+          <div class="lab-ladder" style="margin-top: 0;">
+            <div class="lab-rung">
+              <div class="lab-rung__num" style="background: rgba(206,215,141,0.12); border: 1px solid rgba(206,215,141,0.2);">01</div>
+              <div class="lab-rung__body" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="lab-rung__title" style="color: var(--lab-white);">Interest</div>
+                <div class="lab-rung__desc" style="color: rgba(255,255,255,0.5);">Someone says they&rsquo;d use it.</div>
+              </div>
+            </div>
+            <div class="lab-rung">
+              <div class="lab-rung__num" style="background: rgba(206,215,141,0.12); border: 1px solid rgba(206,215,141,0.2);">02</div>
+              <div class="lab-rung__body" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="lab-rung__title" style="color: var(--lab-white);">Intent</div>
+                <div class="lab-rung__desc" style="color: rgba(255,255,255,0.5);">Someone commits time, provides data, or joins a waitlist.</div>
+              </div>
+            </div>
+            <div class="lab-rung">
+              <div class="lab-rung__num" style="background: rgba(206,215,141,0.12); border: 1px solid rgba(206,215,141,0.2);">03</div>
+              <div class="lab-rung__body" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="lab-rung__title" style="color: var(--lab-white);">Commitment</div>
+                <div class="lab-rung__desc" style="color: rgba(255,255,255,0.5);">Someone signs up or agrees to a pilot.</div>
+              </div>
+            </div>
+            <div class="lab-rung">
+              <div class="lab-rung__num" style="background: rgba(206,215,141,0.12); border: 1px solid rgba(206,215,141,0.2);">04</div>
+              <div class="lab-rung__body" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="lab-rung__title" style="color: var(--lab-white);">Payment</div>
+                <div class="lab-rung__desc" style="color: rgba(255,255,255,0.5);">Someone actually pays.</div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; font-style: italic; opacity: 0.6; margin-top: 16px;">The goal isn&rsquo;t Level 4 every time. It&rsquo;s to reach the strongest evidence we can realistically get before you invest further.</p>
+        </div>
+      </details>
+
+    </div><!-- /lab-judgement-acc -->
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VALIDATION
+============================================================ -->
+<section class="lab-section lab-section--beige">
+  <div class="lab-wrap">
+    <h2 class="lab-h2" style="color: var(--lab-orchid);">Make a strategic decision with evidence: move forward, or move away.</h2>
+    <div class="lab-body lab-body--navy">
+      <p>You&rsquo;re not looking for a room full of exciting ideas. You&rsquo;re looking for evidence you can act on. So we test before you invest.</p>
+    </div>
+
+    <h3 class="lab-h3 lab-h3--navy lab-mt-lg">Three possible outcomes; all of them successful</h3>
+    <div class="lab-scenarios">
+      <div class="lab-scenario">
+        <div class="lab-scenario__dot lab-scenario__dot--green"></div>
+        <h4>Go as it is</h4>
+        <p>The evidence supports launching. You have what you need to start.</p>
+      </div>
+      <div class="lab-scenario">
+        <div class="lab-scenario__dot lab-scenario__dot--amber"></div>
+        <h4>Refine</h4>
+        <p>There&rsquo;s something here; it needs adjustment before it&rsquo;s worth investing further.</p>
+      </div>
+      <div class="lab-scenario">
+        <div class="lab-scenario__dot lab-scenario__dot--orchid"></div>
+        <h4>Move away</h4>
+        <p>The evidence says don&rsquo;t invest further. You just saved yourself the money, time and goodwill; and you still hold the Opportunity Map with two futures on it.</p>
+      </div>
+    </div>
+    <div class="lab-belief__pull" style="margin-top: 32px;">
+      You&rsquo;re not paying me to make your original idea work. You&rsquo;re paying me to find out whether it&rsquo;s worth building.
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EFFORT
+============================================================ -->
+<section class="lab-section lab-section--navy">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow">How your time is protected</span>
+    <h2 class="lab-h2 lab-h2--white">Your team brings the decisions. We do the production.</h2>
+    <div class="lab-body lab-body--white">
+      <p>You have no spare capacity. A project that adds to your team&rsquo;s workload is a project that quietly dies in week six.</p>
+      <p>So the split is written into the scope before we start.</p>
+    </div>
+    <div class="lab-effort__split">
+      <div class="lab-effort__col lab-effort__col--you">
+        <h4>Your team</h4>
+        <ul>
+          <li>Capped hours; the number goes in your scope of work before we start</li>
+          <li>Strategic decisions at key milestones</li>
+          <li>Access to your people and data</li>
+          <li>Your expertise in your sector and community</li>
+        </ul>
+      </div>
+      <div class="lab-effort__col lab-effort__col--us">
+        <h4>We do</h4>
+        <ul>
+          <li>All research, mapping, analysis, and modelling</li>
+          <li>Design and prototyping</li>
+          <li>Documents and business case</li>
+          <li>Market test design and execution</li>
+          <li>The 90-day roadmap</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lab-result-note lab-mt-md">
+      No disappearing for six weeks and returning with a deck. No endless document requests. No workshop where everyone has sticky notes and nobody knows what happens on Monday.
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EXECUTION / DELIVERABLES
+============================================================ -->
+<section class="lab-section lab-section--beige">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow lab-eyebrow--navy">What you leave with</span>
+    <h2 class="lab-h2 lab-h2--navy">I don&rsquo;t just find the idea. I make it market ready too.</h2>
+    <div class="lab-body lab-body--navy">
+      <p>Market ready means you could start selling it the week after we finish.</p>
+    </div>
+    <div class="lab-deliverables">
+      <div class="lab-deliverable">
+        <div class="lab-deliverable__icon">3</div>
+        <div>
+          <h4>Three opportunities</h4>
+          <p>Three viable pathways from the Opportunity Map; scored and ranked, so a no on one isn&rsquo;t a dead end.</p>
+        </div>
+      </div>
+      <div class="lab-deliverable">
+        <div class="lab-deliverable__icon">✓</div>
+        <div>
+          <h4>One tested offer</h4>
+          <p>Designed, costed, priced, and put in front of real buyers.</p>
+        </div>
+      </div>
+      <div class="lab-deliverable">
+        <div class="lab-deliverable__icon">$</div>
+        <div>
+          <h4>One business case</h4>
+          <p>Board or funder ready; with the numbers, the risks, and the ask.</p>
+        </div>
+      </div>
+      <div class="lab-deliverable">
+        <div class="lab-deliverable__icon">4</div>
+        <div>
+          <h4>Four pieces of equipment</h4>
+          <p>The specific assets required to sell and deliver it; pricing model, sales kit, offer prototype, delivery playbook, or customer onboarding. We decide which four matter most once we know what we&rsquo;re building.</p>
+        </div>
+      </div>
+      <div class="lab-deliverable">
+        <div class="lab-deliverable__icon">90</div>
+        <div>
+          <h4>One 90-day roadmap</h4>
+          <p>Exactly what happens next; built for the reality of your team, your systems and your constraints.</p>
+        </div>
+      </div>
+      <div class="lab-deliverable" style="background: var(--lab-navy); border-color: var(--lab-navy);">
+        <div class="lab-deliverable__icon" style="background: rgba(206,215,141,0.15); color: var(--lab-lime);">✕</div>
+        <div>
+          <h4 style="color: var(--lab-lime);">No strategy deck</h4>
+          <p style="color: rgba(255,255,255,0.6);">No sixty-page report. No &ldquo;someone needs to implement this now.&rdquo;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CREDIBILITY
+============================================================ -->
+<section class="lab-section lab-section--beige" style="border-top: 1px solid #ddd8e8;">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow lab-eyebrow--navy">About Cata</span>
+    <h2 class="lab-h2 lab-h2--navy">Fourteen years in this sector. I&rsquo;ve spent them making things, not writing reports.</h2>
+    <div class="lab-body lab-body--navy">
+      <p>I&rsquo;m an industrial designer who ended up in the purpose-led world and never left. Fourteen years, hundreds of founders and leaders, and a career spent moving between the frontline and the boardroom.</p>
+      <p>Along the way I learned to read a P&amp;L, design services, develop new concepts, lead change, work with boards, facilitate hard decisions, and turn ideas into things people can actually use.</p>
+      <p>Most people in this space either think or make. I do both; which is why what gets designed is built for the reality of the organisation that has to deliver it.</p>
+    </div>
+    <div class="lab-stats">
+      <div class="lab-stat">
+        <div class="lab-stat__num">14</div>
+        <div class="lab-stat__label">years working exclusively with purpose-led organisations</div>
+      </div>
+      <div class="lab-stat">
+        <div class="lab-stat__num">100s</div>
+        <div class="lab-stat__label">of founders and leaders; from frontline teams to board tables</div>
+      </div>
+      <div class="lab-stat">
+        <div class="lab-stat__num">10</div>
+        <div class="lab-stat__label">years building human-centred design capacity; startups to government</div>
+      </div>
+      <div class="lab-stat">
+        <div class="lab-stat__num">3</div>
+        <div class="lab-stat__label">years teaching CX Design at the University of Melbourne</div>
+      </div>
+    </div>
+
+    <div class="lab-mt-lg">
+      <h3 class="lab-h3 lab-h3--navy" style="margin-bottom: 20px;">What clients have built</h3>
+      <div class="lab-client-stories">
+        <div class="lab-client-story">
+          <div class="lab-client-story__outcome">New positioning</div>
+          <p>Newbies and Bewbies went from competing in a crowded market of lactation consultants to being the specialist second-time mums with a history of trauma seek when preparing for their next experience.</p>
+        </div>
+        <div class="lab-client-story">
+          <div class="lab-client-story__outcome">New revenue model</div>
+          <p>Waverley Social Enterprises created a whole new approach to supported employment; differentiating from competitors and making their mission stronger and more commercially sustainable.</p>
+        </div>
+        <div class="lab-client-story">
+          <div class="lab-client-story__outcome">New product</div>
+          <p>A social start-up in Argentina designed a bathroom that can be built in eight hours, requires no technical knowledge, and lasts indefinitely; now reaching communities that traditional construction cannot.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab-cfo-note">
+      <div>
+        <h3>You don&rsquo;t have to choose between me and a CFO.</h3>
+        <p>Your CFO helps you understand the numbers, strengthen the financial strategy, and work out what the organisation needs to stay viable. They help you understand where the money needs to come from.</p>
+      </div>
+      <div>
+        <h3 style="visibility:hidden;">spacer</h3>
+        <p>I work on the other side of the equation: what could you actually sell? I help you design what you can offer to bring more of it in. If you already have a CFO, I want them in the room. If you don&rsquo;t, we can proceed. If you want one, I can recommend trusted partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     QUALIFICATION
+============================================================ -->
+<section class="lab-section lab-section--navy">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow">Is this right for you?</span>
+    <h2 class="lab-h2 lab-h2--white">This isn&rsquo;t for everyone. I&rsquo;ll tell you in the first conversation if it&rsquo;ll work for you.</h2>
+    <div class="lab-qual-split">
+      <div class="lab-qual-col lab-qual-col--yes">
+        <div class="lab-qual-col__label">This is for you if&hellip;</div>
+        <ul>
+          <li>You lead an established purpose-led organisation with real capability, reputation, and ambition</li>
+          <li>You know the organisation needs to evolve; but can&rsquo;t yet see what the next model looks like</li>
+          <li>You&rsquo;re grateful for your funders; and you know that owning an income stream would make your impact and legacy stronger</li>
+          <li>You&rsquo;re ready to make decisions, invest resources, and try something different</li>
+          <li>You want someone who will tell you when the answer is no</li>
+        </ul>
+      </div>
+      <div class="lab-qual-col lab-qual-col--no">
+        <div class="lab-qual-col__label">This isn&rsquo;t for you if&hellip;</div>
+        <ul>
+          <li>You want a report and a set of recommendations</li>
+          <li>You want the answer without your team in the room</li>
+          <li>The opportunity is unlikely to be commercially meaningful enough to justify a private engagement</li>
+          <li>You&rsquo;re looking for help winning more grants</li>
+          <li>You want someone to run the resulting business for you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FAQ
+============================================================ -->
+<section class="lab-section lab-section--beige">
+  <div class="lab-wrap">
+    <span class="lab-eyebrow lab-eyebrow--navy">Questions I always get</span>
+    <h2 class="lab-h2 lab-h2--navy">Answered honestly.</h2>
+    <div class="lab-faq lab-mt-md">
+
+      <details class="lab-faq-item">
+        <summary>
+          Isn&rsquo;t this just commercialising our mission?
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          The value already exists; and you&rsquo;re currently giving much of it away. I&rsquo;m not asking you to sell your purpose; or to charge the people you serve. I&rsquo;m asking a different question: who else has a problem your organisation is uniquely equipped to solve; and would pay you to solve it?
+        </div>
+      </details>
+
+      <details class="lab-faq-item">
+        <summary>
+          Our people can&rsquo;t pay for anything.
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          Correct. The buyer for the new offer usually isn&rsquo;t the person you serve today. That&rsquo;s the point.
+        </div>
+      </details>
+
+      <details class="lab-faq-item">
+        <summary>
+          Won&rsquo;t this pull the team away from mission work?
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          It will; if you bolt another business onto the organisation. It shouldn&rsquo;t; if the offer is designed properly. The delivery model and pricing need to cover the real cost of delivering it before you scale. That&rsquo;s part of the work we do together.
+        </div>
+      </details>
+
+      <details class="lab-faq-item">
+        <summary>
+          We tried a social enterprise before and it didn&rsquo;t work.
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          Often the problem is that the social enterprise becomes a second business built around capabilities the organisation doesn&rsquo;t actually have. We start somewhere else: what are you already exceptionally good at; and who else needs it?
+        </div>
+      </details>
+
+      <details class="lab-faq-item">
+        <summary>
+          We&rsquo;ve tried consultants before and nothing stuck.
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          The most common thing I hear. Most consulting produces reports. You leave here with equipment; and with evidence about whether anyone will pay.
+        </div>
+      </details>
+
+      <details class="lab-faq-item">
+        <summary>
+          How much of this lands on my team?
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          A capped number of hours; written into your scope of work before we start. Decisions, expertise, and access come from you. Everything else comes from us.
+        </div>
+      </details>
+
+      <details class="lab-faq-item">
+        <summary>
+          What if the idea doesn&rsquo;t work?
+          <span class="lab-faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </summary>
+        <div class="lab-faq-item__body">
+          Then I&rsquo;ll tell you; and that&rsquo;s exactly why we test before you invest heavily in building it. You may leave with a Go, a Refine, or a Move Away; and all three are useful decisions. Before we get anywhere near a Move Away, we adapt and iterate to find a version that works. But you&rsquo;re not paying me to make your original idea work. You&rsquo;re paying me to find out whether it&rsquo;s worth building.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     INVESTMENT
+============================================================ -->
+<section class="lab-section lab-section--navy">
+  <div class="lab-wrap lab-text-center">
+    <span class="lab-eyebrow">Investment</span>
+    <h2 class="lab-h2 lab-h2--white">A fixed fee for a fixed outcome.</h2>
+    <div class="lab-body lab-body--white">
+      <p>This isn&rsquo;t priced by the day or the hour. You&rsquo;re investing in the opportunity, the evidence and the equipment required to take it forward.</p>
+    </div>
+    <div class="lab-investment-card">
+      <div class="lab-investment-card__offer">The Revenue Lab &mdash; Private 1:1</div>
+      <div class="lab-investment-card__name">14 weeks. One new revenue stream.</div>
+      <div class="lab-investment-card__desc">From first idea to market test.</div>
+      <div class="lab-investment-card__price">$12,000</div>
+      <div class="lab-investment-card__price-note">2026 investment. Increasing in 2027. Fixed fee. Fixed scope. No surprise invoices.</div>
+      <div class="lab-investment-card__inclusions">
+        <div class="lab-investment-card__inclusion">Opportunity Map and Three Futures</div>
+        <div class="lab-investment-card__inclusion">One tested offer; designed, costed and priced</div>
+        <div class="lab-investment-card__inclusion">Board-ready business case with market evidence</div>
+        <div class="lab-investment-card__inclusion">Four pieces of equipment to sell and deliver it</div>
+        <div class="lab-investment-card__inclusion">90-day roadmap built for your team and constraints</div>
+      </div>
+      <a href="contact.html" class="lab-btn lab-btn--orchid lab-btn--lg">Apply now &rarr;</a>
+      <p style="margin-top: 14px; font-size: 0.8rem; color: rgba(255,255,255,0.3);">First conversation is free and commits you to nothing.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MAIN CTA
+============================================================ -->
+<section class="lab-cta-section">
+  <div class="lab-wrap lab-text-center">
+    <span class="lab-eyebrow">Ready to start?</span>
+    <h2 class="lab-h2 lab-h2--white" style="max-width: 600px; margin: 0 auto 16px;">Let&rsquo;s find your next source of predictable income.</h2>
+    <div class="lab-body lab-body--white" style="max-width: 520px; margin: 0 auto;">
+      <p>A first conversation costs nothing and commits you to nothing. Bring the challenges, the ideas, the things you&rsquo;ve tried; and the thing you can&rsquo;t quite name yet. We&rsquo;ll work out together whether there&rsquo;s something here worth building.</p>
+      <p style="margin-top: 8px; font-size: 0.88rem; opacity: 0.6;">If I don&rsquo;t think the Revenue Lab is right for your organisation, I&rsquo;ll tell you; and I&rsquo;ll tell you what I&rsquo;d do instead.</p>
+    </div>
+    <div class="lab-steps">
+      <div class="lab-step">
+        <div class="lab-step__num">1</div>
+        <h4>A 45-minute conversation</h4>
+        <p>What&rsquo;s happening, what&rsquo;s getting in the way, and what you&rsquo;re seeing that others aren&rsquo;t.</p>
+      </div>
+      <div class="lab-step">
+        <div class="lab-step__num">2</div>
+        <h4>A short written proposal</h4>
+        <p>Scope, capped hours, investment, and exactly what we&rsquo;re building together.</p>
+      </div>
+      <div class="lab-step">
+        <div class="lab-step__num">3</div>
+        <h4>We start</h4>
+        <p>Fourteen weeks later you have an evidence-backed, market-tested offer and a clear decision about what happens next.</p>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 12px;">
+      <a href="contact.html" class="lab-btn lab-btn--orchid lab-btn--lg">Book a discovery call &rarr;</a>
+      <a href="quiz.html" class="lab-btn lab-btn--outline-white">Find what&rsquo;s hiding in your org first</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WAITLIST
+============================================================ -->
+<section class="lab-section lab-section--navy lab-waitlist">
+  <h2>Not this year?</h2>
+  <p>If the timing isn&rsquo;t right; join the 2027 waitlist. You&rsquo;ll be first to hear when the next round opens; and first to hear about the group program for organisations earlier in the journey.</p>
+  <a href="contact.html" class="lab-btn lab-btn--outline-white">Join the 2027 waitlist</a>
+  <div class="lab-waitlist__sign">
+    See you soon,
+    <strong>Cata</strong>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="lab-footer">
+  <p>
+    &copy; 2026 SHiFT with Purpose. ABN: 43 326 330 421.
+    &nbsp;&middot;&nbsp; <a href="index.html">shiftwithpurpose.com.au</a>
+    &nbsp;&middot;&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au">hello@shiftwithpurpose.com.au</a>
+    &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a>
+  </p>
+</footer>
+
+
+<!-- Cookie consent (reused from site) -->
+<div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--lab-navy); padding:18px 28px; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.3); border-top: 2px solid var(--lab-orchid);">
+  <p style="color:rgba(255,255,255,0.8); font-family: var(--lab-font-body); font-size:0.88rem; line-height:1.6; margin:0; max-width:600px;">
+    We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--lab-lime); text-decoration:underline;">Privacy policy</a>
+  </p>
+  <div style="display:flex; gap:10px; flex-shrink:0;">
+    <button id="swp-cookie-decline" style="background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.6); padding:9px 20px; border-radius:6px; cursor:pointer; font-size:0.85rem; font-family:var(--lab-font-body);">Decline</button>
+    <button id="swp-cookie-accept" style="background:var(--lab-orchid); border:none; color:var(--lab-navy); padding:9px 20px; border-radius:6px; cursor:pointer; font-size:0.85rem; font-weight:700; font-family:var(--lab-font-body);">Accept</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var KEY = 'swp_cookie_consent';
+    var banner = document.getElementById('swp-cookie-banner');
+    if (!localStorage.getItem(KEY) && banner) banner.style.display = 'flex';
+    document.getElementById('swp-cookie-accept').addEventListener('click', function() {
+      localStorage.setItem(KEY, 'accepted');
+      banner.style.display = 'none';
+      if (typeof swp_loadGA === 'function') swp_loadGA();
+    });
+    document.getElementById('swp-cookie-decline').addEventListener('click', function() {
+      localStorage.setItem(KEY, 'declined');
+      banner.style.display = 'none';
+    });
+  })();
+</script>
+
+<script src="acknowledgement.js"></script>
+</body>
+</html>
