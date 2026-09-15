@@ -31,6 +31,7 @@
   --font-accent:     'Clash Display', 'Garet', sans-serif;
   --font-caption:    'Satoshi', 'Poppins', sans-serif;
   --color-coral:     #e07560;
+  --color-orchid:    #d17fd4;   /* Orchid — Revenue Lab accent, CTA on lime */
 
   --max-width:       1160px;
   --section-py:      96px;
@@ -1168,8 +1169,9 @@ a.has-dropdown::after {
    Footer EDM subscription band
    ============================================================= */
 .footer-edm {
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding: 56px 0 52px;
+  background: var(--color-sage);
+  border-radius: var(--radius-lg, 16px);
+  padding: 56px 48px 52px;
   margin-bottom: 0;
 }
 
@@ -1185,21 +1187,22 @@ a.has-dropdown::after {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-sage);
+  color: var(--color-navy);
+  opacity: 0.65;
   margin-bottom: 14px;
 }
 
 .footer-edm__heading {
   font-size: 1.45rem;
   font-weight: 800;
-  color: var(--color-white);
+  color: var(--color-navy);
   line-height: 1.35;
   margin-bottom: 14px;
 }
 
 .footer-edm__body {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(25,53,80,0.78);
   line-height: 1.7;
   margin: 0;
 }
@@ -1218,10 +1221,10 @@ a.has-dropdown::after {
 .footer-edm__input {
   flex: 1;
   padding: 14px 18px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(25,53,80,0.22);
   border-radius: 6px;
-  background: rgba(255,255,255,0.07);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-navy);
   font-family: var(--font-main);
   font-size: 0.95rem;
   outline: none;
@@ -1229,17 +1232,17 @@ a.has-dropdown::after {
 }
 
 .footer-edm__input::placeholder {
-  color: rgba(255,255,255,0.45);
+  color: rgba(25,53,80,0.45);
 }
 
 .footer-edm__input:focus {
-  border-color: var(--color-sage);
+  border-color: var(--color-navy);
 }
 
 .footer-edm__submit {
   margin-top: 16px;
   padding: 14px 28px;
-  background: var(--color-sage);
+  background: var(--color-orchid);
   color: var(--color-navy);
   font-family: var(--font-main);
   font-size: 0.95rem;
@@ -1252,13 +1255,13 @@ a.has-dropdown::after {
 }
 
 .footer-edm__submit:hover {
-  background: #bece6e;
+  background: #c065c4;
   transform: translateY(-1px);
 }
 
 .footer-edm__microcopy {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(25,53,80,0.6);
   margin: 12px 0 0;
 }
 
@@ -1798,6 +1801,10 @@ a.has-dropdown::after {
   .footer-edm__inner {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .footer-edm {
+    padding: 44px 28px 40px;
   }
 }
 
@@ -2512,4 +2519,19 @@ a.has-dropdown::after {
   .aoc-modal__body { padding: 28px 24px 24px; }
   .aoc-modal__footer { padding: 16px 24px 24px; }
   .aoc-modal__btn { width: 100%; text-align: center; }
+}
+
+
+/* =============================================================
+   Logo on navy
+   Use images/SHiFT With Purpose - logo for dark backgrounds.png
+   anywhere the background is navy. The wordmark is 2:1, not
+   square like the older logo files, so size it by height and let
+   the width follow.
+   ============================================================= */
+.footer__logo img,
+.nav--on-navy .nav__logo img {
+  height: 52px;
+  width: auto;
+  display: block;
 }
