@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <!-- Google Analytics — loads only after cookie consent -->
@@ -32,9 +32,6 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Moxie iFrame resizer -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.10/iframeResizer.min.js"></script>
-
   <style>
     /* Full-viewport two-column booking layout */
     .booking-split {
@@ -52,7 +49,7 @@
     }
 
     .booking-split__right {
-      background: #f5f2f8;
+      background: var(--color-white);
       padding: clamp(32px, 5vw, 64px) clamp(24px, 4vw, 56px);
       display: flex;
       flex-direction: column;
@@ -113,13 +110,6 @@
       margin: 8px 0 0;
     }
 
-    .moxie-wrapper {
-      background: var(--color-white);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
-      overflow: hidden;
-    }
-
     @media (max-width: 860px) {
       .booking-split {
         grid-template-columns: 1fr;
@@ -154,12 +144,9 @@
         <li>
           <a href="services.html" class="has-dropdown">Services</a>
           <ul class="nav__dropdown">
-            <li><a href="catalyst.html">SHiFT Catalyst (Strategy Day)</a></li>
-            <li><a href="spark.html">SHiFT Spark (Project)</a></li>
-            <li><a href="partnership.html">SHiFT Partnership (Fractional)</a></li>
-            <li><a href="revenue-lab.html">Revenue Lab (14 Weeks)</a></li>
-            <li><a href="ai-amplifier.html">AI Impact Amplifier</a></li>
-            <li><a href="contact.html">Bespoke Workshop</a></li>
+            <li><a href="catalyst.html">The SHiFT Catalyst</a></li>
+            <li><a href="revenue-lab.html">The Revenue Lab</a></li>
+            <li><a href="partnership.html">Your Growth Partner</a></li>
           </ul>
         </li>
         <li>
@@ -189,32 +176,22 @@
 
     <!-- Left: Copy -->
     <div class="booking-split__left">
-      <h1>Let's Chat</h1>
-      <h2>Book Your free 45 minute Discovery Call</h2>
-      <p>If you're not quite sure what option would work best for you, let's jump on a call.</p>
-      <p>This 45 minutes are a great opportunity to:</p>
+      <h1>I love talking with ambitious purpose-led leaders.</h1>
+      <p>I help values-driven businesses, social enterprises and not-for-profit organisations grow by making their services easier to deliver, better to experience and more valuable to the people they serve.</p>
+      <h2>How I can help you grow and stand out:</h2>
       <ul>
-        <li>Get to know each other</li>
-        <li>Understand your key challenges, goals and what you're looking to achieve</li>
-        <li>Better understand what I do and how I do it.</li>
+        <li><strong>SHiFT Catalyst session:</strong> A focused strategic session to tackle one important challenge, find practical solutions and walk away with a clear implementation plan.</li>
+        <li><strong>SHiFT Partnership:</strong> Ongoing strategic and executive-level support to help you design and implement better services, experiences and ways of working across your organisation.</li>
+        <li><strong>The Revenue Lab:</strong> A four-month, 1:1 advisory engagement to uncover, design and develop new revenue streams or make existing ones work harder.</li>
       </ul>
-      <p>By the end of the call, I'll provide you with a recommendation on which package is best for you, your people and the transformation you are looking to achieve.</p>
-      <p style="margin-bottom: 8px;">And will know whether we're suited to work together to achieve your attraction, retention and impact goals.</p>
-      <p class="closing-line">Pick a date and time and book in now.</p>
+      <p class="closing-line">Not sure which is right for you? No drama! That's what our conversation is for. We'll explore what you're trying to achieve and work out the best way forward.</p>
     </div>
 
-    <!-- Right: Moxie calendar -->
+    <!-- Right: Google Calendar booking -->
     <div class="booking-split__right">
-      <div class="moxie-wrapper">
-        <div style="width:100%; min-height:500px;">
-          <iframe
-            src="https://hello.withmoxie.com/01/weshift/discovery-call?inFrame=true"
-            id="moxie-discovery-call"
-            style="padding: 0; margin: 0; border: 0; max-width: 100%; min-width: 100%;"
-            title="Book a Discovery Call with Cata"
-          ></iframe>
-        </div>
-      </div>
+      <!-- Google Calendar Appointment Scheduling begin -->
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1WXNgEBuDdSS0GlIChy2ZpTVJ_nMUevpVRV3D0_HungSpWG394SBlURJd6FofQWBhoTFZrCEnb?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+      <!-- end Google Calendar Appointment Scheduling -->
     </div>
 
   </section>
@@ -269,34 +246,6 @@
     </div>
   </footer>
 
-  <!-- Moxie iFrame init -->
-  <script type="text/javascript">
-    setTimeout(() => iFrameResize({
-      heightCalculationMethod: 'min',
-      sizeWidth: true,
-      sizeHeight: true,
-      log: false,
-      checkOrigin: false
-    }, '#moxie-discovery-call'), 100);
-
-    window.addEventListener("message", (event) => {
-      if (event.origin === 'https://hello.withmoxie.com' && event.data && event.data.startsWith('[Redirect]')) {
-        let url = event.data.slice(10);
-        // If Moxie sends a relative or empty redirect, land on the thank-you page
-        if (!url || url === '/') {
-          window.location = 'thank-you.html';
-        } else {
-          window.location = url;
-        }
-      }
-      // Booking confirmed event — redirect to thank-you page
-      if (event.origin === 'https://hello.withmoxie.com' && event.data && event.data.includes('booking_confirmed')) {
-        window.location = 'thank-you.html';
-      }
-    }, false);
-  </script>
-
-
   <!-- Mobile nav toggle -->
   <script>
     (function() {
@@ -329,7 +278,7 @@
   <!-- ============================================================
        COOKIE CONSENT BANNER
        ============================================================ -->
-  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-primary-dark); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
+  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-navy); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
     <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.65; margin:0; max-width:660px;">
       We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--color-sage); text-decoration:underline; text-underline-offset:3px;">Privacy policy</a>
     </p>
