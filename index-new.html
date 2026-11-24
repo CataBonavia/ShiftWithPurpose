@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <!-- Google Analytics — loads only after cookie consent -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function swp_loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NR1ZB5W4N5';
+      document.head.appendChild(s);
+      s.onload = function() { gtag('js', new Date()); gtag('config', 'G-NR1ZB5W4N5'); };
+    }
+    if (localStorage.getItem('swp_cookie_consent') === 'accepted') { swp_loadGA(); }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHiFT with Purpose | Make Your Services Easier to Deliver and Better to Experience</title>
+  <meta name="description" content="We help ambitious, values-driven businesses and organisations improve performance by rethinking how they deliver value — better services, smarter ways of working and opportunities for growth." />
+  <meta name="keywords" content="service design, customer experience, purpose-led growth, organisational improvement, service improvement, human-centred design, Melbourne, Australia" />
+  <link rel="canonical" href="https://www.shiftwithpurpose.com.au/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.shiftwithpurpose.com.au/" />
+  <meta property="og:title" content="SHiFT with Purpose | Make Your Services Easier to Deliver and Better to Experience" />
+  <meta property="og:description" content="We turn complex organisational challenges into better services, smarter ways of working and opportunities for growth." />
+  <meta property="og:image" content="images/logo-dark.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "SHiFT with Purpose",
+    "url": "https://www.shiftwithpurpose.com.au",
+    "description": "We help ambitious, values-driven businesses and organisations improve performance by rethinking how they deliver value.",
+    "founder": { "@type": "Person", "name": "Catalina Bonavia" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
+    "sameAs": ["https://www.linkedin.com/in/catalina-bonavia/","https://www.instagram.com/shiftwithpurpose/"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       ANNOUNCEMENT BANNER
+       ============================================================ -->
+  <div id="swp-announcement-bar" style="background: var(--color-primary); padding: 12px 56px 12px 24px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; position: relative; z-index: 200;">
+    <p style="color: var(--color-navy); font-weight: 600; font-size: 0.9rem; margin: 0; text-align: center; line-height: 1.5;">
+      Less effort spent on what doesn&rsquo;t matter. More value created where it does.
+    </p>
+    <a href="quiz.html" style="font-family: var(--font-main); font-size: 0.85rem; font-weight: 700; padding: 8px 18px; border-radius: 50px; background: var(--color-navy); color: var(--color-sage); border: 2px solid var(--color-navy); text-decoration: none; white-space: nowrap; flex-shrink: 0;">Find what&rsquo;s hiding in plain sight &rarr;</a>
+    <button id="swp-banner-close" aria-label="Dismiss banner" style="background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; line-height: 1; flex-shrink: 0; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);">&times;</button>
+  </div>
+
+  <!-- ============================================================
+       EXIT-INTENT POPUP
+       ============================================================ -->
+  <div id="swp-exit-popup" style="display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(25,53,80,0.8); backdrop-filter: blur(4px);">
+    <div id="swp-exit-popup-card" style="background: var(--color-navy); border-radius: 24px; max-width: 600px; width: calc(100% - 48px); padding: 56px 48px; position: relative; box-shadow: 0 32px 100px rgba(0,0,0,0.35); transform: scale(0.92); opacity: 0; transition: transform 0.35s ease, opacity 0.35s ease;">
+      <button id="swp-popup-close" aria-label="Close" style="position: absolute; top: 18px; right: 20px; background: none; border: none; font-size: 1.6rem; color: rgba(255,255,255,0.6); cursor: pointer; line-height: 1;">&times;</button>
+      <span style="font-family: var(--font-caption); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); font-weight: 700; display: block; margin-bottom: 18px;">Before you go</span>
+      <h3 style="color: var(--color-white); font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.35; font-weight: 800; margin: 0 0 32px;">Your organisation may already have the ingredients for a new source of income. Take the free 10-minute quiz to find where it&rsquo;s <span style="color: var(--color-sage);">hiding in plain sight.</span></h3>
+      <a href="quiz.html" class="btn btn-primary" style="display: block; text-align: center; font-size: 1.05rem; padding: 16px 28px;" onclick="document.getElementById('swp-exit-popup').style.display='none';">Find what&rsquo;s hiding in plain sight &rarr;</a>
+      <p style="text-align: center; margin-top: 18px; margin-bottom: 0;">
+        <button onclick="document.getElementById('swp-exit-popup').style.display='none'; sessionStorage.setItem('swp_exit_dismissed','1');" style="background: none; border: none; color: rgba(255,255,255,0.6); font-size: 0.85rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;">No thanks, I&rsquo;ll figure it out on my own</button>
+      </p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logo-light.png" alt="SHiFT with Purpose" style="height:44px;" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="methodology.html" class="has-dropdown">Methodology</a>
+          <ul class="nav__dropdown">
+            <li><a href="methodology.html#shift-method">SHiFT Method</a></li>
+            <li><a href="methodology.html#think-then-ai">Think Then AI</a></li>
+            <li><a href="methodology.html#experience-architecture-framework">Experience Architecture Framework</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="services.html" class="has-dropdown">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="revenue-lab.html">The Revenue Lab</a></li>
+            <li><a href="partnership.html">Your Growth Partner</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" class="has-dropdown">Insights</a>
+          <ul class="nav__dropdown">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Client Stories</a></li>
+            <li><a href="mighty-shifts.html">Mighty SHiFTs Newsletter</a></li>
+            <li><a href="quiz.html">Customer Experience Quiz</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
+      </div>
+      <div class="nav__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero-primary" style="background: var(--color-navy); overflow: hidden; display: flex; align-items: stretch; min-height: 680px;">
+
+    <div class="hero-primary__copy">
+      <h1 class="hero-primary__h1" style="color: var(--color-white); font-size: clamp(2rem, 4vw, 3.2rem);">
+        For CEOs and COOs ready to challenge the status quo and take their organisation further.
+      </h1>
+      <h2 class="lead hero-primary__h2" style="color: var(--color-white); opacity: 0.88; margin-bottom: 40px; font-family: var(--font-main); font-size: clamp(1.1rem, 1.7vw, 1.35rem); font-weight: 400; line-height: 1.6;">
+        We help ambitious, values-driven businesses and organisations rethink how they deliver value, create customer experiences that attract and keep customers coming back, empower their people and build an organisation that&rsquo;s ready for what&rsquo;s next.
+      </h2>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-sage">Book a discovery call</a>
+      </div>
+    </div>
+
+    <div class="hero-primary__photo">
+      <div class="photo-blob-wrap photo-blob-wrap--on-purple">
+        <img src="images/Catalina%20Bonavia%20-%20SHiFT%20with%20Purpose.png" alt="Catalina Bonavia, founder of SHiFT with Purpose" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       CLIENT LOGOS
+       ============================================================ -->
+  <div class="logo-carousel">
+    <p class="logo-carousel__label">Trusted by purpose-led organisations across Australia</p>
+    <div class="logo-carousel__track">
+      <img src="images/client-creative-care-company.png" alt="The Creative Care Company" />
+      <img src="images/client-waverley.png" alt="Waverley Social Enterprises" />
+      <img src="images/client-butterfly.png" alt="Butterfly" />
+      <img src="images/client-polaron-connect.png" alt="Polaron Connect" />
+      <img src="images/client-city-of-monash.png" alt="City of Monash" />
+      <img src="images/client-newbies-bewbies.png" alt="Newbies &amp; Bewbies" />
+      <img src="images/client-growth-collective.png" alt="The Growth Collective" />
+      <img src="images/client-health-wellbeing-qld.png" alt="Health &amp; Wellbeing Queensland" />
+      <img src="images/client-aruma.png" alt="Aruma" />
+      <img src="images/client-creative-care-company.png" alt="" aria-hidden="true" />
+      <img src="images/client-waverley.png" alt="" aria-hidden="true" />
+      <img src="images/client-butterfly.png" alt="" aria-hidden="true" />
+      <img src="images/client-polaron-connect.png" alt="" aria-hidden="true" />
+      <img src="images/client-city-of-monash.png" alt="" aria-hidden="true" />
+      <img src="images/client-newbies-bewbies.png" alt="" aria-hidden="true" />
+      <img src="images/client-growth-collective.png" alt="" aria-hidden="true" />
+      <img src="images/client-health-wellbeing-qld.png" alt="" aria-hidden="true" />
+      <img src="images/client-aruma.png" alt="" aria-hidden="true" />
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BOARD ASKS; split — bold text left, Cata photo right
+       ============================================================ -->
+  <section style="background: var(--color-lavender); padding: 0; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 560px;">
+
+      <div style="padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; gap: 32px;">
+        <span class="caption" style="color: var(--color-primary-dark); margin-bottom: 0;">Sound familiar?</span>
+        <h2 style="color: var(--color-navy); margin-top: 0; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; font-weight: 800;">
+          The Board asks:<br>&ldquo;Where is growth coming from next?&rdquo;
+        </h2>
+        <p style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; color: var(--color-primary-dark); line-height: 1.3; margin: 0;">The room goes quiet&hellip;</p>
+        <p style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; color: var(--color-navy); line-height: 1.3; margin: 0;">That&rsquo;s when you call me.</p>
+        <a href="contact.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">Book a Discovery Call</a>
+      </div>
+
+      <div style="overflow: hidden; position: relative; min-height: 480px;">
+        <img src="images/Cata%20Bonavia%2C%20Founder%2C%20SHiFT%20with%20Purpose.png" alt="Catalina Bonavia, Founder of SHiFT with Purpose" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAIN / PROBLEM; white bg, dash bullets
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 80px 0;">
+    <div class="container">
+      <div class="grid-2" style="gap: 64px; align-items: start;">
+
+        <div>
+          <h2 style="color: var(--color-navy); font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.3; font-weight: 800; margin-bottom: 24px;">Your team is working hard. But somewhere between knowing what needs to change and making it happen, things get complicated.</h2>
+          <p style="color: var(--color-navy); opacity: 0.8; font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">Your organisation has grown. You&rsquo;ve invested in systems and training. But the experience isn&rsquo;t where it should be, and the same problems keep coming back.</p>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Your customers aren&rsquo;t getting the experience or value you want to deliver.</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Your people spend too much time navigating processes, fixing mistakes or working around problems.</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">You&rsquo;ve invested in technology, but the underlying issues haven&rsquo;t gone away.</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Different teams are working hard, but the handovers, connections and responsibilities between them aren&rsquo;t working.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 style="color: var(--color-navy); font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.3; font-weight: 800; margin-bottom: 24px;">And yet&hellip;</h2>
+          <div style="display: flex; flex-direction: column; gap: 0;">
+            <div style="padding: 16px 0; border-bottom: 1px solid rgba(108,84,129,0.2); display: flex; gap: 16px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 3px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.65;">You can see what needs to change, but don&rsquo;t have the time, tools or internal capability to make it happen.</p>
+            </div>
+            <div style="padding: 16px 0; border-bottom: 1px solid rgba(108,84,129,0.2); display: flex; gap: 16px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 3px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.65;">Your services are becoming more complicated and expensive to deliver.</p>
+            </div>
+            <div style="padding: 16px 0; border-bottom: 1px solid rgba(108,84,129,0.2); display: flex; gap: 16px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 3px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.65;">You&rsquo;re growing, but your operations aren&rsquo;t keeping pace.</p>
+            </div>
+            <div style="padding: 16px 0; border-bottom: 1px solid rgba(108,84,129,0.2); display: flex; gap: 16px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 3px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.65;">You know there&rsquo;s more value in what you already do, but haven&rsquo;t worked out how to unlock it.</p>
+            </div>
+            <div style="padding: 16px 0; display: flex; gap: 16px; align-items: flex-start;">
+              <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; margin-top: 3px;">&#8212;</span>
+              <p style="margin: 0; color: var(--color-navy); font-size: 0.95rem; line-height: 1.65;">Your income or funding model isn&rsquo;t giving you the stability or room to grow that you need.</p>
+            </div>
+          </div>
+          <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(108,84,129,0.2);">
+            <p style="font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; color: var(--color-navy); line-height: 1.3; margin: 0;">
+              These aren&rsquo;t just operational headaches. <span style="font-family: var(--font-accent); color: var(--color-primary-dark); font-size: 1.05em;">They affect your customers, your people, your costs and your ability to deliver on what your organisation exists to do.</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FIND WHAT'S NEXT; navy bg, full-width image
+       ============================================================ -->
+  <section style="background: var(--color-navy); padding: 64px 0 0; overflow: hidden;">
+
+    <p style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;" aria-hidden="true">Find what&apos;s next without losing your values. Your next offer is already inside your organisation. We help purpose-led organisations uncover the opportunities hiding in what they already know, do and have and turn them into services people want, revenue they can rely on and growth that doesn&apos;t compromise their purpose. Values-aligned growth for purpose-led organisations in disability services, aged care, and community health.</p>
+
+    <div class="container" style="text-align: center; padding-bottom: 48px; max-width: 760px;">
+      <h2 style="font-family: var(--font-main); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--color-white); line-height: 1.15; margin: 0;">Find what&rsquo;s next without losing your values</h2>
+    </div>
+
+    <img src="images/Your%20owned%20revenue%20stream%20-%20SHiFT%20with%20Purpose.png" alt="Your owned revenue stream — SHiFT with Purpose helps purpose-led organisations find and build new income streams that grow their mission" style="width: 80%; display: block; margin: 0 auto;" />
+
+    <div style="padding: 64px 0; text-align: center;">
+      <div class="container" style="max-width: 760px;">
+        <h2 style="font-family: var(--font-main); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--color-white); line-height: 1.2; margin-bottom: 32px;">There is potential hiding in your organisation. I want to help you turn it into owned revenue.</h2>
+        <a href="quiz.html" class="btn btn-sage" style="font-size: 1.05rem; padding: 16px 36px;">Find Your Hidden Opportunities &rarr;</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       APPROACH; whole-picture lens — navy background
+       ============================================================ -->
+  <section style="background: var(--color-lavender); padding: 96px 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 64px; max-width: 760px; margin-left: auto; margin-right: auto;">
+        <span class="caption" style="color: var(--color-navy); margin-bottom: 12px;">Our approach</span>
+        <h2 style="color: var(--color-navy); margin-top: 16px; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.25; font-weight: 800;">
+          Better performance starts with understanding where value is created; and where it&rsquo;s getting lost.
+        </h2>
+        <p style="color: rgba(25,53,80,0.75); font-size: 1.05rem; line-height: 1.7; margin: 0;">Improving a service isn&rsquo;t just about fixing a process. The real opportunities often sit in the connections between different parts of your organisation. We look at the whole picture.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; align-items: stretch;">
+
+        <div style="background: var(--color-sage); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-navy);">Your Customers</div>
+          <p style="font-size: 0.9rem; color: var(--color-navy); line-height: 1.65; margin: 0;">What do they need? What do they value? Where are they experiencing friction? What makes them choose you, stay with you or recommend you?</p>
+        </div>
+
+        <div style="background: var(--color-orchid); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-navy);">Your People</div>
+          <p style="font-size: 0.9rem; color: var(--color-navy); line-height: 1.65; margin: 0;">What do employees need to do their jobs well? Where are they spending time on workarounds, duplication or things that don&rsquo;t add value?</p>
+        </div>
+
+        <div style="background: var(--color-sage); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-navy);">Services &amp; Operations</div>
+          <p style="font-size: 0.9rem; color: var(--color-navy); line-height: 1.65; margin: 0;">How do your services actually work? How do teams, processes and responsibilities connect? Where is work getting stuck or unnecessarily complicated?</p>
+        </div>
+
+        <div style="background: var(--color-orchid); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-navy);">Systems &amp; Technology</div>
+          <p style="font-size: 0.9rem; color: var(--color-navy); line-height: 1.65; margin: 0;">Are your tools supporting the way your organisation needs to work? Or are they adding complexity to problems that haven&rsquo;t been solved?</p>
+        </div>
+
+        <div style="background: var(--color-sage); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-navy);">Business Performance</div>
+          <p style="font-size: 0.9rem; color: var(--color-navy); line-height: 1.65; margin: 0;">Where are you spending time and money without creating enough value? Where could you simplify, improve productivity or create new opportunities for growth?</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 56px; padding-top: 48px; border-top: 1px solid rgba(25,53,80,0.15);">
+        <p style="color: var(--color-navy); font-size: 1.15rem; font-weight: 700; line-height: 1.65; max-width: 680px; margin: 0 auto 20px;">We bring these perspectives together to <strong>identify where to simplify</strong>, where to <strong>invest</strong> and <strong>what needs to change.</strong></p>
+        <p style="color: var(--color-navy); font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 32px;">The goal is always the same: make better use of what you have and create more value from what you do.</p>
+        <a href="methodology.html" class="btn btn-sage">See our methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BELIEF; grant / growth statement
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 80px 0;">
+    <div class="container" style="max-width: 780px; text-align: center;">
+      <h2 style="font-family: var(--font-main); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--color-navy); line-height: 1.25; margin-bottom: 24px;">Your growth and impact shouldn&rsquo;t depend on the next grant.</h2>
+      <p style="font-size: 1.05rem; color: var(--color-navy); line-height: 1.75; opacity: 0.8; margin-bottom: 16px;">Somewhere along the way this sector accepted a trade: you can be mission-driven or you can be commercially confident; and choosing both makes you suspicious. I don&rsquo;t accept it, and neither do the leaders I work with.</p>
+      <p style="font-size: 1.05rem; font-weight: 700; color: var(--color-navy); line-height: 1.6; margin-bottom: 32px;">An organisation whose entire direction can be redrawn by one unsuccessful funding round isn&rsquo;t running a strategy; it&rsquo;s renting one. We create income you own that doesn&rsquo;t compete with your mission. It grows it.</p>
+      <a href="revenue-lab.html" class="btn btn-primary">Learn about the Revenue Lab &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW WE DO IT; lavender, 5 ways
+       ============================================================ -->
+  <section style="background: var(--color-lavender); padding: 96px 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 56px; max-width: 740px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: var(--color-navy); margin-top: 0; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.25; font-weight: 800;">We look beyond the obvious, then we make it happen.</h2>
+        <p style="color: var(--color-navy); opacity: 0.8; font-size: 1.05rem; line-height: 1.7; margin: 0 0 20px;">We get close to the work, listen to the people involved and look at the problem from different perspectives. We connect things that are often treated separately and challenge the assumption that the existing way is the only way.</p>
+        <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark); margin: 0;">Then we work with you to find a better one.</p>
+      </div>
+
+      <p style="font-size: 0.85rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-dark); margin-bottom: 20px;">That might mean:</p>
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 56px;">
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; padding: 22px 28px; background: rgba(255,255,255,0.65); border-radius: 12px;">
+          <span style="color: var(--color-primary-dark); font-size: 1.2rem; flex-shrink: 0; margin-top: 1px;">&rarr;</span>
+          <p style="margin: 0; font-size: 1rem; color: var(--color-navy); line-height: 1.65;"><strong>Removing unnecessary work:</strong> simplifying processes, reducing duplication and eliminating activities that don&rsquo;t create value.</p>
+        </div>
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; padding: 22px 28px; background: rgba(255,255,255,0.65); border-radius: 12px;">
+          <span style="color: var(--color-primary-dark); font-size: 1.2rem; flex-shrink: 0; margin-top: 1px;">&rarr;</span>
+          <p style="margin: 0; font-size: 1rem; color: var(--color-navy); line-height: 1.65;"><strong>Ensuring your people are spending their time where it&rsquo;s needed:</strong> giving teams clearer ways of working, better tools and more time to focus on what matters.</p>
+        </div>
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; padding: 22px 28px; background: rgba(255,255,255,0.65); border-radius: 12px;">
+          <span style="color: var(--color-primary-dark); font-size: 1.2rem; flex-shrink: 0; margin-top: 1px;">&rarr;</span>
+          <p style="margin: 0; font-size: 1rem; color: var(--color-navy); line-height: 1.65;"><strong>Improving the customer &amp; employee experience:</strong> making services easier to access, navigate and deliver.</p>
+        </div>
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; padding: 22px 28px; background: rgba(255,255,255,0.65); border-radius: 12px;">
+          <span style="color: var(--color-primary-dark); font-size: 1.2rem; flex-shrink: 0; margin-top: 1px;">&rarr;</span>
+          <p style="margin: 0; font-size: 1rem; color: var(--color-navy); line-height: 1.65;"><strong>Getting more from your systems:</strong> fixing the underlying ways of working so technology can actually support your organisation.</p>
+        </div>
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; padding: 22px 28px; background: rgba(255,255,255,0.65); border-radius: 12px;">
+          <span style="color: var(--color-primary-dark); font-size: 1.2rem; flex-shrink: 0; margin-top: 1px;">&rarr;</span>
+          <p style="margin: 0; font-size: 1rem; color: var(--color-navy); line-height: 1.65;"><strong>Creating new opportunities:</strong> turning your existing expertise, relationships and capabilities into new services, offerings and revenue.</p>
+        </div>
+
+      </div>
+
+      <div style="background: var(--color-navy); border-radius: 20px; padding: 48px 56px; text-align: center;">
+        <p style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); font-weight: 700; color: var(--color-white); line-height: 1.4; margin: 0 0 24px;">We don&rsquo;t bring a standard solution and try to make your organisation fit it. <span style="font-family: var(--font-accent); color: var(--color-sage);">A good idea only creates value when it works in the real world.</span></p>
+        <a href="contact.html" class="btn btn-sage">Book a discovery call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW WE WORK; three principles, lavender background
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 96px 0;">
+    <div class="container">
+
+      <div style="text-align: center; margin-bottom: 64px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        <span class="caption" style="color: var(--color-orchid); margin-bottom: 12px;">How we work</span>
+        <h2 style="color: var(--color-navy); margin-top: 16px; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.3; font-weight: 800;">
+          We co-design to create solutions unique to your world and help you implement.
+        </h2>
+      </div>
+
+      <div class="grid-3" style="gap: 48px;">
+
+        <div style="text-align: center;">
+          <img src="images/feet%20firmly%20on%20the%20ground.png" alt="Feet firmly on the ground" width="140" height="140" loading="lazy" style="width: 140px; height: auto; margin: 0 auto 24px; display: block;" />
+          <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; line-height: 1.35; margin: 0 0 12px;">Feet firmly on the ground.</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); opacity: 0.78; line-height: 1.7; margin: 0;">Creative thinking only counts if your team can deliver it on Monday. Every idea gets tested against your budget, your regulator and the people who have to run it.</p>
+        </div>
+
+        <div style="text-align: center;">
+          <img src="images/with%20humans%2C%20not%20at%20them.png" alt="With humans, not at them" width="140" height="140" loading="lazy" style="width: 140px; height: auto; margin: 0 auto 24px; display: block;" />
+          <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; line-height: 1.35; margin: 0 0 12px;">With humans, not at them.</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); opacity: 0.78; line-height: 1.7; margin: 0;">The people who use your service and the people who deliver it are in the room, not quoted on a slide. What gets built with them gets adopted, because it already belongs to them.</p>
+        </div>
+
+        <div style="text-align: center;">
+          <img src="images/designed%20for%20execution%2C%20not%20admiration.png" alt="Designed for execution, not admiration" width="140" height="140" loading="lazy" style="width: 140px; height: auto; margin: 0 auto 24px; display: block;" />
+          <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; line-height: 1.35; margin: 0 0 12px;">Designed for execution, not admiration.</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); opacity: 0.78; line-height: 1.7; margin: 0;">We stay until it works, not until the deck looks good. You get the offer, the pricing, the delivery model and the assets to sell it. Never a report for the drawer.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW WE WORK RHYTHM; 4 steps — navy background
+       ============================================================ -->
+  <section style="background: var(--color-navy); padding: 96px 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 64px; max-width: 740px; margin-left: auto; margin-right: auto;">
+        <span class="caption" style="color: var(--color-sage); margin-bottom: 12px;">The rhythm that underpins all our work</span>
+        <h2 style="color: var(--color-white); margin-top: 16px; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.3; font-weight: 800;">
+          We understand the problem from all angles, rethink the possibilities and, most importantly, make change happen.
+        </h2>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7; margin: 0;">Every challenge is different. We don&rsquo;t arrive with a cookie-cutter process and try to make your organisation fit it. But our work has a common rhythm.</p>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0;">
+
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; padding-right: 16px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-sage);">01. See clearly</div>
+          <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.65; margin: 0;">We listen, observe and explore the experience from different perspectives. We look beyond what the process says should happen to understand what actually happens, and why.</p>
+        </div>
+
+        <div style="flex-shrink: 0; color: var(--color-sage); font-size: 1.6rem; padding: 0 12px; opacity: 0.5; line-height: 1.4;">&rarr;</div>
+
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 0 16px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-sage);">02. Question everything</div>
+          <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.65; margin: 0;">We challenge assumptions, connect insights and explore ideas. We don&rsquo;t assume the existing way is the only way, and we don&rsquo;t push &ldquo;best practices&rdquo;; we look at what works for you and your context.</p>
+        </div>
+
+        <div style="flex-shrink: 0; color: var(--color-sage); font-size: 1.6rem; padding: 0 12px; opacity: 0.5; line-height: 1.4;">&rarr;</div>
+
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 0 16px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-sage);">03. Make it practical</div>
+          <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.65; margin: 0;">We work with the people involved to shape, test and refine solutions. We consider the real-world constraints, not just the ideal scenario.</p>
+        </div>
+
+        <div style="flex-shrink: 0; color: var(--color-sage); font-size: 1.6rem; padding: 0 12px; opacity: 0.5; line-height: 1.4;">&rarr;</div>
+
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; padding-left: 16px;">
+          <div style="font-size: 0.95rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-sage);">04. Put it into action</div>
+          <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.65; margin: 0;">We help turn ideas into changes people can use, adopt and build on. The goal is progress that lasts, not a presentation that gets buried in the too-hard basket.</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 56px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.15);">
+        <a href="methodology.html" class="btn btn-outline-white">See the full methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CASE STUDY HIGHLIGHTS; white bg
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 96px 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 64px; max-width: 740px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: var(--color-navy); margin-top: 0; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.3; font-weight: 800;">A different perspective creates a very different result.</h2>
+        <p style="color: var(--color-navy); opacity: 0.75; font-size: 1.05rem; line-height: 1.7; margin: 16px 0 0;">Here are a few examples.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 56px;">
+
+        <div style="background: var(--color-lavender); border-radius: 16px; padding: 40px 36px;">
+          <p style="font-family: var(--font-caption); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-dark); margin: 0 0 16px;">Complex information &rarr; practical tool</p>
+          <h3 style="color: var(--color-navy); font-size: 1.1rem; font-weight: 800; line-height: 1.4; margin: 0 0 12px;">Making complex information easier to use</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); line-height: 1.7; opacity: 0.8; margin: 0 0 16px;">The brief was to create another PowerPoint explaining workplace policy. The real challenge was helping people with intellectual disabilities have meaningful conversations about their careers. We created accessible conversation cards that beat every formal process they&rsquo;d tried, for under a hundred dollars.</p>
+          <p style="font-size: 0.88rem; font-style: italic; color: var(--color-primary-dark); margin: 0;">A different format turned information that was difficult to use into a practical tool for better conversations.</p>
+        </div>
+
+        <div style="background: var(--color-lavender); border-radius: 16px; padding: 40px 36px;">
+          <p style="font-family: var(--font-caption); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-dark); margin: 0 0 16px;">Checklist &rarr; human experience</p>
+          <h3 style="color: var(--color-navy); font-size: 1.1rem; font-weight: 800; line-height: 1.4; margin: 0 0 12px;">Making onboarding feel more human</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); line-height: 1.7; opacity: 0.8; margin: 0 0 16px;">A traditional onboarding checklist wasn&rsquo;t creating the engagement the organisation wanted. We reimagined it with an onboarding passport, achievements and coffee stamps, making the process more personal and easier to follow. Instead of constant follow-ups, the experience itself helped people see their progress and take part.</p>
+          <p style="font-size: 0.88rem; font-style: italic; color: var(--color-primary-dark); margin: 0;">A simpler experience reduced pressure on the team and created something people genuinely wanted to use.</p>
+        </div>
+
+        <div style="background: var(--color-lavender); border-radius: 16px; padding: 40px 36px;">
+          <p style="font-family: var(--font-caption); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-dark); margin: 0 0 16px;">Invisible work &rarr; visible solution</p>
+          <h3 style="color: var(--color-navy); font-size: 1.1rem; font-weight: 800; line-height: 1.4; margin: 0 0 12px;">Making invisible work visible</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); line-height: 1.7; opacity: 0.8; margin: 0 0 16px;">A seemingly simple handover process relied on people manually passing information between teams. When that didn&rsquo;t happen, someone could go without an essential service. Through interviews and observations, we uncovered where the handover was breaking down and helped introduce an immediate fix, while working towards a more connected solution.</p>
+          <p style="font-size: 0.88rem; font-style: italic; color: var(--color-primary-dark); margin: 0;">Addressing the gap rather than expecting people to keep working around it.</p>
+        </div>
+
+        <div style="background: var(--color-lavender); border-radius: 16px; padding: 40px 36px;">
+          <p style="font-family: var(--font-caption); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-dark); margin: 0 0 16px;">Expertise &rarr; owned revenue</p>
+          <h3 style="color: var(--color-navy); font-size: 1.1rem; font-weight: 800; line-height: 1.4; margin: 0 0 12px;">Turning expertise into new revenue</h3>
+          <p style="font-size: 0.95rem; color: var(--color-navy); line-height: 1.7; opacity: 0.8; margin: 0 0 16px;">Organisations sitting on years of expertise, trusted relationships and hard-won IP are turning it into offers someone pays for, costed, priced and tested with real buyers before anyone commits to building. Different sectors, different formats. The same method.</p>
+          <p style="font-size: 0.88rem; font-style: italic; color: var(--color-primary-dark); margin: 0;">What you already know, do and have is worth more than you think.</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-size: 1rem; font-weight: 600; color: var(--color-navy); margin-bottom: 24px;">Different sectors. Different formats. <span style="font-family: var(--font-accent); color: var(--color-primary-dark);">Same method.</span></p>
+        <a href="case-studies.html" class="btn btn-outline" style="border-color: var(--color-navy); color: var(--color-navy);">See client stories &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHO WE WORK WITH
+       ============================================================ -->
+  <section class="section" style="background: var(--color-lavender); padding: 80px 0 64px;">
+
+    <div class="container" style="margin-bottom: 56px;">
+      <div style="text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">
+        <span class="caption" style="margin-bottom: 16px;">Who we work with</span>
+        <h2 style="margin: 16px 0 0; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.3;">I create the most impact working with ambitious organisations ready to grow, innovate and lead the way.</h2>
+      </div>
+    </div>
+
+    <!-- Full-bleed: photo left half, list right half -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 540px;">
+      <div style="overflow: hidden; min-height: 480px;">
+        <img src="images/cata-laughing-with-clients.jpg" alt="Catalina Bonavia working with clients" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+      </div>
+      <div style="padding: 48px clamp(32px, 5vw, 80px); display: flex; align-items: center; background: var(--color-lavender);">
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px; width: 100%;">
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="color: var(--color-navy); font-weight: 700; flex-shrink: 0; font-size: 1.1rem; margin-top: 1px;">&rarr;</span>
+            <p style="margin: 0; color: var(--color-navy); font-size: 0.97rem; line-height: 1.7;"><strong>Established, purpose-led organisations and businesses</strong> with something meaningful to protect and something exciting to build.</p>
+          </li>
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; font-size: 1.1rem; margin-top: 1px;">&rarr;</span>
+            <p style="margin: 0; color: var(--color-navy); font-size: 0.97rem; line-height: 1.7;"><strong>Founders and leaders who care about both impact and profitability.</strong> Established enough to have something to build on; ambitious enough to know it isn&rsquo;t enough yet.</p>
+          </li>
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; font-size: 1.1rem; margin-top: 1px;">&rarr;</span>
+            <p style="margin: 0; color: var(--color-navy); font-size: 0.97rem; line-height: 1.7;"><strong>Collaborative, courageous and curious people</strong> who are willing to challenge their own assumptions.</p>
+          </li>
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; font-size: 1.1rem; margin-top: 1px;">&rarr;</span>
+            <p style="margin: 0; color: var(--color-navy); font-size: 0.97rem; line-height: 1.7;"><strong>Organisations with 5&ndash;100 people</strong> ready to invest in making something extraordinary happen.</p>
+          </li>
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; font-size: 1.1rem; margin-top: 1px;">&rarr;</span>
+            <p style="margin: 0; color: var(--color-navy); font-size: 0.97rem; line-height: 1.7;"><strong>People-centred leaders</strong> who understand that better experiences create better outcomes.</p>
+          </li>
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="color: var(--color-primary-dark); font-weight: 700; flex-shrink: 0; font-size: 1.1rem; margin-top: 1px;">&rarr;</span>
+            <p style="margin: 0; color: var(--color-navy); font-size: 0.97rem; line-height: 1.7;"><strong>Leaders willing to make the decisions their competitors aren&rsquo;t,</strong> because they know there&rsquo;s more potential in what they already have.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 56px; text-align: center;">
+      <p style="font-family: var(--font-main); font-size: 1.05rem; font-weight: 700; color: var(--color-navy); margin-bottom: 24px;">14 years in the purpose-led space. A methodology designed to bring out the best in you and your people. That&rsquo;s my approach to values-led growth.</p>
+      <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       WON'T BE A FIT
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 72px 0;">
+    <div class="container">
+      <h3 style="color: var(--color-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 32px;">We definitely won&rsquo;t be a good fit if&hellip;</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <p style="margin: 0; color: rgba(25,53,80,0.75); font-size: 0.95rem; line-height: 1.6;"><strong style="color: var(--color-navy);">You want me to hand you a strategy in three months and wish you good luck.</strong> I&rsquo;m here to help make the thing happen, not just make the deck.</p>
+        <p style="margin: 0; color: rgba(25,53,80,0.75); font-size: 0.95rem; line-height: 1.6;"><strong style="color: var(--color-navy);">You want to do what everyone else is doing.</strong> ChatGPT can help with that. I&rsquo;m much more interested in creating new value than following the template.</p>
+        <p style="margin: 0; color: rgba(25,53,80,0.75); font-size: 0.95rem; line-height: 1.6;"><strong style="color: var(--color-navy);">You&rsquo;re looking for cost-cutting.</strong> I&rsquo;m far more interested in creating value than squeezing the last dollar out of a budget.</p>
+        <p style="margin: 0; color: rgba(25,53,80,0.75); font-size: 0.95rem; line-height: 1.6;"><strong style="color: var(--color-navy);">You need someone to manage your team for you.</strong> I know someone brilliant for that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="section testimonial-carousel-section">
+    <div class="container">
+      <div class="tc-wrap" id="testimonialCarousel">
+
+        <div class="tc-slide tc-slide--active">
+          <div class="tc-photo"><img src="images/Testimonial-Ellen Hooper.png" alt="Ellen Hooper" /></div>
+          <div class="tc-content">
+            <blockquote class="tc-quote">"Working with WeSHiFT was such an incredible experience. Catalina has such amazing expertise in so many areas. She worked really closely with us to understand what we wanted for our business and our life. Catalina is so pragmatic, kind and helpful. I just couldn&rsquo;t recommend working with WeSHiFT enough."</blockquote>
+            <cite class="tc-cite">Ellen Hooper; Founder, Executive Coach, Chief People Officer</cite>
+          </div>
+        </div>
+
+        <div class="tc-slide">
+          <div class="tc-photo"><img src="images/Testimonial- Sarah Exton.png" alt="Sarah Exton" /></div>
+          <div class="tc-content">
+            <blockquote class="tc-quote">"We were looking for a unicorn, and we found her! We needed someone who could do it all, and I honestly didn&rsquo;t think they existed. We interviewed service designers and a few larger creative agencies, but SHiFT with Purpose was the only one that took the time to understand us and didn&rsquo;t propose a cookie-cutter approach. For us it is critical that our participants / clients feel heard and engaged, and Catalina&rsquo;s approach exceeded our expectations. I never have to worry about anything; she&rsquo;s the dream."</blockquote>
+            <cite class="tc-cite">Sarah Exton; C-level executive, Founder, Board Member</cite>
+          </div>
+        </div>
+
+        <div class="tc-slide">
+          <div class="tc-photo"><img src="images/Testimonial-Frontline - Ops Workshop.png" alt="Frontline Worker" /></div>
+          <div class="tc-content">
+            <blockquote class="tc-quote">"Thank you for really listening to the team. In the middle of the workshop I saw how my colleagues&rsquo; spark came back. I am hopeful again; we will work through this together."</blockquote>
+            <cite class="tc-cite">Frontline Worker; Social Enterprise</cite>
+          </div>
+        </div>
+
+        <div class="tc-slide">
+          <div class="tc-photo"><img src="images/Testimonial - Karen Dynon.png" alt="Karen Dynon" /></div>
+          <div class="tc-content">
+            <blockquote class="tc-quote">"The session with WeSHiFT was invaluable. In my opinion, 30 minutes with you is better than a half a day with many other people. Your questions are delivered with a gentle directness and your advice is very good. I&rsquo;m glad I sat in."</blockquote>
+            <cite class="tc-cite">Karen Dynon; Social Impact Expert</cite>
+          </div>
+        </div>
+
+        <div class="tc-dots" role="tablist" aria-label="Testimonial navigation">
+          <button class="tc-dot tc-dot--active" data-index="0" aria-label="Testimonial 1" aria-selected="true"></button>
+          <button class="tc-dot" data-index="1" aria-label="Testimonial 2" aria-selected="false"></button>
+          <button class="tc-dot" data-index="2" aria-label="Testimonial 3" aria-selected="false"></button>
+          <button class="tc-dot" data-index="3" aria-label="Testimonial 4" aria-selected="false"></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function() {
+    var carousel = document.getElementById('testimonialCarousel');
+    if (!carousel) return;
+    var slides = carousel.querySelectorAll('.tc-slide');
+    var dots   = carousel.querySelectorAll('.tc-dot');
+    var current = 0; var timer;
+    function goTo(index) {
+      slides[current].classList.remove('tc-slide--active');
+      dots[current].classList.remove('tc-dot--active');
+      dots[current].setAttribute('aria-selected', 'false');
+      current = index;
+      slides[current].classList.add('tc-slide--active');
+      dots[current].classList.add('tc-dot--active');
+      dots[current].setAttribute('aria-selected', 'true');
+    }
+    function next() { goTo((current + 1) % slides.length); }
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        clearInterval(timer);
+        goTo(parseInt(this.getAttribute('data-index'), 10));
+        timer = setInterval(next, 6000);
+      });
+    });
+    timer = setInterval(next, 6000);
+  })();
+  </script>
+
+  <!-- ============================================================
+       WHAT WE ARE / NOT
+       ============================================================ -->
+  <section class="split-section">
+
+    <div class="split-col split-col--white" style="padding: 80px 64px;">
+      <h2 style="margin-bottom: 40px; color: var(--color-navy);">We&rsquo;re not what you&rsquo;ve tried before.</h2>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won&rsquo;t bring a standard solution and try to make you fit it.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">Every organisation is different. We get close to your work, listen to the people involved and design solutions around your people, your customers and the realities of getting things done.</p>
+        </div>
+        <div style="height: 1px; background: var(--color-border);"></div>
+        <div>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won&rsquo;t stop at a clever idea or a strategy document.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We co-design with your team and implement alongside you. No junior staff doing the work. You get Cata, start to finish. And we stay until the change is embedded, not until the document is delivered.</p>
+        </div>
+        <div style="height: 1px; background: var(--color-border);"></div>
+        <div>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won&rsquo;t sell you software before understanding your people.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">We help you figure out where AI and technology fit and where they don&rsquo;t, always with your people at the centre. Human-first. Platform-agnostic.</p>
+        </div>
+        <div style="height: 1px; background: var(--color-border);"></div>
+        <div>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">We won&rsquo;t disappear when implementation gets messy.</p>
+          <p style="font-size: 0.95rem; color: var(--color-text-mid);">Because a good idea only creates value when it works in the real world.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="split-col split-col--navy" style="padding: 80px 64px; background: var(--color-navy);">
+      <h2 style="color: var(--color-white); margin-bottom: 40px;">We are your partner from idea to implementation.</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <span style="color: var(--color-white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+          <p style="color: rgba(252,252,252,0.85); margin: 0;">Curious about the problems people have learned to live with; the workarounds that have become business as usual</p>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <span style="color: var(--color-white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+          <p style="color: rgba(252,252,252,0.85); margin: 0;">Connecting things that are often treated separately and challenging the assumption that the existing way is the only way</p>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <span style="color: var(--color-white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+          <p style="color: rgba(252,252,252,0.85); margin: 0;">From sitting with frontline workers to standing in front of the board</p>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <span style="color: var(--color-white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+          <p style="color: rgba(252,252,252,0.85); margin: 0;">Bringing creativity, empathy and implementation; not just advice</p>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <span style="color: var(--color-white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+          <p style="color: rgba(252,252,252,0.85); margin: 0;">Human-centred first, technology-enabled second, always purpose-led</p>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <span style="color: var(--color-white); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+          <p style="color: rgba(252,252,252,0.85); margin: 0;">Working in regulated, resource-limited environments; and making bold design feel safe</p>
+        </div>
+      </div>
+      <a href="about.html" class="btn btn-outline-white" style="margin-top: 40px; display: inline-block;">Learn more about Cata and the approach</a>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       NEWSLETTER / MIGHTY SHiFTs; full background photo
+       ============================================================ -->
+  <section style="position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; justify-content: center; padding: 80px 24px;">
+    <div style="position: absolute; inset: 0;">
+      <img src="images/cata-about.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+      <div style="position: absolute; inset: 0; background: rgba(25,53,80,0.68);"></div>
+    </div>
+    <div style="position: relative; z-index: 1; max-width: 540px; width: 100%; background: rgba(252,252,252,0.97); border-radius: 24px; padding: 56px 48px; display: flex; flex-direction: column; gap: 20px;">
+      <span class="caption" style="color: var(--color-primary-dark);">Mighty SHiFTs</span>
+      <h2 style="font-family: var(--font-main); font-size: clamp(1.3rem, 2.2vw, 1.75rem); font-weight: 800; color: var(--color-navy); line-height: 1.3; margin: 0;">Join the ambitious, purpose-led leaders who read Mighty SHiFTs every fortnight.</h2>
+      <p style="font-size: 1rem; color: var(--color-navy); line-height: 1.7; opacity: 0.8; margin: 0;">A little mischief for people who know there&rsquo;s got to be a better way of delivering great services.</p>
+      <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" method="post" data-id="150541769976579600" style="display: flex; flex-direction: column; gap: 12px;">
+        <input type="email" name="fields[email]" placeholder="Your email address" required style="font-size: 1rem; padding: 14px 20px; border-radius: 50px; border: 2px solid var(--color-navy); background: var(--color-white); color: var(--color-navy); outline: none; font-family: var(--font-caption); width: 100%; box-sizing: border-box;" />
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button type="submit" style="font-family: var(--font-main); font-size: 1rem; font-weight: 700; padding: 14px 28px; border-radius: 50px; background: var(--color-primary); color: var(--color-navy); border: none; cursor: pointer; width: 100%;">Sign up for Mighty SHiFTs</button>
+      </form>
+      <p style="margin: 0; font-size: 0.82rem; color: var(--color-navy); opacity: 0.5;">No generic advice. No consultant jargon. Unsubscribe any time.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEET THE FOUNDER; navy, split
+       ============================================================ -->
+  <section style="background: var(--color-navy); padding: 0; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 560px;">
+
+      <div style="padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+        <h2 style="font-family: var(--font-main); font-size: clamp(1.6rem, 2.5vw, 2rem); font-weight: 800; color: var(--color-white); margin: 0;">Meet the person who loves finding a different way through. And making it work.</h2>
+        <p style="color: rgba(255,255,255,0.85); line-height: 1.75; margin: 0; font-size: 0.97rem;">Hi, I&rsquo;m Catalina Bonavia, founder of SHiFT with Purpose.</p>
+        <p style="color: rgba(255,255,255,0.85); line-height: 1.75; margin: 0; font-size: 0.97rem;">It started when I was 23, working at a startup trying to solve housing problems for low-income families. We visited dozens of families and ended up designing a bathroom that could be built in 8 hours and lasts forever. What impacted me most wasn&rsquo;t the product &mdash; it was the process: deeply understanding the people at the core of the challenge, co-designing based on their constraints and making it happen even though the architects said it was impossible.</p>
+        <p style="color: rgba(255,255,255,0.85); line-height: 1.75; margin: 0; font-size: 0.97rem;"><strong style="color: var(--color-white);">I&rsquo;m curious about how people think and what drives them, about how things work, and even more curious about why we keep doing things the way we do.</strong> I love getting into the detail of a problem, asking the questions others haven&rsquo;t thought to ask and zooming out to spot connections that open up new possibilities.</p>
+        <p style="color: rgba(255,255,255,0.8); line-height: 1.75; margin: 0; font-size: 0.97rem;">I believe good services shouldn&rsquo;t have to rely on people working around broken systems. And I believe that purpose-led organisations deserve practical, innovative ways to make their work better.</p>
+        <p style="font-size: 1rem; font-weight: 700; color: var(--color-white); line-height: 1.6; margin: 0;">Break up with boring. Get SHiFT done.</p>
+        <a href="about.html" class="btn btn-outline-white" style="align-self: flex-start; margin-top: 8px;">More about Cata &rarr;</a>
+      </div>
+
+      <div style="overflow: hidden; position: relative; min-height: 480px;">
+        <img src="images/Cata%20Bonavia%20-%20SHift%20With%20Purpose.png" alt="Catalina Bonavia, Founder of SHiFT with Purpose" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CLOSE CTA
+       ============================================================ -->
+  <section style="background: var(--color-orchid); padding: 80px 0;">
+    <div class="container" style="max-width: 760px; text-align: center;">
+      <h2 style="font-family: var(--font-main); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--color-navy); line-height: 1.2; margin-bottom: 20px;">Ready to make something shift?</h2>
+      <p style="font-size: 1.1rem; color: rgba(25,53,80,0.85); line-height: 1.75; margin-bottom: 32px;">Whether you&rsquo;ve got a stubborn problem to solve, a service that needs rethinking or an opportunity you&rsquo;re ready to explore, let&rsquo;s start with a conversation.</p>
+      <a href="contact.html" class="btn btn-sage" style="font-size: 1.05rem; padding: 16px 36px;">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ACKNOWLEDGEMENT OF COUNTRY
+       ============================================================ -->
+  <section style="background: var(--color-white); padding: 56px 0; border-top: 3px solid var(--color-sage);">
+    <div class="container" style="max-width: 760px;">
+      <p style="font-family: var(--font-caption); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-navy); opacity: 0.6; margin-bottom: 14px;">Acknowledgement of Country</p>
+      <p style="font-size: 0.92rem; color: rgba(25,53,80,0.85); line-height: 1.75; margin: 0;">We acknowledge the Bunurong people of the Kulin Nation as the Traditional Custodians of the land where we live and work, and honour the Indigenous peoples of the lands of Buenos Aires, Argentina, where our founder was raised. We pay our respects to Elders past and present and recognise the value, dignity, and lived experience of all people; particularly those too often excluded from design, access, opportunity, and decision-making.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-edm">
+        <div class="footer-edm__inner">
+          <div>
+            <p class="footer-edm__label">Mighty Shifts</p>
+            <p class="footer-edm__body">Mighty SHiFTs is a short note from Cata about the things that make you stop and think. Unexpected ideas, stories from the real world, assumptions worth questioning and practical ways to make services work better. No generic advice. No consultant jargon. Just the occasional nudge to see things differently.</p>
+          </div>
+          <div>
+            <div id="mlb2-24367037" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24367037">
+              <div class="ml-form-embedWrapper embedForm" style="background:transparent;border:none;padding:0;width:100%;max-width:100%;">
+                <div class="ml-form-embedBody row-form" style="padding:0;">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1241699/forms/150541769976579600/subscribe" data-code="" method="post" target="_blank" style="margin:0;">
+                    <div class="footer-edm__form-row">
+                      <input aria-label="name" type="text" name="fields[name]" placeholder="First name" class="footer-edm__input" autocomplete="given-name" />
+                      <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" class="footer-edm__input" required autocomplete="email" />
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="footer-edm__submit">Send me the Mighty Shifts</button>
+                    <button disabled="disabled" style="display:none;" type="button"><span class="sr-only">Loading...</span></button>
+                    <p class="footer-edm__microcopy">No generic advice. No consultant jargon. Unsubscribe any time.</p>
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none;padding:0;">
+                  <div style="padding: 24px 0;">
+                    <h4 style="color:var(--color-navy);margin-bottom:12px;">You&rsquo;re on the list.</h4>
+                    <p style="color:rgba(25,53,80,0.8);font-size:0.92rem;line-height:1.6;">You&rsquo;re officially on the list. We can&rsquo;t wait to start sharing <em>Mighty SHiFTS</em> with you each week. Happy shifting, Cata.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo"><img src="images/SHiFT%20With%20Purpose%20-%20logo%20for%20dark%20backgrounds.png" alt="SHiFT with Purpose" style="height:52px;" /></div>
+          <p class="footer__tagline">Purpose-led organisations shouldn&rsquo;t have to choose between impact and innovation.</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/catalina-bonavia/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/shiftwithpurpose/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="revenue-lab.html">The Revenue Lab</a></li>
+            <li><a href="partnership.html">Your Growth Partner</a></li>
+            <li><a href="catalyst.html">SHiFT Catalyst</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Cata</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Start here</h4>
+          <ul>
+            <li><a href="contact.html">Discovery Call</a></li>
+            <li><a href="quiz.html">Customer Experience Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 SHiFT with Purpose. ABN: 43 326 330 421. All rights reserved.</span>
+        <span>Melbourne, Australia &nbsp;|&nbsp; <a href="mailto:hello@shiftwithpurpose.com.au" style="color: rgba(255,255,255,0.4); text-decoration: underline;">hello@shiftwithpurpose.com.au</a> &nbsp;|&nbsp; <a href="#" id="swp-cookie-prefs" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Cookie preferences</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile nav -->
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav__toggle');
+      var nav    = document.querySelector('.nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('nav--open');
+        toggle.setAttribute('aria-label', nav.classList.contains('nav--open') ? 'Close menu' : 'Open menu');
+      });
+      document.addEventListener('click', function(e) { if (!nav.contains(e.target)) nav.classList.remove('nav--open'); });
+      document.querySelectorAll('.nav__links a').forEach(function(link) { link.addEventListener('click', function() { nav.classList.remove('nav--open'); }); });
+    })();
+  </script>
+
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
+  <script>
+    function ml_webform_success_24367037() {
+      var body = document.querySelector('#mlb2-24367037 .ml-form-embedBody');
+      var success = document.querySelector('#mlb2-24367037 .ml-form-successBody');
+      if (body) body.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="swp-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--color-navy); padding:20px 32px; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 24px rgba(0,0,0,0.25);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.65; margin:0; max-width:660px;">
+      We use cookies to understand how people find and use this site (Google Analytics). No advertising trackers. No data sold. <a href="privacy.html" style="color:var(--color-sage); text-decoration:underline; text-underline-offset:3px;">Privacy policy</a>
+    </p>
+    <div style="display:flex; gap:12px; flex-shrink:0;">
+      <button id="swp-cookie-decline" style="background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.65); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-family:inherit;">Decline</button>
+      <button id="swp-cookie-accept" style="background:var(--color-sage); border:none; color:var(--color-navy); padding:10px 22px; border-radius:6px; cursor:pointer; font-size:0.88rem; font-weight:700; font-family:inherit;">Accept</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var KEY = 'swp_cookie_consent';
+      var banner = document.getElementById('swp-cookie-banner');
+      if (!localStorage.getItem(KEY) && banner) banner.style.display = 'flex';
+      var a = document.getElementById('swp-cookie-accept');
+      var d = document.getElementById('swp-cookie-decline');
+      var p = document.getElementById('swp-cookie-prefs');
+      if (a) a.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'accepted');
+        if (banner) banner.style.display = 'none';
+        if (typeof swp_loadGA === 'function') swp_loadGA();
+      });
+      if (d) d.addEventListener('click', function() {
+        localStorage.setItem(KEY, 'declined');
+        if (banner) banner.style.display = 'none';
+      });
+      if (p) p.addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem(KEY);
+        if (banner) banner.style.display = 'flex';
+      });
+    })();
+  </script>
+
+  <script src="acknowledgement.js"></script>
+
+  <!-- Announcement banner dismiss -->
+  <script>
+    (function() {
+      var bar   = document.getElementById('swp-announcement-bar');
+      var close = document.getElementById('swp-banner-close');
+      if (!bar || !close) return;
+      if (sessionStorage.getItem('swp_banner_dismissed') === '1') {
+        bar.style.display = 'none';
+      }
+      close.addEventListener('click', function() {
+        bar.style.display = 'none';
+        sessionStorage.setItem('swp_banner_dismissed', '1');
+      });
+    })();
+  </script>
+
+  <!-- Exit-intent popup -->
+  <script>
+    (function() {
+      var popup     = document.getElementById('swp-exit-popup');
+      var popupClose = document.getElementById('swp-popup-close');
+      if (!popup) return;
+      var shown = false;
+      function showPopup() {
+        if (shown) return;
+        if (sessionStorage.getItem('swp_exit_dismissed') === '1') return;
+        shown = true;
+        popup.style.display = 'flex';
+        var card = document.getElementById('swp-exit-popup-card');
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            if (card) {
+              card.style.transform = 'scale(1)';
+              card.style.opacity = '1';
+            }
+          });
+        });
+      }
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 10) showPopup();
+      });
+      var idleTimer = setTimeout(showPopup, 40000);
+      ['mousemove','scroll','keydown','touchstart'].forEach(function(ev) {
+        document.addEventListener(ev, function() {
+          clearTimeout(idleTimer);
+          idleTimer = setTimeout(showPopup, 40000);
+        }, { passive: true });
+      });
+      if (popupClose) {
+        popupClose.addEventListener('click', function() {
+          popup.style.display = 'none';
+          sessionStorage.setItem('swp_exit_dismissed', '1');
+        });
+      }
+      popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+          sessionStorage.setItem('swp_exit_dismissed', '1');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
